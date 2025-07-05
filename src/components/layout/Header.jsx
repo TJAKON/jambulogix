@@ -24,14 +24,14 @@ export default function Header() {
         <a className="hover:text-[#FF7F06]" href="#">
           Resources
         </a>
-        <a className="hover:text-[#FF7F06]" href="">
+        <a className="hover:text-[#FF7F06]" href="/pages/about">
           About Us
         </a>
         <a className="hover:text-[#FF7F06]" href="#">
           Contact Us
         </a>
       </nav>
-      <button className="bg-[#24577F] text-white md:bg-[#FF7F06] md:text-[#24577F] px-4 py-2 rounded-full font-bold text-md md:text-xl border-2 border-white md:border-[#24577F] hover:border-white hover:bg-[#24577F] hover:text-white transition-colors duration-300">
+      <button className="bg-[#24577F] text-white md:bg-[#FF7F06] md:text-[#24577F] px-4 py-2 rounded-2xl font-bold text-md md:text-xl border-2 border-white md:border-[#24577F] hover:border-white hover:bg-[#24577F] hover:text-white transition-colors duration-300">
         Get in Touch
       </button>
     </header>

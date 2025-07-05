@@ -36,25 +36,17 @@ export default function Footer() {
           <div className="flex justify-center md:justify-start items-center gap-4 mt-4">
             <a href="#">
               <Image
-                src="/facebook.svg"
-                alt="Facebook"
-                width={20}
-                height={20}
-              />
-            </a>
-            <a href="#">
-              <Image
                 src="/linkedin.svg"
                 alt="LinkedIn"
-                width={20}
+                width={30}
                 height={20}
               />
             </a>
             <a href="#">
               <Image
-                src="/instagram.svg"
-                alt="Instagram"
-                width={20}
+                src="/facebook.svg"
+                alt="Facebook"
+                width={30}
                 height={20}
               />
             </a>
