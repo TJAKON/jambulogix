@@ -40,7 +40,7 @@ export default function AboutUsPage() {
       {/* Hero Banner */}
       <section className="relative w-full h-[60vh] md:h-[75vh] overflow-hidden">
         <Image
-          src="/test.jpeg"
+            src="/warehousing.jpg"
           alt="About Jambulogix"
           fill
           className="object-cover w-full h-full"
@@ -66,7 +66,7 @@ export default function AboutUsPage() {
           <div className="grid grid-cols-2 gap-4">
             <div className="w-full aspect-square overflow-hidden rounded-xl shadow">
               <Image
-                src="/test.jpeg"
+             src="/warehousing.jpg"
                 alt="Team 1"
                 width={500}
                 height={500}
@@ -340,7 +340,7 @@ export default function AboutUsPage() {
 
       {/* Awards & Clients */}
       <section className="bg-[#F9FAFB] py-20 px-6 sm:px-20">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-7xl mx-auto">
           {/* Heading */}
           <div className="text-center mb-14">
             <h2 className="text-4xl sm:text-5xl font-bold text-[#24577F]">
@@ -354,8 +354,8 @@ export default function AboutUsPage() {
           </div>
 
           {/* Logos Grid */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8 place-items-center">
-            {Array(10)
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-8 place-items-center">
+            {Array(18)
               .fill(null)
               .map((_, idx) => (
                 <div
@@ -363,7 +363,7 @@ export default function AboutUsPage() {
                   className="bg-white rounded-xl shadow hover:shadow-lg hover:scale-105 transition-all duration-300 p-4 w-full flex items-center justify-center"
                 >
                   <Image
-                    src="/test.jpeg"
+                    src={`/ClientLogo/${idx + 1}.png`}
                     alt={`Client ${idx + 1}`}
                     width={100}
                     height={40}

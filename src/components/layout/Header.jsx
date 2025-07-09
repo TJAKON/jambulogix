@@ -40,30 +40,36 @@ export default function Header() {
           <PopoverButton className="flex items-center gap-1 hover:text-[#FF7F06] transition duration-200 focus:outline-none">
             Services <ChevronDownIcon className="h-5 w-5" />
           </PopoverButton>
-          <PopoverPanel className="absolute top-15 left-0 mt-2 w-80 bg-black/20 border p-4 space-y-2 z-50 text-white shadow-xl">
+          <PopoverPanel className="absolute top-15 left-0 mt-2 w-90 font-bold bg-black/40 backdrop-blur-md p-4 space-y-2 z-50 text-white shadow-xl">
             <Link
               href="/pages/services/smart-warehousing-solution"
-              className="block hover:text-[#FF7F06]"
+              className="block hover:text-white hover:bg-[#FF7F06] border-2 bg-[#24577F] backdrop-blur-3xl p-2 rounded-lg"
             >
               Smart Warehousing Solutions
             </Link>
             <Link
               href="/pages/services/smart-distribution-solution"
-              className="block hover:text-[#FF7F06]"
+              className="block hover:text-white hover:bg-[#FF7F06] border-2 bg-[#24577F] backdrop-blur-3xl p-2 rounded-lg"
             >
               Distribution Solutions
             </Link>
             <Link
               href="/pages/services/transportation-service"
-              className="block hover:text-[#FF7F06]"
+              className="block hover:text-white hover:bg-[#FF7F06] border-2 bg-[#24577F] backdrop-blur-3xl p-2 rounded-lg"
             >
               Transportation Services
             </Link>
             <Link
               href="/pages/services/supply-chain-solution"
-              className="block hover:text-[#FF7F06]"
+              className="block hover:text-white hover:bg-[#FF7F06] border-2 bg-[#24577F] backdrop-blur-3xl p-2 rounded-lg"
             >
               Supply Chain Solutioning
+            </Link>
+            <Link
+              href="/pages/services/motherhood-service"
+              className="block hover:text-white hover:bg-[#FF7F06] border-2 bg-[#24577F] backdrop-blur-3xl p-2 rounded-lg"
+            >
+              MotherHood Service
             </Link>
           </PopoverPanel>
         </Popover>
@@ -76,6 +82,9 @@ export default function Header() {
           <PopoverPanel className="absolute top-15 left-0 mt-2 w-52 bg-black/20 border p-4 space-y-2 z-50 text-white shadow-xl">
             <Link href="/pages/about" className="block hover:text-[#FF7F06]">
               Our Partners
+            </Link>
+            <Link href="/pages/about" className="block hover:text-[#FF7F06]">
+              Careers
             </Link>
           </PopoverPanel>
         </Popover>
@@ -218,7 +227,10 @@ export default function Header() {
             Contact Us
           </Link>
 
-          <button onClick={() => setSidebarOpen(false)}  className="mt-6 w-full bg-[#FF7F06] text-white px-4 py-2 rounded-2xl font-bold border-2 border-[#24577F] hover:border-white hover:bg-[#24577F] hover:text-white transition duration-300">
+          <button
+            onClick={() => setSidebarOpen(false)}
+            className="mt-6 w-full bg-[#FF7F06] text-white px-4 py-2 rounded-2xl font-bold border-2 border-[#24577F] hover:border-white hover:bg-[#24577F] hover:text-white transition duration-300"
+          >
             Get in Touch
           </button>
         </div>

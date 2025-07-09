@@ -15,7 +15,7 @@ export default function AboutSection() {
           <div className="grid grid-cols-2 gap-4">
             <div className="w-full aspect-square overflow-hidden rounded-xl shadow">
               <Image
-                src="/test.jpeg"
+                src="/warehousing.jpg"
                 alt="Team 1"
                 width={500}
                 height={500}
