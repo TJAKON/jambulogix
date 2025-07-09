@@ -32,8 +32,12 @@ export default function Hero() {
           Experience the Future of
           <span className=" text-white"> Logistics</span>
         </h1>
-        <p className="text-white/80 mb-6 text-3xl">
+        {/* <p className="text-white/80 mb-6 text-3xl">
           Efficient. Reliable. <span className="text-[#FF7F06]">On Time</span>{" "}
+        </p> */}
+        <p className="text-white/80 mb-6 text-3xl capitalize">
+          Agile by Design{" "}
+          <span className="text-[#FF7F06]">Yours by Choice</span>{" "}
         </p>
       </div>
 

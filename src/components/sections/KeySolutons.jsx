@@ -88,41 +88,48 @@ const solutions = [
 
 export default function KeySolutions() {
   return (
-    <section className="bg-white/95 text-black px-4 sm:px-20 pt-28 pb-16 min-h-screen">
+    <section className="bg-white/95 text-black px-4 sm:px-20 pt-28 pb-16 min-h-screen relative">
       <div className="flex flex-col sm:flex-row gap-10">
         {/* Sticky Title */}
-        <div className="sm:w-1/3 flex flex-col items-center sm:items-start  space-y-6">
-          <h2 className="text-7xl font-bold md:sticky md:top-28 mb-3 text-center sm:text-left text-[#FF7F06]">
+        <div className="sm:w-2/5 flex flex-col items-center sm:items-start space-y-6">
+          <div className="w-full md:sticky md:top-28">
+            {/* Logo */}
             <Image
               src="/jlxx.png"
-              className="z-60"
               alt="Jambulogix Logo"
               width={180}
-              height={40}
+            height={40}
+              className="mx-auto sm:mx-0 mb-4"
             />
-            Smart. Scalable. Solutions.
-          </h2>
-          <p className="text-xl md:sticky md:top-100 text-gray-700 text-center sm:text-left">
-            we deliver fast, flexible, and tech-driven logistics solutions for
-            businesses of all sizes. From storage to delivery, our custom-built
-            services ensure visibility, speed, and reliability across your
-            supply chain.
-          </p>
+
+            {/* Title */}
+            <p className="text-3xl sm:text-4xl md:text-8xl font-bold text-[#FF7F06] text-center sm:text-left">
+              Smart. Scalable. Solutions.
+            </p>
+
+            {/* Description */}
+            <p className="text-sm sm:text-base md:text-lg font-medium text-gray-700 text-center sm:text-left mt-4">
+              We deliver fast, flexible, and tech-driven logistics solutions for
+              businesses of all sizes. From storage to delivery, our
+              custom-built services ensure visibility, speed, and reliability
+              across your supply chain.
+            </p>
+          </div>
         </div>
 
         {/* Grid Cards */}
-        <div className="sm:w-2/3">
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <div className="sm:w-3/5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             {solutions.map((item, idx) => (
               <div
                 key={idx}
-                className="bg-black/20 cursor-pointer backdrop-blur-3xl p-6 rounded-2xl shadow-sm border border-gray-200 hover:shadow-lg transition-all duration-200 ease-in-out"
+                className="bg-[#24577F]/80 cursor-pointer backdrop-blur-3xl p-12 rounded-3xl shadow-sm border border-gray-200 hover:shadow-lg transition-all duration-200 ease-in-out"
               >
                 <div className="flex flex-col h-full">
-                  <h4 className="text-3xl font-bold text-[#24577F] mb-2">
+                  <h4 className="text-3xl font-bold text-white mb-2">
                     {item.title}
                   </h4>
-                  <p className="text-xl text-black/80 leading-relaxed">
+                  <p className="text-lg text-white/60 leading-relaxed">
                     {item.description}
                   </p>
                 </div>

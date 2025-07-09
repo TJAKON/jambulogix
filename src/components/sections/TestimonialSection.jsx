@@ -41,12 +41,12 @@ const testimonials = [
 
 export default function TestimonialCarousel() {
   return (
-    <section className="bg-white/95 py-20 px-6 sm:px-20 text-black">
+    <section className="bg-white/95 py-6 md:py-20 px-4 sm:px-10 lg:px-20 text-black">
       <div className="max-w-6xl mx-auto text-center mb-12">
-        <h2 className="text-5xl font-bold text-[#FF7F06] mb-4">
+        <h2 className="text-4xl sm:text-4xl lg:text-5xl font-bold text-[#FF7F06] mb-4">
           What Our Clients Say
         </h2>
-        <p className="text-gray-700 text-lg">
+        <p className="text-gray-700 text-base sm:text-lg">
           Hear from our partners who trust Jambulogix to deliver excellence
           across every mile.
         </p>
@@ -55,31 +55,31 @@ export default function TestimonialCarousel() {
       <Swiper
         modules={[Autoplay]}
         autoplay={{ delay: 4000, disableOnInteraction: false }}
-        slidesPerView={2.5}
-        spaceBetween={30}
         loop
+        spaceBetween={20}
         breakpoints={{
-          0: { slidesPerView: 1.1 },
+          0: { slidesPerView: 1 },
           640: { slidesPerView: 1.5 },
+          768: { slidesPerView: 1.5 },
           1024: { slidesPerView: 2 },
         }}
-        className="max-w-6xl"
+        className="max-w-6xl mx-auto"
       >
         {testimonials.map((item, idx) => (
           <SwiperSlide key={idx}>
             <div className="h-full p-3">
-              <div className="bg-white/40 group border border-gray-200 hover:bg-[#24577F] shadow-xl rounded-xl p-8 h-full flex flex-col justify-between text-center transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
-                <Quote className="text-[#24577F] group-hover:text-white w-6 h-6 mb-4 mx-auto transition-colors" />
+              <div className="bg-white/40 group border border-gray-200 hover:bg-[#24577F] shadow-xl rounded-xl p-6 h-full flex flex-col justify-between text-center transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+                <Quote className="text-[#24577F] group-hover:text-white w-6 h-6 mb-3 mx-auto transition-colors" />
 
-                <p className="text-gray-800 group-hover:text-white text-base leading-relaxed mb-6 transition-colors">
+                <p className="text-gray-800 group-hover:text-white text-sm sm:text-base leading-relaxed mb-5 transition-colors">
                   "{item.message}"
                 </p>
 
                 <div>
-                  <p className="text-[#24577F] group-hover:text-[#FF7F06] font-bold transition-colors">
+                  <p className="text-[#24577F] group-hover:text-[#FF7F06] font-bold text-base transition-colors">
                     {item.name}
                   </p>
-                  <p className="text-sm text-gray-500 group-hover:text-white transition-colors">
+                  <p className="text-xs sm:text-sm text-gray-500 group-hover:text-white transition-colors">
                     {item.role}
                   </p>
                 </div>

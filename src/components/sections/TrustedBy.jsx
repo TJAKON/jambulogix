@@ -14,25 +14,24 @@ export default function TrustedBy() {
     "/Linkedin.svg",
   ];
 
-  // Repeat the array to ensure enough width for infinite scroll
-  const repeatedBrands = [...brands, ...brands, ...brands];
+  const repeatedBrands = [...brands, ...brands];
 
   return (
-    <section className="p-8 sm:p-20 bg-black/60 text-center text-black overflow-hidden">
-      <h2 className="text-5xl font-extrabold mb-12 text-[#FF7F06]">
+    <section className="p-6 sm:p-16 bg-black/60 text-center overflow-hidden">
+      <h2 className="text-3xl sm:text-5xl font-extrabold mb-10 text-[#FF7F06]">
         Trusted By
       </h2>
 
-      <div className="relative overflow-hidden whitespace-nowrap">
-        <div className="inline-block animate-marquee">
+      <div className="relative overflow-hidden">
+        <div className="whitespace-nowrap flex animate-marquee gap-10">
           {repeatedBrands.map((logo, index) => (
             <Image
               key={index}
               src={logo}
               alt={`Brand ${index + 1}`}
-              width={100}
+              width={80}
               height={40}
-              className="mx-8 inline-block"
+              className="inline-block object-contain"
             />
           ))}
         </div>
