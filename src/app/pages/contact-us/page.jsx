@@ -100,8 +100,8 @@ export default function Page() {
   return (
     <>
       <section
-        className="bg-[#070B2A] text-white py-32 sm:py-40 md:py-52 text-center bg-cover bg-center relative"
-        style={{ backgroundImage: "url('/6243815.jpg')" }}
+        className="bg-[#070B2A] text-white py-32 sm:py-40 md:py-44 text-center bg-cover  bg-bottom relative"
+        style={{ backgroundImage: "url('/1.jpg')" }}
       >
         {/* Dark Overlay */}
         <div className="absolute inset-0 bg-[#070B2A] opacity-70" />
@@ -285,6 +285,17 @@ export default function Page() {
         </div> */}
         </section>
       </div>
+      <section className="h-[400px] w-full">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3334.4801092970106!2d76.99134557528197!3d28.447734675766196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d179270965c3b%3A0xb3f0124d653de1b8!2sJambulogix%20Private%20Limited%20-%20NHQ!5e1!3m2!1sen!2sin!4v1752236997535!5m2!1sen!2sin"
+          width="100%"
+          height="100%"
+          style={{ border: 0 }}
+          allowFullScreen
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </section>
     </>
   );
 }

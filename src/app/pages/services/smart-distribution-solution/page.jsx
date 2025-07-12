@@ -12,13 +12,13 @@ const subServices = [
     title: "First Mile Service",
     description:
       "Our First Mile services are designed to move inventory swiftly from your warehouse or seller location to our distribution hubs or fulfillment centers. With deep regional coverage and a tech-enabled fleet, we ensure that your supply chain starts on time, every time.",
-    image: "/test.jpeg",
+    image: "/28.jpg",
   },
   {
     title: " Last Mile Service",
     description:
       "The Last Mile is the most crucial and customer-facing part of the supply chain. Our last-mile operations are built for high reliability and customer satisfaction, ensuring on-time deliveries with real-time updates.",
-    image: "/test.jpeg",
+    image: "/29.jpg",
   },
 ];
 
@@ -28,21 +28,21 @@ const steps = [
     title: "Order",
     description:
       "A request is initiated via our API, assigning a pickup rider within one hour for orders placed before 5 PM. The rider then collects the parcel from the customer’s doorstep.",
-    image: "/test.jpeg",
+    image: "/31.jpg",
   },
   {
     label: "Step 02:",
     title: "Smart Dispatch",
     description:
       "The parcel reaches our sorting or fulfilment centre, where it is scanned, quality-checked, and securely processed for return or further dispatch.",
-    image: "/test.jpeg",
+    image: "/34.jpg",
   },
   {
     label: "Step 03:",
     title: "On-Time Delivery",
     description:
       "The parcel is either returned to the seller, refurbished, or delivered to the next customer via optimized last-mile logistics.",
-    image: "/test.jpeg",
+    image: "/36.jpg",
   },
 ];
 
@@ -57,7 +57,7 @@ export default function Page() {
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/warehousing.jpg"
+            src="/26.jpg"
             alt="Smart Warehousing"
             fill
             className="object-cover brightness-60"
@@ -73,9 +73,9 @@ export default function Page() {
             className="text-5xl sm:text-8xl font-extrabold mb-5 leading-tight drop-shadow-lg"
           >
             Smart <span className="text-[#FF7F06]"> Distribution</span>
-            <br /> Faster{" "}
-            <span className="text-[#FF7F06] border-2 md:border-4 border-white px-3">
-              Solution
+            <br /> Smarter{" "}
+            <span className="text-[#FF7F06] hover:bg-white hover:text-[#24577F] border-2 md:border-4 border-white px-3">
+              Coverage
             </span>
           </motion.h1>
 
@@ -85,18 +85,19 @@ export default function Page() {
             transition={{ delay: 0.2, duration: 0.6 }}
             className="text-lg sm:text-2xl text-white/90 max-w-xl mb-8"
           >
-            Fast, efficient, and data-driven distribution services tailored for
-            your business growth.
+            Efficient inventory flow, intelligent route mapping, and real-time
+            control—our distribution services power your brand's last-mile reach
+            and market scalability.
           </motion.p>
 
           {/* <motion.button
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.4, duration: 0.5 }}
-            className="bg-[#FF7F06] px-8 py-4 rounded-full font-semibold hover:bg-[#d96800] shadow-lg transition"
-          >
-            Explore Warehousing
-          </motion.button> */}
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ delay: 0.4, duration: 0.5 }}
+                  className="bg-[#FF7F06] px-8 py-4 rounded-full font-semibold hover:bg-[#d96800] shadow-lg transition"
+                >
+                  Explore Warehousing
+                </motion.button> */}
         </div>
       </section>
 
@@ -106,19 +107,18 @@ export default function Page() {
           {/* Image Section */}
           <div>
             <Image
-              src="/test.jpeg"
+              src="/32.jpg"
               alt="Warehouse"
               width={600}
               height={400}
-              className="rounded-2xl shadow-xl w-full h-auto"
+              className="rounded-2xl shadow-xl w-full h-[600px] object-cover"
             />
           </div>
 
           {/* Text Section */}
           <div>
-            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-extrabold text-[#24577F] mb-6 leading-tight">
-              What is Smart <span className="text-[#FF7F06]">Distribution</span>
-              ?
+            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-[#24577F] mb-6 leading-tight">
+              Why Smart <span className="text-[#FF7F06]">Distribution..</span>?
             </h2>
 
             <p className="text-gray-600 text-base sm:text-lg leading-relaxed mb-4">
@@ -173,7 +173,7 @@ export default function Page() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: idx * 0.2, duration: 0.6 }}
-              className="rounded-2xl bg-[#112233] p-6 shadow-lg hover:scale-105 transition-transform"
+              className="rounded-2xl text-center bg-[#112233] p-6 shadow-lg hover:scale-105 transition-transform"
             >
               <h3 className=" text-xl md:text-3xl font-extrabold mb-2 text-[#FF7F06]">
                 {item.value}
@@ -295,9 +295,9 @@ export default function Page() {
             transition={{ staggerChildren: 0.2 }}
           >
             {[
-              { img: "/test.jpeg", label: "E-commerce Enterprises" },
-              { img: "/test.jpeg", label: "Online Sellers & SMEs" },
-              { img: "/test.jpeg", label: "Brands & D2C Companies" },
+              { img: "/19.jpg", label: "E-commerce Enterprises" },
+              { img: "/18.jpg", label: "Online Sellers & SMEs" },
+              { img: "/10.jpg", label: "Brands & D2C Companies" },
             ].map((item, idx) => (
               <motion.div
                 key={idx}
@@ -311,7 +311,7 @@ export default function Page() {
                   alt={item.label}
                   width={320}
                   height={200}
-                  className="rounded-xl mx-auto mb-6 group-hover:scale-105 transition"
+                  className="rounded-xl h-60 bg-cover object-cover mx-auto mb-6 group-hover:scale-105 transition"
                 />
                 <p className="font-semibold text-lg text-gray-700">
                   {item.label}
@@ -406,7 +406,7 @@ export default function Page() {
               alt={activeStep.title}
               width={550}
               height={350}
-              className="rounded-2xl w-full h-auto shadow-lg transform hover:scale-[1.02] transition"
+              className="rounded-2xl w-full h-[420px] object-cover shadow-lg transform hover:scale-[1.02] transition"
             />
             <div className="text-left">
               <h4 className="text-lg sm:text-6xl font-semibold text-[#FF7F06] mb-4">

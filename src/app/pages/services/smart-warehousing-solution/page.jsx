@@ -12,31 +12,31 @@ const subServices = [
     title: "Sorting Centre",
     description:
       "Our strategically located sorting centres ensure faster and more accurate parcel classification, optimized for regional and last-mile distribution. Using process automation and trained manpower, we reduce delays and enable real-time tracking across shipment flows.",
-    image: "/test.jpeg",
+    image: "/46.jpg",
   },
   {
     title: "Fulfilment Centre",
     description:
       "Our fulfilment centres are designed to handle picking, packing, and shipping for both B2B and D2C customers. Whether it's eCommerce orders or bulk shipments, we ensure precision handling, inventory accuracy, and minimal lead time.",
-    image: "/test.jpeg",
+    image: "/45.jpg",
   },
   {
     title: "Dark Store",
     description:
       "To meet the growing need for quick commerce and hyperlocal delivery, our dark stores are designed to act as micro-fulfilment hubs that bring inventory closer to your end customers.",
-    image: "/test.jpeg",
+    image: "/42.jpg",
   },
   {
     title: "Cross Dock",
     description:
       "Our cross-docking facilities reduce storage time and speed up freight movement by enabling direct inbound-to-outbound transfers. It’s the ideal solution for businesses seeking to reduce warehousing costs and increase flow-through efficiency.",
-    image: "/test.jpeg",
+    image: "/44.jpg",
   },
   {
     title: "Hub In Hub",
     description:
       "With our Hub-in-Hub model, we extend warehousing capabilities deep into Tier II/III cities by embedding micro-warehouses within major regional hubs — increasing service coverage and cutting down delivery times.",
-    image: "/test.jpeg",
+    image: "/41.jpg",
   },
 ];
 
@@ -46,21 +46,21 @@ const steps = [
     title: "Pick-Up",
     description:
       "A request is initiated via our API, assigning a pickup rider within one hour for orders placed before 5 PM. The rider then collects the parcel from the customer’s doorstep.",
-    image: "/test.jpeg",
+    image: "/63.png",
   },
   {
     label: "Step 02:",
     title: "Processing",
     description:
       "The parcel reaches our sorting or fulfilment centre, where it is scanned, quality-checked, and securely processed for return or further dispatch.",
-    image: "/test.jpeg",
+    image: "/65.png",
   },
   {
     label: "Step 03:",
     title: "Return or Delivery",
     description:
       "The parcel is either returned to the seller, refurbished, or delivered to the next customer via optimized last-mile logistics.",
-    image: "/test.jpeg",
+    image: "/64.png",
   },
 ];
 
@@ -90,7 +90,11 @@ export default function Page() {
             transition={{ duration: 0.8 }}
             className="text-5xl sm:text-8xl font-extrabold mb-5 leading-tight drop-shadow-lg"
           >
-            Smarter <span className="text-[#FF7F06]"> Warehousing</span><br /> Faster <span className="text-[#FF7F06] border-2 md:border-4 border-white px-3">Growth</span>
+            Smarter <span className="text-[#FF7F06]"> Warehousing</span>
+            <br /> Faster{" "}
+            <span className="text-[#FF7F06] hover:bg-white hover:text-[#24577F] border-2 md:border-4 border-white px-3">
+              Growth
+            </span>
           </motion.h1>
 
           <motion.p
@@ -120,7 +124,8 @@ export default function Page() {
           {/* Text Section */}
           <div>
             <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-[#24577F] mb-6 leading-tight">
-              What is Smart <span className="text-[#FF7F06]">Warehousing</span>
+              What is Smart{" "}
+              <span className="text-[#FF7F06]">Warehousing..</span>?
             </h2>
 
             <p className="text-gray-600 text-base sm:text-lg leading-relaxed mb-4">
@@ -143,11 +148,11 @@ export default function Page() {
           {/* Image Section */}
           <div>
             <Image
-              src="/test.jpeg"
+              src="/38.jpg"
               alt="Warehouse"
               width={600}
               height={400}
-              className="rounded-2xl shadow-xl w-full h-auto"
+              className="rounded-2xl shadow-xl w-full h-[600px] object-cover"
             />
           </div>
         </div>
@@ -187,7 +192,7 @@ export default function Page() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: idx * 0.2, duration: 0.6 }}
-              className="rounded-2xl bg-[#112233] p-6 shadow-lg hover:scale-105 transition-transform"
+              className="rounded-2xl text-center bg-[#112233] p-6 shadow-lg hover:scale-105 transition-transform"
             >
               <h3 className=" text-xl md:text-3xl font-extrabold mb-2 text-[#FF7F06]">
                 {item.value}
@@ -201,7 +206,7 @@ export default function Page() {
       </section>
 
       {/* Sub Services Section */}
-      <section className="bg-[#F9FAFB] py-20 px-6 sm:px-20 border-t border-gray-200">
+      <section className="bg-[#F9FAFB] py-20 px-6 mx-auto sm:px-20 border-t border-gray-200">
         <div className="max-w-8xl mx-auto">
           <div className="flex flex-wrap gap-0 md:gap-6 border-b border-[#24577F] mb-6 justify-center">
             {subServices.map((service) => (
@@ -224,20 +229,27 @@ export default function Page() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="grid sm:grid-cols-2 gap-10 items-center"
+            className="flex flex-col md:flex-row items-center gap-8 "
           >
-            <Image
-              src={activeTab.image}
-              alt={activeTab.title}
-              width={500}
-              height={300}
-              className="rounded-2xl w-full h-auto shadow-md"
-            />
-            <div>
-              <h3 className="text-5xl font-extrabold text-[#24577F] mb-4">
+            {/* Image */}
+            <div className="w-full md:w-2/3">
+              <Image
+                src={activeTab.image}
+                alt={activeTab.title}
+                width={600}
+                height={400}
+                className="rounded-2xl w-full h-[250px] sm:h-[350px] md:h-[450px] object-cover shadow-lg"
+              />
+            </div>
+
+            {/* Text */}
+            <div className="w-full md:w-1/3 text-center md:text-left">
+              <h3 className="text-3xl sm:text-5xl md:text-6xl font-extrabold text-[#FF7F06] mb-4 leading-tight">
                 {activeTab.title}
               </h3>
-              <p className="text-gray-600 text-lg">{activeTab.description}</p>
+              <p className="text-gray-600 text-base sm:text-lg leading-relaxed">
+                {activeTab.description}
+              </p>
             </div>
           </motion.div>
         </div>
@@ -302,9 +314,9 @@ export default function Page() {
             transition={{ staggerChildren: 0.2 }}
           >
             {[
-              { img: "/test.jpeg", label: "E-commerce Enterprises" },
-              { img: "/test.jpeg", label: "Online Sellers & SMEs" },
-              { img: "/test.jpeg", label: "Brands & D2C Companies" },
+              { img: "/19.jpg", label: "E-commerce Enterprises" },
+              { img: "/18.jpg", label: "Online Sellers & SMEs" },
+              { img: "/10.jpg", label: "Brands & D2C Companies" },
             ].map((item, idx) => (
               <motion.div
                 key={idx}
@@ -318,7 +330,7 @@ export default function Page() {
                   alt={item.label}
                   width={320}
                   height={200}
-                  className="rounded-xl mx-auto mb-6 group-hover:scale-105 transition"
+                  className="rounded-xl h-60 bg-cover object-cover mx-auto mb-6 group-hover:scale-105 transition"
                 />
                 <p className="font-semibold text-lg text-gray-700">
                   {item.label}
@@ -413,7 +425,7 @@ export default function Page() {
               alt={activeStep.title}
               width={550}
               height={350}
-              className="rounded-2xl w-full h-auto shadow-lg transform hover:scale-[1.02] transition"
+              className="rounded-2xl w-full h-[420px] object-cover shadow-lg transform hover:scale-[1.02] transition"
             />
             <div className="text-left">
               <h4 className="text-lg sm:text-6xl font-semibold text-[#FF7F06] mb-4">

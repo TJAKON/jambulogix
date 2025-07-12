@@ -45,31 +45,25 @@ export default function Header() {
               href="/pages/services/smart-warehousing-solution"
               className="block hover:text-white hover:bg-[#FF7F06] border-2 bg-[#24577F] backdrop-blur-3xl p-2 rounded-lg"
             >
-              Smart Warehousing Solutions
+              Smart Warehousing Services
             </Link>
             <Link
               href="/pages/services/smart-distribution-solution"
               className="block hover:text-white hover:bg-[#FF7F06] border-2 bg-[#24577F] backdrop-blur-3xl p-2 rounded-lg"
             >
-              Distribution Solutions
+              Smart Distribution Services
             </Link>
             <Link
               href="/pages/services/transportation-service"
               className="block hover:text-white hover:bg-[#FF7F06] border-2 bg-[#24577F] backdrop-blur-3xl p-2 rounded-lg"
             >
-              Transportation Services
+              Smart Transportation Services
             </Link>
             <Link
               href="/pages/services/supply-chain-solution"
               className="block hover:text-white hover:bg-[#FF7F06] border-2 bg-[#24577F] backdrop-blur-3xl p-2 rounded-lg"
             >
               Supply Chain Solutioning
-            </Link>
-            <Link
-              href="/pages/services/motherhood-service"
-              className="block hover:text-white hover:bg-[#FF7F06] border-2 bg-[#24577F] backdrop-blur-3xl p-2 rounded-lg"
-            >
-              MotherHood Service
             </Link>
           </PopoverPanel>
         </Popover>
@@ -79,29 +73,50 @@ export default function Header() {
           <PopoverButton className="flex items-center gap-1 hover:text-[#FF7F06] transition duration-200 focus:outline-none">
             Company <ChevronDownIcon className="h-5 w-5" />
           </PopoverButton>
-          <PopoverPanel className="absolute top-15 left-0 mt-2 w-52 bg-black/20 border p-4 space-y-2 z-50 text-white shadow-xl">
-            <Link href="/pages/about" className="block hover:text-[#FF7F06]">
+          <PopoverPanel className="absolute top-15 left-0 mt-2 w-90 font-bold bg-black/40 backdrop-blur-md p-4 space-y-2 z-50 text-white shadow-xl">
+            <Link
+              href="/pages/company/OurPartners"
+              className="block hover:text-white hover:bg-[#FF7F06] border-2 bg-[#24577F] backdrop-blur-3xl p-2 rounded-lg"
+            >
               Our Partners
             </Link>
-            <Link href="/pages/about" className="block hover:text-[#FF7F06]">
+            <Link
+              href="/pages/company/OurTeam"
+              className="block hover:text-white hover:bg-[#FF7F06] border-2 bg-[#24577F] backdrop-blur-3xl p-2 rounded-lg"
+            >
+              Our Team
+            </Link>
+            <Link
+              href="/pages/company/Careers"
+              className="block hover:text-white hover:bg-[#FF7F06] border-2 bg-[#24577F] backdrop-blur-3xl p-2 rounded-lg"
+            >
               Careers
             </Link>
           </PopoverPanel>
         </Popover>
 
         {/* Resources */}
-        <Popover className="relative group">
+        {/* <Popover className="relative group">
           <PopoverButton className="flex items-center gap-1 hover:text-[#FF7F06] transition duration-200 focus:outline-none">
             Resources <ChevronDownIcon className="h-5 w-5" />
           </PopoverButton>
-          <PopoverPanel className="absolute top-15 left-0 mt-2 w-52 bg-black/20 p-4 space-y-2 z-50 text-white shadow-xl border">
-            <Link href="#" className="block hover:text-[#FF7F06]">
+          <PopoverPanel className="absolute top-15 left-0 mt-2 w-90 font-bold bg-black/40 backdrop-blur-md p-4 space-y-2 z-50 text-white shadow-xl">
+            <Link
+              href="/pages/services/smart-warehousing-solution"
+              className="block hover:text-white hover:bg-[#FF7F06] border-2 bg-[#24577F] backdrop-blur-3xl p-2 rounded-lg"
+            >
               Blogs
             </Link>
           </PopoverPanel>
-        </Popover>
+        </Popover> */}
 
         {/* Static Links */}
+        <Link
+          href="/pages/services/motherhood-service"
+          className="text-[#FF7F06] hover:text-white transition duration-200 font-bold"
+        >
+          Mother Hood
+        </Link>
         <Link
           href="/pages/about"
           className="hover:text-[#FF7F06] transition duration-200"

@@ -98,7 +98,7 @@ export default function KeySolutions() {
               src="/jlxx.png"
               alt="Jambulogix Logo"
               width={180}
-            height={40}
+              height={40}
               className="mx-auto sm:mx-0 mb-4"
             />
 
@@ -125,7 +125,14 @@ export default function KeySolutions() {
                 key={idx}
                 className="bg-[#24577F]/80 cursor-pointer backdrop-blur-3xl p-12 rounded-3xl shadow-sm border border-gray-200 hover:shadow-lg transition-all duration-200 ease-in-out"
               >
-                <div className="flex flex-col h-full">
+                <div className="flex flex-col h-full items-start">
+                  <Image
+                    src="/delivery.png" // <-- Replace with your actual icon
+                    alt="Icon"
+                    width={32}
+                    height={32}
+                    className="mb-4 w-24"
+                  />
                   <h4 className="text-3xl font-bold text-white mb-2">
                     {item.title}
                   </h4>

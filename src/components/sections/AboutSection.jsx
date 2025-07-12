@@ -15,7 +15,7 @@ export default function AboutSection() {
           <div className="grid grid-cols-2 gap-4">
             <div className="w-full aspect-square overflow-hidden rounded-xl shadow">
               <Image
-                src="/warehousing.jpg"
+                src="/8.jpg"
                 alt="Team 1"
                 width={500}
                 height={500}
@@ -24,7 +24,7 @@ export default function AboutSection() {
             </div>
             <div className="w-full aspect-square overflow-hidden rounded-xl shadow">
               <Image
-                src="/test1.jpg"
+                src="/4.jpg"
                 alt="Warehouse 1"
                 width={500}
                 height={500}
@@ -33,7 +33,7 @@ export default function AboutSection() {
             </div>
             <div className="w-full aspect-square overflow-hidden rounded-xl shadow">
               <Image
-                src="/test2.jpg"
+                src="/12.jpg"
                 alt="Transport 1"
                 width={500}
                 height={500}
@@ -42,7 +42,7 @@ export default function AboutSection() {
             </div>
             <div className="w-full aspect-square overflow-hidden rounded-xl shadow">
               <Image
-                src="/test3.jpg"
+                src="/13.jpg"
                 alt="Delivery 1"
                 width={500}
                 height={500}

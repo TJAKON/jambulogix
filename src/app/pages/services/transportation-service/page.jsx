@@ -9,40 +9,52 @@ import ContactSection from "@/components/sections/ContactSection";
 
 const subServices = [
   {
-    title: "First Mile Service",
+    title: "FTL (Full Truck Load)",
     description:
-      "Our First Mile services are designed to move inventory swiftly from your warehouse or seller location to our distribution hubs or fulfillment centers. With deep regional coverage and a tech-enabled fleet, we ensure that your supply chain starts on time, every time.",
-    image: "/test.jpeg",
+      "Our FTL services offer dedicated truck capacity for clients with bulk shipments or high-volume movement needs. Ideal for B2B and enterprise clients, we ensure on-time dispatches, real-time tracking, and complete consignment visibility.",
+    image: "/16.jpg",
   },
   {
-    title: " Last Mile Service",
+    title: "Surface Express",
     description:
-      "The Last Mile is the most crucial and customer-facing part of the supply chain. Our last-mile operations are built for high reliability and customer satisfaction, ensuring on-time deliveries with real-time updates.",
-    image: "/test.jpeg",
+      "Speed meets scale with our Surface Express service — designed for businesses that need faster-than-standard transit times without the cost of air. This solution leverages our extensive road network and strategic hub placement to ensure timely delivery with high operational efficiency.",
+    image: "/22.jpg",
+  },
+  {
+    title: "Air Express",
+    description:
+      "When every minute counts, our Air Express logistics ensures swift movement of high-value or urgent consignments across India. Backed by alliances with leading domestic air carriers, we provide dependable coverage and assured timelines.",
+    image: "/21.jpg",
+  },
+  {
+    title: "Rail Parcel",
+    description:
+      "Sustainable, secure, and scalable — our Rail Parcel service leverages Indian Railways' vast network to offer cost-efficient cargo movement for clients shipping intercity and bulk volumes.",
+    image: "/3.jpg",
   },
 ];
 
 const steps = [
   {
-    label: "Step 01:",
-    title: "Order",
+    label: "Step 1",
+    title: "You Schedule a Pickup",
+    image: "/24.jpg",
     description:
-      "A request is initiated via our API, assigning a pickup rider within one hour for orders placed before 5 PM. The rider then collects the parcel from the customer’s doorstep.",
-    image: "/test.jpeg",
+      "Use our web dashboard or API to schedule a pickup from your warehouse or store—anywhere in India.",
   },
   {
-    label: "Step 02:",
-    title: "Smart Dispatch",
+    label: "Step 2",
+    title: "We Collect & Sort",
+    image: "/23.jpg",
     description:
-      "The parcel reaches our sorting or fulfilment centre, where it is scanned, quality-checked, and securely processed for return or further dispatch.",
-    image: "/test.jpeg",
+      "Our logistics team collects your parcel, sorts it at the nearest hub, and prepares it for the fastest route.",
   },
   {
-    label: "Step 03:",
-    title: "On-Time Delivery",
+    label: "Step 3",
+    title: "Real-Time Delivery & Updates",
+    image: "/asset.png",
     description:
-      "The parcel is either returned to the seller, refurbished, or delivered to the next customer via optimized last-mile logistics.",
-    image: "/test.jpeg",
+      "From dispatch to doorstep, we provide real-time tracking, delivery confirmation, and customer feedback collection.",
   },
 ];
 
@@ -57,7 +69,7 @@ export default function Page() {
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/warehousing.jpg"
+            src="/2.jpg"
             alt="Smart Warehousing"
             fill
             className="object-cover brightness-60"
@@ -72,10 +84,11 @@ export default function Page() {
             transition={{ duration: 0.8 }}
             className="text-5xl sm:text-8xl font-extrabold mb-5 leading-tight drop-shadow-lg"
           >
-            Smart <span className="text-[#FF7F06]"> Distribution</span>
-            <br /> Faster{" "}
-            <span className="text-[#FF7F06] border-2 md:border-4 border-white px-3">
-              Solution
+            Smarter <span className="text-[#FF7F06]"> Transportation</span>
+            <br />
+            Faster{" "}
+            <span className="text-[#FF7F06] hover:bg-white hover:text-[#24577F] border-2 md:border-4 border-white px-3">
+              Deliveries
             </span>
           </motion.h1>
 
@@ -85,55 +98,60 @@ export default function Page() {
             transition={{ delay: 0.2, duration: 0.6 }}
             className="text-lg sm:text-2xl text-white/90 max-w-xl mb-8"
           >
-            Fast, efficient, and data-driven distribution services tailored for
-            your business growth.
+            Pan-India coverage with reliable, tech-enabled cargo movement—built
+            to optimize cost, speed, and service across every route.
           </motion.p>
 
           {/* <motion.button
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.4, duration: 0.5 }}
-            className="bg-[#FF7F06] px-8 py-4 rounded-full font-semibold hover:bg-[#d96800] shadow-lg transition"
-          >
-            Explore Warehousing
-          </motion.button> */}
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ delay: 0.4, duration: 0.5 }}
+                  className="bg-[#FF7F06] px-8 py-4 rounded-full font-semibold hover:bg-[#d96800] shadow-lg transition"
+                >
+                  Explore Warehousing
+                </motion.button> */}
         </div>
       </section>
 
       {/* What is Smart Warehousing */}
       <section className="py-16 px-6 sm:px-12 md:px-20 bg-white">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+        <div className="max-w-8xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
           {/* Image Section */}
           <div>
             <Image
-              src="/test.jpeg"
+              src="/3.jpg"
               alt="Warehouse"
               width={600}
               height={400}
-              className="rounded-2xl shadow-xl w-full h-auto"
+              className="rounded-2xl shadow-xl  w-full h-[580px] object-cover"
             />
           </div>
 
           {/* Text Section */}
           <div>
-            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-extrabold text-[#24577F] mb-6 leading-tight">
-              What is Smart <span className="text-[#FF7F06]">Distribution</span>
-              ?
+            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-[#24577F] mb-6 leading-tight">
+              Why Smart <span className="text-[#FF7F06]">Transportation</span>?
             </h2>
 
-            <p className="text-gray-600 text-base sm:text-lg leading-relaxed mb-4">
-              At Jambulogix, distribution isn't just a step in the supply chain
-              — it's where customer satisfaction truly begins. Our distribution
-              network is engineered for speed, precision, and scalability.
-              Whether it's initiating the journey with First Mile or delivering
-              the final promise with Last Mile, we ensure every shipment moves
-              efficiently, reliably, and with full visibility.
+            <p className="text-gray-600 text-base sm:text-lg leading-relaxed mb-3">
+              At Jambulogix, transportation is the backbone of our supply chain
+              solutions. With a robust and agile network, we provide pan-India
+              freight movement through road, air, and rail — all managed under a
+              single, tech-enabled platform. From full truckload operations to
+              time-sensitive air express, our multimodal approach ensures fast,
+              safe, and cost-effective deliveries.
             </p>
 
+            <p className="text-gray-600 text-base sm:text-lg leading-relaxed mb-3">
+              We operate an asset-light model, allowing flexibility,
+              scalability, and seamless connectivity across all major transport
+              corridors in India.
+            </p>
             <p className="text-gray-600 text-base sm:text-lg leading-relaxed">
-              By combining physical infrastructure with digital intelligence, we
-              help brands across sectors streamline their movement of goods —
-              from origin to doorstep.
+              Our transportation vertical ensures consistent performance across
+              diverse industries — from retail and FMCG to engineering and
+              electronics — by blending flexibility, affordability, and
+              real-time visibility into every shipment.
             </p>
           </div>
         </div>
@@ -173,7 +191,7 @@ export default function Page() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: idx * 0.2, duration: 0.6 }}
-              className="rounded-2xl bg-[#112233] p-6 shadow-lg hover:scale-105 transition-transform"
+              className="rounded-2xl bg-[#112233] p-6 shadow-lg hover:scale-105 transition-transform text-center"
             >
               <h3 className=" text-xl md:text-3xl font-extrabold mb-2 text-[#FF7F06]">
                 {item.value}
@@ -295,9 +313,9 @@ export default function Page() {
             transition={{ staggerChildren: 0.2 }}
           >
             {[
-              { img: "/test.jpeg", label: "E-commerce Enterprises" },
-              { img: "/test.jpeg", label: "Online Sellers & SMEs" },
-              { img: "/test.jpeg", label: "Brands & D2C Companies" },
+              { img: "/19.jpg", label: "E-commerce Enterprises" },
+              { img: "/18.jpg", label: "Online Sellers & SMEs" },
+              { img: "/10.jpg", label: "Brands & D2C Companies" },
             ].map((item, idx) => (
               <motion.div
                 key={idx}
@@ -311,7 +329,7 @@ export default function Page() {
                   alt={item.label}
                   width={320}
                   height={200}
-                  className="rounded-xl mx-auto mb-6 group-hover:scale-105 transition"
+                  className="rounded-xl h-60 bg-cover object-cover mx-auto mb-6 group-hover:scale-105 transition"
                 />
                 <p className="font-semibold text-lg text-gray-700">
                   {item.label}
@@ -406,10 +424,10 @@ export default function Page() {
               alt={activeStep.title}
               width={550}
               height={350}
-              className="rounded-2xl w-full h-auto shadow-lg transform hover:scale-[1.02] transition"
+              className="rounded-2xl w-full h-[560px] object-cover shadow-lg transform hover:scale-[1.02] transition"
             />
             <div className="text-left">
-              <h4 className="text-lg sm:text-6xl font-semibold text-[#FF7F06] mb-4">
+              <h4 className="text-lg sm:text-6xl font-semibold text-[#24577F] mb-4">
                 {activeStep.title}
               </h4>
               <p className="text-gray-600 text-base sm:text-lg leading-relaxed">
