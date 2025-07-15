@@ -68,7 +68,7 @@ export default function TestimonialCarousel() {
         {testimonials.map((item, idx) => (
           <SwiperSlide key={idx}>
             <div className="h-full p-3">
-              <div className="bg-white/40 group border border-gray-200 hover:bg-[#24577F] shadow-xl rounded-xl p-6 h-full flex flex-col justify-between text-center transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+              <div className="bg-white/40 group border border-gray-200 hover:bg-[#24577F] shadow-xl rounded-2xl p-10 h-full flex flex-col justify-between text-center transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
                 <Quote className="text-[#24577F] group-hover:text-white w-6 h-6 mb-3 mx-auto transition-colors" />
 
                 <p className="text-gray-800 group-hover:text-white text-sm sm:text-base leading-relaxed mb-5 transition-colors">

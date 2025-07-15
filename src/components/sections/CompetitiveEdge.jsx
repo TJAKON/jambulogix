@@ -59,14 +59,14 @@ export default function CompetitiveEdge() {
           })}
         </div>
       </section>
-      <section className="relative w-full h-20 md:h-64">
+      {/* <section className="relative w-full h-20 md:h-64">
         <Image
           src="/49.jpg"
           alt="test"
           fill
           className="object-cover h-20 md:h-64"
         />
-      </section>
+      </section> */}
     </>
   );
 }

@@ -9,16 +9,16 @@ import ContactSection from "@/components/sections/ContactSection";
 
 const subServices = [
   {
-    title: "First Mile Service",
+    title: "Hub Operations & Optimization (Hub Care)",
     description:
-      "Our First Mile services are designed to move inventory swiftly from your warehouse or seller location to our distribution hubs or fulfillment centers. With deep regional coverage and a tech-enabled fleet, we ensure that your supply chain starts on time, every time.",
-    image: "/test.jpeg",
+      "Our Hub Care service is designed to streamline and optimize high-throughput logistics hubs. Whether it’s managing inventory flow, reducing dwell time, or enabling quick dispatch turnaround, we ensure your central operations run with clockwork precision.",
+    image: "/82.jpg",
   },
   {
-    title: " Last Mile Service",
+    title: "Distribution Solutioning",
     description:
-      "The Last Mile is the most crucial and customer-facing part of the supply chain. Our last-mile operations are built for high reliability and customer satisfaction, ensuring on-time deliveries with real-time updates.",
-    image: "/test.jpeg",
+      "Every business has unique distribution challenges — and our Distribution Solutioning service is built to address them. Whether you’re an eCommerce brand scaling across India or a manufacturer needing better market reach, we craft customized distribution strategies based on your geography, product type, and customer base.",
+    image: "/81.jpg",
   },
 ];
 
@@ -53,11 +53,12 @@ export default function Page() {
   return (
     <>
       {/* Hero Section */}
+
       <section className="relative w-full h-screen overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/warehousing.jpg"
+            src="/79.jpg"
             alt="Smart Warehousing"
             fill
             className="object-cover brightness-60"
@@ -65,17 +66,18 @@ export default function Page() {
         </div>
 
         {/* Content */}
-        <div className="relative z-10 h-full flex flex-col justify-center items-start px-6 sm:px-16 max-w-7xl mx-auto text-white">
+        <div className="relative z-10 h-full flex flex-col justify-center items-center px-6 sm:px-16 max-w-7xl mx-auto text-white">
           <motion.h1
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-5xl sm:text-8xl font-extrabold mb-5 leading-tight drop-shadow-lg"
           >
-            Smart <span className="text-[#FF7F06]"> Distribution</span>
-            <br /> Faster{" "}
-            <span className="text-[#FF7F06] border-2 md:border-4 border-white px-3">
-              Solution
+            Smarter <span className="text-[#FF7F06]"> Supply Chain</span>
+            <br />
+            Seamless{" "}
+            <span className="text-[#FF7F06] hover:bg-white hover:text-[#24577F] border-2 md:border-4 border-white px-3">
+              Execution
             </span>
           </motion.h1>
 
@@ -85,56 +87,55 @@ export default function Page() {
             transition={{ delay: 0.2, duration: 0.6 }}
             className="text-lg sm:text-2xl text-white/90 max-w-xl mb-8"
           >
-            Fast, efficient, and data-driven distribution services tailored for
-            your business growth.
+            Pan-India coverage with reliable, tech-enabled cargo movement—built
+            to optimize cost, speed, and service across every route.
           </motion.p>
 
           {/* <motion.button
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.4, duration: 0.5 }}
-            className="bg-[#FF7F06] px-8 py-4 rounded-full font-semibold hover:bg-[#d96800] shadow-lg transition"
-          >
-            Explore Warehousing
-          </motion.button> */}
+                        initial={{ opacity: 0, scale: 0.95 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ delay: 0.4, duration: 0.5 }}
+                        className="bg-[#FF7F06] px-8 py-4 rounded-full font-semibold hover:bg-[#d96800] shadow-lg transition"
+                      >
+                        Explore Warehousing
+                      </motion.button> */}
         </div>
       </section>
 
       {/* What is Smart Warehousing */}
       <section className="py-16 px-6 sm:px-12 md:px-20 bg-white">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-          {/* Image Section */}
-          <div>
-            <Image
-              src="/test.jpeg"
-              alt="Warehouse"
-              width={600}
-              height={400}
-              className="rounded-2xl shadow-xl w-full h-auto"
-            />
-          </div>
-
+        <div className="max-w-8xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
           {/* Text Section */}
           <div>
             <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-extrabold text-[#24577F] mb-6 leading-tight">
-              What is Smart <span className="text-[#FF7F06]">Distribution</span>
-              ?
+              What is <span className="text-[#FF7F06]">Supply Chain</span>?
             </h2>
 
             <p className="text-gray-600 text-base sm:text-lg leading-relaxed mb-4">
-              At Jambulogix, distribution isn't just a step in the supply chain
-              — it's where customer satisfaction truly begins. Our distribution
-              network is engineered for speed, precision, and scalability.
-              Whether it's initiating the journey with First Mile or delivering
-              the final promise with Last Mile, we ensure every shipment moves
-              efficiently, reliably, and with full visibility.
+              In a world where speed, accuracy, and adaptability define
+              competitive advantage, Jambulogix’s Supply Chain Solutioning
+              services empower businesses to build smarter, leaner, and more
+              responsive logistics models. From hub operations to tailored
+              distribution strategies, we bring deep domain expertise and
+              tech-enabled processes to reimagine your supply chain from the
+              ground up.
             </p>
 
             <p className="text-gray-600 text-base sm:text-lg leading-relaxed">
-              By combining physical infrastructure with digital intelligence, we
-              help brands across sectors streamline their movement of goods —
-              from origin to doorstep.
+              Our goal is simple: optimize your operations, minimize cost, and
+              maximize service experience — whether you're scaling up or
+              navigating complexity.
             </p>
+          </div>
+          {/* Image Section */}
+          <div>
+            <Image
+              src="/61.jpg"
+              alt="Warehouse"
+              width={600}
+              height={400}
+              className="rounded-2xl shadow-xl w-full h-[600px] object-cover"
+            />
           </div>
         </div>
       </section>
@@ -173,7 +174,7 @@ export default function Page() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: idx * 0.2, duration: 0.6 }}
-              className="rounded-2xl bg-[#112233] p-6 shadow-lg hover:scale-105 transition-transform"
+              className="rounded-2xl text-center bg-[#112233] p-6 shadow-lg hover:scale-105 transition-transform"
             >
               <h3 className=" text-xl md:text-3xl font-extrabold mb-2 text-[#FF7F06]">
                 {item.value}
@@ -219,7 +220,7 @@ export default function Page() {
                 alt={activeTab.title}
                 width={600}
                 height={400}
-                className="rounded-2xl w-full h-[250px] sm:h-[350px] md:h-[450px] object-cover shadow-lg"
+                className="rounded-2xl w-full h-[250px] sm:h-[350px] md:h-[520px] object-cover shadow-lg"
               />
             </div>
 
@@ -295,9 +296,9 @@ export default function Page() {
             transition={{ staggerChildren: 0.2 }}
           >
             {[
-              { img: "/test.jpeg", label: "E-commerce Enterprises" },
-              { img: "/test.jpeg", label: "Online Sellers & SMEs" },
-              { img: "/test.jpeg", label: "Brands & D2C Companies" },
+              { img: "/19.jpg", label: "E-commerce Enterprises" },
+              { img: "/18.jpg", label: "Online Sellers & SMEs" },
+              { img: "/10.jpg", label: "Brands & D2C Companies" },
             ].map((item, idx) => (
               <motion.div
                 key={idx}
@@ -311,7 +312,7 @@ export default function Page() {
                   alt={item.label}
                   width={320}
                   height={200}
-                  className="rounded-xl mx-auto mb-6 group-hover:scale-105 transition"
+                  className="rounded-xl h-60 bg-cover object-cover mx-auto mb-6 group-hover:scale-105 transition"
                 />
                 <p className="font-semibold text-lg text-gray-700">
                   {item.label}
