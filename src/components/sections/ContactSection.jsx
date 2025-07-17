@@ -99,14 +99,14 @@ export default function ContactSection() {
   return (
     <div className="bg-[#24577F]/60 backdrop-blur-3xl text-white">
       <section className="py-20 px-6 lg:px-20">
-        <div className="grid md:grid-cols-2 gap-12">
+        <div className="grid md:grid-cols-2 gap-6 md:gap-12">
           <div className="relative w-full h-fit overflow-hidden rounded-md">
             <div className=" max-w-3xl">
               <h3 className="max-w-xl text-5xl md:text-7xl font-extrabold uppercase mb-3 text-[#FF7F06]">
                 Gain Leverage For <span className=" text-white">Your</span>{" "}
                 Business With <span className=" text-white">jambulogix</span>
               </h3>
-              <p className=" max-w-2xl text-lg mb-6 text-white/80 text-center sm:text-left">
+              <p className=" max-w-2xl text-lg mb-6 text-white/80 text-left sm:text-left">
                 We’d love to hear from you! Whether you’re a business looking
                 for scalable logistics solutions, a partner exploring
                 collaboration, or a candidate interested in joining our journey
@@ -230,7 +230,7 @@ export default function ContactSection() {
 
               <button
                 type="submit"
-                className="bg-[#FF7F06] text-[#070B2A] px-6 py-3 rounded-md hover:bg-orange-500 transition font-bold"
+                className="bg-[#FF7F06] w-full md:w-1/4 text-[#070B2A] px-6 py-3 rounded-md hover:bg-orange-500 transition font-bold"
               >
                 Send Message
               </button>

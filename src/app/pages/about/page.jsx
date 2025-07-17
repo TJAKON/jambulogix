@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import { Target, Rocket } from "lucide-react"; // or use Heroicons or custom SVGs
 import { motion } from "framer-motion";
@@ -34,13 +34,34 @@ const leaders = [
   },
 ];
 
+// Partner categories and their respective logos
+const partnerCategories = [
+  {
+    label: "Support Partners",
+    logos: ["/Clientlogo/1.png", "/Clientlogo/2.png", "/Clientlogo/3.png"],
+  },
+  {
+    label: "Logistics Partners",
+    logos: ["/Clientlogo/22.png", "/Clientlogo/23.png", "/Clientlogo/24.png"],
+  },
+  {
+    label: "Retail Partners",
+    logos: ["/Clientlogo/13.png", "/Clientlogo/14.png", "/Clientlogo/12.png"],
+  },
+  {
+    label: "Technology Partners",
+    logos: ["/Clientlogo/5.png", "/Clientlogo/6.png", "/Clientlogo/7.png"],
+  },
+];
+
 export default function AboutUsPage() {
+  const [activeCategory, setActiveCategory] = useState(partnerCategories[0]);
   return (
     <div className="">
       {/* Hero Banner */}
       <section className="relative w-full h-[60vh] md:h-[75vh] overflow-hidden">
         <Image
-            src="/warehousing.jpg"
+          src="/warehousing.jpg"
           alt="About Jambulogix"
           fill
           className="object-cover w-full h-full"
@@ -66,7 +87,7 @@ export default function AboutUsPage() {
           <div className="grid grid-cols-2 gap-4">
             <div className="w-full aspect-square overflow-hidden rounded-xl shadow">
               <Image
-             src="/warehousing.jpg"
+                src="/warehousing.jpg"
                 alt="Team 1"
                 width={500}
                 height={500}
@@ -123,8 +144,8 @@ export default function AboutUsPage() {
           <p className="text-gray-700 text-lg leading-relaxed mb-6">
             Jambulogix revolutionizing the Indian logistics ecosystem by
             offering responsive, tech-enabled, and customer-centric supply chain
-            solutions. Jambulogix, brings together decades of industry
-            expertise with innovation at its core.
+            solutions. Jambulogix, brings together decades of industry expertise
+            with innovation at its core.
           </p>
           <p className="text-gray-700 text-lg leading-relaxed mb-10">
             Our services span B2B, B2C, D2C, eCommerce, and Express Logistics,
@@ -339,39 +360,63 @@ export default function AboutUsPage() {
       </section>
 
       {/* Awards & Clients */}
-      <section className="bg-[#F9FAFB] py-20 px-6 sm:px-20">
-        <div className="max-w-7xl mx-auto">
-          {/* Heading */}
-          <div className="text-center mb-14">
-            <h2 className="text-4xl sm:text-5xl font-bold text-[#24577F]">
-              Trusted by Leading Brands
-            </h2>
-            <p className="text-gray-600 mt-3 text-md">
-              We’re proud to be the preferred logistics partner for top
-              companies across India.
-            </p>
-            <div className="mt-6 w-24 h-1 mx-auto bg-[#FF7F06] rounded-full" />
-          </div>
 
-          {/* Logos Grid */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-8 place-items-center">
-            {Array(18)
-              .fill(null)
-              .map((_, idx) => (
-                <div
-                  key={idx}
-                  className="bg-white rounded-xl shadow hover:shadow-lg hover:scale-105 transition-all duration-300 p-4 w-full flex items-center justify-center"
-                >
-                  <Image
-                    src={`/ClientLogo/${idx + 1}.png`}
-                    alt={`Client ${idx + 1}`}
-                    width={100}
-                    height={40}
-                    className="object-contain grayscale hover:grayscale-0 transition duration-300"
-                  />
-                </div>
-              ))}
-          </div>
+      <section className="py-20 px-6 sm:px-12 md:px-20 bg-[#F4F6F8]">
+        <div className="text-center mb-12">
+          <h2 className="text-5xl font-bold text-[#24577F] mb-4">
+            Trusted by Leading Brands
+          </h2>
+          <p className="text-gray-600 max-w-2xl mx-auto">
+            We collaborate with industry leaders across sectors. Choose a
+            category to view our partners.
+          </p>
+        </div>
+
+        {/* Navigation Buttons */}
+        <motion.div
+          className="flex flex-wrap gap-4 justify-center mb-10"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          transition={{ staggerChildren: 0.1 }}
+        >
+          {partnerCategories.map((category, idx) => (
+            <motion.button
+              key={idx}
+              onClick={() => setActiveCategory(category)}
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3 }}
+              className={`px-5 py-3 rounded-2xl border-4 font-semibold text-sm sm:text-base shadow-sm transition ${
+                activeCategory.label === category.label
+                  ? "bg-[#FF7F06] text-black border-[#FF7F06]"
+                  : "bg-white text-gray-600 border-gray-300 hover:text-[#FF7F06] hover:border-[#24577F]"
+              }`}
+            >
+              {category.label}
+            </motion.button>
+          ))}
+        </motion.div>
+
+        {/* Partner Logos */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8 items-center justify-center max-w-6xl mx-auto">
+          {activeCategory.logos.map((logo, idx) => (
+            <motion.div
+              key={idx}
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ delay: idx * 0.1 }}
+              className="bg-white rounded-xl shadow hover:shadow-lg hover:scale-105 transition-all duration-300 p-4 w-full flex items-center justify-center"
+            >
+              <Image
+                src={logo}
+                alt={`Partner ${idx}`}
+                width={100}
+                height={60}
+                className="object-contain grayscale hover:grayscale-0 transition duration-300"
+              />
+            </motion.div>
+          ))}
         </div>
       </section>
 

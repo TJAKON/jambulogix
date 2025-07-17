@@ -2,6 +2,8 @@
 
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
+
 import { motion } from "framer-motion";
 
 export default function AboutSection() {
@@ -84,9 +86,11 @@ export default function AboutSection() {
             <li>Scalable solutions with dedicated support</li>
           </ul>
 
-          <button className="bg-[#24577F] text-white md:bg-[#FF7F06] md:text-[#24577F] px-4 py-2 rounded-2xl font-bold text-md md:text-xl border-2 border-white md:border-[#24577F] hover:border-white hover:bg-[#24577F] hover:text-white transition-colors duration-300">
-            Explore Our Solutions
-          </button>
+          <Link href="/pages/services/supply-chain-solution" passHref>
+            <button className="bg-[#24577F] text-white md:bg-[#FF7F06] md:text-[#24577F] px-4 py-2 rounded-2xl font-bold text-md md:text-xl border-2 border-white md:border-[#24577F] hover:border-white hover:bg-[#24577F] hover:text-white transition-colors duration-300">
+              Explore Our Solutions
+            </button>
+          </Link>
         </motion.div>
       </div>
     </section>

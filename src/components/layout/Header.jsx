@@ -113,9 +113,9 @@ export default function Header() {
         {/* Static Links */}
         <Link
           href="/pages/services/motherhood-service"
-          className="text-[#FF7F06] hover:text-white transition duration-200 font-bold"
+          className="text-[#FF7F06] hover:text-white text-center transition duration-200 font-bold"
         >
-          Mother Hood
+          Motherhood
         </Link>
         <Link
           href="/pages/about"

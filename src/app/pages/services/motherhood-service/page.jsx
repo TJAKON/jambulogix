@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { React, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -9,6 +10,8 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import TestimonialCarousel from "@/components/sections/TestimonialSection";
+import InnerNumbers from "@/components/sections/InnerNumbers";
+import InstantQuote from "@/components/sections/InstantQuote";
 
 const services = [
   {
@@ -78,12 +81,23 @@ export default function MotherHood() {
             like family.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-            <button className="bg-[#1F2937] text-white px-6 py-3 rounded-lg hover:bg-[#111827] transition-all">
-              🧡 Ship with Care
-            </button>
-            <button className="border border-gray-400 bg-[#FF7F06] px-6 py-3 rounded-lg hover:bg-gray-100 transition-all">
-              Get Instant Quote
-            </button>
+            <Link href="/pages/contact-us" passHref>
+              <button
+                type="button"
+                className="bg-[#1F2937] text-white px-6 py-3 rounded-lg hover:bg-[#111827] transition-all focus:outline-none focus:ring-2 focus:ring-[#FF7F06] focus:ring-offset-2"
+              >
+                🧡 Ship with Care
+              </button>
+            </Link>
+
+            <Link href="#quote" passHref>
+              <button
+                type="button"
+                className="border border-gray-400 bg-[#FF7F06] px-6 py-3 rounded-lg hover:bg-gray-100 transition-all text-black focus:outline-none focus:ring-2 focus:ring-[#1F2937] focus:ring-offset-2"
+              >
+                Get Instant Quote
+              </button>
+            </Link>
           </div>
         </div>
 
@@ -98,12 +112,11 @@ export default function MotherHood() {
           />
         </div>
       </section>
-
       {/* Why Choose Us */}
       <section className="py-20 px-6 md:px-16 bg-white">
         <div className="max-w-7xl mx-auto text-center">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-6xl font-extrabold text-[#1F2937] mb-12">
+            <h2 className="text-4xl md:text-6xl font-normal md:font-extrabold text-[#1F2937] mb-12">
               Why Choose <span className="text-[#FF7F06]">MotherHood</span>{" "}
               Service?
             </h2>
@@ -145,9 +158,8 @@ export default function MotherHood() {
           </div>
         </div>
       </section>
-
       {/* Stats Section */}
-      <section className="bg-[#0A1A2F] text-white py-16 px-6 sm:px-20">
+      {/* <section className="bg-[#0A1A2F] text-white py-16 px-6 sm:px-20">
         <div className="max-w-7xl mx-auto text-center mb-12">
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
@@ -191,11 +203,11 @@ export default function MotherHood() {
             </motion.div>
           ))}
         </div>
-      </section>
-
+      </section> */}
+      <InnerNumbers />
       {/* Core Services */}
       <section className="py-20 px-6 md:px-10 bg-[#F4F6F8]">
-        <h2 className="text-8xl font-extrabold text-center mb-12">
+        <h2 className=" text-4xl md:text-8xl font-normal md:font-extrabold text-center mb-12">
           Our Core <span className="text-[#FF7F06]">Services</span>
         </h2>
 
@@ -206,7 +218,13 @@ export default function MotherHood() {
             disableOnInteraction: false,
           }}
           spaceBetween={40}
-          slidesPerView={2}
+          // slidesPerView={2}
+          breakpoints={{
+            0: { slidesPerView: 1 },
+            640: { slidesPerView: 1.5 },
+            768: { slidesPerView: 1.5 },
+            1024: { slidesPerView: 2 },
+          }}
           navigation
           // pagination={{ clickable: true }}
           loop={true} // <-- Enables infinite loop
@@ -242,11 +260,10 @@ export default function MotherHood() {
           ))}
         </Swiper>
       </section>
-
       {/* How It Works */}
       <section className="py-24 px-6 md:px-20 bg-gradient-to-b from-[#FFF] to-[#F9FAFB] relative overflow-hidden">
         <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-4xl md:text-8xl font-extrabold text-[#1F2937] mb-16">
+          <h2 className="text-4xl md:text-8xl font-normal md:font-extrabold text-[#1F2937] mb-16">
             How <span className="text-[#FF7F06]">It Works</span>
           </h2>
 
@@ -296,12 +313,11 @@ export default function MotherHood() {
         <div className="absolute top-0 left-0 w-72 h-72 bg-[#FFEDD5] rounded-full blur-3xl opacity-40 -z-10" />
         <div className="absolute bottom-0 right-0 w-72 h-72 bg-[#DBEAFE] rounded-full blur-3xl opacity-30 -z-10" />
       </section>
-
       {/* Trust & Safety */}
       <section className="py-24 px-6 md:px-20 bg-[#0A1A2F]">
         <div className="max-w-7xl mx-auto text-center">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl md:text-6xl font-extrabold text-white mb-16">
+            <h2 className="text-4xl md:text-6xl font-normal md:font-extrabold text-white mb-16">
               Trust & <span className="text-[#FF7F06]">Safety</span> Guarantees
             </h2>
           </div>
@@ -342,12 +358,11 @@ export default function MotherHood() {
           </div>
         </div>
       </section>
-
       {/* Testimonials */}
       <section className="py-24 px-6 md:px-20 bg-gradient-to-br from-[#FFF8F1] to-[#FDFDFD] text-center">
         <div className="max-w-7xl mx-auto">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-6xl font-extrabold text-[#1F2937] mb-12">
+            <h2 className="text-4xl md:text-6xl font-normal md:font-extrabold text-[#1F2937] mb-12">
               Stories from Our{" "}
               <span className="text-[#FF7F06]">Extended Family</span>
             </h2>
@@ -397,65 +412,10 @@ export default function MotherHood() {
           </div>
         </div>
       </section>
-
       {/* Quote Section */}
-      <section className="relative w-full h-screen bg-black overflow-hidden">
-        <div className="flex flex-col md:flex-row h-full">
-          {/* Left Side Background with Parallax */}
-          <div className="w-full md:w-1/2 h-64 md:h-full relative">
-            <div
-              className="absolute inset-0 bg-cover bg-center transform md:translate-y-0 translate-y-[-20%] transition-transform duration-1000 ease-in-out"
-              style={{
-                backgroundImage: "url('/truck.png')",
-              }}
-            />
-            <div className="absolute inset-0 bg-black/40" />
-            <div className="absolute inset-0 flex items-center justify-center">
-              <h2 className="text-white text-3xl md:text-4xl font-extrabold px-4 text-center drop-shadow-xl">
-                Fast, Safe, and Hassle-Free Shipping
-              </h2>
-            </div>
-          </div>
 
-          {/* Right Side Form */}
-          <div className="w-full md:w-1/2 h-full flex items-center justify-center px-6 md:px-16 bg-[#0A1A2F]">
-            <div className="w-full max-w-md bg-[#FAFAFA] p-8 rounded-2xl shadow-xl">
-              <h3 className="text-2xl font-bold text-center text-[#1F2937] mb-6">
-                Get Instant Quote
-              </h3>
-
-              <form className="space-y-4">
-                <select className="w-full p-3 border border-gray-300 rounded-lg">
-                  <option>Up to 5kg</option>
-                  <option>5kg - 10kg</option>
-                  <option>10kg - 20kg</option>
-                </select>
-
-                <input
-                  type="text"
-                  placeholder="Enter destination city"
-                  className="w-full p-3 border border-gray-300 rounded-lg"
-                />
-
-                <select className="w-full p-3 border border-gray-300 rounded-lg">
-                  <option>Standard (3–5 days)</option>
-                  <option>Express (1–2 days)</option>
-                </select>
-
-                <div className="text-right text-sm text-gray-600">
-                  Estimated Cost: <span className="font-bold">{quote}</span>
-                </div>
-
-                <button
-                  type="submit"
-                  className="w-full bg-[#1F2937] text-white py-3 rounded-lg hover:bg-[#111827] transition-all"
-                >
-                  🚀 Book Now
-                </button>
-              </form>
-            </div>
-          </div>
-        </div>
+      <section id="quote">
+        <InstantQuote />
       </section>
 
       {/* Final CTA */}
@@ -464,7 +424,7 @@ export default function MotherHood() {
         <div className="absolute inset-0 opacity-5 bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:20px_20px] pointer-events-none" />
 
         <div className="relative z-10">
-          <h2 className="text-3xl md:text-5xl font-extrabold mb-4">
+          <h2 className="text-4xl md:text-5xl font-normal md:font-extrabold mb-4">
             Ready to Ship with <span className="text-[#FF7F06]">Heart</span>?
           </h2>
           <p className="text-lg text-gray-300 mb-8">
@@ -473,12 +433,17 @@ export default function MotherHood() {
           </p>
 
           <div className="flex justify-center gap-4 flex-wrap">
-            <button className="bg-[#FF7F06] text-white px-6 py-3 rounded-lg font-medium hover:bg-[#e66900] transition-all shadow-md">
-              🚚 Start Your First Shipment
-            </button>
-            <button className="border border-white px-6 py-3 rounded-lg text-white font-medium hover:bg-white hover:text-[#1F2937] transition-all shadow-sm">
-              📞 Contact Support
-            </button>
+            <Link href="#quote" passHref>
+              <button className="bg-[#FF7F06] text-white px-6 py-3 rounded-lg font-medium hover:bg-[#e66900] transition-all shadow-md">
+                🚚 Start Your First Shipment
+              </button>
+            </Link>
+
+            <Link href="/pages/contact-us" passHref>
+              <button className="border border-white px-6 py-3 rounded-lg text-white font-medium hover:bg-white hover:text-[#1F2937] transition-all shadow-sm">
+                📞 Contact Support
+              </button>
+            </Link>
           </div>
         </div>
       </section>

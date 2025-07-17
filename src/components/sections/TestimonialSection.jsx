@@ -41,7 +41,7 @@ const testimonials = [
 
 export default function TestimonialCarousel() {
   return (
-    <section className="bg-white/95 py-6 md:py-20 px-4 sm:px-10 lg:px-20 text-black">
+    <section className="bg-white/95 py-10 md:py-20 px-4 sm:px-10 lg:px-20 text-black">
       <div className="max-w-6xl mx-auto text-center mb-12">
         <h2 className="text-4xl sm:text-4xl lg:text-5xl font-bold text-[#FF7F06] mb-4">
           What Our Clients Say

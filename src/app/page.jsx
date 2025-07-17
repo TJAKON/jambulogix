@@ -4,6 +4,7 @@ import AboutSection from "@/components/sections/AboutSection";
 import CompetitiveEdge from "@/components/sections/CompetitiveEdge";
 import ContactSection from "@/components/sections/ContactSection";
 import Hero from "@/components/sections/Hero";
+import InstantQuote from "@/components/sections/InstantQuote";
 import KeySolutons from "@/components/sections/KeySolutons";
 import Key_Solutons from "@/components/sections/KeySolutons";
 import Numbers from "@/components/sections/Numbers";
@@ -23,6 +24,7 @@ export default function Home() {
       <ServicesSection />
       <TrustedBy />
       <KeySolutons />
+      <InstantQuote />
       <CompetitiveEdge />
       <TestimonialSection />
       <ContactSection />

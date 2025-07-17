@@ -138,17 +138,17 @@ export default function Footer() {
                 Careers
               </a>
             </li>
-            <li>
+            {/* <li>
               <a href="#" className="hover:text-yellow-400">
                 Blogs
               </a>
-            </li>
-            <li>
+            </li> */}
+            {/* <li>
               <a href="#" className="hover:text-yellow-400">
                 Innovation
               </a>
-            </li>
-            <li>
+            </li> */}
+            {/* <li>
               <a href="#" className="hover:text-yellow-400">
                 Social Impact
               </a>
@@ -157,7 +157,7 @@ export default function Footer() {
               <a href="#" className="hover:text-yellow-400">
                 Our Customers
               </a>
-            </li>
+            </li> */}
             <li>
               <a href="#" className="hover:text-yellow-400">
                 Contact Us
@@ -208,7 +208,7 @@ export default function Footer() {
 
       {/* Bottom Copyright */}
       <div className="mt-8 text-center md:text-right text-xs text-white md:text-white/60 z-10">
-        © {new Date().getFullYear()} All rights reserved. Shadowfax Technologies
+        © {new Date().getFullYear()} All rights reserved. Jambulogix Technologies
         Limited.
       </div>
     </footer>

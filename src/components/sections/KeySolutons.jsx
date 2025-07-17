@@ -133,10 +133,10 @@ export default function KeySolutions() {
                     height={32}
                     className="mb-4 w-24"
                   />
-                  <h4 className="text-3xl font-bold text-white mb-2">
+                  <h4 className=" text-2xl md:text-3xl font-bold text-white mb-2">
                     {item.title}
                   </h4>
-                  <p className="text-lg text-white/60 leading-relaxed">
+                  <p className="text-sm md:text-lg text-white/60 leading-relaxed">
                     {item.description}
                   </p>
                 </div>

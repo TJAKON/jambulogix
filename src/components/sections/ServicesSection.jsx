@@ -33,7 +33,7 @@ const services = [
     title: "Supply Chain",
     description:
       "Streamlining logistics for seamless and efficient operations from start to finish.",
-    image: "/test4.jpg",
+    image: "/79.jpg",
     color: "#4F46E5",
     to: "/pages/services/supply-chain-solution",
   },
@@ -43,7 +43,7 @@ export default function ServicesSection() {
   return (
     <section className="px-4 sm:px-8 lg:px-20 py-12 sm:py-20 bg-white/95 text-black">
       <motion.h2
-        className="text-4xl sm:text-5xl font-extrabold mb-3 text-[#FF7F06] text-center"
+        className="text-4xl sm:text-5xl font-bold md:font-extrabold mb-3 text-[#FF7F06] text-left md:text-center"
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
@@ -52,7 +52,7 @@ export default function ServicesSection() {
       </motion.h2>
 
       <motion.p
-        className="text-2xl sm:text-3xl font-bold mb-12 text-[#24577F] max-w-3xl text-center mx-auto"
+        className="text-xl sm:text-3xl font-normal md:font-bold mb-6 md:mb-12 text-[#24577F] max-w-3xl text-left md:text-center mx-auto"
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
@@ -80,10 +80,10 @@ export default function ServicesSection() {
                   sizes="100vw"
                   className="rounded-xl mb-6 w-full h-48 sm:h-60 object-cover mx-auto shadow-lg"
                 />
-                <h3 className="font-bold text-2xl sm:text-3xl mb-4 text-[#24577F] text-center">
+                <h3 className="font-bold text-2xl sm:text-3xl mb-4 text-[#24577F] text-left md:text-center">
                   {service.title}
                 </h3>
-                <p className="text-base sm:text-lg text-white text-center leading-relaxed">
+                <p className="text-base sm:text-lg text-white text-left md:text-center leading-relaxed">
                   {service.description}
                 </p>
               </motion.div>
