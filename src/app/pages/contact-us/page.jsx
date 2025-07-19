@@ -101,10 +101,10 @@ export default function Page() {
     <>
       <section
         className="bg-[#070B2A] text-white py-32 sm:py-40 md:py-44 text-center bg-cover  bg-bottom relative"
-        style={{ backgroundImage: "url('/1.jpg')" }}
+        style={{ backgroundImage: "url('/88.jpg')" }}
       >
         {/* Dark Overlay */}
-        <div className="absolute inset-0 bg-[#070B2A] opacity-70" />
+        <div className="absolute inset-0 bg-black opacity-30" />
 
         {/* Content */}
         <div className="relative z-10 px-4 sm:px-8 max-w-5xl mx-auto">

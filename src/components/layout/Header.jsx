@@ -3,6 +3,8 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+
 import {
   Popover,
   PopoverButton,
@@ -19,6 +21,13 @@ import {
 export default function Header() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [mobileDropdown, setMobileDropdown] = useState("");
+  const pathname = usePathname();
+
+  // Function to check if link is active
+  const isActive = (href) =>
+    pathname === href
+      ? "text-white underline underline-offset-4 decoration-2"
+      : "hover:text-[#FF7F06] text-white";
 
   return (
     <header className="fixed top-0 left-0 w-full z-50 backdrop-blur-md border-b border-white/10 bg-black/40 shadow p-4 sm:p-6 flex items-center justify-between">
@@ -43,25 +52,25 @@ export default function Header() {
           <PopoverPanel className="absolute top-15 left-0 mt-2 w-90 font-bold bg-black/40 backdrop-blur-md p-4 space-y-2 z-50 text-white shadow-xl">
             <Link
               href="/pages/services/smart-warehousing-solution"
-              className="block hover:text-white hover:bg-[#FF7F06] border-2 bg-[#24577F] backdrop-blur-3xl p-2 rounded-lg"
+              className="block hover:text-white hover:bg-[#FF7F06] border-2 bg-[#24577F] p-2 rounded-lg"
             >
               Smart Warehousing Services
             </Link>
             <Link
               href="/pages/services/smart-distribution-solution"
-              className="block hover:text-white hover:bg-[#FF7F06] border-2 bg-[#24577F] backdrop-blur-3xl p-2 rounded-lg"
+              className="block hover:text-white hover:bg-[#FF7F06] border-2 bg-[#24577F] p-2 rounded-lg"
             >
               Smart Distribution Services
             </Link>
             <Link
               href="/pages/services/transportation-service"
-              className="block hover:text-white hover:bg-[#FF7F06] border-2 bg-[#24577F] backdrop-blur-3xl p-2 rounded-lg"
+              className="block hover:text-white hover:bg-[#FF7F06] border-2 bg-[#24577F] p-2 rounded-lg"
             >
               Smart Transportation Services
             </Link>
             <Link
               href="/pages/services/supply-chain-solution"
-              className="block hover:text-white hover:bg-[#FF7F06] border-2 bg-[#24577F] backdrop-blur-3xl p-2 rounded-lg"
+              className="block hover:text-white hover:bg-[#FF7F06] border-2 bg-[#24577F] p-2 rounded-lg"
             >
               Supply Chain Solutioning
             </Link>
@@ -76,56 +85,64 @@ export default function Header() {
           <PopoverPanel className="absolute top-15 left-0 mt-2 w-90 font-bold bg-black/40 backdrop-blur-md p-4 space-y-2 z-50 text-white shadow-xl">
             <Link
               href="/pages/company/OurPartners"
-              className="block hover:text-white hover:bg-[#FF7F06] border-2 bg-[#24577F] backdrop-blur-3xl p-2 rounded-lg"
+              className="block hover:text-white hover:bg-[#FF7F06] border-2 bg-[#24577F] p-2 rounded-lg"
             >
               Our Partners
             </Link>
             <Link
               href="/pages/company/OurTeam"
-              className="block hover:text-white hover:bg-[#FF7F06] border-2 bg-[#24577F] backdrop-blur-3xl p-2 rounded-lg"
+              className="block hover:text-white hover:bg-[#FF7F06] border-2 bg-[#24577F] p-2 rounded-lg"
             >
               Our Team
             </Link>
             <Link
               href="/pages/company/Careers"
-              className="block hover:text-white hover:bg-[#FF7F06] border-2 bg-[#24577F] backdrop-blur-3xl p-2 rounded-lg"
+              className="block hover:text-white hover:bg-[#FF7F06] border-2 bg-[#24577F] p-2 rounded-lg"
             >
               Careers
             </Link>
           </PopoverPanel>
         </Popover>
+        {/* Company */}
 
-        {/* Resources */}
-        {/* <Popover className="relative group">
+        {/* Static Links with Active Highlight */}
+        <Link
+          href="/pages/services/motherhood-service"
+          className={`transition duration-200 font-bold text-center ${isActive(
+            "/pages/services/motherhood-service"
+          )}`}
+        >
+          Motherhood
+        </Link>
+
+        <Link
+          href="/pages/about"
+          className={`transition duration-200 ${isActive("/pages/about")}`}
+        >
+          About Us
+        </Link>
+        <Popover className="relative group">
           <PopoverButton className="flex items-center gap-1 hover:text-[#FF7F06] transition duration-200 focus:outline-none">
             Resources <ChevronDownIcon className="h-5 w-5" />
           </PopoverButton>
           <PopoverPanel className="absolute top-15 left-0 mt-2 w-90 font-bold bg-black/40 backdrop-blur-md p-4 space-y-2 z-50 text-white shadow-xl">
             <Link
-              href="/pages/services/smart-warehousing-solution"
-              className="block hover:text-white hover:bg-[#FF7F06] border-2 bg-[#24577F] backdrop-blur-3xl p-2 rounded-lg"
+              href="/pages/company/OurPartners"
+              className="block hover:text-white hover:bg-[#FF7F06] border-2 bg-[#24577F] p-2 rounded-lg"
             >
               Blogs
             </Link>
+            <Link
+              href="/pages/company/OurTeam"
+              className="block hover:text-white hover:bg-[#FF7F06] border-2 bg-[#24577F] p-2 rounded-lg"
+            >
+              News
+            </Link>
           </PopoverPanel>
-        </Popover> */}
-
-        {/* Static Links */}
-        <Link
-          href="/pages/services/motherhood-service"
-          className="text-[#FF7F06] hover:text-white text-center transition duration-200 font-bold"
-        >
-          Motherhood
-        </Link>
-        <Link
-          href="/pages/about"
-          className="hover:text-[#FF7F06] transition duration-200"
-        >
-          About Us
-        </Link>
+        </Popover>
         <Link
           href="/pages/contact-us"
-          className="hover:text-[#FF7F06] transition duration-200"
+          className={`transition duration-200 ${isActive("/pages/contact-us")}`}
         >
           Contact Us
         </Link>
@@ -153,7 +170,6 @@ export default function Header() {
             alt="Jambulogix Logo"
             width={180}
             height={40}
-            className=""
           />
           <button onClick={() => setSidebarOpen(false)}>
             <XMarkIcon className="h-8 w-8 text-white" />
@@ -187,10 +203,6 @@ export default function Header() {
             {
               title: "Company",
               children: [{ label: "Our Partners", link: "/pages/about" }],
-            },
-            {
-              title: "Resources",
-              children: [{ label: "Blogs", link: "#" }],
             },
           ].map((group) => (
             <div key={group.title}>

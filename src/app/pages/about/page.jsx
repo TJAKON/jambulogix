@@ -34,6 +34,37 @@ const leaders = [
   },
 ];
 
+const partners = [
+  { name: "Motherson", logo: "/Clientlogo/1.png" },
+  { name: "Schaeffler", logo: "/Clientlogo/2.png" },
+  { name: "STUDDS", logo: "/Clientlogo/3.png" },
+  { name: "Carrier", logo: "/Clientlogo/4.png" },
+  { name: "Reliance Digital", logo: "/Clientlogo/5.png" },
+  { name: "Croma", logo: "/Clientlogo/6.png" },
+  { name: "Johnson Controls", logo: "/Clientlogo/7.png" },
+  { name: "Indian Terrain", logo: "/Clientlogo/8.png" },
+  { name: "Uppercase", logo: "/Clientlogo/9.png" },
+  { name: "Mankind", logo: "/Clientlogo/10.png" },
+  { name: "Johnson & Johnson", logo: "/Clientlogo/11.png" },
+  { name: "Meesho", logo: "/Clientlogo/12.png" },
+  { name: "Flipkart", logo: "/Clientlogo/13.png" },
+  { name: "Amazon", logo: "/Clientlogo/14.png" },
+  { name: "Domino's", logo: "/Clientlogo/15.png" },
+  { name: "Reliance", logo: "/Clientlogo/16.png" },
+  { name: "Zomato", logo: "/Clientlogo/17.png" },
+  { name: "Dorset", logo: "/Clientlogo/18.png" },
+  { name: "Inalco", logo: "/Clientlogo/19.png" },
+  { name: "Fenesta", logo: "/Clientlogo/20.png" },
+  { name: "Aishwaryam", logo: "/Clientlogo/21.png" },
+  { name: "XpressBees", logo: "/Clientlogo/22.png" },
+  { name: "Shadowfax", logo: "/Clientlogo/23.png" },
+  { name: "DHL", logo: "/Clientlogo/24.png" },
+  { name: "DISHA Publication", logo: "/Clientlogo/25.png" },
+  { name: "SKB", logo: "/Clientlogo/26.png" },
+  { name: "Del Mario", logo: "/Clientlogo/27.png" },
+  { name: "Jubilant FoodWorks", logo: "/Clientlogo/28.png" },
+];
+
 // Partner categories and their respective logos
 const partnerCategories = [
   {
@@ -59,16 +90,16 @@ export default function AboutUsPage() {
   return (
     <div className="">
       {/* Hero Banner */}
-      <section className="relative w-full h-[60vh] md:h-[75vh] overflow-hidden">
+      <section className="relative w-full h-[60vh] md:h-screen overflow-hidden">
         <Image
-          src="/warehousing.jpg"
+          src="/95.jpg"
           alt="About Jambulogix"
           fill
           className="object-cover w-full h-full"
         />
         <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
           <div className="text-center text-white px-4">
-            <h1 className="text-4xl md:text-6xl font-extrabold">
+            <h1 className="text-4xl md:text-7xl font-extrabold">
               Empowering Global Logistics
             </h1>
             <p className="mt-4 text-lg md:text-2xl max-w-2xl mx-auto">
@@ -304,7 +335,7 @@ export default function AboutUsPage() {
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
           {/* Right Side: Content */}
           <div>
-            <h2 className="text-4xl font-bold text-[#FF7F06] mb-6">
+            <h2 className="text-5xl font-bold text-[#FF7F06] mb-6">
               Our Core Values
             </h2>
             <p className="text-gray-700 text-lg mb-6">
@@ -313,10 +344,11 @@ export default function AboutUsPage() {
             </p>
             <ul className="space-y-4">
               {[
-                "Innovation – We evolve with technology to stay ahead.",
-                "Empathy – We value people and relationships.",
-                "Transparency – We communicate with clarity and honesty.",
-                "Reliability – We deliver what we promise, always.",
+                "Customer Centricity: At the heart of all we do",
+                "People First: A great place to work and grow",
+                "Purpose-led Commerce: Business with sustainability and social accountability",
+                "Transparency & Simplicity: We keep it honest and efficient",
+                "Integrity & Governance: Committed to ethical operations and eco-conscious decisions",
               ].map((item, idx) => (
                 <li
                   key={idx}
@@ -359,9 +391,8 @@ export default function AboutUsPage() {
         </div>
       </section>
 
-      {/* Awards & Clients */}
-
-      <section className="py-20 px-6 sm:px-12 md:px-20 bg-[#F4F6F8]">
+      {/* Partners Grid */}
+      <section className="py-20 px-6 sm:px-12 md:px-20 bg-white">
         <div className="text-center mb-12">
           <h2 className="text-5xl font-bold text-[#24577F] mb-4">
             Trusted by Leading Brands
@@ -371,52 +402,84 @@ export default function AboutUsPage() {
             category to view our partners.
           </p>
         </div>
-
-        {/* Navigation Buttons */}
-        <motion.div
-          className="flex flex-wrap gap-4 justify-center mb-10"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          transition={{ staggerChildren: 0.1 }}
-        >
-          {partnerCategories.map((category, idx) => (
-            <motion.button
-              key={idx}
-              onClick={() => setActiveCategory(category)}
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.3 }}
-              className={`px-5 py-3 rounded-2xl border-4 font-semibold text-sm sm:text-base shadow-sm transition ${
-                activeCategory.label === category.label
-                  ? "bg-[#FF7F06] text-black border-[#FF7F06]"
-                  : "bg-white text-gray-600 border-gray-300 hover:text-[#FF7F06] hover:border-[#24577F]"
-              }`}
-            >
-              {category.label}
-            </motion.button>
-          ))}
-        </motion.div>
-
-        {/* Partner Logos */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8 items-center justify-center max-w-6xl mx-auto">
-          {activeCategory.logos.map((logo, idx) => (
+        <div className="grid grid-cols-4 sm:grid-cols-3 md:grid-cols-7 gap-10 items-center max-w-8xl mx-auto">
+          {partners.map((partner, index) => (
             <motion.div
-              key={idx}
-              initial={{ opacity: 0, scale: 0.9 }}
+              key={index}
+              initial={{ opacity: 0, scale: 0.8 }}
               whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ delay: idx * 0.1 }}
-              className="bg-white rounded-xl shadow hover:shadow-lg hover:scale-105 transition-all duration-300 p-4 w-full flex items-center justify-center"
+              transition={{ delay: index * 0.1, duration: 0.1 }}
+              className="flex justify-center items-center w-fit h-fit bg-transparent rounded-xl shadow-sm p-1  md:p-4 hover:shadow-md transition"
             >
               <Image
-                src={logo}
-                alt={`Partner ${idx}`}
-                width={100}
+                src={partner.logo}
+                alt={partner.name}
+                width={120}
                 height={60}
-                className="object-contain grayscale hover:grayscale-0 transition duration-300"
+                className="object-cover h-12 md:12 md:h-24 md:w-28"
               />
             </motion.div>
           ))}
+        </div>
+      </section>
+
+      {/* Values Section */}
+      <section className="py-20 px-6 sm:px-20 mx-auto bg-white/95">
+        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+          <div className="grid grid-cols-2 gap-4">
+            {["/test4.jpg", "/test3.jpg", "/test3.jpg", "/test4.jpg"].map(
+              (src, idx) => (
+                <div
+                  key={idx}
+                  className="relative group rounded-xl overflow-hidden shadow-lg border border-gray-200"
+                >
+                  <Image
+                    src={src}
+                    alt={`Core Value ${idx + 1}`}
+                    width={300}
+                    height={200}
+                    className="object-cover w-full h-full transform group-hover:scale-105 transition duration-300"
+                  />
+                  <div className="absolute bottom-0 left-0 w-full bg-black/50 text-white text-center py-2 text-sm font-semibold backdrop-blur-sm">
+                    {
+                      ["Innovation", "Empathy", "Transparency", "Reliability"][
+                        idx
+                      ]
+                    }
+                  </div>
+                </div>
+              )
+            )}
+          </div>
+          {/* Right Side: Content */}
+          <div>
+            <h2 className="text-5xl font-bold text-[#FF7F06] mb-6">
+              Our Growth Strategy
+            </h2>
+            <p className="text-gray-700 text-lg mb-6">
+             Our expansion blueprint is simple yet powerful — Grow by Square Feet & Pin Codes.
+            </p>
+            <ul className="space-y-4">
+              {[
+                "Scaling our physical infrastructure across India",
+                "Extending reach to over 10,000 PIN codes",
+                "Innovating daily to raise the bar on package delivery efficiency",
+                "Acquiring new customers by targeting Total Addressable Market (TAM)",
+                "Forming strategic partnerships and alliances to increase coverage, capability, and capacity",
+              ].map((item, idx) => (
+                <li
+                  key={idx}
+                  className="flex items-start gap-3 group hover:pl-2 transition-all"
+                >
+                  <span className="text-[#24577F] font-bold">•</span>
+                  <p className="text-gray-800 group-hover:text-[#24577F] transition duration-300">
+                    {item}
+                  </p>
+                </li>
+              ))}
+            </ul>
+          </div>
+          {/* Left Side: Image */}
         </div>
       </section>
 

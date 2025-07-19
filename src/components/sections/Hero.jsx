@@ -8,7 +8,7 @@ export default function Hero() {
     <section className="relative flex flex-col-reverse sm:flex-row items-center h-lvh justify-between gap-8 p-8 sm:p-20 overflow-hidden">
       {/* Background Image */}
       <Image
-        src="/68.jpg"
+        src="/83.png"
         alt="Banner"
         fill
         className="object-cover z-0 object-bottom"
@@ -49,11 +49,11 @@ export default function Hero() {
 
       {/* Delivery Image */}
       <Image
-        src="/delivery_boy.webp"
+        src="/JLXXM.png"
         alt="Hero"
-        width={650}
-        height={400}
-        className="absolute z-10 right-0 -bottom-10"
+        width={460}
+        height={200}
+        className="absolute z-10 w-lvh md:w-[460px] h-lvh  md:h-[200px] right-0 md:right-40 -bottom-20 md:bottom-0"
       />
     </section>
   );

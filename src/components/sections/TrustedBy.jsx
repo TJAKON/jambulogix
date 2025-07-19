@@ -91,7 +91,7 @@ export default function TrustedBy() {
 
   return (
     <section className="p-6 sm:p-16 bg-white/80 text-center overflow-hidden">
-      <h2 className="text-3xl sm:text-5xl font-extrabold mb-10 text-[#FF7F06]">
+      <h2 className="text-4xl sm:text-5xl font-bold md:font-extrabold mb-1 md:mb-10 text-[#FF7F06]">
         Trusted By
       </h2>
 

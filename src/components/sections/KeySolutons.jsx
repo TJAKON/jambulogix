@@ -92,7 +92,7 @@ export default function KeySolutions() {
       <div className="flex flex-col sm:flex-row gap-10">
         {/* Sticky Title */}
         <div className="sm:w-2/5 flex flex-col items-center sm:items-start space-y-6">
-          <div className="w-full md:sticky md:top-28">
+          <div className="w-full md:sticky md:top-28 z-10">
             {/* Logo */}
             <Image
               src="/jlxx.png"

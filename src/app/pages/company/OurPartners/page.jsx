@@ -1,6 +1,7 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
+
 import Image from "next/image";
 import { motion } from "framer-motion";
 import TestimonialCarousel from "@/components/sections/TestimonialSection";
@@ -36,7 +37,60 @@ const partners = [
   { name: "Jubilant FoodWorks", logo: "/Clientlogo/28.png" },
 ];
 
+const leaders = [
+  {
+    name: "Pankaj Deole",
+    role: "Founder & CEO",
+    desc: "Visionary leader driving innovation across supply chain solutions.",
+    img: "/test.jpeg",
+  },
+  {
+    name: "Rahul Sinha",
+    role: "COO",
+    desc: "Operational excellence expert ensuring scalable logistics operations.",
+    img: "/test.jpeg",
+  },
+  {
+    name: "Neha Rathi",
+    role: "Chief Strategy Officer",
+    desc: "Crafts growth strategies and data-driven decisions for expansion.",
+    img: "/test.jpeg",
+  },
+  {
+    name: "Amit Joshi",
+    role: "Tech Head",
+    desc: "Leads our digital transformation and intelligent logistics systems.",
+    img: "/test.jpeg",
+  },
+];
+
+// Partner categories and their respective logos
+const partnerCategories = [
+  {
+    label: "Delivery Partners",
+    logos: ["/Clientlogo/22.png", "/Clientlogo/23.png", "/Clientlogo/24.png"],
+  },
+  {
+    label: "Workforce Partners",
+    logos: ["/Clientlogo/1.png", "/Clientlogo/2.png", "/Clientlogo/3.png"],
+  },
+  {
+    label: "Logistics Partners",
+    logos: ["/Clientlogo/22.png", "/Clientlogo/23.png", "/Clientlogo/24.png"],
+  },
+  {
+    label: "Warehouse Partners",
+    logos: ["/Clientlogo/13.png", "/Clientlogo/14.png", "/Clientlogo/12.png"],
+  },
+  {
+    label: "Technology Partners",
+    logos: ["/Clientlogo/5.png", "/Clientlogo/6.png", "/Clientlogo/7.png"],
+  },
+];
+
 export default function OurPartnersPage() {
+  const [activeCategory, setActiveCategory] = useState(partnerCategories[0]);
+
   return (
     <main className="bg-white text-gray-800">
       {/* Hero Banner */}
@@ -56,32 +110,106 @@ export default function OurPartnersPage() {
         </div>
       </section>
 
-      {/* Partners Grid */}
-      <section className="py-20 px-6 sm:px-12 md:px-20">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#24577F] mb-4">
-            Our Trusted Partners
+      <section className="py-24 px-6 sm:px-20 bg-black/60">
+        <div className="max-w-8xl mx-auto">
+          <h2 className="text-4xl sm:text-5xl font-bold text-center text-[#FF7F06] mb-16">
+            Our Investers
           </h2>
-          <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-            Partnering with top brands allows us to deliver value at scale and
-            create frictionless customer experiences.
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+            {leaders.map((leader, idx) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: idx * 0.1 }}
+                className="group relative rounded-xl overflow-hidden h-90 shadow-lg"
+              >
+                {/* Background Image */}
+                <Image
+                  src={leader.img}
+                  alt={leader.name}
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+
+                {/* Overlay */}
+                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/70 transition duration-500 z-10"></div>
+
+                {/* Name (always visible) */}
+                <div className="absolute bottom-4 left-4 z-20">
+                  <p className="text-white text-lg font-bold">{leader.name}</p>
+                </div>
+
+                {/* Hover Content */}
+                <div className="absolute inset-0 flex flex-col items-start justify-center text-white px-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20">
+                  <p className="text-[#FF7F06] font-semibold text-md mb-1">
+                    {leader.role}
+                  </p>
+                  <p className="text-sm">{leader.desc}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Partners Grid */}
+
+      <section className="py-20 px-6 sm:px-12 md:px-20 bg-[#F4F6F8]">
+        <div className="text-center mb-12">
+          <h2 className="text-5xl font-bold text-[#24577F] mb-4">
+            Trusted by Our Partners
+          </h2>
+          <p className="text-gray-600 max-w-2xl mx-auto">
+            We collaborate with industry leaders across sectors. Choose a
+            category to view our partners.
           </p>
         </div>
-        <div className="grid grid-cols-4 sm:grid-cols-3 md:grid-cols-7 gap-10 items-center max-w-8xl mx-auto">
-          {partners.map((partner, index) => (
+
+        {/* Navigation Buttons */}
+        <motion.div
+          className="flex flex-wrap gap-4 justify-center mb-10"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          transition={{ staggerChildren: 0.1 }}
+        >
+          {partnerCategories.map((category, idx) => (
+            <motion.button
+              key={idx}
+              onClick={() => setActiveCategory(category)}
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3 }}
+              className={`px-5 py-3 rounded-2xl border-4 font-semibold text-sm sm:text-base shadow-sm transition ${
+                activeCategory.label === category.label
+                  ? "bg-[#FF7F06] text-black border-[#FF7F06]"
+                  : "bg-white text-gray-600 border-gray-300 hover:text-[#FF7F06] hover:border-[#24577F]"
+              }`}
+            >
+              {category.label}
+            </motion.button>
+          ))}
+        </motion.div>
+
+        {/* Partner Logos */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8 items-center justify-center max-w-6xl mx-auto">
+          {activeCategory.logos.map((logo, idx) => (
             <motion.div
-              key={index}
-              initial={{ opacity: 0, scale: 0.8 }}
+              key={idx}
+              initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ delay: index * 0.1, duration: 0.4 }}
-              className="flex justify-center items-center w-fit h-fit bg-transparent rounded-xl shadow-sm p-1  md:p-4 hover:shadow-md transition"
+              transition={{ delay: idx * 0.1 }}
+              className="bg-white rounded-xl shadow hover:shadow-lg hover:scale-105 transition-all duration-300 p-4 w-full flex items-center justify-center"
             >
               <Image
-                src={partner.logo}
-                alt={partner.name}
-                width={120}
+                src={logo}
+                alt={`Partner ${idx}`}
+                width={100}
                 height={60}
-                className="object-cover h-12 md:12 md:h-24 md:w-28"
+                className="object-contain grayscale hover:grayscale-0 transition duration-300"
               />
             </motion.div>
           ))}
@@ -134,6 +262,7 @@ export default function OurPartnersPage() {
         <div className="absolute top-[-150px] left-[-150px] w-[400px] h-[400px] bg-white/10 rounded-full blur-3xl z-0" />
         <div className="absolute bottom-[-150px] right-[-150px] w-[400px] h-[400px] bg-white/10 rounded-full blur-3xl z-0" />
       </section>
+
       <section className="py-20 px-4 sm:px-10 md:px-20 bg-[#F4F6F8]">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">

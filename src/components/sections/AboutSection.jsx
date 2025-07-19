@@ -3,58 +3,45 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-
 import { motion } from "framer-motion";
 
 export default function AboutSection() {
   return (
-    <section className="px-6 sm:px-20 py-20 bg-white/95 text-black">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-        {/* Left Side: Overlapping Animated Images */}
+    <section className="relative px-6 sm:px-20 py-20 bg-white/95 text-black overflow-hidden">
+      {/* Decorative Background Image */}
+      <div className="absolute inset-0 z-0 opacity-60 pointer-events-none">
+        <Image
+          src="/graphics.png"
+          alt="Background Graphic"
+          layout="fill"
+          objectFit="cover"
+          quality={100}
+        />
+      </div>
 
+      {/* Main Content */}
+      <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+        {/* Left Side - Image Grid */}
         <div className="space-y-10">
-          {/* Image Grid */}
           <div className="grid grid-cols-2 gap-4">
-            <div className="w-full aspect-square overflow-hidden rounded-xl shadow">
-              <Image
-                src="/8.jpg"
-                alt="Team 1"
-                width={500}
-                height={500}
-                className="object-cover w-full h-full"
-              />
-            </div>
-            <div className="w-full aspect-square overflow-hidden rounded-xl shadow">
-              <Image
-                src="/4.jpg"
-                alt="Warehouse 1"
-                width={500}
-                height={500}
-                className="object-cover w-full h-full"
-              />
-            </div>
-            <div className="w-full aspect-square overflow-hidden rounded-xl shadow">
-              <Image
-                src="/12.jpg"
-                alt="Transport 1"
-                width={500}
-                height={500}
-                className="object-cover w-full h-full"
-              />
-            </div>
-            <div className="w-full aspect-square overflow-hidden rounded-xl shadow">
-              <Image
-                src="/13.jpg"
-                alt="Delivery 1"
-                width={500}
-                height={500}
-                className="object-cover w-full h-full"
-              />
-            </div>
+            {["/8.jpg", "/4.jpg", "/12.jpg", "/13.jpg"].map((src, index) => (
+              <div
+                key={index}
+                className="w-full aspect-square overflow-hidden rounded-xl shadow"
+              >
+                <Image
+                  src={src}
+                  alt={`Image ${index + 1}`}
+                  width={500}
+                  height={500}
+                  className="object-cover w-full h-full"
+                />
+              </div>
+            ))}
           </div>
         </div>
 
-        {/* Right Side: Vertical Animation for Content */}
+        {/* Right Side - Animated Text */}
         <motion.div
           className="space-y-6"
           initial={{ opacity: 0, y: 60 }}
@@ -80,7 +67,7 @@ export default function AboutSection() {
             all scales with speed, reliability, and precision.
           </p>
 
-          <ul className="space-y-2 text-sm md:text-lg  text-gray-800 font-medium list-disc pl-5">
+          <ul className="space-y-2 text-sm md:text-lg text-gray-800 font-medium list-disc pl-5">
             <li>Tailor-made logistics for your supply chain</li>
             <li>Pan-India reach with real-time visibility</li>
             <li>Scalable solutions with dedicated support</li>

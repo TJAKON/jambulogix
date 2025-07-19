@@ -41,9 +41,18 @@ const services = [
 
 export default function ServicesSection() {
   return (
-    <section className="px-4 sm:px-8 lg:px-20 py-12 sm:py-20 bg-white/95 text-black">
+    <section className=" relative px-4 sm:px-8 lg:px-20 py-12 sm:py-20 bg-white/95 text-black">
+      <div className=" hidden md:block absolute inset-0 z-0 opacity-60 pointer-events-none">
+        <Image
+          src="/graphics.png"
+          alt="Background Graphic"
+          layout="fill"
+          objectFit="cover"
+          quality={100}
+        />
+      </div>
       <motion.h2
-        className="text-4xl sm:text-5xl font-bold md:font-extrabold mb-3 text-[#FF7F06] text-left md:text-center"
+        className="text-4xl sm:text-5xl font-bold md:font-extrabold mb-3 text-[#FF7F06] text-center md:text-center"
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
@@ -52,7 +61,7 @@ export default function ServicesSection() {
       </motion.h2>
 
       <motion.p
-        className="text-xl sm:text-3xl font-normal md:font-bold mb-6 md:mb-12 text-[#24577F] max-w-3xl text-left md:text-center mx-auto"
+        className="text-xl sm:text-3xl font-normal md:font-bold mb-6 md:mb-12 text-[#24577F] max-w-3xl text-center md:text-center mx-auto"
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
