@@ -23,6 +23,45 @@ export default function Header() {
   const [mobileDropdown, setMobileDropdown] = useState("");
   const pathname = usePathname();
 
+  const menuGroups = [
+    {
+      title: "Services",
+      children: [
+        {
+          label: "Smart Warehousing",
+          link: "/pages/services/smart-warehousing-solution",
+        },
+        {
+          label: "Distribution Solutions",
+          link: "/pages/services/smart-distribution-solution",
+        },
+        {
+          label: "Transportation Services",
+          link: "/pages/services/transportation-service",
+        },
+        {
+          label: "Supply Chain Solutioning",
+          link: "/pages/services/supply-chain-solution",
+        },
+      ],
+    },
+    {
+      title: "Company",
+      children: [
+        { label: "Our Partners", link: "/pages/company/OurPartners" },
+        { label: "Our Team", link: "/pages/company/OurTeam" },
+        { label: "Careers", link: "/pages/company/Careers" },
+      ],
+    },
+    {
+      title: "Resources",
+      children: [
+        { label: "Our Blogs", link: "/" },
+        { label: "Our News", link: "/" },
+      ],
+    },
+  ];
+
   // Function to check if link is active
   const isActive = (href) =>
     pathname === href
@@ -176,35 +215,9 @@ export default function Header() {
           </button>
         </div>
 
-        <div className="space-y-4">
-          {/* Collapsible Mobile Menus */}
-          {[
-            {
-              title: "Services",
-              children: [
-                {
-                  label: "Smart Warehousing",
-                  link: "/pages/services/smart-warehousing-solution",
-                },
-                {
-                  label: "Distribution Solutions",
-                  link: "/pages/services/smart-distribution-solution",
-                },
-                {
-                  label: "Transportation Services",
-                  link: "/pages/services/transportation-service",
-                },
-                {
-                  label: "Supply Chain Solutioning",
-                  link: "/pages/services/supply-chain-solution",
-                },
-              ],
-            },
-            {
-              title: "Company",
-              children: [{ label: "Our Partners", link: "/pages/about" }],
-            },
-          ].map((group) => (
+        <div className="space-y-6">
+          {/* Collapsible Dropdown Menus */}
+          {menuGroups.map((group) => (
             <div key={group.title}>
               <button
                 onClick={() =>
@@ -212,7 +225,7 @@ export default function Header() {
                     prev === group.title ? "" : group.title
                   )
                 }
-                className="flex justify-between items-center w-full text-left font-semibold hover:text-[#FF7F06]"
+                className="flex justify-between items-center w-full text-lg font-semibold hover:text-[#FF7F06] transition"
               >
                 {group.title}
                 <ChevronRightIcon
@@ -221,8 +234,9 @@ export default function Header() {
                   }`}
                 />
               </button>
+
               {mobileDropdown === group.title && (
-                <div className="ml-4 mt-2 space-y-2 text-sm">
+                <div className="ml-4 mt-4 space-y-4 text-md text-white">
                   {group.children.map((child) => (
                     <Link
                       href={child.link}
@@ -238,22 +252,32 @@ export default function Header() {
             </div>
           ))}
 
-          {/* Static */}
-          <Link
-            href="/pages/about"
-            className="block mt-4 hover:text-[#FF7F06]"
-            onClick={() => setSidebarOpen(false)}
-          >
-            About Us
-          </Link>
-          <Link
-            href="/pages/contact-us"
-            className="block hover:text-[#FF7F06]"
-            onClick={() => setSidebarOpen(false)}
-          >
-            Contact Us
-          </Link>
+          {/* Static Links */}
+          <div className="space-y-6 mt-4 text-white font-bold">
+            <Link
+              href="/pages/services/motherhood-service"
+              className="block hover:text-[#FF7F06]"
+              onClick={() => setSidebarOpen(false)}
+            >
+              Motherhood
+            </Link>
+            <Link
+              href="/pages/about"
+              className="block hover:text-[#FF7F06]"
+              onClick={() => setSidebarOpen(false)}
+            >
+              About Us
+            </Link>
+            <Link
+              href="/pages/contact-us"
+              className="block hover:text-[#FF7F06]"
+              onClick={() => setSidebarOpen(false)}
+            >
+              Contact Us
+            </Link>
+          </div>
 
+          {/* CTA Button */}
           <button
             onClick={() => setSidebarOpen(false)}
             className="mt-6 w-full bg-[#FF7F06] text-white px-4 py-2 rounded-2xl font-bold border-2 border-[#24577F] hover:border-white hover:bg-[#24577F] hover:text-white transition duration-300"

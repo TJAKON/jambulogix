@@ -123,7 +123,7 @@ export default function KeySolutions() {
             {solutions.map((item, idx) => (
               <div
                 key={idx}
-                className="bg-[#24577F]/80 cursor-pointer backdrop-blur-3xl p-12 rounded-3xl shadow-sm border border-gray-200 hover:shadow-lg transition-all duration-200 ease-in-out"
+                className="bg-[#24577F] hover:bg-black/90 cursor-pointer backdrop-blur-3xl p-12 rounded-3xl shadow-sm border border-gray-200 hover:shadow-lg transition-all duration-200 ease-in-out"
               >
                 <div className="flex flex-col h-full items-start">
                   <Image

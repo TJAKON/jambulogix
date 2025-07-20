@@ -6,6 +6,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import TestimonialCarousel from "@/components/sections/TestimonialSection";
 import ContactSection from "@/components/sections/ContactSection";
+import InnerNumbers from "@/components/sections/InnerNumbers";
 
 const subServices = [
   {
@@ -108,10 +109,10 @@ export default function Page() {
           {/* Text Section */}
           <div>
             <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-extrabold text-[#24577F] mb-6 leading-tight">
-              What is <span className="text-[#FF7F06]">Supply Chain</span>?
+              What is <span className="text-[#FF7F06]">Supply Chain..</span>?
             </h2>
 
-            <p className="text-gray-600 text-base sm:text-lg leading-relaxed mb-4">
+            <p className="text-black text-base sm:text-lg leading-relaxed mb-4">
               In a world where speed, accuracy, and adaptability define
               competitive advantage, Jambulogix’s Supply Chain Solutioning
               services empower businesses to build smarter, leaner, and more
@@ -121,7 +122,7 @@ export default function Page() {
               ground up.
             </p>
 
-            <p className="text-gray-600 text-base sm:text-lg leading-relaxed">
+            <p className="text-black text-base sm:text-lg leading-relaxed">
               Our goal is simple: optimize your operations, minimize cost, and
               maximize service experience — whether you're scaling up or
               navigating complexity.
@@ -134,58 +135,14 @@ export default function Page() {
               alt="Warehouse"
               width={600}
               height={400}
-              className="rounded-2xl shadow-xl w-full h-[600px] object-cover"
+              className="rounded-2xl shadow-xl w-full h-[320px] md:h-[600px] object-cover"
             />
           </div>
         </div>
       </section>
 
       {/* Stats Section */}
-      <section className="bg-[#0A1A2F] text-white py-16 px-6 sm:px-20">
-        <div className="max-w-7xl mx-auto text-center mb-12">
-          <motion.h2
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7 }}
-            className="text-3xl sm:text-4xl font-bold mb-4"
-          >
-            Driving Efficiency at Unmatched Scale
-          </motion.h2>
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2, duration: 0.7 }}
-            className="text-white/70 max-w-2xl mx-auto"
-          >
-            Our smart supply chain operates with precision and scale, ensuring
-            speed, coverage, and reliability across the nation.
-          </motion.p>
-        </div>
-
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-10 max-w-6xl mx-auto">
-          {[
-            { label: "Orders Processed Daily", value: "1 Billion+" },
-            { label: "Global Offices", value: "2,200+" },
-            { label: "PIN Codes Covered", value: "14,300+" },
-            { label: "Fleet Strength", value: "2,500+" },
-          ].map((item, idx) => (
-            <motion.div
-              key={idx}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: idx * 0.2, duration: 0.6 }}
-              className="rounded-2xl text-center bg-[#112233] p-6 shadow-lg hover:scale-105 transition-transform"
-            >
-              <h3 className=" text-xl md:text-3xl font-extrabold mb-2 text-[#FF7F06]">
-                {item.value}
-              </h3>
-              <p className="text-xs md:text-sm text-white/80 tracking-wide">
-                {item.label}
-              </p>
-            </motion.div>
-          ))}
-        </div>
-      </section>
+      <InnerNumbers />
 
       {/* Sub Services Section */}
       <section className="bg-[#F9FAFB] py-20 px-6 sm:px-20 border-t border-gray-200">
@@ -239,13 +196,13 @@ export default function Page() {
 
       {/* Highlights + Benefits */}
       <section className="py-16 px-6 sm:px-20 bg-[#0A1A2F]">
-        <div className="max-w-7xl mx-auto text-center">
+        <div className="max-w-7xl mx-auto  text-center">
           <h2 className="text-4xl sm:text-5xl font-extrabold text-white mb-12">
-            Key <span className="text-[#FF7F06]"> Features</span>
+            Key <span className="text-[#FF7F06]"> Highlights</span>
           </h2>
 
           <motion.div
-            className="grid sm:grid-cols-3 gap-10 mb-20 text-center"
+            className="grid sm:grid-cols-3 gap-6 md:gap-10 mb-6 md:mb-20 text-center"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
@@ -258,7 +215,7 @@ export default function Page() {
             ].map((item, idx) => (
               <motion.div
                 key={idx}
-                className="bg-white p-8 rounded-2xl shadow-lg border hover:border-[#FF7F06] hover:bg-black/30 hover:text-white hover:shadow-xl transition duration-300 cursor-pointer group"
+                className="bg-white p-5 md:p-8 rounded-2xl shadow-lg border hover:border-[#FF7F06] hover:bg-black/30 hover:text-white hover:shadow-xl transition duration-300 cursor-pointer group"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
@@ -276,12 +233,12 @@ export default function Page() {
       </section>
 
       {/* Target Audience */}
-      <section className="py-24 px-6 sm:px-20 bg-[#F0F4F8]">
+      <section className="py-16 md:py-24 px-6 sm:px-20 bg-[#F0F4F8]">
         <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-4xl sm:text-5xl font-extrabold text-[#24577F] mb-6">
+          <h2 className="text-4xl sm:text-5xl font-extrabold text-[#24577F] mb-3 md:mb-6">
             Who is it for?
           </h2>
-          <p className="text-gray-600 text-lg mb-16 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-black text-md md:text-lg mb-8 md:mb-16 max-w-3xl mx-auto leading-relaxed">
             Our solutions are designed for businesses of all scales—whether
             you’re an ambitious start-up, a growing SME, or a large enterprise.
             We enable efficient returns, better customer satisfaction, and
@@ -289,7 +246,7 @@ export default function Page() {
           </p>
 
           <motion.div
-            className="grid sm:grid-cols-3 gap-10"
+            className="grid sm:grid-cols-3 gap-6 md:gap-10"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
@@ -324,14 +281,14 @@ export default function Page() {
       </section>
 
       {/* Highlights + Benefits */}
-      <section className="py-24 px-6 sm:px-20 bg-gradient-to-b from-[#F9FAFB] to-white">
+      <section className="py-16 md:py-24 px-6 sm:px-20 bg-gradient-to-b from-[#F9FAFB] to-white">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl sm:text-5xl font-extrabold text-[#24577F] mb-12 text-center">
             Key Benefits
           </h2>
 
           <motion.div
-            className="grid sm:grid-cols-3 gap-10 text-center"
+            className="grid sm:grid-cols-3 gap-6 md:gap-10 text-center"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
@@ -400,20 +357,20 @@ export default function Page() {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
-            className="grid sm:grid-cols-2 gap-12 items-center bg-white rounded-3xl shadow-xl p-10 border-b-4 border-white hover:border-[#FF7F06] transition"
+            className="grid sm:grid-cols-2 gap-6 md:gap-12 items-center bg-white rounded-3xl shadow-xl p-6 md:p-10 border-b-4 border-white hover:border-[#FF7F06] transition"
           >
             <Image
               src={activeStep.image}
               alt={activeStep.title}
               width={550}
               height={350}
-              className="rounded-2xl w-full h-auto shadow-lg transform hover:scale-[1.02] transition"
+              className="rounded-2xl w-full h-[220px] md:h-[420px] object-cover shadow-lg transform hover:scale-[1.02] transition"
             />
             <div className="text-left">
-              <h4 className="text-lg sm:text-6xl font-semibold text-[#FF7F06] mb-4">
+              <h4 className="text-2xl sm:text-6xl font-semibold text-[#FF7F06] mb-1 md:mb-4">
                 {activeStep.title}
               </h4>
-              <p className="text-gray-600 text-base sm:text-lg leading-relaxed">
+              <p className="text-black text-base sm:text-lg leading-relaxed">
                 {activeStep.description}
               </p>
             </div>

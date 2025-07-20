@@ -57,30 +57,29 @@ export default function MotherHood() {
   return (
     <div className="font-sans text-gray-800">
       {/* Hero Section */}
-      <section className="relative px-6 md:px-16 h-screen flex flex-col-reverse md:flex-row items-center justify-between gap-10 overflow-hidden">
-        {/* 🔹 Blurred background image layer */}
-        <div className="absolute inset-0 -z-10">
+      <section className="relative px-4 sm:px-6 md:px-16 h-[90vh] sm:h-screen flex flex-col-reverse md:flex-row items-center justify-between gap-10 overflow-hidden py-12 md:py-0">
+        {/* 🔹 Background Image Layer */}
+        <div className=" absolute inset-0 -z-10">
           <Image
-            src="/53.jpg" // 👉 Replace with your background image
+            src="/53.jpg"
             alt="Background blur"
             fill
-            className="object-cover blur-xs opacity-60"
+            className="object-cover blur-sm opacity-60"
             priority
           />
-          <div className="absolute inset-0 bg-white/10" />{" "}
-          {/* Optional tint overlay */}
+          <div className="absolute inset-0 bg-white/10" />
         </div>
 
-        {/* 🔹 Text & buttons */}
-        <div className="max-w-xl text-center md:text-left z-10">
-          <h1 className="text-4xl md:text-8xl font-extrabold mb-4 text-white">
+        {/* 🔹 Text & Buttons */}
+        <div className="w-full md:w-1/2 text-center md:text-left z-10">
+          <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold mb-4 text-white leading-tight">
             Logistics with <span className="text-[#FF7F06]">Heart</span>
           </h1>
-          <p className="text-lg text-white mb-6">
+          <p className="text-base sm:text-lg md:text-xl text-white mb-6 max-w-xl mx-auto md:mx-0">
             MotherHood Service by Jambulogix – Where every package is treated
             like family.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+          <div className="flex flex-row sm:flex-row gap-4 justify-center md:justify-start">
             <Link href="/pages/contact-us" passHref>
               <button
                 type="button"
@@ -101,8 +100,8 @@ export default function MotherHood() {
           </div>
         </div>
 
-        {/* 🔹 Foreground main image */}
-        <div className="w-full md:w-[50%] h-64 md:h-[420px] rounded-xl relative overflow-hidden shadow-md z-10">
+        {/* 🔹 Foreground Image */}
+        <div className="hidden sm:block w-full md:w-1/2 h-64 sm:h-80 md:h-[420px] rounded-xl relative overflow-hidden shadow-lg z-10">
           <Image
             src="/70.jpg"
             alt="Mother packing care package with love"
@@ -113,16 +112,18 @@ export default function MotherHood() {
         </div>
       </section>
       {/* Why Choose Us */}
-      <section className="py-20 px-6 md:px-16 bg-white">
-        <div className="max-w-7xl mx-auto text-center">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl md:text-6xl font-normal md:font-extrabold text-[#1F2937] mb-12">
+      <section className="py-16 px-4 sm:px-6 md:px-16 bg-white">
+        <div className="max-w-7xl mx-auto">
+          {/* Title Section */}
+          <div className="text-center mb-12">
+            <h2 className="text-3xl sm:text-4xl md:text-6xl font-semibold md:font-extrabold text-[#1F2937] leading-tight">
               Why Choose <span className="text-[#FF7F06]">MotherHood</span>{" "}
               Service?
             </h2>
           </div>
 
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-10">
+          {/* Feature Cards */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 md:gap-10">
             {[
               {
                 title: "Safe for Students",
@@ -142,15 +143,15 @@ export default function MotherHood() {
             ].map((item, i) => (
               <div
                 key={i}
-                className="bg-[#0A1A2F] rounded-2xl p-8 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 text-left"
+                className="bg-[#0A1A2F] rounded-2xl p-6 sm:p-8 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
               >
-                <div className="w-14 h-14 flex items-center justify-center text-3xl bg-[#FFE8D6] rounded-full mb-4">
+                <div className="w-12 h-12 sm:w-14 sm:h-14 flex items-center justify-center text-2xl sm:text-3xl bg-[#FFE8D6] rounded-full mb-4">
                   {item.icon}
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3">
+                <h3 className="text-lg sm:text-xl font-bold text-white mb-2 sm:mb-3">
                   {item.title}
                 </h3>
-                <p className="text-white/70 font-medium leading-relaxed">
+                <p className="text-white/70 text-sm sm:text-base leading-relaxed font-medium">
                   {item.desc}
                 </p>
               </div>
@@ -158,56 +159,12 @@ export default function MotherHood() {
           </div>
         </div>
       </section>
-      {/* Stats Section */}
-      {/* <section className="bg-[#0A1A2F] text-white py-16 px-6 sm:px-20">
-        <div className="max-w-7xl mx-auto text-center mb-12">
-          <motion.h2
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7 }}
-            className="text-3xl sm:text-5xl font-bold mb-4"
-          >
-            Driving Efficiency at Unmatched Scale
-          </motion.h2>
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2, duration: 0.7 }}
-            className="text-white/70 max-w-2xl mx-auto"
-          >
-            Our smart supply chain operates with precision and scale, ensuring
-            speed, coverage, and reliability across the nation.
-          </motion.p>
-        </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-10 max-w-6xl mx-auto">
-          {[
-            { label: "Orders Processed Daily", value: "1 Billion+" },
-            { label: "Global Offices", value: "2,200+" },
-            { label: "PIN Codes Covered", value: "14,300+" },
-            { label: "Fleet Strength", value: "2,500+" },
-          ].map((item, idx) => (
-            <motion.div
-              key={idx}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: idx * 0.2, duration: 0.6 }}
-              className="rounded-2xl text-center bg-[#112233] p-6 shadow-lg hover:scale-105 transition-transform"
-            >
-              <h3 className=" text-xl md:text-3xl font-extrabold mb-2 text-[#FF7F06]">
-                {item.value}
-              </h3>
-              <p className="text-xs md:text-sm text-white/80 tracking-wide">
-                {item.label}
-              </p>
-            </motion.div>
-          ))}
-        </div>
-      </section> */}
+      {/* Stats Section */}
       <InnerNumbers />
-      {/* Core Services */}
-      <section className="py-20 px-6 md:px-10 bg-[#F4F6F8]">
-        <h2 className=" text-4xl md:text-8xl font-normal md:font-extrabold text-center mb-12">
+
+      <section className="py-16 px-4 sm:px-6 md:px-10 bg-[#F4F6F8]">
+        <h2 className="text-3xl sm:text-4xl md:text-6xl font-semibold md:font-extrabold text-center mb-10">
           Our Core <span className="text-[#FF7F06]">Services</span>
         </h2>
 
@@ -217,41 +174,44 @@ export default function MotherHood() {
             delay: 4000,
             disableOnInteraction: false,
           }}
-          spaceBetween={40}
-          // slidesPerView={2}
+          spaceBetween={20}
           breakpoints={{
             0: { slidesPerView: 1 },
-            640: { slidesPerView: 1.5 },
-            768: { slidesPerView: 1.5 },
+            640: { slidesPerView: 1.2 },
+            768: { slidesPerView: 1.4 },
             1024: { slidesPerView: 2 },
           }}
           navigation
-          // pagination={{ clickable: true }}
-          loop={true} // <-- Enables infinite loop
-          className="max-w-8xl mx-auto"
+          loop={true}
+          className="max-w-7xl mx-auto"
         >
           {services.map((service, index) => (
             <SwiperSlide key={index}>
-              <div className="bg-white rounded-2xl shadow-md p-3 flex flex-col md:flex-row gap-3 items-center">
-                <div className="w-full md:w-3/5 h-[500px] relative overflow-hidden rounded-xl shadow object-cover">
+              <div className="bg-white rounded-2xl shadow-md p-4 sm:p-6 flex flex-col md:flex-row gap-4 items-start">
+                {/* Image */}
+                <div className="w-full md:w-3/5 h-[280px] sm:h-[400px] md:h-[460px] relative overflow-hidden rounded-xl">
                   <Image
                     src={service.image}
                     alt={service.title}
-                    width={400}
-                    height={400}
-                    className="object-cover w-full h-[500px]"
+                    fill
+                    className="object-cover"
                   />
                 </div>
 
-                <div className="w-full md:w-2/5 text-left">
-                  <h3 className="text-3xl font-bold mb-3">{service.title}</h3>
-                  <p className="text-gray-600 mb-4">{service.desc}</p>
-                  <ul className="list-disc pl-5 text-gray-700 space-y-2 mb-6">
+                {/* Text */}
+                <div className="w-full md:w-2/5 text-left mt-4 md:mt-0">
+                  <h3 className="text-2xl sm:text-3xl font-bold mb-3">
+                    {service.title}
+                  </h3>
+                  <p className="text-gray-600 mb-4 text-sm sm:text-base">
+                    {service.desc}
+                  </p>
+                  <ul className="list-disc pl-5 text-gray-700 space-y-2 mb-6 text-sm sm:text-base">
                     {service.points.map((point, i) => (
                       <li key={i}>{point}</li>
                     ))}
                   </ul>
-                  <button className="bg-[#1F2937] text-white px-6 py-3 rounded-lg hover:bg-[#FF7F06] transition-all">
+                  <button className="bg-[#1F2937] text-white px-5 py-2.5 sm:px-6 sm:py-3 rounded-lg hover:bg-[#FF7F06] transition-all">
                     Start Booking
                   </button>
                 </div>
@@ -260,14 +220,15 @@ export default function MotherHood() {
           ))}
         </Swiper>
       </section>
-      {/* How It Works */}
-      <section className="py-24 px-6 md:px-20 bg-gradient-to-b from-[#FFF] to-[#F9FAFB] relative overflow-hidden">
+
+      {/* 🔸 HOW IT WORKS */}
+      <section className="py-20 px-4 sm:px-6 md:px-20 bg-gradient-to-b from-[#FFF] to-[#F9FAFB] relative overflow-hidden">
         <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-4xl md:text-8xl font-normal md:font-extrabold text-[#1F2937] mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-6xl font-semibold md:font-extrabold text-[#1F2937] mb-14">
             How <span className="text-[#FF7F06]">It Works</span>
           </h2>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-12 relative z-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 relative z-10">
             {[
               {
                 title: "Schedule Pickup",
@@ -292,37 +253,40 @@ export default function MotherHood() {
             ].map((step, i) => (
               <div
                 key={i}
-                className="bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 p-8 flex flex-col items-center text-center"
+                className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-6 sm:p-8 flex flex-col items-center text-center"
               >
-                <div className="text-4xl mb-4 bg-[#FFFAF0] w-16 h-16 flex items-center justify-center rounded-full shadow-md">
+                <div className="text-3xl sm:text-4xl mb-4 bg-[#FFFAF0] w-14 h-14 sm:w-16 sm:h-16 flex items-center justify-center rounded-full shadow-md">
                   {step.icon}
                 </div>
-                <div className="text-sm text-gray-500 mb-2 tracking-wide">
+                <div className="text-xs sm:text-sm text-gray-500 mb-1 tracking-wide uppercase">
                   Step {i + 1}
                 </div>
-                <h3 className="text-xl font-bold text-[#1F2937] mb-3">
+                <h3 className="text-lg sm:text-xl font-bold text-[#1F2937] mb-2 sm:mb-3">
                   {step.title}
                 </h3>
-                <p className="text-gray-600 leading-relaxed">{step.desc}</p>
+                <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
+                  {step.desc}
+                </p>
               </div>
             ))}
           </div>
         </div>
 
         {/* Decorative Blurs */}
-        <div className="absolute top-0 left-0 w-72 h-72 bg-[#FFEDD5] rounded-full blur-3xl opacity-40 -z-10" />
-        <div className="absolute bottom-0 right-0 w-72 h-72 bg-[#DBEAFE] rounded-full blur-3xl opacity-30 -z-10" />
+        <div className="absolute top-0 left-0 w-60 h-60 sm:w-72 sm:h-72 bg-[#FFEDD5] rounded-full blur-3xl opacity-40 -z-10" />
+        <div className="absolute bottom-0 right-0 w-60 h-60 sm:w-72 sm:h-72 bg-[#DBEAFE] rounded-full blur-3xl opacity-30 -z-10" />
       </section>
+
       {/* Trust & Safety */}
-      <section className="py-24 px-6 md:px-20 bg-[#0A1A2F]">
+      <section className="py-16 px-4 sm:px-6 md:px-20 bg-[#0A1A2F]">
         <div className="max-w-7xl mx-auto text-center">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl md:text-6xl font-normal md:font-extrabold text-white mb-16">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-3xl sm:text-4xl md:text-6xl font-semibold md:font-extrabold text-white mb-12 sm:mb-16">
               Trust & <span className="text-[#FF7F06]">Safety</span> Guarantees
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 sm:gap-10">
             {[
               {
                 title: "Tamper-Proof Packaging",
@@ -342,15 +306,15 @@ export default function MotherHood() {
             ].map((item, i) => (
               <div
                 key={i}
-                className="bg-black/30 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 p-8 flex flex-col items-center text-center"
+                className="bg-black/30 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 p-6 sm:p-8 flex flex-col items-center text-center"
               >
-                <div className="w-16 h-16 mb-5 flex items-center justify-center text-3xl rounded-full bg-[#FFFAF0] text-[#FF7F06] shadow-md">
+                <div className="w-14 h-14 sm:w-16 sm:h-16 mb-4 sm:mb-5 flex items-center justify-center text-2xl sm:text-3xl rounded-full bg-[#FFFAF0] text-[#FF7F06] shadow-md">
                   {item.icon}
                 </div>
-                <h4 className="text-xl font-bold text-white mb-3">
+                <h4 className="text-lg sm:text-xl font-bold text-white mb-2 sm:mb-3">
                   {item.title}
                 </h4>
-                <p className="text-white/80 text-sm leading-relaxed">
+                <p className="text-white/80 text-sm sm:text-base leading-relaxed">
                   {item.desc}
                 </p>
               </div>
@@ -358,21 +322,23 @@ export default function MotherHood() {
           </div>
         </div>
       </section>
+
       {/* Testimonials */}
-      <section className="py-24 px-6 md:px-20 bg-gradient-to-br from-[#FFF8F1] to-[#FDFDFD] text-center">
+      <section className="py-20 px-4 sm:px-6 md:px-20 bg-gradient-to-br from-[#FFF8F1] to-[#FDFDFD] text-center">
         <div className="max-w-7xl mx-auto">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl md:text-6xl font-normal md:font-extrabold text-[#1F2937] mb-12">
+          <div className="max-w-3xl mx-auto mb-6">
+            <h2 className="text-3xl sm:text-4xl md:text-6xl font-semibold md:font-extrabold text-[#1F2937] mb-6 sm:mb-12">
               Stories from Our{" "}
               <span className="text-[#FF7F06]">Extended Family</span>
             </h2>
           </div>
-          <p className="text-gray-600 max-w-2xl mx-auto mb-16 text-lg">
+
+          <p className="text-gray-600 max-w-xl mx-auto mb-10 sm:mb-16 text-base sm:text-lg">
             Hear from loving parents, doting grandparents, and globe-trotting
             professionals who made someone’s day special through MotherHood.
           </p>
 
-          <div className="grid md:grid-cols-3 gap-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 sm:gap-10">
             {[
               {
                 name: "Suman Sharma",
@@ -398,20 +364,23 @@ export default function MotherHood() {
             ].map((t, i) => (
               <div
                 key={i}
-                className="bg-white p-8 rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 text-left"
+                className="bg-white p-6 sm:p-8 rounded-3xl shadow-md hover:shadow-xl transition-all duration-300 text-left"
               >
-                <div className="text-4xl mb-4">{t.emoji}</div>
-                <p className="italic text-gray-700 mb-4 leading-relaxed">
+                <div className="text-3xl sm:text-4xl mb-4">{t.emoji}</div>
+                <p className="italic text-gray-700 mb-4 text-sm sm:text-base leading-relaxed">
                   “{t.quote}”
                 </p>
-                <hr className="my-4 border-t border-gray-200" />
-                <p className="font-bold text-[#1F2937] text-lg">{t.name}</p>
-                <p className="text-sm text-gray-500">{t.tag}</p>
+                <hr className="my-3 sm:my-4 border-t border-gray-200" />
+                <p className="font-bold text-[#1F2937] text-base sm:text-lg">
+                  {t.name}
+                </p>
+                <p className="text-xs sm:text-sm text-gray-500">{t.tag}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
+
       {/* Quote Section */}
 
       <section id="quote">

@@ -90,12 +90,12 @@ export default function AboutUsPage() {
   return (
     <div className="">
       {/* Hero Banner */}
-      <section className="relative w-full h-[60vh] md:h-screen overflow-hidden">
+      <section className="relative w-full h-[90vh] md:h-screen overflow-hidden">
         <Image
           src="/95.jpg"
           alt="About Jambulogix"
           fill
-          className="object-cover w-full h-full"
+          className="object-cover object-right md:object-center w-full h-full"
         />
         <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
           <div className="text-center text-white px-4">
@@ -113,7 +113,7 @@ export default function AboutUsPage() {
       {/* Company Summary */}
       <section className="py-20 px-6 sm:px-20 max-w-8xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center bg-white">
         {/* Left: Image Grid + Stats */}
-        <div className="space-y-10">
+        <div className="space-y-10 hidden sm:block">
           {/* Image Grid */}
           <div className="grid grid-cols-2 gap-4">
             <div className="w-full aspect-square overflow-hidden rounded-xl shadow">
@@ -207,6 +207,60 @@ export default function AboutUsPage() {
             </div>
           </div>
         </div>
+
+        <div className="space-y-10 block sm:hidden">
+          {/* Image Grid */}
+          <div className="grid grid-cols-2 gap-4">
+            <div className="w-full aspect-square overflow-hidden rounded-xl shadow">
+              <Image
+                src="/warehousing.jpg"
+                alt="Team 1"
+                width={500}
+                height={500}
+                className="object-cover w-full h-full"
+              />
+            </div>
+            <div className="w-full aspect-square overflow-hidden rounded-xl shadow">
+              <Image
+                src="/test1.jpg"
+                alt="Warehouse 1"
+                width={500}
+                height={500}
+                className="object-cover w-full h-full"
+              />
+            </div>
+            <div className="w-full aspect-square overflow-hidden rounded-xl shadow">
+              <Image
+                src="/test2.jpg"
+                alt="Transport 1"
+                width={500}
+                height={500}
+                className="object-cover w-full h-full"
+              />
+            </div>
+            <div className="w-full aspect-square overflow-hidden rounded-xl shadow">
+              <Image
+                src="/test3.jpg"
+                alt="Delivery 1"
+                width={500}
+                height={500}
+                className="object-cover w-full h-full"
+              />
+            </div>
+          </div>
+
+          {/* Sub Stats */}
+          <div className="grid grid-cols-2 gap-6 text-center">
+            <div>
+              <h3 className="text-3xl font-bold text-[#24577F]">80L+</h3>
+              <p className="text-sm text-gray-600">Happy Customers</p>
+            </div>
+            <div>
+              <h3 className="text-3xl font-bold text-[#24577F]">2,200+</h3>
+              <p className="text-sm text-gray-600">Business Connections</p>
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* Highlights Section */}
@@ -247,12 +301,12 @@ export default function AboutUsPage() {
         ))}
       </section> */}
 
-      <section className="relative bg-[#24577F] text-white py-24 px-6 sm:px-20 overflow-hidden">
+      <section className="relative bg-[#24577F] text-white py-12 md:py-24 px-6 sm:px-20 overflow-hidden">
         {/* Decorative Gradient Blobs */}
         {/* <div className="absolute top-[-100px] left-[-100px] w-72 h-72 bg-[#FF7F06]/40 rounded-full blur-3xl opacity-60 z-0" />
         <div className="absolute bottom-[-100px] right-[-80px] w-72 h-72 bg-[#FF7F06]/30 rounded-full blur-2xl opacity-50 z-0" /> */}
 
-        <div className="max-w-6xl mx-auto relative z-10 grid sm:grid-cols-2 gap-16 items-start">
+        <div className="max-w-6xl mx-auto relative z-10 grid sm:grid-cols-2 gap-8 md:gap-16 items-start">
           {/* Vision */}
           <div className="bg-white/10 rounded-2xl p-8 shadow-lg border border-white/20 hover:bg-white/20 transition">
             <div className="flex items-center gap-4 mb-4">
@@ -285,9 +339,9 @@ export default function AboutUsPage() {
         </div>
       </section>
 
-      <section className="py-24 px-6 sm:px-20 bg-black/60">
+      <section className=" py-12 md:py-24 px-6 sm:px-20 bg-black/60">
         <div className="max-w-8xl mx-auto">
-          <h2 className="text-4xl sm:text-5xl font-bold text-center text-[#FF7F06] mb-16">
+          <h2 className="text-4xl sm:text-5xl font-bold text-center text-[#FF7F06] mb-8 md:mb-16">
             Our Leadership
           </h2>
 
@@ -331,14 +385,14 @@ export default function AboutUsPage() {
       </section>
 
       {/* Values Section */}
-      <section className="py-20 px-6 sm:px-20 mx-auto bg-white/95">
+      <section className=" py-10 md:py-20 px-6 sm:px-20 mx-auto bg-white/95">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
           {/* Right Side: Content */}
           <div>
-            <h2 className="text-5xl font-bold text-[#FF7F06] mb-6">
+            <h2 className="text-4xl sm:text-5xl text-center  font-bold text-[#FF7F06] mb-6">
               Our Core Values
             </h2>
-            <p className="text-gray-700 text-lg mb-6">
+            <p className="text-black text-md md:text-lg mb-6">
               At Jambulogix, our values drive everything — from decision-making
               to daily operations.
             </p>
@@ -354,8 +408,8 @@ export default function AboutUsPage() {
                   key={idx}
                   className="flex items-start gap-3 group hover:pl-2 transition-all"
                 >
-                  <span className="text-[#24577F] font-bold">•</span>
-                  <p className="text-gray-800 group-hover:text-[#24577F] transition duration-300">
+                  <span className="text-black font-bold">•</span>
+                  <p className="text-black group-hover:text-[#24577F] transition duration-300">
                     {item}
                   </p>
                 </li>
@@ -394,10 +448,10 @@ export default function AboutUsPage() {
       {/* Partners Grid */}
       <section className="py-20 px-6 sm:px-12 md:px-20 bg-white">
         <div className="text-center mb-12">
-          <h2 className="text-5xl font-bold text-[#24577F] mb-4">
+          <h2 className=" text-4xl md:text-5xl font-bold text-[#24577F] mb-4">
             Trusted by Leading Brands
           </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
+          <p className="text-black max-w-2xl mx-auto">
             We collaborate with industry leaders across sectors. Choose a
             category to view our partners.
           </p>
@@ -424,40 +478,47 @@ export default function AboutUsPage() {
       </section>
 
       {/* Values Section */}
-      <section className="py-20 px-6 sm:px-20 mx-auto bg-white/95">
+      <section className=" py-10 md:py-20 px-6 sm:px-20 mx-auto bg-white/95">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
-          <div className="grid grid-cols-2 gap-4">
-            {["/test4.jpg", "/test3.jpg", "/test3.jpg", "/test4.jpg"].map(
-              (src, idx) => (
-                <div
-                  key={idx}
-                  className="relative group rounded-xl overflow-hidden shadow-lg border border-gray-200"
-                >
-                  <Image
-                    src={src}
-                    alt={`Core Value ${idx + 1}`}
-                    width={300}
-                    height={200}
-                    className="object-cover w-full h-full transform group-hover:scale-105 transition duration-300"
-                  />
-                  <div className="absolute bottom-0 left-0 w-full bg-black/50 text-white text-center py-2 text-sm font-semibold backdrop-blur-sm">
-                    {
-                      ["Innovation", "Empathy", "Transparency", "Reliability"][
-                        idx
-                      ]
-                    }
+          <div className="hidden sm:flex">
+            <div className="grid grid-cols-2 gap-4 ">
+              {["/test4.jpg", "/test3.jpg", "/test3.jpg", "/test4.jpg"].map(
+                (src, idx) => (
+                  <div
+                    key={idx}
+                    className="relative group rounded-xl overflow-hidden shadow-lg border border-gray-200"
+                  >
+                    <Image
+                      src={src}
+                      alt={`Core Value ${idx + 1}`}
+                      width={300}
+                      height={200}
+                      className="object-cover w-full h-full transform group-hover:scale-105 transition duration-300"
+                    />
+                    <div className="absolute bottom-0 left-0 w-full bg-black/50 text-white text-center py-2 text-sm font-semibold backdrop-blur-sm">
+                      {
+                        [
+                          "Innovation",
+                          "Empathy",
+                          "Transparency",
+                          "Reliability",
+                        ][idx]
+                      }
+                    </div>
                   </div>
-                </div>
-              )
-            )}
+                )
+              )}
+            </div>
           </div>
+
           {/* Right Side: Content */}
           <div>
-            <h2 className="text-5xl font-bold text-[#FF7F06] mb-6">
+            <h2 className=" text-4xl md:text-5xl font-bold text-[#FF7F06] mb-6">
               Our Growth Strategy
             </h2>
-            <p className="text-gray-700 text-lg mb-6">
-             Our expansion blueprint is simple yet powerful — Grow by Square Feet & Pin Codes.
+            <p className="text-black text-md md:text-lg mb-6">
+              Our expansion blueprint is simple yet powerful — Grow by Square
+              Feet & Pin Codes.
             </p>
             <ul className="space-y-4">
               {[
@@ -471,13 +532,44 @@ export default function AboutUsPage() {
                   key={idx}
                   className="flex items-start gap-3 group hover:pl-2 transition-all"
                 >
-                  <span className="text-[#24577F] font-bold">•</span>
-                  <p className="text-gray-800 group-hover:text-[#24577F] transition duration-300">
+                  <span className="text-black font-bold">•</span>
+                  <p className="text-black group-hover:text-[#24577F] transition duration-300">
                     {item}
                   </p>
                 </li>
               ))}
             </ul>
+          </div>
+
+          <div className="block sm:hidden">
+            <div className="grid grid-cols-2 gap-4 ">
+              {["/test4.jpg", "/test3.jpg", "/test3.jpg", "/test4.jpg"].map(
+                (src, idx) => (
+                  <div
+                    key={idx}
+                    className="relative group rounded-xl overflow-hidden shadow-lg border border-gray-200"
+                  >
+                    <Image
+                      src={src}
+                      alt={`Core Value ${idx + 1}`}
+                      width={300}
+                      height={200}
+                      className="object-cover w-full h-full transform group-hover:scale-105 transition duration-300"
+                    />
+                    <div className="absolute bottom-0 left-0 w-full bg-black/50 text-white text-center py-2 text-sm font-semibold backdrop-blur-sm">
+                      {
+                        [
+                          "Innovation",
+                          "Empathy",
+                          "Transparency",
+                          "Reliability",
+                        ][idx]
+                      }
+                    </div>
+                  </div>
+                )
+              )}
+            </div>
           </div>
           {/* Left Side: Image */}
         </div>

@@ -9,7 +9,7 @@ export default function AboutSection() {
   return (
     <section className="relative px-6 sm:px-20 py-20 bg-white/95 text-black overflow-hidden">
       {/* Decorative Background Image */}
-      <div className="absolute inset-0 z-0 opacity-60 pointer-events-none">
+      <div className="hidden sm:block absolute inset-0 z-0 opacity-60 pointer-events-none">
         <Image
           src="/graphics.png"
           alt="Background Graphic"
@@ -22,7 +22,7 @@ export default function AboutSection() {
       {/* Main Content */}
       <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
         {/* Left Side - Image Grid */}
-        <div className="space-y-10">
+        <div className="space-y-10 hidden sm:block">
           <div className="grid grid-cols-2 gap-4">
             {["/8.jpg", "/4.jpg", "/12.jpg", "/13.jpg"].map((src, index) => (
               <div
@@ -79,6 +79,25 @@ export default function AboutSection() {
             </button>
           </Link>
         </motion.div>
+
+        <div className="space-y-10 block sm:hidden">
+          <div className="grid grid-cols-2 gap-4">
+            {["/8.jpg", "/4.jpg", "/12.jpg", "/13.jpg"].map((src, index) => (
+              <div
+                key={index}
+                className="w-full aspect-square overflow-hidden rounded-xl shadow"
+              >
+                <Image
+                  src={src}
+                  alt={`Image ${index + 1}`}
+                  width={500}
+                  height={500}
+                  className="object-cover w-full h-full"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );

@@ -7,6 +7,7 @@ import emailjs from "@emailjs/browser";
 import toast from "react-hot-toast";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
+import ContactSection from "@/components/sections/ContactSection";
 
 export default function Page() {
   const formRef = useRef();
@@ -100,7 +101,7 @@ export default function Page() {
   return (
     <>
       <section
-        className="bg-[#070B2A] text-white py-32 sm:py-40 md:py-44 text-center bg-cover  bg-bottom relative"
+        className="bg-[#070B2A] text-white py-48 sm:py-40 md:py-44 text-center bg-cover  bg-bottom relative"
         style={{ backgroundImage: "url('/88.jpg')" }}
       >
         {/* Dark Overlay */}
@@ -120,171 +121,7 @@ export default function Page() {
         </div>
       </section>
 
-      <div className="bg-[#24577F]/60 backdrop-blur-3xl text-white">
-        <section className="py-20 px-6 lg:px-20">
-          <div className="grid md:grid-cols-2 gap-12">
-            <div className="relative w-full h-fit overflow-hidden rounded-md">
-              <div className=" max-w-3xl">
-                <h3 className="max-w-xl text-7xl font-extrabold uppercase mb-3 text-[#FF7F06]">
-                  Gain Leverage For <span className=" text-white">Your</span>{" "}
-                  Business With <span className=" text-white">jambulogix</span>
-                </h3>
-                <p className=" max-w-2xl text-lg mb-6 text-white/80 text-center sm:text-left">
-                  We’d love to hear from you! Whether you’re a business looking
-                  for scalable logistics solutions, a partner exploring
-                  collaboration, or a candidate interested in joining our
-                  journey — we’re just a message away.
-                </p>
-              </div>
-              {/* <video
-              autoPlay
-              loop
-              muted
-              playsInline
-              className="object-cover w-full rounded-md"
-            >
-              <source src="/Video-Showreel.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video> */}
-            </div>
-
-            <div>
-              <form ref={formRef} onSubmit={handleSubmit} className="space-y-4">
-                <input
-                  type="text"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  placeholder="Full Name"
-                  className={`${inputBase} ${errors.name ? errorStyle : ""}`}
-                />
-                {errors.name && (
-                  <p className="text-red-400 text-sm">{errors.name}</p>
-                )}
-
-                <input
-                  type="text"
-                  name="company"
-                  value={formData.company}
-                  onChange={handleChange}
-                  placeholder="Company Name"
-                  className={`${inputBase} ${errors.company ? errorStyle : ""}`}
-                />
-                {errors.company && (
-                  <p className="text-red-400 text-sm">{errors.company}</p>
-                )}
-
-                <input
-                  type="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  placeholder="Email Address"
-                  className={`${inputBase} ${errors.email ? errorStyle : ""}`}
-                />
-                {errors.email && (
-                  <p className="text-red-400 text-sm">{errors.email}</p>
-                )}
-
-                <PhoneInput
-                  country={"in"}
-                  value={formData.phone}
-                  onChange={(phone) =>
-                    setFormData((prev) => ({ ...prev, phone }))
-                  }
-                  inputProps={{
-                    name: "phone",
-                    required: true,
-                  }}
-                  containerClass="!w-full !bg-[#070B2A] !rounded-md !border !border-gray-300 focus-within:!ring-2 focus-within:!ring-[#FF7F06]"
-                  inputClass="!w-full !h-[52px] !bg-[#070B2A] !text-white !pl-16 !pr-4 !border-none placeholder-white/50"
-                  buttonClass="!border-r !border-gray-600 !px-3"
-                  dropdownClass="text-black"
-                  placeholder="Phone Number"
-                />
-                {errors.phone && (
-                  <p className="text-red-400 text-sm mt-1">{errors.phone}</p>
-                )}
-
-                <select
-                  name="service"
-                  value={formData.service}
-                  onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 bg-[#070B2A] text-white/70 rounded-md focus:outline-none focus:ring-2 focus:ring-[#FF7F06]"
-                >
-                  {services.map((option, idx) => (
-                    <option key={idx} value={option}>
-                      {option}
-                    </option>
-                  ))}
-                </select>
-
-                {formData.service === "Other" && (
-                  <>
-                    <input
-                      type="text"
-                      name="customService"
-                      value={formData.customService}
-                      onChange={handleChange}
-                      placeholder="Please specify"
-                      className={`${inputBase} ${
-                        errors.customService ? errorStyle : ""
-                      }`}
-                    />
-                    {errors.customService && (
-                      <p className="text-red-400 text-sm">
-                        {errors.customService}
-                      </p>
-                    )}
-                  </>
-                )}
-
-                <textarea
-                  rows={5}
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  placeholder="Message"
-                  className={`${inputBase} ${errors.message ? errorStyle : ""}`}
-                />
-                {errors.message && (
-                  <p className="text-red-400 text-sm">{errors.message}</p>
-                )}
-
-                <button
-                  type="submit"
-                  className="bg-[#FF7F06] text-[#070B2A] px-6 py-3 rounded-md hover:bg-orange-500 transition font-bold"
-                >
-                  Send Message
-                </button>
-              </form>
-            </div>
-          </div>
-          {/* 
-        <div className="grid lg:grid-cols-3 bg-[#2244f8] text-white p-8 mt-16 space-y-6 lg:space-y-0">
-          <div>
-            <h4 className="flex items-center gap-2 text-lg font-semibold">
-              <Phone className="w-5 h-5" /> Call Us
-            </h4>
-            <p className="ml-7 text-xl font-bold mt-1">+91 9109416188</p>
-          </div>
-          <div>
-            <h4 className="flex items-center gap-2 text-lg font-semibold">
-              <Mail className="w-5 h-5" /> Contact Emails
-            </h4>
-            <p className="ml-7 mt-1 font-medium">t.jaiprakash20@gmail.com</p>
-          </div>
-          <div>
-            <h4 className="flex items-center gap-2 text-lg font-semibold">
-              <MapPin className="w-5 h-5" /> Location
-            </h4>
-            <p className="ml-7 mt-1 font-medium">
-              Raipur, Chhattisgarh, India
-            </p>
-          </div>
-        </div> */}
-        </section>
-      </div>
+      <ContactSection />
       <section className="h-[400px] w-full">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3334.4801092970106!2d76.99134557528197!3d28.447734675766196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d179270965c3b%3A0xb3f0124d653de1b8!2sJambulogix%20Private%20Limited%20-%20NHQ!5e1!3m2!1sen!2sin!4v1752236997535!5m2!1sen!2sin"

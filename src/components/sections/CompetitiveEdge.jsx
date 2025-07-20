@@ -13,7 +13,7 @@ export default function CompetitiveEdge() {
 
   return (
     <>
-      <section className="p-6 sm:p-20 bg-white/95 text-black">
+      <section className="py-16 md:py-24 p-6 sm:p-20 bg-white/95 text-black">
         <div className="max-w-5xl mx-auto text-left md:text-center mb-6 md:mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold md:font-extrabold mb-4 text-[#FF7F06]">
             Diversity & Inclusion

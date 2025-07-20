@@ -90,7 +90,7 @@ export default function TrustedBy() {
   const repeatedBrands = [...brands, ...brands];
 
   return (
-    <section className="p-6 sm:p-16 bg-white/80 text-center overflow-hidden">
+    <section className="py-6 sm:py-12 bg-white/80 text-center overflow-hidden">
       <h2 className="text-4xl sm:text-5xl font-bold md:font-extrabold mb-1 md:mb-10 text-[#FF7F06]">
         Trusted By
       </h2>

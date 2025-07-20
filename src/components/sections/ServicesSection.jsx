@@ -9,7 +9,7 @@ const services = [
     title: "Warehousing",
     description:
       "Hassle-free shipping with expert handling, customs clearance, and optimized routes.",
-    image: "/warehousing.jpg",
+    image: "/102.jpg",
     color: "#4F46E5",
     to: "/pages/services/smart-warehousing-solution",
   },
@@ -17,7 +17,7 @@ const services = [
     title: "Distribution",
     description:
       "Secure storage and efficient distribution to keep your supply chain running smoothly.",
-    image: "/26.jpg",
+    image: "/96.jpg",
     color: "#F97316",
     to: "/pages/services/smart-distribution-solution",
   },
@@ -25,7 +25,7 @@ const services = [
     title: "Transportation",
     description:
       "Safe, reliable, and timely cargo movement across local and global routes.",
-    image: "/2.jpg",
+    image: "/100.jpg",
     color: "#4F46E5",
     to: "/pages/services/transportation-service",
   },
@@ -33,7 +33,7 @@ const services = [
     title: "Supply Chain",
     description:
       "Streamlining logistics for seamless and efficient operations from start to finish.",
-    image: "/79.jpg",
+    image: "/101.jpg",
     color: "#4F46E5",
     to: "/pages/services/supply-chain-solution",
   },
@@ -69,7 +69,7 @@ export default function ServicesSection() {
         Elevate Your Supply Chain with Our Comprehensive Logistics Solutions
       </motion.p>
 
-      <div className="w-full max-w-7xl mx-auto">
+      <div className="w-full max-w-8xl mx-auto">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full">
           {services.map((service, index) => (
             <Link href={service.to} key={index}>

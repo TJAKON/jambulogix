@@ -9,43 +9,31 @@ export default function InstantQuote() {
   const [weight, setWeight] = useState(1);
   const [destination, setDestination] = useState("");
   return (
-    <section className="relative w-full h-screen bg-black overflow-hidden">
+    <section className="relative w-full h-full md:h-screen bg-black overflow-hidden">
       <div className="flex flex-col md:flex-row h-full">
         {/* Left Side Background with Parallax */}
-        <div className="w-full md:w-1/2 h-full md:h-full relative">
+        <div className="w-full md:w-1/2 h-[400px] md:h-full relative">
           <div
-            className="absolute inset-0 rotate-270 bg-cover bg-center transform md:translate-y-0 translate-y-[0%] transition-transform duration-1000 ease-in-out"
+            className="inset-0 h-[400px] md:h-full bg-cover bg-center transition-transform duration-1000 ease-in-out"
             style={{
               backgroundImage: "url('/truck.png')",
             }}
           />
           <div className="absolute inset-0 bg-black/20" />
 
-          <div className="hidden sm:flex">
-            <div className="absolute inset-0 flex rotate-270 flex-col items-center md:items-start justify-top text-white px-6 md:px-20 py-10 md:py-0">
-              {/* {["Fast", "Safe", "Hassle-Free"].map((line, i) => (
-                <motion.h2
-                  key={i}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: i * 1, duration: 0.8 }}
-                  className="text-2xl md:text-5xl text-[#FF7F06] font-extrabold mb-2 drop-shadow-xl"
-                >
-                  {line}
-                </motion.h2>
-              ))} */}
-
-              <motion.h2
-                // key={i}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                // transition={{ delay: i * 1, duration: 0.8 }}
-                className="text-2xl md:text-5xl text-[#FF7F06] font-extrabold mb-2 drop-shadow-xl"
-              >
-                Fast, Safe, Hassle-Free
-              </motion.h2>
-            </div>
+          {/* <div className="hidden sm:flex"> */}
+          <div className="absolute inset-0 flex rotate-270 flex-col items-center md:items-center justify-top text-white px-6 md:px-10 py-10 md:py-0">
+            <motion.h2
+              // key={i}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              // transition={{ delay: i * 1, duration: 0.8 }}
+              className="text-2xl md:text-5xl text-[#FF7F06] capitalize items-center justify-center font-extrabold my-12 md:my-30 drop-shadow-xl"
+            >
+              Fast, Safe, Hassle-Free
+            </motion.h2>
           </div>
+          {/* </div> */}
         </div>
 
         {/* Right Side Form */}

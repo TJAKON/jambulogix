@@ -95,7 +95,7 @@ export default function OurPartnersPage() {
     <main className="bg-white text-gray-800">
       {/* Hero Banner */}
       <section
-        className="relative bg-cover bg-center h-[80vh] flex items-center justify-center text-center"
+        className="relative bg-cover bg-center h-screen flex items-center justify-center text-center"
         style={{ backgroundImage: "url('/56.jpg')" }}
       >
         <div className="bg-opacity-50 w-full h-full absolute top-0 left-0" />
