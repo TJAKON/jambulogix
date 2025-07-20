@@ -90,7 +90,7 @@ export default function AboutUsPage() {
   return (
     <div className="">
       {/* Hero Banner */}
-      <section className="relative w-full h-[90vh] md:h-screen overflow-hidden">
+      <section className="relative w-full h-[100vh] md:h-screen overflow-hidden">
         <Image
           src="/95.jpg"
           alt="About Jambulogix"
