@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="relative flex flex-col-reverse sm:flex-row items-center justify-center sm:justify-start gap-6 sm:gap-12 px-4 sm:px-10 md:px-20 py-12 sm:py-20 h-[90vh] sm:h-screen overflow-hidden">
+    <section className="relative flex flex-col-reverse sm:flex-row items-center sm:justify-start gap-6 sm:gap-12 px-4 sm:px-10 md:px-20 py-12 sm:py-20 h-[90vh] sm:h-screen overflow-hidden">
       {/* Background Image */}
       <Image
         src="/83.png"
