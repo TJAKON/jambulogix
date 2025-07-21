@@ -90,7 +90,7 @@ export default function AboutUsPage() {
   return (
     <div className="">
       {/* Hero Banner */}
-      <section className="relative w-full h-[100vh] md:h-screen overflow-hidden">
+      <section className="relative w-full h-[90vh] md:h-screen overflow-hidden">
         <Image
           src="/95.jpg"
           alt="About Jambulogix"
@@ -417,7 +417,7 @@ export default function AboutUsPage() {
             </ul>
           </div>
           {/* Left Side: Image */}
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1  sm:grid-cols-2 gap-4">
             {["/test4.jpg", "/test3.jpg", "/test3.jpg", "/test4.jpg"].map(
               (src, idx) => (
                 <div
@@ -456,21 +456,21 @@ export default function AboutUsPage() {
             category to view our partners.
           </p>
         </div>
-        <div className="grid grid-cols-4 sm:grid-cols-3 md:grid-cols-7 gap-10 items-center max-w-8xl mx-auto">
+        <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-7 gap-3 sm:gap-10 justify-items-center max-w-8xl mx-auto ouverflow-hidden">
           {partners.map((partner, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, scale: 0.8 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ delay: index * 0.1, duration: 0.1 }}
-              className="flex justify-center items-center w-fit h-fit bg-transparent rounded-xl shadow-sm p-1  md:p-4 hover:shadow-md transition"
+              className="flex justify-center justify-items-center items-center h-20 w-24 bg-transparent rounded-xl shadow-sm   md:p-4 hover:shadow-md transition"
             >
               <Image
                 src={partner.logo}
                 alt={partner.name}
                 width={120}
                 height={60}
-                className="object-cover h-12 md:12 md:h-24 md:w-28"
+                className="object-cover h-20 w-24 md:h-24 md:w-28"
               />
             </motion.div>
           ))}
@@ -478,7 +478,7 @@ export default function AboutUsPage() {
       </section>
 
       {/* Values Section */}
-      <section className=" py-10 md:py-20 px-6 sm:px-20 mx-auto bg-white/95">
+      <section className="py-20 px-6 sm:px-20 mx-auto bg-white/95">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
           <div className="hidden sm:flex">
             <div className="grid grid-cols-2 gap-4 ">
@@ -513,7 +513,7 @@ export default function AboutUsPage() {
 
           {/* Right Side: Content */}
           <div>
-            <h2 className=" text-4xl md:text-5xl font-bold text-[#FF7F06] mb-6">
+            <h2 className=" text-4xl md:text-5xl text-center sm:text-center font-bold text-[#FF7F06] mb-6">
               Our Growth Strategy
             </h2>
             <p className="text-black text-md md:text-lg mb-6">
@@ -542,7 +542,7 @@ export default function AboutUsPage() {
           </div>
 
           <div className="block sm:hidden">
-            <div className="grid grid-cols-2 gap-4 ">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {["/test4.jpg", "/test3.jpg", "/test3.jpg", "/test4.jpg"].map(
                 (src, idx) => (
                   <div
