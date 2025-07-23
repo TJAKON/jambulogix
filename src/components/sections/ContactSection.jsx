@@ -1,8 +1,6 @@
 "use client";
 import React, { useRef, useState } from "react";
 import { Mail, Phone, MapPin } from "lucide-react";
-import Image from "next/image";
-import emailjs from "@emailjs/browser";
 import toast from "react-hot-toast";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
@@ -58,7 +56,7 @@ export default function ContactSection() {
     setErrors((prev) => ({ ...prev, [name]: "" }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (!validate()) {
       toast.error("Please fix errors in the form.");
@@ -67,14 +65,16 @@ export default function ContactSection() {
 
     toast.loading("Sending...", { id: "contact-toast" });
 
-    emailjs
-      .send(
-        // "service_mbu89yq",
-        // "template_uyjes9m",
-        { ...formData }
-        // "dS08Hy3gaFiNSD_du"
-      )
-      .then(() => {
+    try {
+      const response = await fetch("/api/send_email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
         toast.success("Message sent!", { id: "contact-toast" });
         setFormData({
           name: "",
@@ -86,10 +86,12 @@ export default function ContactSection() {
           message: "",
         });
         setErrors({});
-      })
-      .catch(() => {
-        toast.error("Send failed.", { id: "contact-toast" });
-      });
+      } else {
+        throw new Error("Failed to send");
+      }
+    } catch (err) {
+      toast.error("Send failed.", { id: "contact-toast" });
+    }
   };
 
   const inputBase =
@@ -99,7 +101,7 @@ export default function ContactSection() {
   return (
     <div className="bg-[#24577F]/60 backdrop-blur-3xl text-white">
       <section className="py-20 px-6 lg:px-20">
-        <div className="grid md:grid-cols-2 gap-6 md:gap-12">
+        <div className="grid lg:grid-cols-1 xl:grid-cols-2 gap-6 md:gap-12">
           <div className="relative w-full h-fit overflow-hidden rounded-md">
             <div className=" max-w-3xl">
               <h3 className="max-w-xl text-5xl md:text-7xl font-extrabold uppercase mb-3 text-[#FF7F06]">
@@ -113,16 +115,6 @@ export default function ContactSection() {
                 — we’re just a message away.
               </p>
             </div>
-            {/* <video
-              autoPlay
-              loop
-              muted
-              playsInline
-              className="object-cover w-full rounded-md"
-            >
-              <source src="/Video-Showreel.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video> */}
           </div>
 
           <div>
@@ -237,29 +229,6 @@ export default function ContactSection() {
             </form>
           </div>
         </div>
-        {/* 
-        <div className="grid lg:grid-cols-3 bg-[#2244f8] text-white p-8 mt-16 space-y-6 lg:space-y-0">
-          <div>
-            <h4 className="flex items-center gap-2 text-lg font-semibold">
-              <Phone className="w-5 h-5" /> Call Us
-            </h4>
-            <p className="ml-7 text-xl font-bold mt-1">+91 9109416188</p>
-          </div>
-          <div>
-            <h4 className="flex items-center gap-2 text-lg font-semibold">
-              <Mail className="w-5 h-5" /> Contact Emails
-            </h4>
-            <p className="ml-7 mt-1 font-medium">t.jaiprakash20@gmail.com</p>
-          </div>
-          <div>
-            <h4 className="flex items-center gap-2 text-lg font-semibold">
-              <MapPin className="w-5 h-5" /> Location
-            </h4>
-            <p className="ml-7 mt-1 font-medium">
-              Raipur, Chhattisgarh, India
-            </p>
-          </div>
-        </div> */}
       </section>
     </div>
   );

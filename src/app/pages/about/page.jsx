@@ -95,7 +95,7 @@ export default function AboutUsPage() {
           src="/95.jpg"
           alt="About Jambulogix"
           fill
-          className="object-cover object-right md:object-center w-full h-full"
+          className="object-cover object-right xl:object-center w-full h-full"
         />
         <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
           <div className="text-center text-white px-4">
@@ -111,7 +111,7 @@ export default function AboutUsPage() {
       </section>
 
       {/* Company Summary */}
-      <section className="py-20 px-6 sm:px-20 max-w-8xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center bg-white">
+      <section className="py-20 px-6 sm:px-20 max-w-8xl mx-auto grid grid-cols-1 lg:grid-cols-1 xl:grid-cols-2 gap-12 items-center bg-white">
         {/* Left: Image Grid + Stats */}
         <div className="space-y-10 hidden sm:block">
           {/* Image Grid */}
@@ -169,7 +169,7 @@ export default function AboutUsPage() {
 
         {/* Right: Text + Stats */}
         <div>
-          <h2 className="text-4xl font-bold text-[#FF7F06] mb-6">
+          <h2 className="text-4xl text-center xl:text-start font-bold text-[#FF7F06] mb-6">
             About Jambulogix
           </h2>
           <p className="text-gray-700 text-lg leading-relaxed mb-6">
@@ -306,7 +306,7 @@ export default function AboutUsPage() {
         {/* <div className="absolute top-[-100px] left-[-100px] w-72 h-72 bg-[#FF7F06]/40 rounded-full blur-3xl opacity-60 z-0" />
         <div className="absolute bottom-[-100px] right-[-80px] w-72 h-72 bg-[#FF7F06]/30 rounded-full blur-2xl opacity-50 z-0" /> */}
 
-        <div className="max-w-6xl mx-auto relative z-10 grid sm:grid-cols-2 gap-8 md:gap-16 items-start">
+        <div className="max-w-6xl mx-auto relative z-10 grid sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 gap-8 md:gap-16 items-start">
           {/* Vision */}
           <div className="bg-white/10 rounded-2xl p-8 shadow-lg border border-white/20 hover:bg-white/20 transition">
             <div className="flex items-center gap-4 mb-4">
@@ -345,7 +345,7 @@ export default function AboutUsPage() {
             Our Leadership
           </h2>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-4 gap-8">
             {leaders.map((leader, idx) => (
               <motion.div
                 key={idx}
@@ -386,7 +386,7 @@ export default function AboutUsPage() {
 
       {/* Values Section */}
       <section className=" py-10 md:py-20 px-6 sm:px-20 mx-auto bg-white/95">
-        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+        <div className="max-w-7xl mx-auto grid md:grid-cols-1 xl:grid-cols-2 gap-10 items-center">
           {/* Right Side: Content */}
           <div>
             <h2 className="text-4xl sm:text-5xl text-center  font-bold text-[#FF7F06] mb-6">
@@ -456,7 +456,7 @@ export default function AboutUsPage() {
             category to view our partners.
           </p>
         </div>
-        <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-7 gap-3 sm:gap-10 justify-items-center max-w-8xl mx-auto ouverflow-hidden">
+        <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-7 gap-3 sm:gap-10 justify-items-center max-w-8xl mx-auto ouverflow-hidden">
           {partners.map((partner, index) => (
             <motion.div
               key={index}
@@ -479,8 +479,8 @@ export default function AboutUsPage() {
 
       {/* Values Section */}
       <section className="py-20 px-6 sm:px-20 mx-auto bg-white/95">
-        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
-          <div className="hidden sm:flex">
+        <div className="max-w-7xl mx-auto grid md:grid-cols-1 xl:grid-cols-2 gap-10 items-center">
+          <div className="hidden xl:flex">
             <div className="grid grid-cols-2 gap-4 ">
               {["/test4.jpg", "/test3.jpg", "/test3.jpg", "/test4.jpg"].map(
                 (src, idx) => (
@@ -541,7 +541,7 @@ export default function AboutUsPage() {
             </ul>
           </div>
 
-          <div className="block sm:hidden">
+          <div className="block xl:hidden">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {["/test4.jpg", "/test3.jpg", "/test3.jpg", "/test4.jpg"].map(
                 (src, idx) => (

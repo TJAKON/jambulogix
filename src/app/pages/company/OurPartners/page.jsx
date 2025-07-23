@@ -116,7 +116,7 @@ export default function OurPartnersPage() {
             Our Investers
           </h2>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-4 gap-8">
             {leaders.map((leader, idx) => (
               <motion.div
                 key={idx}
@@ -228,7 +228,7 @@ export default function OurPartnersPage() {
             logistics ecosystem.
           </p>
 
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
+          <div className="grid sm:grid-cols-2 md:grid-cols-1 xl:grid-cols-3 gap-8">
             {[
               {
                 title: "15K+ MSMEs",
@@ -276,7 +276,7 @@ export default function OurPartnersPage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 sm:grid-cols-2 gap-10">
+          <div className="grid sm:grid-cols-1 md:grid-cols-1 xl:grid-cols-3 gap-10">
             {[
               {
                 emoji: "🌐",

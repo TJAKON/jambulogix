@@ -13,7 +13,7 @@ export default function CompetitiveEdge() {
 
   return (
     <>
-      <section className="py-16 md:py-24 p-6 sm:p-20 bg-white/95 text-black">
+      <section className="py-16 sm:py-16 lg:py-24 p-6 sm:p-6 lg:p-20 bg-white/95 text-black">
         <div className="max-w-5xl mx-auto text-left md:text-center mb-6 md:mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold md:font-extrabold mb-4 text-[#FF7F06]">
             Diversity & Inclusion
@@ -28,17 +28,17 @@ export default function CompetitiveEdge() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-12 gap-3 md:gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-3 md:gap-6">
           {features.map((item, i) => {
             const isEvenRow = Math.floor(i / 2) % 2 === 0;
             const isFirstInPair = i % 2 === 0;
             const colSpan = isEvenRow
               ? isFirstInPair
-                ? "sm:col-span-8"
-                : "sm:col-span-4"
+                ? "lg:col-span-8"
+                : "lg:col-span-4"
               : isFirstInPair
-              ? "sm:col-span-4"
-              : "sm:col-span-8";
+              ? "lg:col-span-4"
+              : "lg:col-span-8";
 
             return (
               <div

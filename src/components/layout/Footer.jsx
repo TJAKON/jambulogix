@@ -196,7 +196,7 @@ export default function Footer() {
         </div>
 
         {/* Footer Rider Image */}
-        <div className="absolute -right-70 -bottom-50 w-[800px] md:w-[1000px] md:right-30 md:-bottom-20 pointer-events-none">
+        <div className=" hidden xl:block absolute -right-70 -bottom-50 w-[800px] md:w-[1000px] md:right-30 md:-bottom-20 pointer-events-none">
           <Image
             src="/footer-bose-mobile.webp"
             alt="Rider"

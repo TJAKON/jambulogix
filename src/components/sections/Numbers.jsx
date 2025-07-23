@@ -39,7 +39,7 @@ function AnimatedCounter({ value }) {
 
 export default function Numbers() {
   return (
-    <section className="grid grid-cols-2 sm:grid-cols-4 gap-6 p-8 sm:p-20 text-center bg-black text-white">
+    <section className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-6 p-8 sm:p-20 text-center bg-black text-white">
       <div>
         <p className="text-2xl md:text-5xl font-bold">
           <AnimatedCounter value="10000000" />

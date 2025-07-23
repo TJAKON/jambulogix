@@ -1,9 +1,5 @@
 "use client";
 import React, { useRef, useState } from "react";
-import { Mail, Phone, MapPin } from "lucide-react";
-import { motion } from "framer-motion";
-import Image from "next/image";
-import emailjs from "@emailjs/browser";
 import toast from "react-hot-toast";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
@@ -60,7 +56,7 @@ export default function Page() {
     setErrors((prev) => ({ ...prev, [name]: "" }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (!validate()) {
       toast.error("Please fix errors in the form.");
@@ -69,59 +65,58 @@ export default function Page() {
 
     toast.loading("Sending...", { id: "contact-toast" });
 
-    emailjs
-      .send(
-        // "service_mbu89yq",
-        // "template_uyjes9m",
-        { ...formData }
-        // "dS08Hy3gaFiNSD_du"
-      )
-      .then(() => {
-        toast.success("Message sent!", { id: "contact-toast" });
-        setFormData({
-          name: "",
-          company: "",
-          email: "",
-          phone: "",
-          service: "Logistics",
-          customService: "",
-          message: "",
-        });
-        setErrors({});
-      })
-      .catch(() => {
-        toast.error("Send failed.", { id: "contact-toast" });
+    try {
+      const res = await fetch("/api/send-email", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
       });
-  };
 
-  const inputBase =
-    "w-full px-4 py-3 border border-gray-300 bg-transparent text-white placeholder-white/50 rounded-md focus:outline-none focus:ring-2 focus:ring-[#FF7F06]";
-  const errorStyle = "border-red-500";
+      if (!res.ok) throw new Error("Failed");
+
+      toast.success("Message sent!", { id: "contact-toast" });
+      setFormData({
+        name: "",
+        company: "",
+        email: "",
+        phone: "",
+        service: "Logistics",
+        customService: "",
+        message: "",
+      });
+      setErrors({});
+    } catch (err) {
+      toast.error("Send failed.", { id: "contact-toast" });
+    }
+  };
 
   return (
     <>
       <section
-        className="bg-[#070B2A] text-white py-48 sm:py-40 md:py-44 text-center bg-cover  bg-bottom relative"
+        className="bg-[#070B2A] text-white py-48 sm:py-40 md:py-44 text-center bg-cover bg-bottom relative"
         style={{ backgroundImage: "url('/88.jpg')" }}
       >
-        {/* Dark Overlay */}
         <div className="absolute inset-0 bg-black opacity-30" />
 
-        {/* Content */}
         <div className="relative z-10 px-4 sm:px-8 max-w-5xl mx-auto">
           <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-4 leading-tight">
-            Driving <span className="text-[#FF7F06]">Logistics Excellence</span>{" "}
-            for Your Business
+            Driving <span className="text-[#FF7F06]">Logistics Excellence</span> for Your Business
           </h1>
           <p className="text-sm sm:text-base text-white/80 max-w-3xl mx-auto">
-            From first mile to last mile, we deliver seamless, reliable, and
-            efficient logistics solutions tailored to your business needs. Let
-            us move your world—faster, smarter, and better.
+            From first mile to last mile, we deliver seamless, reliable, and efficient logistics solutions tailored to your business needs. Let us move your world—faster, smarter, and better.
           </p>
         </div>
       </section>
 
-      <ContactSection />
+      <ContactSection 
+        formData={formData} 
+        setFormData={setFormData} 
+        errors={errors} 
+        handleChange={handleChange} 
+        handleSubmit={handleSubmit} 
+        services={services} 
+      />
+
       <section className="h-[400px] w-full">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3334.4801092970106!2d76.99134557528197!3d28.447734675766196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d179270965c3b%3A0xb3f0124d653de1b8!2sJambulogix%20Private%20Limited%20-%20NHQ!5e1!3m2!1sen!2sin!4v1752236997535!5m2!1sen!2sin"

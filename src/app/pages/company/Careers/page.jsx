@@ -82,7 +82,7 @@ export default function Page() {
 
       {/* Why Join Us */}
       <section className="py-24 px-6 sm:px-20 bg-gradient-to-b from-white to-[#F9FAFB] text-[#0A1A2F]">
-        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+        <div className="max-w-7xl mx-auto grid sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-2 gap-16 items-center">
           {/* Text Block */}
           <div>
             <h2 className="text-4xl sm:text-6xl font-extrabold mb-6 text-[#24577F] leading-tight">
@@ -126,7 +126,7 @@ export default function Page() {
             Life at <span className="text-[#FF7F06]">Jambulogix</span>
           </h2>
         </div>
-        <div className="grid sm:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-3 gap-6">
           {["60.jpg", "58.jpg", "59.jpg"].map((img, i) => (
             <Image
               key={i}

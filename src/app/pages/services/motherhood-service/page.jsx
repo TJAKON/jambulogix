@@ -79,11 +79,11 @@ export default function MotherHood() {
             MotherHood Service by Jambulogix – Where every package is treated
             like family.
           </p>
-          <div className="flex flex-row sm:flex-row gap-4 justify-center md:justify-start">
+          <div className="flex flex-col sm:flex-col xl:flex-row gap-4 justify-center md:justify-start">
             <Link href="/pages/contact-us" passHref>
               <button
                 type="button"
-                className="bg-[#1F2937] text-white px-6 py-3 rounded-lg hover:bg-[#111827] transition-all focus:outline-none focus:ring-2 focus:ring-[#FF7F06] focus:ring-offset-2"
+                className="bg-[#1F2937] text-white w-full px-6 py-3 rounded-lg hover:bg-[#111827] transition-all focus:outline-none focus:ring-2 focus:ring-[#FF7F06] focus:ring-offset-2"
               >
                 🧡 Ship with Care
               </button>
@@ -92,7 +92,7 @@ export default function MotherHood() {
             <Link href="#quote" passHref>
               <button
                 type="button"
-                className="border border-gray-400 bg-[#FF7F06] px-6 py-3 rounded-lg hover:bg-gray-100 transition-all text-black focus:outline-none focus:ring-2 focus:ring-[#1F2937] focus:ring-offset-2"
+                className="border border-gray-400 w-full bg-[#FF7F06] px-6 py-3 rounded-lg hover:bg-gray-100 transition-all text-black focus:outline-none focus:ring-2 focus:ring-[#1F2937] focus:ring-offset-2"
               >
                 Get Instant Quote
               </button>
@@ -123,7 +123,7 @@ export default function MotherHood() {
           </div>
 
           {/* Feature Cards */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 md:gap-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 xl:grid-cols-3 gap-6 sm:gap-8 md:gap-10">
             {[
               {
                 title: "Safe for Students",
@@ -178,7 +178,8 @@ export default function MotherHood() {
           breakpoints={{
             0: { slidesPerView: 1 },
             640: { slidesPerView: 1.2 },
-            768: { slidesPerView: 1.4 },
+            768: { slidesPerView: 1.2 },
+            1024: { slidesPerView: 1.1 },
             1024: { slidesPerView: 2 },
           }}
           navigation
@@ -228,7 +229,7 @@ export default function MotherHood() {
             How <span className="text-[#FF7F06]">It Works</span>
           </h2>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 relative z-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-8 sm:gap-10 relative z-10">
             {[
               {
                 title: "Schedule Pickup",
@@ -286,7 +287,7 @@ export default function MotherHood() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 sm:gap-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 xl:grid-cols-3 gap-8 sm:gap-10">
             {[
               {
                 title: "Tamper-Proof Packaging",
@@ -338,7 +339,7 @@ export default function MotherHood() {
             professionals who made someone’s day special through MotherHood.
           </p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 sm:gap-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 xl:grid-cols-3 gap-8 sm:gap-10">
             {[
               {
                 name: "Suman Sharma",

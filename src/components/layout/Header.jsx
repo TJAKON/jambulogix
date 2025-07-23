@@ -82,7 +82,7 @@ export default function Header() {
       </Link>
 
       {/* Desktop Nav */}
-      <PopoverGroup className="hidden sm:flex gap-6 text-white text-xl font-medium items-center">
+      <PopoverGroup className="hidden xl:flex gap-6  text-white text-xl font-medium items-center">
         {/* Services */}
         <Popover className="relative group">
           <PopoverButton className="flex items-center gap-1 hover:text-[#FF7F06] transition duration-200 focus:outline-none">
@@ -188,12 +188,14 @@ export default function Header() {
       </PopoverGroup>
 
       {/* CTA Button (Desktop Only) */}
-      <button className="hidden sm:block ml-4 bg-[#FF7F06] text-white px-4 py-2 rounded-2xl font-bold text-md md:text-xl border-2 border-[#24577F] hover:border-white hover:bg-[#24577F] hover:text-white transition-colors duration-300">
-        Get in Touch
-      </button>
+      <Link href="/pages/contact-us">
+        <div className="hidden xl:block ml-4 bg-[#FF7F06] text-white px-4 py-2 rounded-2xl font-bold text-md md:text-xl border-2 border-[#24577F] hover:border-white hover:bg-[#24577F] hover:text-white transition-colors duration-300">
+          Get in Touch
+        </div>
+      </Link>
 
       {/* Mobile Hamburger */}
-      <button onClick={() => setSidebarOpen(true)} className="sm:hidden">
+      <button onClick={() => setSidebarOpen(true)} className="xl:hidden">
         <Bars3Icon className="h-7 w-7 text-white" />
       </button>
 

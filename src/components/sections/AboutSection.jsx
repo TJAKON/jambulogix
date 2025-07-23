@@ -20,7 +20,7 @@ export default function AboutSection() {
       </div>
 
       {/* Main Content */}
-      <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+      <div className="relative z-10 grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-2 gap-10 items-center">
         {/* Left Side - Image Grid */}
         <div className="space-y-10 hidden sm:block">
           <div className="grid grid-cols-2 gap-4">

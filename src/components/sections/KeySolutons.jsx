@@ -88,10 +88,10 @@ const solutions = [
 
 export default function KeySolutions() {
   return (
-    <section className="bg-white/95 text-black px-4 sm:px-20 pt-28 pb-16 min-h-screen relative">
-      <div className="flex flex-col sm:flex-row gap-10">
+    <section className="bg-white/95 text-black px-4 sm:px-5 lg:px-20 pt-28 pb-16 min-h-screen relative">
+      <div className="flex flex-col lg:flex-col xl:flex-row gap-10">
         {/* Sticky Title */}
-        <div className="sm:w-2/5 flex flex-col items-center sm:items-start space-y-6">
+        <div className="lg:w-5/5 xl:w-2/5 flex flex-col items-center sm:items-start space-y-6">
           <div className="w-full md:sticky md:top-28 z-10">
             {/* Logo */}
             <Image
@@ -118,8 +118,8 @@ export default function KeySolutions() {
         </div>
 
         {/* Grid Cards */}
-        <div className="sm:w-3/5">
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        <div className="lg:w-5/5 xl:w-3/5">
+          <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-3">
             {solutions.map((item, idx) => (
               <div
                 key={idx}

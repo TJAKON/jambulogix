@@ -76,7 +76,7 @@ export default function InnerNumbers() {
         </motion.p>
       </div>
 
-      <div className="grid grid-cols-2 sm:grid-cols-4 gap-10 max-w-6xl mx-auto text-nowrap">
+      <div className="grid grid-cols-2 sm:grid-cols-2 xl:grid-cols-4 gap-10 max-w-6xl mx-auto text-nowrap">
         {stats.map((stat, idx) => (
           <motion.div
             key={idx}

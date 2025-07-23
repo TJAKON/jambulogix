@@ -41,7 +41,7 @@ const testimonials = [
 
 export default function TestimonialCarousel() {
   return (
-    <section className="bg-white/95 py-16 md:py-20 px-4 sm:px-10 lg:px-20 text-black">
+    <section className="bg-white/95 py-16 md:py-20 px-4 sm:px-6 lg:px-20 text-black">
       <div className="max-w-6xl mx-auto text-center mb-12">
         <h2 className="text-4xl sm:text-4xl lg:text-5xl font-bold md:font-extrabold text-[#FF7F06] mb-4">
           What Our Clients Say
@@ -59,9 +59,10 @@ export default function TestimonialCarousel() {
         spaceBetween={20}
         breakpoints={{
           0: { slidesPerView: 1 },
-          640: { slidesPerView: 1.5 },
-          768: { slidesPerView: 1.5 },
-          1024: { slidesPerView: 2 },
+          640: { slidesPerView: 1 },
+          768: { slidesPerView: 1.25 },
+          1024: { slidesPerView: 1.25 },
+          1440: { slidesPerView: 2 },
         }}
         className="max-w-6xl mx-auto"
       >

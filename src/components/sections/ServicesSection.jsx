@@ -30,9 +30,9 @@ const services = [
     to: "/pages/services/transportation-service",
   },
   {
-    title: "Supply Chain",
+    title: "Supply Chain Solution ",
     description:
-      "Streamlining logistics for seamless and efficient operations from start to finish.",
+      "Streamlining logistics for seamless and efficient and effective operations from start to finish.",
     image: "/101.jpg",
     color: "#4F46E5",
     to: "/pages/services/supply-chain-solution",
@@ -70,7 +70,7 @@ export default function ServicesSection() {
       </motion.p>
 
       <div className="w-full max-w-8xl mx-auto">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-6 w-full">
           {services.map((service, index) => (
             <Link href={service.to} key={index}>
               <motion.div

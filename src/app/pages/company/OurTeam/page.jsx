@@ -85,7 +85,7 @@ export default function Page() {
             Our Board Members
           </h2>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-4  gap-8">
             {leaders.map((leader, idx) => (
               <motion.div
                 key={idx}
@@ -136,7 +136,7 @@ export default function Page() {
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 max-w-7xl mx-auto">
+        <div className="grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-10 max-w-7xl mx-auto">
           {teamMembers.map((member, idx) => (
             <motion.div
               key={idx}
