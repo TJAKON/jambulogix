@@ -6,9 +6,10 @@ export default function Footer() {
   return (
     <footer className="bg-black/60 backdrop-blur-3xl text-white pt-12 pb-8 px-6 sm:px-16 relative text-center sm:text-left overflow-hidden">
       {/* Top Section */}
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-5 gap-8 z-20">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-8 z-20">
+
         {/* Logo & Address */}
-        <div className="flex flex-col items-center md:items-start">
+        <div className="flex flex-col items-center sm:items-center md:items-start">
           <Link href="/" className="flex items-center">
             <Image
               src="/logo.png"
@@ -54,7 +55,7 @@ export default function Footer() {
         </div>
 
         {/* Quick Links */}
-        <div>
+        <div className="flex flex-col items-center sm:items-center md:items-start">
           <h3 className="font-semibold mb-3">Quick Links</h3>
           <ul className="space-y-2 text-sm">
             <li>
@@ -71,7 +72,7 @@ export default function Footer() {
         </div>
 
         {/* Services */}
-        <div>
+        <div className="flex flex-col items-center sm:items-center md:items-start">
           <h3 className="font-semibold mb-3">Services</h3>
           <ul className="space-y-2 text-sm">
             <li>
@@ -103,7 +104,7 @@ export default function Footer() {
         </div>
 
         {/* Partners */}
-        <div>
+        <div className="flex flex-col items-center sm:items-center md:items-start">
           <h3 className="font-semibold mb-3">Partners</h3>
           <ul className="space-y-2 text-sm">
             <li>
@@ -125,7 +126,7 @@ export default function Footer() {
         </div>
 
         {/* Company & Legal */}
-        <div>
+        <div className="flex flex-col items-center sm:items-center md:items-start">
           <h3 className="font-semibold mb-3">Company</h3>
           <ul className="space-y-2 text-sm mb-6">
             <li>
@@ -196,18 +197,19 @@ export default function Footer() {
         </div>
 
         {/* Footer Rider Image */}
-        <div className=" hidden xl:block absolute -right-70 -bottom-50 w-[800px] md:w-[1000px] md:right-30 md:-bottom-20 pointer-events-none">
+        <div className=" hidden xl:block absolute -right-70 -bottom-50 w-[800px] md:w-[1000px] md:-right-205 md:-bottom-20 pointer-events-none">
           <Image
-            src="/footer-bose-mobile.webp"
+            src="/footer_img.png"
             alt="Rider"
-            width={1000}
+            width={360}
             height={250}
+              // className="-scale-x-100"
           />
         </div>
       </div>
 
       {/* Bottom Copyright */}
-      <div className="mt-8 text-center md:text-right text-xs text-white md:text-white/60 z-10">
+      <div className="mt-8 text-center md:text-center text-xs text-white md:text-white/60 ">
         © {new Date().getFullYear()} All rights reserved. Jambulogix Technologies
         Limited.
       </div>

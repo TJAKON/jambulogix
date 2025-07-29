@@ -54,7 +54,7 @@ export default function Hero() {
           alt="Hero"
           width={460}
           height={200}
-          className="w-[400px] sm:w-[320px] md:w-[420px] h-auto"
+          className="w-[400px] sm:w-[320px] md:w-[420px] h-auto "
         />
       </div>
     </section>

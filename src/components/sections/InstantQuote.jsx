@@ -150,7 +150,7 @@ export default function InstantQuote() {
             style={{ backgroundImage: "url('/truck.png')" }}
           />
           <div className="absolute inset-0 bg-black/20" />
-          <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center px-6">
+          <div className="absolute inset-0 rotate-270 flex flex-col items-center justify-start text-white text-center px-6 pt-24 sm:pt-36 lg:pt-48">
             <h2 className="text-3xl md:text-5xl text-[#FF7F06] font-extrabold">
               Fast, Safe, Hassle-Free
             </h2>

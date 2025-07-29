@@ -173,10 +173,10 @@ export default function AboutUsPage() {
             About Jambulogix
           </h2>
           <p className="text-gray-700 text-lg leading-relaxed mb-6">
-            Jambulogix revolutionizing the Indian logistics ecosystem by
-            offering responsive, tech-enabled, and customer-centric supply chain
-            solutions. Jambulogix, brings together decades of industry expertise
-            with innovation at its core.
+            Agile by design, yours by choice - our strength lies in a powerful
+            combination of experts by veterans, customization and technology.
+            Our emphasis on innovation and range of cost effective services are
+            aimed at streamlining complete logistics solution
           </p>
           <p className="text-gray-700 text-lg leading-relaxed mb-10">
             Our services span B2B, B2C, D2C, eCommerce, and Express Logistics,
