@@ -64,8 +64,8 @@ export default function Page() {
             transition={{ duration: 0.8 }}
             className="text-5xl sm:text-8xl font-extrabold mb-6 leading-tight drop-shadow-lg"
           >
-            Join the <span className="text-[#FF7F06]"> Movement</span>
-            <br /> Build <span className="text-[#FF7F06]">Tomorrow</span>
+            Your Ideas <span className="text-[#FF7F06]"> Your Move</span>
+            <br /> Our <span className="text-[#FF7F06]">Mission</span>
           </motion.h1>
 
           <motion.p
@@ -74,35 +74,63 @@ export default function Page() {
             transition={{ delay: 0.2, duration: 0.6 }}
             className="text-lg sm:text-2xl text-white/90 max-w-2xl"
           >
-            We’re transforming supply chain with speed, tech, and scale—join a
-            team that thrives on solving real-world problems.
+            At Jambulogix, speed meets strategy, tech meets teamwork — and every
+            voice shapes the journey. If you believe in solving real-world
+            challenges and building what’s next, you belong here.
           </motion.p>
         </div>
       </section>
+
+      {/* add one section here unity in diversity the jambulogix way */}
 
       {/* Why Join Us */}
       <section className="py-24 px-6 sm:px-20 bg-gradient-to-b from-white to-[#F9FAFB] text-[#0A1A2F]">
         <div className="max-w-7xl mx-auto grid sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-2 gap-16 items-center">
           {/* Text Block */}
           <div>
-            <h2 className="text-4xl sm:text-6xl font-extrabold mb-6 text-[#24577F] leading-tight">
-              Why Work at <span className="text-[#FF7F06]">Jambulogix?</span>
+            <h2 className="text-4xl sm:text-3xl font-extrabold mb-6 text-[#24577F] leading-tight">
+              Why Work at <span className="text-[#FF7F06] text-7xl">Jambulogix..?</span>
             </h2>
 
-            <p className="text-gray-600 text-lg mb-6 leading-relaxed">
-              At Jambulogix, we’re not just moving parcels—we're moving
+            <p className="text-gray-600 text-md mb-6 leading-relaxed">
+              we’re not just moving parcels—we're moving
               possibilities. We are reshaping the logistics ecosystem with
-              technology, empathy, and agility at our core. Whether you're an
-              engineer, analyst, or operations enthusiast, you'll build for
-              scale, solve real-world bottlenecks, and grow in a culture that
-              values ownership and innovation.
+              technology, empathy, and agility at our core. At Jambulogix, we’re
+              building more than a logistics network — we’re creating an
+              ecosystem of opportunities, growth, and innovation. Here you'll
+              build for scale, solve real-world bottlenecks, and grow in a
+              culture that values ownership and innovation.
             </p>
 
-            <ul className="text-gray-700 text-lg space-y-4 list-disc pl-6">
-              <li>Be part of a fast-scaling logistics-tech movement</li>
-              <li>Work with people solving high-impact real-world problems</li>
-              <li>Grow fast in a flat, performance-first environment</li>
-              <li>Enjoy hybrid flexibility & modern team culture</li>
+            <ul className="text-gray-700 text-md space-y-4 list-disc pl-6">
+              <li>
+                Grow Fast – Accelerate your career in a high-growth
+                logistics-tech environment
+              </li>
+              <li>
+                Keep Learning – Gain hands-on exposure to operations,
+                technology, and supply chain innovation
+              </li>
+              <li>
+                Own Your Work – Freedom to take initiative and see your ideas
+                come to life
+              </li>
+              <li>
+                Make an Impact – Contribute directly to building India’s
+                next-gen logistics network
+              </li>
+              <li>
+                Be Recognized – Performance incentives, awards, and
+                opportunities to shine
+              </li>
+              <li>
+                Work Your Way – Flexible approach, supportive managers, and a
+                people-first culture
+              </li>
+              <li>
+                Enjoy the Journey – Collaborative teams, bonding activities, and
+                an energizing workplace.
+              </li>
             </ul>
           </div>
 
@@ -123,7 +151,7 @@ export default function Page() {
       <section className="py-20 px-6 sm:px-20 bg-[#24577F]">
         <div className="max-w-7xl mx-auto text-center mb-12">
           <h2 className="text-4xl sm:text-5xl font-extrabold text-white">
-            Life at <span className="text-[#FF7F06]">Jambulogix</span>
+            Life at <span className="text-[#FF7F06] text-8xl">Jambulogix</span>
           </h2>
         </div>
         <div className="grid sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-3 gap-6">
@@ -181,9 +209,41 @@ export default function Page() {
           </p>
           <div className="grid sm:grid-cols-3 gap-10">
             {[
-              { icon: "🚀", label: "Speed Matters" },
-              { icon: "🤝", label: "Earn Trust" },
-              { icon: "🔍", label: "Think Deep" },
+              {
+                icon: "🚀",
+                label: "Customer Obsession",
+                desc: "We put our customers at the heart of every move.",
+              },
+              {
+                icon: "🤝",
+                label: "Ownership Mindset",
+                desc: "We take charge, act with purpose, and deliver results.",
+              },
+              {
+                icon: "🔍",
+                label: "Innovation Every Day",
+                desc: "We challenge the norm to build smarter, faster solutions.",
+              },
+              {
+                icon: "🔍",
+                label: "Speed with Integrity",
+                desc: "We move fast but never compromise on ethics.",
+              },
+              {
+                icon: "🔍",
+                label: "People First",
+                desc: "We create a safe, inclusive, and empowering workplace.",
+              },
+              {
+                icon: "🔍",
+                label: "Collaboration Wins",
+                desc: "We grow stronger by working together — across teams, across geographies.",
+              },
+              {
+                icon: "🔍",
+                label: "Excellence as Standard",
+                desc: "We set the bar high and keep raising it.",
+              },
             ].map((val, i) => (
               <div key={i} className="bg-[#112233] p-8 rounded-2xl shadow-md">
                 <div className="text-5xl mb-4 text-[#FF7F06]">{val.icon}</div>
@@ -201,8 +261,8 @@ export default function Page() {
             Ready to take the leap?
           </h2>
           <p className="text-white/90 mb-8 text-lg">
-            We’re always on the lookout for people who dare to think different
-            and build big.
+            We’re always seeking individuals who think differently, act boldly,
+            and build with purpose.
           </p>
           <button className="bg-white text-[#FF7F06] px-6 py-3 font-bold rounded-full shadow-lg hover:scale-105 transition">
             Send Your Resume

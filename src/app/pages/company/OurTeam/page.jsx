@@ -69,21 +69,82 @@ export default function Page() {
       >
         <div className="absolute inset-0 bg-black/80" />
         <div className="relative z-10 px-6">
-          <h1 className="text-white text-4xl sm:text-5xl font-bold mb-4">
-            Meet the Visionary Minds
+          <h1 className="text-white text-4xl sm:text-5xl max-w-6xl font-bold mb-4">
+            "Alone we can do so little - together we can do so much.” — Helen
+            Keller
           </h1>
-          <p className="text-white text-lg sm:text-xl max-w-2xl mx-auto">
-            Our heart-led team is committed to delivering care, comfort, and
-            connection—across every shipment.
+          <p className="text-white text-lg sm:text-xl max-w-6xl mx-auto">
+            This belief moves us every day. Meet the people powering India’s
+            most inclusive logistics network. Our heart-led team is committed to
+            delivering care, comfort, and connection—across every shipment.
           </p>
+        </div>
+      </section>
+
+      <section className="py-24 px-6 sm:px-20 bg-gradient-to-b from-white to-[#F9FAFB] text-[#0A1A2F]">
+        <div className="max-w-7xl mx-auto grid sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-2 gap-16 items-center">
+          <div>
+            <Image
+              src="/57.jpg"
+              alt="Team Collaboration"
+              width={600}
+              height={400}
+              className="rounded-3xl shadow-2xl w-full h-[600px] object-cover"
+            />
+          </div>
+
+          {/* Text Block */}
+          <div>
+            <h2 className="text-4xl sm:text-5xl font-extrabold text-[#24577F] leading-tight">
+              The Vision Behind{" "}
+              <span className="text-[#FF7F06]">Jambulogix {"  "}</span>
+            </h2>
+            <h2 className="text-4xl sm:text-5xl font-extrabold mb-6 text-[#24577F] leading-tight">
+              <span className="text-[#24577F]"> A Note from {"  "}</span>
+              <span className="text-[#FF7F06]">Our Founder </span>
+            </h2>
+
+            <p className="text-gray-600 text-lg mb-6 leading-relaxed">
+              In an increasingly connected world, logistics is no longer just
+              about moving goods from Point A to Point B — it’s about enabling
+              businesses to grow, customers to trust, and experiences to be
+              delivered seamlessly. Jambulogix was founded with a clear purpose:
+              to redefine fulfillment by combining operational excellence with a
+              deep commitment to people — our team, our partners, and our
+              clients. Our journey has been built on agility, accountability,
+              and a relentless pursuit of improvement. Whether it’s the last
+              mile or the first step, we believe in creating value through
+              precision, transparency, and care. As we continue to grow, our
+              focus remains the same — building a robust logistics ecosystem
+              that empowers every stakeholder involved. Because at Jambulogix,
+              we don’t just deliver products — we deliver reliability.
+            </p>
+            <p className="text-black text-lg font-bold mb-6 leading-relaxed">
+              Nikhilendu Shekhar, Founder & CEO, Jambulogix
+            </p>
+          </div>
+
+          {/* Image Block */}
         </div>
       </section>
 
       <section className="py-24 px-6 sm:px-20 bg-white/20">
         <div className="max-w-8xl mx-auto">
-          <h2 className="text-4xl sm:text-5xl font-bold text-center text-[#FF7F06] mb-16">
-            Our Board Members
+          <h2 className="text-4xl sm:text-5xl font-bold text-center text-[#FF7F06] mb-4">
+            Our Board - Guiding the Vision
           </h2>
+
+          <h5 className="text-black text-4xl sm:text-2xl max-w-7xl text-center mx-auto font-bold mb-4">
+            – Anchoring our purpose with experience and foresight.” Behind every
+            bold move is a foundation of insight.
+          </h5>
+          <p className="text-black text-lg sm:text-md max-w-6xl mx-auto text-center mb-16">
+            Our Board brings the depth of experience, strategic clarity, and
+            long-term perspective that keeps Jambulogix grounded in purpose and
+            geared for progress. With eyes on the horizon and hands steady on
+            the wheel, our Board help ensure every leap forward is backed by
+            wisdom, integrity, and intent.
+          </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-4  gap-8">
             {leaders.map((leader, idx) => (
@@ -128,11 +189,53 @@ export default function Page() {
       <section className="py-20 px-6 sm:px-12 md:px-20 bg-[#F9FAFB]">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-extrabold text-[#24577F] mb-4">
-            Our Core Team
+            The Navigators - Charting the course for what’s next
           </h2>
           <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-            Behind every successful delivery is a team of passionate innovators,
-            logistics experts, and customer-first champions.
+            At the intersection of vision and execution, The Navigators are the
+            minds that steer Jambulogix toward its future. We decode complexity,
+            identify opportunity, and design strategies that keep us ahead of
+            the curve in a rapidly evolving logistics landscape.
+          </p>
+        </div>
+
+        <div className="grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-10 max-w-7xl mx-auto">
+          {teamMembers.map((member, idx) => (
+            <motion.div
+              key={idx}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, delay: idx * 0.1 }}
+              className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl text-center transition-all"
+            >
+              <div className="w-28 h-28 mx-auto mb-4 overflow-hidden rounded-full">
+                <img
+                  src={member.image}
+                  alt={member.name}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <h3 className="text-xl font-semibold text-[#24577F]">
+                {member.name}
+              </h3>
+              <p className="text-sm text-gray-500 mb-2">{member.role}</p>
+              <p className="italic text-gray-600 text-sm">“{member.quote}”</p>
+            </motion.div>
+          ))}
+        </div>
+      </section>
+
+      <section className="py-20 px-6 sm:px-12 md:px-20 bg-[#F9FAFB]">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#24577F] mb-4">
+            The Catalysts - Fueling momentum, driving change
+          </h2>
+          <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+            When vision turns into action, that’s where we come in. We bring
+            clarity, speed, and precision to every step of execution. With a
+            deep understanding of strategy and a bias for progress, we drive
+            outcomes that matter — consistently, intelligently, and together.
+            We’re not just moving fast — we’re moving with intent.
           </p>
         </div>
 
@@ -163,15 +266,23 @@ export default function Page() {
       </section>
 
       {/* Vision Section */}
-      <section className="bg-[#24577F] text-white py-20 px-6 sm:px-12 md:px-20">
+      <section
+        className="bg-[#24577F] h-[60vh] bg-cover bg-center text-white py-20 px-6 sm:px-12 md:px-20"
+        style={{ backgroundImage: "url('/70.jpg')" }}
+      >
         <div className="text-center max-w-3xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Built on Belief. Fueled by People.
           </h2>
+          <h5 className="text-3xl md:text-3xl font-bold mb-4">
+            Our people. Our strength. Our story.
+          </h5>
           <p className="text-lg text-white/80">
-            At MotherHood Service, we believe that logistics isn’t just about
-            moving boxes—it's about moving hearts. That’s why our team is made
-            of people who care.
+            At Jambulogix, our people are the backbone of everything we do. From
+            the ground to the grid, every role matters — and every voice is
+            valued. We’re building a logistics ecosystem that’s not just fast,
+            but fair, inclusive, and deeply human. Because when people thrive,
+            systems grow. And that’s the future we believe in — together
           </p>
         </div>
       </section>
@@ -182,8 +293,8 @@ export default function Page() {
           Want to Join Our Mission?
         </h2>
         <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-6">
-          We’re always looking for dreamers, doers, and disruptors to join our
-          team.
+          We’re always looking for dreamers, doers, and disruptors —
+          people-first thinkers who want to build something meaningful
         </p>
         <a
           href="/pages/company/Careers"

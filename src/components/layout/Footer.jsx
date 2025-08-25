@@ -210,7 +210,8 @@ export default function Footer() {
 
       {/* Bottom Copyright */}
       <div className="mt-8 text-center md:text-center text-xs text-white md:text-white/60 ">
-        © {new Date().getFullYear()} All rights reserved. Jambulogix Technologies
+        © {new Date().getFullYear()} All rights reserved. Jambulogix Logistics
+        Private Limited. Jambulogix is a registered trademark of Jambulogix
         Limited.
       </div>
     </footer>

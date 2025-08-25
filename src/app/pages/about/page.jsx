@@ -6,6 +6,29 @@ import { Target, Rocket } from "lucide-react"; // or use Heroicons or custom SVG
 import { motion } from "framer-motion";
 import ContactSection from "@/components/sections/ContactSection";
 import TestimonialCarousel from "@/components/sections/TestimonialSection";
+import { FaLeaf, FaRecycle } from "react-icons/fa";
+
+const sustainabilityData = [
+  "Reduction In Transit Damages",
+  "Direct/Indirect Savings",
+  "Improved Handling & Packaging",
+  "Carbon Neutral Delivery Solution",
+  "Increase Efficiency",
+  "Reduced Carbon Footprint",
+  "Green Logistics & Transportation Solution",
+  "Customized Design",
+];
+
+const sustainabilityPoints = [
+  "Reduction in Transit Damages",
+  "Direct & Indirect Savings",
+  "Improved Handling & Packaging",
+  "Carbon Neutral Delivery",
+  "Increased Operational Efficiency",
+  "Reduced Carbon Footprint",
+  "Green Transportation Solutions",
+  "Customized Packaging Design",
+];
 
 const leaders = [
   {
@@ -97,7 +120,7 @@ export default function AboutUsPage() {
           fill
           className="object-cover object-right xl:object-center w-full h-full"
         />
-        <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
+        <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
           <div className="text-center text-white px-4">
             <h1 className="text-4xl md:text-7xl font-extrabold">
               Empowering Global Logistics
@@ -173,19 +196,37 @@ export default function AboutUsPage() {
             About Jambulogix
           </h2>
           <p className="text-gray-700 text-lg leading-relaxed mb-6">
-            Agile by design, yours by choice - our strength lies in a powerful
-            combination of experts by veterans, customization and technology.
-            Our emphasis on innovation and range of cost effective services are
-            aimed at streamlining complete logistics solution
+            Jambulogix (JLX) is building India’s next-generation flexi-logistics
+            network — designed for brands, retailers, and businesses that demand
+            speed, scale, and reliability. Agile by design and yours by choice,
+            we combine the expertise of industry veterans with a people-first
+            culture, advanced technology, and tailored solutions to meet diverse
+            logistics needs. Our services cover the full spectrum — from smart
+            warehousing, sort centers, cross-docks, and dark stores to
+            multimodal transport, FTL/LTL, and first-mile/last-mile delivery.
+            Serving B2B, B2C, D2C, eCommerce, and express logistics, we operate
+            across 10,000+ PIN codes with a robust network built for precision
+            and scale.
+          </p>
+          <p className="text-gray-700 text-lg leading-relaxed mb-6">
+            What sets us apart is our relentless focus on customer obsession,
+            transparency, and innovation. Our growing tech stack ensures
+            real-time visibility, control, and efficiency in every shipment,
+            while our inclusive culture empowers teams to think big, take
+            ownership, and deliver impact. We are also committed to building a
+            greener supply chain — optimizing routes, reducing empty miles, and
+            adopting energy-efficient practices to lower our carbon footprint
+            without compromising speed or service.
+          </p>
+          <p className="text-gray-700 text-lg leading-relaxed mb-6">
+            Whether you’re a fast-growing D2C brand, a large enterprise
+            optimizing supply chains, or a B2B player navigating India’s
+            geography, JLX brings you the reach, reliability, and agility to
+            move possibilities — not just parcels.
           </p>
           <p className="text-gray-700 text-lg leading-relaxed mb-10">
-            Our services span B2B, B2C, D2C, eCommerce, and Express Logistics,
-            offering end-to-end solutions — from smart warehousing and
-            multimodal transportation to last-mile delivery and tech-driven
-            supply chain management. With operations across 10,000+ PIN codes
-            and a wide network of sorting centers, cross docks, dark stores, and
-            distribution hubs, we are uniquely positioned to serve businesses of
-            all scales with speed, reliability, and precision.
+            We’re on a mission to make logistics smarter, faster, greener, and
+            more human — shaping the future of commerce, one delivery at a time.
           </p>
 
           <div className="grid grid-cols-2 sm:grid-cols-2 gap-6 text-center">
@@ -301,14 +342,119 @@ export default function AboutUsPage() {
         ))}
       </section> */}
 
+      <section className="bg-gradient-to-b from-white via-slate-50 to-white py-24 px-6 relative overflow-hidden">
+        <div className="max-w-7xl mx-auto text-center">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-gray-800 mb-14 tracking-tight">
+            Sustainability
+          </h2>
+
+          {/* Circle layout */}
+          <div className="relative w-full max-w-4xl mx-auto h-[550px] flex items-center justify-center">
+            {/* Main Center */}
+            <div className="z-20 w-64 h-64 bg-green-100 rounded-full flex flex-col items-center justify-center text-center shadow-lg border-2 border-green-400">
+              <FaLeaf size={48} className="text-green-600 mb-3" />
+              <h3 className="text-xl font-semibold text-green-900">
+                Green Hubs
+              </h3>
+              <p className="text-sm text-green-700 mt-1 tracking-wide">
+                Reduce • Reuse • Recycle
+              </p>
+            </div>
+
+            {/* Orbit Bubbles */}
+            {sustainabilityPoints.map((text, idx) => {
+              const angle = (360 / sustainabilityPoints.length) * idx;
+              const radius = 220;
+              const x = radius * Math.cos((angle * Math.PI) / 180);
+              const y = radius * Math.sin((angle * Math.PI) / 180);
+
+              return (
+                <div
+                  key={idx}
+                  className="absolute w-44 h-44 bg-white rounded-full shadow-md border border-green-300 flex items-center justify-center text-center px-4 transition hover:shadow-xl"
+                  style={{ transform: `translate(${x}px, ${y}px)` }}
+                >
+                  <p className="text-sm font-medium text-gray-700">{text}</p>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      <section className="w-full bg-[#25503f] py-24 px-6">
+        <div className="max-w-8xl mx-auto px-6 sm:px-20 flex flex-col lg:flex-row items-center justify-between gap-16">
+          {/* Left Text Block */}
+          <div className="lg:w-1/2">
+            <h2 className="text-5xl font-extrabold text-white mb-6">
+              Sustainable
+              <span className="text-[#FF7F06] text-7xl">{" "}Jambulogix</span>
+            </h2>
+            <p className="text-lg text-white mb-8">
+              We are committed to building a greener future by optimizing every
+              touchpoint of our supply chain. Our green hubs and logistics
+              processes are designed to reduce waste, save energy, and boost
+              efficiency at scale.
+            </p>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {[
+                "Eco-optimized packaging & delivery",
+                "Carbon-neutral transportation solutions",
+                "Energy-efficient warehousing practices",
+                "Recycling, reusing, and rethinking resources",
+              ].map((point, idx) => (
+                <div
+                  key={idx}
+                  className="bg-white border border-slate-200 rounded-lg p-4 shadow-sm hover:shadow-md transition"
+                >
+                  <p className="text-sm text-gray-800 font-medium">{point}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Right Orbit Diagram */}
+          <div className="relative lg:w-1/2 h-[500px] flex items-center justify-center">
+            {/* Center Circle */}
+            <div className="z-10 w-60 h-60 bg-green-100 border-2 border-[#FF7F06] rounded-full flex flex-col items-center justify-center text-center shadow-lg">
+              <FaLeaf size={42} className="text-green-600 mb-2" />
+              <h3 className="text-xl font-bold text-green-900">Green Hubs</h3>
+              <p className="text-sm text-green-700 mt-1">
+                Reduce • Reuse • Recycle
+              </p>
+            </div>
+
+            {/* Orbit Points */}
+            {sustainabilityPoints.map((text, idx) => {
+              const angle = (360 / sustainabilityPoints.length) * idx;
+              const radius = 195;
+              const x = radius * Math.cos((angle * Math.PI) / 180);
+              const y = radius * Math.sin((angle * Math.PI) / 180);
+
+              return (
+                <div
+                  key={idx}
+                  className="absolute w-44 h-44 bg-green-600 rounded-full border-2 border-white shadow-sm flex items-center justify-center text-center px-6 hover:shadow-lg shadow-green-400 transition"
+                  style={{ transform: `translate(${x}px, ${y}px)` }}
+                >
+                  <p className="text-sm font-medium text-white">{text}</p>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+      
+
       <section className="relative bg-[#24577F] text-white py-12 md:py-24 px-6 sm:px-20 overflow-hidden">
         {/* Decorative Gradient Blobs */}
         {/* <div className="absolute top-[-100px] left-[-100px] w-72 h-72 bg-[#FF7F06]/40 rounded-full blur-3xl opacity-60 z-0" />
         <div className="absolute bottom-[-100px] right-[-80px] w-72 h-72 bg-[#FF7F06]/30 rounded-full blur-2xl opacity-50 z-0" /> */}
 
-        <div className="max-w-6xl mx-auto relative z-10 grid sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 gap-8 md:gap-16 items-start">
+        <div className="max-w-7xl mx-auto relative z-10 grid sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 gap-8 md:gap-16 items-start">
           {/* Vision */}
-          <div className="bg-white/10 rounded-2xl p-8 shadow-lg border border-white/20 hover:bg-white/20 transition">
+          <div className="bg-white/10 rounded-2xl p-8 h-[40vh] flex flex-col justify-center shadow-lg border border-white/20 hover:bg-white/20 transition">
             <div className="flex items-center gap-4 mb-4">
               <Target className="w-10 h-10 text-[#FF7F06]" />
               <h3 className="text-3xl font-bold">Our Vision</h3>
@@ -323,17 +469,18 @@ export default function AboutUsPage() {
           </div>
 
           {/* Mission */}
-          <div className="bg-white/10 rounded-2xl p-8 shadow-lg border border-white/20 hover:bg-white/20 transition">
+          <div className="bg-white/10 rounded-2xl p-8 h-[40vh] flex flex-col justify-center shadow-lg border border-white/20 hover:bg-white/20 transition">
             <div className="flex items-center gap-4 mb-4">
               <Rocket className="w-10 h-10 text-[#FF7F06]" />
               <h3 className="text-3xl font-bold">Our Mission</h3>
             </div>
             <p className="text-md text-white/90 leading-relaxed">
-              To be a dynamic and progressive logistics partner, driven by a
-              culture of customer obsession, operational excellence, and
-              continuous innovation. We strive to create a safe and supportive
-              workplace, aiming to be recognized as the best employer in
-              logistics and the most trusted name in the industry.
+              To be India’s most agile and progressive logistics partner —
+              powered by a culture of customer obsession, operational
+              excellence, and constant innovation. We’re committed to creating a
+              safe, inclusive, and empowering workplace, earning recognition as
+              the most trusted name in logistics and the employer of choice for
+              top talent.
             </p>
           </div>
         </div>
@@ -392,17 +539,22 @@ export default function AboutUsPage() {
             <h2 className="text-4xl sm:text-5xl text-center  font-bold text-[#FF7F06] mb-6">
               Our Core Values
             </h2>
-            <p className="text-black text-md md:text-lg mb-6">
+            <p className="text-black text-md md:text-lg mb-3">
               At Jambulogix, our values drive everything — from decision-making
               to daily operations.
             </p>
+            <p className="text-black text-md md:text-lg mb-6">
+              We put our customers at the heart of everything we do — solving
+              their challenges with speed, empathy, and precision.
+            </p>
             <ul className="space-y-4">
               {[
-                "Customer Centricity: At the heart of all we do",
-                "People First: A great place to work and grow",
-                "Purpose-led Commerce: Business with sustainability and social accountability",
-                "Transparency & Simplicity: We keep it honest and efficient",
-                "Integrity & Governance: Committed to ethical operations and eco-conscious decisions",
+                "People First: Our people are our biggest strength. We empower them with trust, freedom, and opportunities to grow.",
+                "Agility in Action: In logistics, speed is everything. We adapt fast, decide smart, and execute with urgency.",
+                "Innovation Everyday: Business with sustainability and social accountability",
+                "Transparency & Simplicity:We embrace new ideas, tech, and smarter ways of working to constantly raise the bar.",
+                "Sustainable Impact: We move goods responsibly, reducing our environmental footprint while creating lasting value.",
+                "Ownership & Accountability:We own the outcome, celebrate wins, and learn from setbacks — always moving forward.",
               ].map((item, idx) => (
                 <li
                   key={idx}
@@ -456,14 +608,14 @@ export default function AboutUsPage() {
             category to view our partners.
           </p>
         </div>
-        <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-7 gap-3 sm:gap-10 justify-items-center max-w-8xl mx-auto ouverflow-hidden">
+        <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-6 gap-3 sm:gap-10 justify-items-center max-w-8xl mx-auto ouverflow-hidden">
           {partners.map((partner, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, scale: 0.8 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ delay: index * 0.1, duration: 0.1 }}
-              className="flex justify-center justify-items-center items-center h-20 w-24 bg-transparent rounded-xl shadow-sm   md:p-4 hover:shadow-md transition"
+              className="flex justify-center justify-items-center items-center h-24 w-36 bg-transparent rounded-xl shadow-sm   md:p-4 hover:shadow-md transition"
             >
               <Image
                 src={partner.logo}
@@ -573,6 +725,23 @@ export default function AboutUsPage() {
           </div>
           {/* Left Side: Image */}
         </div>
+      </section>
+
+      {/* The jambulogix exprience */}
+
+      <section className="bg-[#24577F] text-white py-16 px-6 sm:px-20 text-center">
+        <h2 className="text-3xl font-bold mb-4">
+          Gain Leverage for Your Business with Jambulogix
+        </h2>
+        <p className="mb-6 max-w-xl mx-auto">
+          We’d love to hear from you! Whether you’re a business looking for
+          scalable logistics solutions, a partner exploring collaboration, or a
+          candidate interested in joining our journey — we’re just a message
+          away.
+        </p>
+        {/* <button className="bg-[#FF7F06] text-white px-6 py-3 rounded-lg font-bold hover:bg-[#e86e00] transition">
+          Contact Us
+        </button> */}
       </section>
 
       <TestimonialCarousel />

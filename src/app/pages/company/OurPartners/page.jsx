@@ -67,24 +67,43 @@ const leaders = [
 // Partner categories and their respective logos
 const partnerCategories = [
   {
-    label: "Delivery Partners",
+    label: "Warehousing Partners",
+    heading: "Smart Space, Seamless Service.",
     logos: ["/Clientlogo/22.png", "/Clientlogo/23.png", "/Clientlogo/24.png"],
+    description:
+      "From storage to fulfillment, our warehousing partners help us stay agile and closer to the customer — wherever demand goes.",
   },
   {
-    label: "Workforce Partners",
+    label: "Staffing  Partners",
+    heading: "People Who Power Progress.",
+
     logos: ["/Clientlogo/1.png", "/Clientlogo/2.png", "/Clientlogo/3.png"],
+    description:
+      "From ground staff to skilled operators, our staffing partners ensure we have the right people in the right place — every single day.",
   },
   {
     label: "Logistics Partners",
+    heading: "Seamless Links in Every Lane.",
+
     logos: ["/Clientlogo/22.png", "/Clientlogo/23.png", "/Clientlogo/24.png"],
+    description:
+      "Our logistics partners help us connect the dots — from first mile to last. With their support, we ensure smoother routes, faster turnarounds, and a supply chain that never stops moving.",
   },
   {
-    label: "Warehouse Partners",
+    label: "Delivery Partners",
+    heading: "Miles Made Meaningful.",
+
     logos: ["/Clientlogo/13.png", "/Clientlogo/14.png", "/Clientlogo/12.png"],
+    description:
+      "Our delivery network is stronger because of our partner fleets. Together, we reach more pin codes, reduce delays, and deliver brand trust at the doorstep.",
   },
   {
     label: "Technology Partners",
+    heading: "Tech That Moves With Us.",
+
     logos: ["/Clientlogo/5.png", "/Clientlogo/6.png", "/Clientlogo/7.png"],
+    description:
+      "From visibility tools to integration engines, our tech allies help us streamline operations, scale faster, and stay ahead of the curve.",
   },
 ];
 
@@ -101,20 +120,44 @@ export default function OurPartnersPage() {
         <div className="bg-opacity-50 w-full h-full absolute top-0 left-0" />
         <div className="relative z-10 px-6">
           <h1 className="text-white text-4xl sm:text-5xl font-bold mb-4">
-            Strategic Partnerships That Drive Success
+            Built on Partnerships. Powered by Purpose.
           </h1>
-          <p className="text-white text-lg sm:text-xl max-w-2xl mx-auto">
-            We collaborate with leading platforms and retailers to empower
-            seamless logistics and eCommerce fulfillment across India.
+          <p className="text-white text-lg sm:text-lg max-w-6xl mx-auto">
+            At Jambulogix, we don’t work alone — we grow together. building for
+            speed, scale, or sustainability — you’ll fit right in.
+          </p>
+          <p className="text-white text-lg sm:text-lg max-w-6xl mx-auto">
+            Our ecosystem thrives on smart collaborations with those who move
+            fast, think bold, and build for scale. Whether it's driving freight
+            across the country or powering the tech behind our operations, our
+            partners help us deliver impact at every mile.
+          </p>
+          <p className="text-white text-lg sm:text-lg max-w-6xl mx-auto">
+            From funding innovation to enabling faster deliveries, from smart
+            warehouses to people on the ground — every partner brings value that
+            moves us forward.
+          </p>
+          <p className="text-white text-lg sm:text-lg max-w-6xl mx-auto">
+            If you’re building for speed, scale, or sustainability — you’ll fit
+            right in.
           </p>
         </div>
       </section>
 
       <section className="py-24 px-6 sm:px-20 bg-black/60">
         <div className="max-w-8xl mx-auto">
-          <h2 className="text-4xl sm:text-5xl font-bold text-center text-[#FF7F06] mb-16">
+          <h2 className="text-4xl sm:text-5xl font-bold text-center text-[#FF7F06] mb-3">
             Our Investers
           </h2>
+          <h2 className="text-4xl sm:text-3xl font-bold text-center text-[#FF7F06] mb-3">
+            Fueling Ambition. Backing Scale.
+          </h2>
+
+          <p className="text-white text-lg sm:text-lg max-w-4xl mx-auto mb-16 text-center">
+            Our investors don’t just fund logistics — they believe in building
+            the future of it. With their support, we’re scaling faster and
+            smarter across India.
+          </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-4 gap-8">
             {leaders.map((leader, idx) => (
@@ -265,14 +308,31 @@ export default function OurPartnersPage() {
 
       <section className="py-20 px-4 sm:px-10 md:px-20 bg-[#F4F6F8]">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-[#24577F] mb-4">
-              Why Partner With Us?
+          <div className="text-center mb-16 ">
+            <h2 className="text-5xl font-bold capitalize text-[#24577F] mb-4 max-w-5xl mx-auto">
+              Partner with{"  "}
+              <span className=" text-[#FF7F06] text-8xl font-extrabold">
+                Jambulogix
+              </span>
             </h2>
-            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-              Our scalable infrastructure and intelligent technology empower
-              businesses to deliver better, faster, and farther — with
-              precision.
+            <h2 className="text-3xl font-bold capitalize text-[#24577F] mb-4 max-w-7xl mx-auto">
+              where logistics meets{"  "}
+              <span className=" text-[#FF7F06] font-extrabold text-5xl">
+                {" "}
+                opportunity, efficiency, {"  "}
+              </span>
+              <span className=" text-[#24577F] font-extrabold capitalize">
+                And
+              </span>
+              <span className=" text-[#FF7F06] font-extrabold text-5xl">
+                {" "}
+                impact
+              </span>
+            </h2>
+            <p className="text-gray-600 text-md max-w-3xl mx-auto">
+              Jambulogix, partnership means progress — not just for us, but for
+              every stakeholder in the logistics chain. We don’t just move
+              goods, we move opportunities, scale, and impact.
             </p>
           </div>
 
@@ -280,21 +340,39 @@ export default function OurPartnersPage() {
             {[
               {
                 emoji: "🌐",
-                title: "Pan-India Coverage",
+                title: "Business Growth at Scale",
                 description:
-                  "Serve customers across 29 states with our extensive logistics footprint.",
+                  "Access a fast-expanding network of MSMEs, enterprises, and eCommerce players across India — and tap into steady demand, new markets, and consistent load volumes.",
               },
               {
                 emoji: "⚙️",
-                title: "Tech-Enabled Fulfillment",
+                title: "Efficiency-Driven Collaboration",
                 description:
-                  "Seamless system integration with real-time visibility and smart automation.",
+                  "We integrate your services into a tech-driven, optimized logistics system — ensuring faster turnaround, reduced idle time, and maximum resource utilization.",
               },
               {
                 emoji: "🏆",
-                title: "Trusted by Leaders",
+                title: "Long-Term, Transparent Relationships",
                 description:
-                  "Backed by India’s leading brands and fastest-growing marketplaces.",
+                  "We believe in fairness, real-time visibility, timely payments, and shared success — building trust at every touchpoint.",
+              },
+              {
+                emoji: "🏆",
+                title: "Innovation & Co-Creation",
+                description:
+                  "From pilot projects to process improvements, we work closely with our partners to build future-ready logistics solutions.",
+              },
+              {
+                emoji: "🏆",
+                title: "Reliability and Complience",
+                description:
+                  "we ensure reliability through a skilled workforce, strict compliance with all regulations, and proactive risk management to keep operations smooth and dependable.",
+              },
+              {
+                emoji: "🏆",
+                title: "Social & Sustainable Impact",
+                description:
+                  "Be part of a logistics movement that supports MSMEs, improves rural connectivity, and reduces environmental footprint through smarter operations.",
               },
             ].map((item, idx) => (
               <div
@@ -319,10 +397,11 @@ export default function OurPartnersPage() {
       {/* CTA */}
       <section className="bg-[#24577F] text-white py-16 text-center px-6">
         <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-          Become a Growth Partner
+          Ready to Grow? Let’s Partner.
         </h2>
         <p className="text-lg mb-6 max-w-2xl mx-auto">
-          Ready to join hands with India’s fastest-growing fulfillment network?
+          From first mile to last, we grow together. Ready to partner with
+          India’s most inclusive Organisation?
         </p>
         <a
           href="/pages/contact-us"

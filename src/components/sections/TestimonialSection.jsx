@@ -44,7 +44,7 @@ export default function TestimonialCarousel() {
     <section className="bg-white/95 py-16 md:py-20 px-4 sm:px-6 lg:px-20 text-black">
       <div className="max-w-6xl mx-auto text-center mb-12">
         <h2 className="text-4xl sm:text-4xl lg:text-5xl font-bold md:font-extrabold text-[#FF7F06] mb-4">
-          What Our Clients Say
+         Trusted by Businesses Like Yours
         </h2>
         <p className="text-gray-700 text-base sm:text-lg">
           Hear from our partners who trust Jambulogix to deliver excellence

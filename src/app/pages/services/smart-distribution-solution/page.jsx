@@ -1,24 +1,28 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
+import { motion, useInView } from "framer-motion";
 
 import Image from "next/image";
-import { motion } from "framer-motion";
 import TestimonialCarousel from "@/components/sections/TestimonialSection";
 import ContactSection from "@/components/sections/ContactSection";
 import InnerNumbers from "@/components/sections/InnerNumbers";
 
 const subServices = [
   {
-    title: "First Mile Service",
+    title: "First Mile Service ",
+    subtitle: "Reliable Starts. Sustainable Moves.",
+
     description:
-      "Our First Mile services are designed to move inventory swiftly from your warehouse or seller location to our distribution hubs or fulfillment centers. With deep regional coverage and a tech-enabled fleet, we ensure that your supply chain starts on time, every time.",
+      "We know every great delivery begins with a smooth first move. Our First Mile services are built to swiftly move your shipments from your pickup point to the next destination — with precision, care, and efficiency. Powered by a tech-enabled fleet, deep regional reach, and a commitment to low-carbon operations, we ensure your supply chain starts right — and sustainably — every time.",
     image: "/28.jpg",
   },
   {
     title: " Last Mile Service",
+    subtitle: "Right Time. Right Door. Every Time.",
+
     description:
-      "The Last Mile is the most crucial and customer-facing part of the supply chain. Our last-mile operations are built for high reliability and customer satisfaction, ensuring on-time deliveries with real-time updates.",
+      "The final step matters most — and we make it count. Our Last Mile services ensure your products reach customers on time, intact, and with care, creating a seamless delivery experience that reflects your brand promise. With a tech-enabled delivery network, trained fleet, and a focus on eco-efficient routing, we help you achieve faster drop-offs while reducing your carbon footprint — making every delivery better for your customers and the planet.",
     image: "/29.jpg",
   },
 ];
@@ -47,9 +51,59 @@ const steps = [
   },
 ];
 
+function Counter({ target }) {
+  const [count, setCount] = useState(0);
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: true });
+
+  useEffect(() => {
+    if (inView) {
+      let start = 0;
+      const end = parseInt(target.replace(/[^0-9]/g, ""));
+      if (isNaN(end)) return;
+
+      const duration = 5000;
+      const increment = end / (duration / 16);
+
+      const animate = () => {
+        start += increment;
+        if (start < end) {
+          setCount(Math.floor(start));
+          requestAnimationFrame(animate);
+        } else {
+          setCount(end);
+        }
+      };
+
+      animate();
+    }
+  }, [inView, target]);
+
+  return (
+    <h3
+      ref={ref}
+      className="text-xl md:text-3xl font-extrabold mb-2 text-[#FF7F06]"
+    >
+      {count.toLocaleString()}
+      {target.includes("Billion") ? "+" : ""}
+    </h3>
+  );
+}
+
 export default function Page() {
   const [activeTab, setActiveTab] = useState(subServices[0]);
   const [activeStep, setActiveStep] = useState(steps[0]);
+
+  const stats = [
+    {
+      label: "Pincodes Covered",
+      value: "15000",
+      suffix: "+",
+    },
+    { label: "States Served", value: "25", suffix: " +" },
+    { label: "Low Carbon Operations", value: "50", suffix: "+" },
+    { label: "Tech-Enabled Control", value: "5", suffix: " +" },
+  ];
 
   return (
     <>
@@ -86,9 +140,10 @@ export default function Page() {
             transition={{ delay: 0.2, duration: 0.6 }}
             className="text-lg sm:text-2xl text-white/90 max-w-xl mb-8"
           >
-            Efficient inventory flow, intelligent route mapping, and real-time
-            control—our distribution services power your brand's last-mile reach
-            and market scalability.
+            Distribution services built to help you reach more customers —
+            faster and smarter. With intelligent route planning, real-time
+            visibility, and a focus on reducing carbon impact, we make your
+            distribution efficient, scalable, and sustainable.
           </motion.p>
 
           {/* <motion.button
@@ -118,7 +173,8 @@ export default function Page() {
           {/* Text Section */}
           <div>
             <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-[#24577F] mb-6 leading-tight">
-              Why Smart <span className="text-[#FF7F06]">Distribution..</span>?
+              Distribution, Reimagined for{" "}
+              <span className="text-[#FF7F06]">Reach, Speed & Control</span>?
             </h2>
 
             <p className="text-black text-md sm:text-lg leading-relaxed mb-4">
@@ -139,7 +195,49 @@ export default function Page() {
         </div>
       </section>
       {/* Stats Section */}
-      <InnerNumbers />
+
+      <section className="bg-[#0A1A2F] text-white py-16 px-6 sm:px-20">
+        <div className="max-w-8xl mx-auto text-center mb-12">
+          <motion.h2
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7 }}
+            className="text-3xl sm:text-5xl font-bold mb-4"
+          >
+            Distribution Without Limits
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2, duration: 0.7 }}
+            className="text-white/70 max-w-3xl mx-auto"
+          >
+            Our distribution engine is built for performance — combining
+            precision, reach, and reliability to deliver at scale. From
+            thousands of shipments to growing coverage across regions, we’re
+            driving measurable impact every single day — helping brands move
+            smarter and grow faster.
+          </motion.p>
+        </div>
+
+        <div className="grid grid-cols-2 sm:grid-cols-2 xl:grid-cols-4 gap-10 max-w-6xl mx-auto text-nowrap">
+          {stats.map((stat, idx) => (
+            <motion.div
+              key={idx}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: idx * 0.2, duration: 0.6 }}
+              className="rounded-2xl text-center bg-[#112233] p-6 shadow-lg hover:scale-105 transition-transform text-nowrap"
+            >
+              <Counter target={stat.value + stat.suffix} />
+              <p className="text-xs md:text-sm text-white/80 tracking-wide">
+                {stat.label}
+              </p>
+            </motion.div>
+          ))}
+        </div>
+      </section>
+
       {/* Sub Services Section */}
       <section className="bg-[#F9FAFB] py-10 md:py-20 px-3 mx-auto sm:px-20 border-t border-gray-200">
         <div className="max-w-8xl mx-auto">
@@ -180,7 +278,7 @@ export default function Page() {
             {/* Text */}
             <div className="w-full md:w-1/3 text-center md:text-left">
               <h3 className="text-3xl sm:text-5xl md:text-6xl font-extrabold text-[#FF7F06] mb-4 leading-tight">
-                {activeTab.title}
+                {activeTab.subtitle}
               </h3>
               <p className="text-black text-base sm:text-lg leading-relaxed">
                 {activeTab.description}
@@ -205,9 +303,31 @@ export default function Page() {
             transition={{ staggerChildren: 0.2 }}
           >
             {[
-              { icon: "🚚", text: "AI-Powered Routing" },
-              { icon: "📦", text: "Real-Time Tracking" },
-              { icon: "🔗", text: "Seamless Integration" },
+              {
+                icon: "🚚",
+                text: "On-Time Pickup ",
+                desc: "Reliable and punctual always",
+              },
+              {
+                icon: "🚚",
+                text: "Brand Experience ",
+                desc: "Final-mile service that reflects you.",
+              },
+              {
+                icon: "🚚",
+                text: "Trained Fleet ",
+                desc: "Professionally managed delivery teams.",
+              },
+              {
+                icon: "🚚",
+                text: "Eco Routing ",
+                desc: "Lower emissions. Smarter movement.",
+              },
+              {
+                icon: "🚚",
+                text: "Live Tracking ",
+                desc: "Real-time delivery visibility.",
+              },
             ].map((item, idx) => (
               <motion.div
                 key={idx}
@@ -235,10 +355,12 @@ export default function Page() {
             Who is it for?
           </h2>
           <p className="text-black text-md md:text-lg mb-8 md:mb-16 max-w-3xl mx-auto leading-relaxed">
-            Our solutions are designed for businesses of all scales—whether
-            you’re an ambitious start-up, a growing SME, or a large enterprise.
-            We enable efficient returns, better customer satisfaction, and
-            seamless supply chain support.
+            Our Distribution Services are built for businesses that value speed,
+            visibility, and sustainable scale. Whether you're a growing SME, a
+            D2C brand, or a regional distributor, Jambulogix offers the right
+            balance of reach, reliability, and real-time control — making us the
+            perfect partner for brands that want to deliver smarter without
+            investing in heavy infrastructure.
           </p>
 
           <motion.div
@@ -249,9 +371,11 @@ export default function Page() {
             transition={{ staggerChildren: 0.2 }}
           >
             {[
-              { img: "/19.jpg", label: "E-commerce Enterprises" },
-              { img: "/18.jpg", label: "Online Sellers & SMEs" },
-              { img: "/10.jpg", label: "Brands & D2C Companies" },
+              { img: "/19.jpg", label: "Startups & Growing Brands" },
+              { img: "/18.jpg", label: "SMEs Across Sectors" },
+              { img: "/10.jpg", label: "Regional & Local Distributors" },
+              { img: "/10.jpg", label: "E-commerce & D2C Sellers" },
+              { img: "/10.jpg", label: "Sustainable & Conscious Businesses" },
             ].map((item, idx) => (
               <motion.div
                 key={idx}
@@ -291,9 +415,31 @@ export default function Page() {
             transition={{ staggerChildren: 0.2 }}
           >
             {[
-              { icon: "🔐", text: "50% Reduction in Fraudulent Returns" },
-              { icon: "⏱️", text: "Same-Day Pickup Till 5 PM" },
-              { icon: "💰", text: "100% Doorstep Refund Guarantee" },
+              {
+                icon: "🔐",
+                text: "Faster Market Expansion",
+                desc: "Access new regions without building your own infra.",
+              },
+              {
+                icon: "🔐",
+                text: "Lower Operational Burden",
+                desc: "We handle fleet, routing, and delivery — you focus on growth.",
+              },
+              {
+                icon: "🔐",
+                text: "Improved Customer Satisfaction",
+                desc: "Reliable, on-time deliveries that build trust.",
+              },
+              {
+                icon: "🔐",
+                text: "Better Cost Control",
+                desc: "Shared resources and optimized routing reduce logistics costs.",
+              },
+              {
+                icon: "🔐",
+                text: "Sustainable Brand Value",
+                desc: "Eco-efficient deliveries align with your environmental goals.",
+              },
             ].map((benefit, idx) => (
               <motion.div
                 key={idx}

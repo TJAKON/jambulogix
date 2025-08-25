@@ -161,7 +161,7 @@ export default function InstantQuote() {
         <div className="w-full lg:w-1/2 flex items-center justify-center p-6 md:px-16 bg-[#0A1A2F]">
           <div className="w-full max-w-2xl bg-white p-5 md:p-8 rounded-2xl shadow-xl">
             <h3 className="text-2xl font-bold text-center text-gray-900 mb-6">
-              Get an Instant Quote
+              Get an Instant Quote -<span className="text-[#FF7F06]"> Comming Soon!</span>
             </h3>
 
             <form onSubmit={handleSubmit} className="space-y-4 text-sm">
