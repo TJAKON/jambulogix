@@ -2,11 +2,16 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import { Target, Rocket } from "lucide-react"; // or use Heroicons or custom SVGs
+import { Rocket, Globe2, Zap, Users, Network } from "lucide-react";
+import { Heart, Lightbulb, Leaf } from "lucide-react";
+import { Target } from "lucide-react"; // or use Heroicons or custom SVGs
 import { motion } from "framer-motion";
 import ContactSection from "@/components/sections/ContactSection";
 import TestimonialCarousel from "@/components/sections/TestimonialSection";
 import { FaLeaf, FaRecycle } from "react-icons/fa";
+import { ThumbsUp, Layers, Truck, Factory } from "lucide-react";
+
+import { ShieldCheck, Video, Map, Package, Lock, Eye } from "lucide-react";
 
 const sustainabilityData = [
   "Reduction In Transit Damages",
@@ -35,25 +40,25 @@ const leaders = [
     name: "Pankaj Deole",
     role: "Founder & CEO",
     desc: "Visionary leader driving innovation across supply chain solutions.",
-    img: "/test.jpeg",
+    img: "/ceo.jpg",
   },
   {
     name: "Rahul Sinha",
     role: "COO",
     desc: "Operational excellence expert ensuring scalable logistics operations.",
-    img: "/test.jpeg",
+    img: "/ceo.jpg",
   },
   {
     name: "Neha Rathi",
     role: "Chief Strategy Officer",
     desc: "Crafts growth strategies and data-driven decisions for expansion.",
-    img: "/test.jpeg",
+    img: "/ceo.jpg",
   },
   {
     name: "Amit Joshi",
     role: "Tech Head",
     desc: "Leads our digital transformation and intelligent logistics systems.",
-    img: "/test.jpeg",
+    img: "/ceo.jpg",
   },
 ];
 
@@ -192,8 +197,8 @@ export default function AboutUsPage() {
 
         {/* Right: Text + Stats */}
         <div>
-          <h2 className="text-4xl text-center xl:text-start font-bold text-[#FF7F06] mb-6">
-            About Jambulogix
+          <h2 className="text-5xl text-center xl:text-start font-bold text-[#24577F] mb-6">
+            About <span className="text-[#FF7F06] text-8xl"> Jambulogix</span>
           </h2>
           <p className="text-gray-700 text-lg leading-relaxed mb-6">
             Jambulogix (JLX) is building India’s next-generation flexi-logistics
@@ -304,91 +309,100 @@ export default function AboutUsPage() {
         </div>
       </section>
 
-      {/* Highlights Section */}
-      {/* <section className="py-16 bg-white/95 px-6 sm:px-20 grid sm:grid-cols-3 gap-10 max-w-6xl mx-auto">
-        {[
-          {
-            title: "Smarter Warehousing",
-            image: "/test.jpeg",
-          },
-          {
-            title: "Nationwide Transport",
-            image: "/test.jpeg",
-          },
-          {
-            title: "Tech-enabled Fulfilment",
-            image: "/test.jpeg",
-          },
-        ].map((item, idx) => (
-          <motion.div
-            key={idx}
-            className="rounded-xl overflow-hidden shadow-lg group hover:shadow-xl transition-all"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: idx * 0.2 }}
-          >
-            <Image
-              src={item.image}
-              alt={item.title}
-              width={400}
-              height={250}
-              className="w-full h-60 object-cover"
-            />
-            <p className="p-4 font-semibold text-center text-[#24577F] group-hover:text-[#FF7F06]">
-              {item.title}
-            </p>
-          </motion.div>
-        ))}
-      </section> */}
+      {/* our vision and mission section */}
+      <section className="relative bg-[#24577F] text-white py-12 md:py-24 px-6 sm:px-20 overflow-hidden">
+        {/* Decorative Gradient Blobs */}
+        {/* <div className="absolute top-[-100px] left-[-100px] w-72 h-72 bg-[#FF7F06]/40 rounded-full blur-3xl opacity-60 z-0" />
+        <div className="absolute bottom-[-100px] right-[-80px] w-72 h-72 bg-[#FF7F06]/30 rounded-full blur-2xl opacity-50 z-0" /> */}
 
-      <section className="bg-gradient-to-b from-white via-slate-50 to-white py-24 px-6 relative overflow-hidden">
-        <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-extrabold text-gray-800 mb-14 tracking-tight">
-            Sustainability
-          </h2>
-
-          {/* Circle layout */}
-          <div className="relative w-full max-w-4xl mx-auto h-[550px] flex items-center justify-center">
-            {/* Main Center */}
-            <div className="z-20 w-64 h-64 bg-green-100 rounded-full flex flex-col items-center justify-center text-center shadow-lg border-2 border-green-400">
-              <FaLeaf size={48} className="text-green-600 mb-3" />
-              <h3 className="text-xl font-semibold text-green-900">
-                Green Hubs
-              </h3>
-              <p className="text-sm text-green-700 mt-1 tracking-wide">
-                Reduce • Reuse • Recycle
-              </p>
+        <div className="max-w-8xl mx-auto px-6 sm:px-0 relative z-10 grid sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 gap-8 md:gap-16 items-start">
+          {/* Vision */}
+          <div className="bg-white/10 rounded-2xl p-8 h-[40vh] flex flex-col justify-center shadow-lg border border-white/20 hover:bg-white/20 transition">
+            <div className="flex items-center gap-4 mb-4">
+              <Target className="w-10 h-10 text-[#FF7F06]" />
+              <h3 className="text-3xl font-bold">Our Vision</h3>
             </div>
+            <p className="text-lg text-white/90 leading-relaxed">
+              To be a passionate service catalyst that simplifies and
+              strengthens the flow of commerce across India's supply chain
+              ecosystem. Our aim is to create a focused and collaborative
+              logistics footprint across all Indian geographies, enabling
+              businesses to scale seamlessly.
+            </p>
+          </div>
 
-            {/* Orbit Bubbles */}
-            {sustainabilityPoints.map((text, idx) => {
-              const angle = (360 / sustainabilityPoints.length) * idx;
-              const radius = 220;
-              const x = radius * Math.cos((angle * Math.PI) / 180);
-              const y = radius * Math.sin((angle * Math.PI) / 180);
-
-              return (
-                <div
-                  key={idx}
-                  className="absolute w-44 h-44 bg-white rounded-full shadow-md border border-green-300 flex items-center justify-center text-center px-4 transition hover:shadow-xl"
-                  style={{ transform: `translate(${x}px, ${y}px)` }}
-                >
-                  <p className="text-sm font-medium text-gray-700">{text}</p>
-                </div>
-              );
-            })}
+          {/* Mission */}
+          <div className="bg-white/10 rounded-2xl p-8 h-[40vh] flex flex-col justify-center shadow-lg border border-white/20 hover:bg-white/20 transition">
+            <div className="flex items-center gap-4 mb-4">
+              <Rocket className="w-10 h-10 text-[#FF7F06]" />
+              <h3 className="text-3xl font-bold">Our Mission</h3>
+            </div>
+            <p className="text-lg text-white/90 leading-relaxed">
+              To be India’s most agile and progressive logistics partner —
+              powered by a culture of customer obsession, operational
+              excellence, and constant innovation. We’re committed to creating a
+              safe, inclusive, and empowering workplace, earning recognition as
+              the most trusted name in logistics and the employer of choice for
+              top talent.
+            </p>
           </div>
         </div>
       </section>
 
+      {/* our leadership */}
+      <section className=" py-12 md:py-24 px-6 sm:px-20 bg-black/60">
+        <div className="max-w-8xl mx-auto">
+          <h2 className="text-4xl sm:text-6xl font-extrabold text-center text-white mb-8 md:mb-16">
+            Our <span className="text-[#FF7F06] text-8xl">Leadership </span>
+          </h2>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-4 gap-8">
+            {leaders.map((leader, idx) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: idx * 0.1 }}
+                className="group relative rounded-xl overflow-hidden h-120 shadow-lg"
+              >
+                {/* Background Image */}
+                <Image
+                  src={leader.img}
+                  alt={leader.name}
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+
+                {/* Overlay */}
+                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/70 transition duration-500 z-10"></div>
+
+                {/* Name (always visible) */}
+                <div className="absolute bottom-4 left-4 z-20">
+                  <p className="text-white text-2xl font-bold">{leader.name}</p>
+                </div>
+
+                {/* Hover Content */}
+                <div className="absolute inset-0 flex flex-col items-start justify-center text-white px-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20">
+                  <p className="text-[#FF7F06] font-semibold text-2xl mb-1">
+                    {leader.role}
+                  </p>
+                  <p className="text-sm">{leader.desc}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Sustainable */}
       <section className="w-full bg-[#25503f] py-24 px-6">
         <div className="max-w-8xl mx-auto px-6 sm:px-20 flex flex-col lg:flex-row items-center justify-between gap-16">
           {/* Left Text Block */}
           <div className="lg:w-1/2">
-            <h2 className="text-5xl font-extrabold text-white mb-6">
+            <h2 className="text-6xl font-extrabold text-white mb-6">
               Sustainable
-              <span className="text-[#FF7F06] text-7xl">{" "}Jambulogix</span>
+              <span className="text-[#FF7F06] text-8xl"> Jambulogix</span>
             </h2>
             <p className="text-lg text-white mb-8">
               We are committed to building a greener future by optimizing every
@@ -445,150 +459,96 @@ export default function AboutUsPage() {
           </div>
         </div>
       </section>
-      
-
-      <section className="relative bg-[#24577F] text-white py-12 md:py-24 px-6 sm:px-20 overflow-hidden">
-        {/* Decorative Gradient Blobs */}
-        {/* <div className="absolute top-[-100px] left-[-100px] w-72 h-72 bg-[#FF7F06]/40 rounded-full blur-3xl opacity-60 z-0" />
-        <div className="absolute bottom-[-100px] right-[-80px] w-72 h-72 bg-[#FF7F06]/30 rounded-full blur-2xl opacity-50 z-0" /> */}
-
-        <div className="max-w-7xl mx-auto relative z-10 grid sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 gap-8 md:gap-16 items-start">
-          {/* Vision */}
-          <div className="bg-white/10 rounded-2xl p-8 h-[40vh] flex flex-col justify-center shadow-lg border border-white/20 hover:bg-white/20 transition">
-            <div className="flex items-center gap-4 mb-4">
-              <Target className="w-10 h-10 text-[#FF7F06]" />
-              <h3 className="text-3xl font-bold">Our Vision</h3>
-            </div>
-            <p className="text-md text-white/90 leading-relaxed">
-              To be a passionate service catalyst that simplifies and
-              strengthens the flow of commerce across India's supply chain
-              ecosystem. Our aim is to create a focused and collaborative
-              logistics footprint across all Indian geographies, enabling
-              businesses to scale seamlessly.
-            </p>
-          </div>
-
-          {/* Mission */}
-          <div className="bg-white/10 rounded-2xl p-8 h-[40vh] flex flex-col justify-center shadow-lg border border-white/20 hover:bg-white/20 transition">
-            <div className="flex items-center gap-4 mb-4">
-              <Rocket className="w-10 h-10 text-[#FF7F06]" />
-              <h3 className="text-3xl font-bold">Our Mission</h3>
-            </div>
-            <p className="text-md text-white/90 leading-relaxed">
-              To be India’s most agile and progressive logistics partner —
-              powered by a culture of customer obsession, operational
-              excellence, and constant innovation. We’re committed to creating a
-              safe, inclusive, and empowering workplace, earning recognition as
-              the most trusted name in logistics and the employer of choice for
-              top talent.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section className=" py-12 md:py-24 px-6 sm:px-20 bg-black/60">
-        <div className="max-w-8xl mx-auto">
-          <h2 className="text-4xl sm:text-5xl font-bold text-center text-[#FF7F06] mb-8 md:mb-16">
-            Our Leadership
-          </h2>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-4 gap-8">
-            {leaders.map((leader, idx) => (
-              <motion.div
-                key={idx}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: idx * 0.1 }}
-                className="group relative rounded-xl overflow-hidden h-90 shadow-lg"
-              >
-                {/* Background Image */}
-                <Image
-                  src={leader.img}
-                  alt={leader.name}
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-
-                {/* Overlay */}
-                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/70 transition duration-500 z-10"></div>
-
-                {/* Name (always visible) */}
-                <div className="absolute bottom-4 left-4 z-20">
-                  <p className="text-white text-lg font-bold">{leader.name}</p>
-                </div>
-
-                {/* Hover Content */}
-                <div className="absolute inset-0 flex flex-col items-start justify-center text-white px-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20">
-                  <p className="text-[#FF7F06] font-semibold text-md mb-1">
-                    {leader.role}
-                  </p>
-                  <p className="text-sm">{leader.desc}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Values Section */}
-      <section className=" py-10 md:py-20 px-6 sm:px-20 mx-auto bg-white/95">
-        <div className="max-w-7xl mx-auto grid md:grid-cols-1 xl:grid-cols-2 gap-10 items-center">
-          {/* Right Side: Content */}
-          <div>
-            <h2 className="text-4xl sm:text-5xl text-center  font-bold text-[#FF7F06] mb-6">
-              Our Core Values
+      <section className="relative py-24 px-6 sm:px-0 bg-gradient-to-br from-gray-900 via-[#0f172a] to-black text-white overflow-hidden">
+        {/* Background Glow Effects */}
+        <div className="absolute inset-0 -z-10">
+          <div className="absolute -top-32 -left-32 w-96 h-96 bg-[#FF7F06]/20 rounded-full blur-3xl animate-pulse" />
+          <div className="absolute -bottom-32 -right-32 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-pulse" />
+        </div>
+
+        <div className="max-w-8xl mx-auto px-6 sm:px-20 grid xl:grid-cols-2 gap-16 items-center">
+          {/* Left Side: Content */}
+          <div className="relative z-10">
+            <h2 className="text-4xl sm:text-4xl font-extrabold mb-6 leading-tight">
+              Our <span className="text-[#FF7F06] text-8xl">Core Values</span>
             </h2>
-            <p className="text-black text-md md:text-lg mb-3">
-              At Jambulogix, our values drive everything — from decision-making
-              to daily operations.
+            <p className="text-gray-300 text-lg mb-4">
+              Our values drive everything — from decision-making to daily
+              operations.
             </p>
-            <p className="text-black text-md md:text-lg mb-6">
+            <p className="text-gray-300 text-lg mb-8">
               We put our customers at the heart of everything we do — solving
               their challenges with speed, empathy, and precision.
             </p>
-            <ul className="space-y-4">
+
+            <div className="grid gap-4">
               {[
-                "People First: Our people are our biggest strength. We empower them with trust, freedom, and opportunities to grow.",
-                "Agility in Action: In logistics, speed is everything. We adapt fast, decide smart, and execute with urgency.",
-                "Innovation Everyday: Business with sustainability and social accountability",
-                "Transparency & Simplicity:We embrace new ideas, tech, and smarter ways of working to constantly raise the bar.",
-                "Sustainable Impact: We move goods responsibly, reducing our environmental footprint while creating lasting value.",
-                "Ownership & Accountability:We own the outcome, celebrate wins, and learn from setbacks — always moving forward.",
+                {
+                  text: "People First: Empowering with trust, freedom & growth.",
+                  icon: Heart,
+                },
+                {
+                  text: "Agility in Action: Adapting fast & executing with urgency.",
+                  icon: Zap,
+                },
+                {
+                  text: "Innovation Everyday: Driving sustainable solutions.",
+                  icon: Lightbulb,
+                },
+                {
+                  text: "Transparency & Simplicity: Clear, honest, and simple.",
+                  icon: ShieldCheck,
+                },
+                {
+                  text: "Sustainable Impact: Reducing footprint, creating value.",
+                  icon: Leaf,
+                },
+                {
+                  text: "Ownership & Accountability: Celebrating wins, learning from setbacks.",
+                  icon: Target,
+                },
               ].map((item, idx) => (
-                <li
+                <div
                   key={idx}
-                  className="flex items-start gap-3 group hover:pl-2 transition-all"
+                  className="flex items-center gap-4 px-5 py-4 rounded-xl bg-white/5 border border-white/10 hover:border-[#FF7F06]/40 hover:translate-x-2 hover:scale-[1.02] transition-all duration-500 backdrop-blur-lg"
                 >
-                  <span className="text-black font-bold">•</span>
-                  <p className="text-black group-hover:text-[#24577F] transition duration-300">
-                    {item}
+                  <item.icon className="w-7 h-7 text-[#FF7F06]" />
+                  <p className="text-gray-200 group-hover:text-white">
+                    {item.text}
                   </p>
-                </li>
+                </div>
               ))}
-            </ul>
+            </div>
           </div>
-          {/* Left Side: Image */}
-          <div className="grid grid-cols-1  sm:grid-cols-2 gap-4">
+
+          {/* Right Side: Floating Image Cards */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {["/test4.jpg", "/test3.jpg", "/test3.jpg", "/test4.jpg"].map(
               (src, idx) => (
                 <div
                   key={idx}
-                  className="relative group rounded-xl overflow-hidden shadow-lg border border-gray-200"
+                  className="relative group rounded-2xl overflow-hidden border border-white/10 shadow-lg hover:shadow-[#FF7F06]/50 hover:scale-105 transform transition-all duration-500 backdrop-blur-xl bg-white/5"
                 >
                   <Image
                     src={src}
                     alt={`Core Value ${idx + 1}`}
                     width={300}
                     height={200}
-                    className="object-cover w-full h-full transform group-hover:scale-105 transition duration-300"
+                    className="object-cover w-full h-84"
                   />
-                  <div className="absolute bottom-0 left-0 w-full bg-black/50 text-white text-center py-2 text-sm font-semibold backdrop-blur-sm">
-                    {
-                      ["Innovation", "Empathy", "Transparency", "Reliability"][
-                        idx
-                      ]
-                    }
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end justify-center">
+                    <span className="text-white text-sm font-semibold mb-3 tracking-wide">
+                      {
+                        [
+                          "🚀 Innovation",
+                          "💡 Empathy",
+                          "🔍 Transparency",
+                          "🛡 Reliability",
+                        ][idx]
+                      }
+                    </span>
                   </div>
                 </div>
               )
@@ -598,12 +558,13 @@ export default function AboutUsPage() {
       </section>
 
       {/* Partners Grid */}
-      <section className="py-20 px-6 sm:px-12 md:px-20 bg-white">
+      <section className="py-20 px-6 sm:px-12 md:px-10 bg-white">
         <div className="text-center mb-12">
-          <h2 className=" text-4xl md:text-5xl font-bold text-[#24577F] mb-4">
-            Trusted by Leading Brands
+          <h2 className=" text-4xl md:text-5xl font-extrabold text-[#24577F] mb-4">
+            Trusted by{" "}
+            <span className="text-[#FF7F06] text-8xl"> Leading Brands </span>
           </h2>
-          <p className="text-black max-w-2xl mx-auto">
+          <p className="text-black max-w-3xl text-lg mx-auto">
             We collaborate with industry leaders across sectors. Choose a
             category to view our partners.
           </p>
@@ -629,111 +590,318 @@ export default function AboutUsPage() {
         </div>
       </section>
 
-      {/* Values Section */}
-      <section className="py-20 px-6 sm:px-20 mx-auto bg-white/95">
-        <div className="max-w-7xl mx-auto grid md:grid-cols-1 xl:grid-cols-2 gap-10 items-center">
-          <div className="hidden xl:flex">
-            <div className="grid grid-cols-2 gap-4 ">
-              {["/test4.jpg", "/test3.jpg", "/test3.jpg", "/test4.jpg"].map(
-                (src, idx) => (
-                  <div
-                    key={idx}
-                    className="relative group rounded-xl overflow-hidden shadow-lg border border-gray-200"
-                  >
-                    <Image
-                      src={src}
-                      alt={`Core Value ${idx + 1}`}
-                      width={300}
-                      height={200}
-                      className="object-cover w-full h-full transform group-hover:scale-105 transition duration-300"
-                    />
-                    <div className="absolute bottom-0 left-0 w-full bg-black/50 text-white text-center py-2 text-sm font-semibold backdrop-blur-sm">
+      {/* Frictionless experiences  */}
+      <section className="bg-black/50 text-white py-16 px-6 md:px-0">
+        <div className="max-w-8xl mx-auto px-6 sm:px-20 text-center">
+          {/* Title */}
+          <h2 className="text-3xl md:text-6xl font-extrabold text-white mb-4">
+            Frictionless{" "}
+            <span className="text-red-600 text-9xl">Experiences</span>
+          </h2>
+
+          {/* Description */}
+          <p className="text-white/80 max-w-7xl mx-auto mb-14 text-base md:text-lg leading-relaxed">
+            we ensure seamless collaboration across customers, partners, shop
+            floors, and people. Our solutions simplify operations, improve
+            efficiency, and deliver value with complete transparency.
+          </p>
+
+          {/* Grid */}
+          <div className="grid md:grid-cols-2 gap-10 text-left">
+            {/* Left side - Customers + Partners */}
+            <div className="space-y-10">
+              {/* Customers */}
+              <div>
+                <h3 className="text-2xl font-bold text-red-600 mb-3">
+                  Customers
+                </h3>
+                <ul className="space-y-2 list-disc list-inside text-white">
+                  <li>Seamless WH operations management</li>
+                  <li>SOP base management</li>
+                  <li>Seamless Transport & distribution management</li>
+                  <li>Value added services</li>
+                  <li>Transparent billing and reconciliation</li>
+                </ul>
+              </div>
+
+              {/* Partners */}
+              <div>
+                <h3 className="text-2xl font-bold text-red-600 mb-3">
+                  Partners
+                </h3>
+                <ul className="space-y-2 list-disc list-inside text-white">
+                  <li>Partners with high integrity</li>
+                  <li>Automated Partner module</li>
+                  <li>Industry experienced Partners</li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Right side - Shop floor + People */}
+            <div className="space-y-10">
+              {/* Shop floor */}
+              <div>
+                <h3 className="text-2xl font-bold text-red-600 mb-3">
+                  Shop Floor
+                </h3>
+                <ul className="space-y-2 list-disc list-inside text-white">
+                  <li>Smart Shopfloor operations</li>
+                  <li>Superior task management</li>
+                  <li>Intuitive access to real-time information</li>
+                </ul>
+              </div>
+
+              {/* People */}
+              <div>
+                <h3 className="text-2xl font-bold text-red-600 mb-3">People</h3>
+                <ul className="space-y-2 list-disc list-inside text-white">
+                  <li>High calibre Team</li>
+                  <li>
+                    Highly compliant Team on Discipline, compliance & Quality
+                  </li>
+                  <li>Acknowledged & Accountable</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          {/* Middle red icon block */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-white mt-16 text-lg">
+            <div className="bg-red-600 p-10 flex flex-col items-center justify-center rounded-xl shadow-md">
+              <ThumbsUp className="w-20 h-20 mb-3" />
+              <p className="font-medium">Customers</p>
+            </div>
+            <div className="bg-red-600 p-10 flex flex-col items-center justify-center rounded-xl shadow-md">
+              <Layers className="w-20 h-20  mb-3" />
+              <p className="font-medium">Shop Floor</p>
+            </div>
+            <div className="bg-red-600 p-10 flex flex-col items-center justify-center rounded-xl shadow-md">
+              <Truck className="w-20 h-20 mb-3" />
+              <p className="font-medium">Partners</p>
+            </div>
+            <div className="bg-red-600 p-10 flex flex-col items-center justify-center rounded-xl shadow-md">
+              <Factory className="w-20 h-20  mb-3" />
+              <p className="font-medium">People</p>
+            </div>
+          </div>
+
+          {/* Footer Icons */}
+          <div className="flex flex-wrap justify-center gap-4 text-gray-700 text-lg mt-14">
+            <span className="px-4 py-2 bg-gray-100 rounded-full">
+              🔧 Deep Understanding of operations
+            </span>
+            <span className="px-4 py-2 bg-gray-100 rounded-full">
+              📈 Industry leading commercial efficiency
+            </span>
+            <span className="px-4 py-2 bg-gray-100 rounded-full">
+              🔒 Safe, Secure & Reliable
+            </span>
+            <span className="px-4 py-2 bg-gray-100 rounded-full">
+              🤝 Seamless customer collaboration
+            </span>
+            <span className="px-4 py-2 bg-gray-100 rounded-full">
+              📊 Scalable solution
+            </span>
+          </div>
+        </div>
+      </section>
+
+      {/* Growth strategis Section */}
+      <section className="relative py-24 px-6 sm:px-0 bg-gradient-to-br from-gray-900 via-[#0f172a] to-black text-white overflow-hidden">
+        {/* Futuristic glowing background */}
+        {/* <div className="absolute inset-0">
+          <div className="absolute -top-32 -left-32 w-96 h-96 bg-[#FF7F06]/30 rounded-full blur-3xl animate-pulse" />
+          <div className="absolute -bottom-32 -right-32 w-96 h-96 bg-blue-500/30 rounded-full blur-3xl animate-pulse" />
+        </div> */}
+
+        <div className="relative max-w-8xl mx-auto px-6 md:px-20 grid xl:grid-cols-2 gap-16 items-center">
+          {/* Left Side: Floating Images */}
+          <div className="hidden xl:grid grid-cols-2 gap-6">
+            {["/test4.jpg", "/test3.jpg", "/test3.jpg", "/test4.jpg"].map(
+              (src, idx) => (
+                <div
+                  key={idx}
+                  className="relative group rounded-2xl overflow-hidden border border-white/10 shadow-lg hover:shadow-[#FF7F06]/50 hover:scale-105 transform transition-all duration-500 backdrop-blur-xl bg-white/5"
+                >
+                  <Image
+                    src={src}
+                    alt={`Core Value ${idx + 1}`}
+                    width={300}
+                    height={200}
+                    className="object-cover w-full h-84"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent flex items-end justify-center">
+                    <span className="text-white text-sm font-semibold mb-3 tracking-wide">
                       {
                         [
-                          "Innovation",
-                          "Empathy",
-                          "Transparency",
-                          "Reliability",
+                          "🚀 Innovation",
+                          "💡 Empathy",
+                          "🔍 Transparency",
+                          "🛡 Reliability",
                         ][idx]
                       }
-                    </div>
+                    </span>
                   </div>
-                )
-              )}
-            </div>
+                </div>
+              )
+            )}
           </div>
 
           {/* Right Side: Content */}
-          <div>
-            <h2 className=" text-4xl md:text-5xl text-center sm:text-center font-bold text-[#FF7F06] mb-6">
-              Our Growth Strategy
+          <div className="relative z-10">
+            <h2 className="text-4xl md:text-6xl font-extrabold mb-6 leading-tight">
+              Our{" "}
+              <span className="text-[#FF7F06] text-8xl">Growth Strategy</span>
             </h2>
-            <p className="text-black text-md md:text-lg mb-6">
-              Our expansion blueprint is simple yet powerful — Grow by Square
-              Feet & Pin Codes.
+            <p className="text-gray-300 text-lg mb-8 max-w-xl">
+              More than expansion — we are building an{" "}
+              <span className="text-white font-semibold">
+                unreal ecosystem{" "}
+              </span>
+              that scales beyond geography, fueled by technology, vision, and
+              unstoppable ambition.
             </p>
-            <ul className="space-y-4">
-              {[
-                "Scaling our physical infrastructure across India",
-                "Extending reach to over 10,000 PIN codes",
-                "Innovating daily to raise the bar on package delivery efficiency",
-                "Acquiring new customers by targeting Total Addressable Market (TAM)",
-                "Forming strategic partnerships and alliances to increase coverage, capability, and capacity",
-              ].map((item, idx) => (
-                <li
-                  key={idx}
-                  className="flex items-start gap-3 group hover:pl-2 transition-all"
-                >
-                  <span className="text-black font-bold">•</span>
-                  <p className="text-black group-hover:text-[#24577F] transition duration-300">
-                    {item}
-                  </p>
-                </li>
-              ))}
-            </ul>
-          </div>
 
-          <div className="block xl:hidden">
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {["/test4.jpg", "/test3.jpg", "/test3.jpg", "/test4.jpg"].map(
-                (src, idx) => (
-                  <div
-                    key={idx}
-                    className="relative group rounded-xl overflow-hidden shadow-lg border border-gray-200"
-                  >
-                    <Image
-                      src={src}
-                      alt={`Core Value ${idx + 1}`}
-                      width={300}
-                      height={200}
-                      className="object-cover w-full h-full transform group-hover:scale-105 transition duration-300"
-                    />
-                    <div className="absolute bottom-0 left-0 w-full bg-black/50 text-white text-center py-2 text-sm font-semibold backdrop-blur-sm">
-                      {
-                        [
-                          "Innovation",
-                          "Empathy",
-                          "Transparency",
-                          "Reliability",
-                        ][idx]
-                      }
-                    </div>
-                  </div>
-                )
-              )}
+            {/* Unrealistic Features */}
+            <div className="grid gap-4">
+              {[
+                {
+                  text: "Scaling our physical infrastructure across India",
+                  icon: Globe2,
+                },
+                {
+                  text: "Extending reach to over 10,000 PIN codes",
+                  icon: Network,
+                },
+                {
+                  text: "Innovating daily to raise efficiency benchmarks",
+                  icon: Zap,
+                },
+                {
+                  text: "Targeting the entire Total Addressable Market (TAM)",
+                  icon: Rocket,
+                },
+                { text: "Forging next-gen strategic alliances", icon: Users },
+              ].map((item, idx) => (
+                <div
+                  key={idx}
+                  className="flex items-center gap-4 px-5 py-4 rounded-xl bg-white/5 border border-white/10 hover:border-[#FF7F06]/40 hover:translate-x-2 hover:scale-[1.02] transition-all duration-500 backdrop-blur-lg"
+                >
+                  <item.icon className="w-7 h-7 text-[#FF7F06]" />
+                  <p className="text-gray-200 group-hover:text-white">
+                    {item.text}
+                  </p>
+                </div>
+              ))}
             </div>
           </div>
-          {/* Left Side: Image */}
+
+          {/* Mobile Images */}
+          <div className="grid xl:hidden grid-cols-2 gap-4">
+            {["/test4.jpg", "/test3.jpg", "/test3.jpg", "/test4.jpg"].map(
+              (src, idx) => (
+                <div
+                  key={idx}
+                  className="relative group rounded-xl overflow-hidden border border-white/10 shadow-md backdrop-blur-lg bg-white/5"
+                >
+                  <Image
+                    src={src}
+                    alt={`Core Value ${idx + 1}`}
+                    width={300}
+                    height={200}
+                    className="object-cover w-full h-40"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end justify-center">
+                    <span className="text-white text-sm font-semibold mb-3">
+                      {
+                        [
+                          "🚀 Innovation",
+                          "💡 Empathy",
+                          "🔍 Transparency",
+                          "🛡 Reliability",
+                        ][idx]
+                      }
+                    </span>
+                  </div>
+                </div>
+              )
+            )}
+          </div>
+        </div>
+      </section>
+
+      {/* loss previntion section */}
+      <section className="bg-black/50 py-24 ">
+        <div className="max-w-8xl mx-auto px-6 md:px-20">
+          {/* Title */}
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-5xl font-extrabold text-white">
+              Safety and{" "}
+              <span className="text-green-600 text-9xl">Loss Prevention</span>
+            </h2>
+            <p className="text-white/80 mt-4 max-w-5xl text-lg mx-auto">
+              We ensure complete protection with 24/7 monitoring, advanced
+              tracking, secure packing, and access-controlled systems — keeping
+              your operations safe and reliable.
+            </p>
+          </div>
+
+          {/* Grid layout */}
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            {/* Left - Feature list */}
+            <div className="space-y-6">
+              {[
+                { text: "24/7 Active Cameras", icon: Video },
+                { text: "Control Tower", icon: Eye },
+                { text: "Vehicle Tracking System", icon: Map },
+                { text: "High Value Check Under CCTV", icon: ShieldCheck },
+                { text: "Secure Packing", icon: Package },
+                { text: "Digital Locks", icon: Lock },
+              ].map((item, idx) => (
+                <div
+                  key={idx}
+                  className="flex items-center gap-4 bg-white shadow-sm border border-gray-100 rounded-xl px-5 py-4 hover:shadow-md shadow-green-400 transition"
+                >
+                  <item.icon className="w-8 h-8 text-red-600" />
+                  <span className="text-gray-800 font-medium text-xl">
+                    {item.text}
+                  </span>
+                </div>
+              ))}
+            </div>
+
+            {/* Right - Image grid */}
+            <div className="grid grid-cols-2 gap-4">
+              <img
+                src="/lp.jpg"
+                alt="Tracking System"
+                className="rounded-xl shadow-md object-cover object-top  h-40 md:h-60 w-full"
+              />
+              <img
+                src="/lp1.jpg"
+                alt="Digital Lock"
+                className="rounded-xl shadow-md object-cover object-top h-40 md:h-60 w-full"
+              />
+              <img
+                src="/lp2.jpg"
+                alt="CCTV Camera"
+                className="rounded-xl shadow-md object-cover object-bottom h-40 md:h-60 w-full col-span-2"
+              />
+            </div>
+          </div>
         </div>
       </section>
 
       {/* The jambulogix exprience */}
-
       <section className="bg-[#24577F] text-white py-16 px-6 sm:px-20 text-center">
-        <h2 className="text-3xl font-bold mb-4">
-          Gain Leverage for Your Business with Jambulogix
+        <h2 className="text-6xl font-extrabold mb-4">
+          Gain Leverage for Your
+          <span className="text-[#FF7F06] text-8xl">
+            {" "}
+            Business with Jambulogix
+          </span>
         </h2>
-        <p className="mb-6 max-w-xl mx-auto">
+        <p className="mb-6 max-w-7xl text-lg mx-auto">
           We’d love to hear from you! Whether you’re a business looking for
           scalable logistics solutions, a partner exploring collaboration, or a
           candidate interested in joining our journey — we’re just a message
@@ -748,14 +916,22 @@ export default function AboutUsPage() {
 
       {/* Footer CTA */}
       <section className="bg-[#24577F] text-white py-16 px-6 sm:px-20 text-center">
-        <h2 className="text-3xl font-bold mb-4">
+        {/* <h2 className="text-3xl font-bold mb-4">
           Ready to Simplify Your Logistics?
+        </h2> */}
+
+        <h2 className="text-6xl font-extrabold mb-4">
+          Ready to
+          <span className="text-[#FF7F06] text-8xl">
+            {" "}
+            Simplify Your Logistics?
+          </span>
         </h2>
-        <p className="mb-6 max-w-xl mx-auto">
+        <p className="mb-6 max-w-7xl text-lg mx-auto">
           Let Jambulogix be your partner in building scalable, tech-driven, and
           efficient supply chains.
         </p>
-        <button className="bg-[#FF7F06] text-white px-6 py-3 rounded-lg font-bold hover:bg-[#e86e00] transition">
+        <button className="bg-[#FF7F06] text-white px-6 py-3 rounded-lg font-bold text-xl hover:bg-[#e86e00] transition">
           Contact Us
         </button>
       </section>

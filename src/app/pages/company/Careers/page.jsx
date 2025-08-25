@@ -4,6 +4,11 @@ import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import { Pagination, Autoplay } from "swiper/modules";
+
 const openings = [
   {
     title: "Fleet Operations Manager",
@@ -43,6 +48,44 @@ const openings = [
   },
 ];
 
+const values = [
+  {
+    icon: "🚀",
+    label: "Customer Obsession",
+    desc: "We put our customers at the heart of every move.",
+  },
+  {
+    icon: "🤝",
+    label: "Ownership Mindset",
+    desc: "We take charge, act with purpose, and deliver results.",
+  },
+  {
+    icon: "💡",
+    label: "Innovation Every Day",
+    desc: "We challenge the norm to build smarter, faster solutions.",
+  },
+  {
+    icon: "⚡",
+    label: "Speed with Integrity",
+    desc: "We move fast but never compromise on ethics.",
+  },
+  {
+    icon: "👥",
+    label: "People First",
+    desc: "We create a safe, inclusive, and empowering workplace.",
+  },
+  {
+    icon: "🤝",
+    label: "Collaboration Wins",
+    desc: "We grow stronger by working together — across teams, across geographies.",
+  },
+  {
+    icon: "🏆",
+    label: "Excellence as Standard",
+    desc: "We set the bar high and keep raising it.",
+  },
+];
+
 export default function Page() {
   return (
     <>
@@ -50,7 +93,7 @@ export default function Page() {
       <section className="relative w-full h-[90vh] overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/careers-bg.jpg"
+            src="/91.jpg"
             alt="Careers at Jambulogix"
             fill
             className="object-cover brightness-60"
@@ -62,17 +105,17 @@ export default function Page() {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-5xl sm:text-8xl font-extrabold mb-6 leading-tight drop-shadow-lg"
+            className="text-5xl sm:text-6xl font-bold mb-6 leading-tight drop-shadow-lg"
           >
-            Your Ideas <span className="text-[#FF7F06]"> Your Move</span>
-            <br /> Our <span className="text-[#FF7F06]">Mission</span>
+            Your Ideas <span className="text-[#24577F] text-9xl font-extrabold "> Your Move</span>
+            <br /> Our <span className="text-[#24577F] text-9xl font-extrabold ">Mission</span>
           </motion.h1>
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.6 }}
-            className="text-lg sm:text-2xl text-white/90 max-w-2xl"
+            className="text-lg sm:text-lg text-white/90 max-w-5xl"
           >
             At Jambulogix, speed meets strategy, tech meets teamwork — and every
             voice shapes the journey. If you believe in solving real-world
@@ -85,21 +128,22 @@ export default function Page() {
 
       {/* Why Join Us */}
       <section className="py-24 px-6 sm:px-20 bg-gradient-to-b from-white to-[#F9FAFB] text-[#0A1A2F]">
-        <div className="max-w-7xl mx-auto grid sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-2 gap-16 items-center">
+        <div className="max-w-8xl mx-auto grid sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-2 gap-16 items-center">
           {/* Text Block */}
           <div>
             <h2 className="text-4xl sm:text-3xl font-extrabold mb-6 text-[#24577F] leading-tight">
-              Why Work at <span className="text-[#FF7F06] text-7xl">Jambulogix..?</span>
+              Why Work at{" "}
+              <span className="text-[#FF7F06] text-7xl">Jambulogix..?</span>
             </h2>
 
             <p className="text-gray-600 text-md mb-6 leading-relaxed">
-              we’re not just moving parcels—we're moving
-              possibilities. We are reshaping the logistics ecosystem with
-              technology, empathy, and agility at our core. At Jambulogix, we’re
-              building more than a logistics network — we’re creating an
-              ecosystem of opportunities, growth, and innovation. Here you'll
-              build for scale, solve real-world bottlenecks, and grow in a
-              culture that values ownership and innovation.
+              we’re not just moving parcels—we're moving possibilities. We are
+              reshaping the logistics ecosystem with technology, empathy, and
+              agility at our core. At Jambulogix, we’re building more than a
+              logistics network — we’re creating an ecosystem of opportunities,
+              growth, and innovation. Here you'll build for scale, solve
+              real-world bottlenecks, and grow in a culture that values
+              ownership and innovation.
             </p>
 
             <ul className="text-gray-700 text-md space-y-4 list-disc pl-6">
@@ -198,8 +242,9 @@ export default function Page() {
       </section>
 
       {/* Core Values */}
+
       <section className="py-20 px-6 sm:px-20 bg-[#0A1A2F] text-white text-center">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-8xl mx-auto">
           <h2 className="text-4xl sm:text-5xl font-extrabold mb-6">
             Our Culture & Values
           </h2>
@@ -207,50 +252,30 @@ export default function Page() {
             Our team thrives on autonomy, accountability, and obsession with
             customer success.
           </p>
-          <div className="grid sm:grid-cols-3 gap-10">
-            {[
-              {
-                icon: "🚀",
-                label: "Customer Obsession",
-                desc: "We put our customers at the heart of every move.",
-              },
-              {
-                icon: "🤝",
-                label: "Ownership Mindset",
-                desc: "We take charge, act with purpose, and deliver results.",
-              },
-              {
-                icon: "🔍",
-                label: "Innovation Every Day",
-                desc: "We challenge the norm to build smarter, faster solutions.",
-              },
-              {
-                icon: "🔍",
-                label: "Speed with Integrity",
-                desc: "We move fast but never compromise on ethics.",
-              },
-              {
-                icon: "🔍",
-                label: "People First",
-                desc: "We create a safe, inclusive, and empowering workplace.",
-              },
-              {
-                icon: "🔍",
-                label: "Collaboration Wins",
-                desc: "We grow stronger by working together — across teams, across geographies.",
-              },
-              {
-                icon: "🔍",
-                label: "Excellence as Standard",
-                desc: "We set the bar high and keep raising it.",
-              },
-            ].map((val, i) => (
-              <div key={i} className="bg-[#112233] p-8 rounded-2xl shadow-md">
-                <div className="text-5xl mb-4 text-[#FF7F06]">{val.icon}</div>
-                <h3 className="text-xl font-semibold">{val.label}</h3>
-              </div>
+
+          {/* Swiper Carousel */}
+          <Swiper
+              modules={[Pagination, Autoplay]}
+            pagination={{ clickable: true }}
+            spaceBetween={30}
+            autoplay={{ delay: 3000, disableOnInteraction: false }}
+            slidesPerView={1}
+            breakpoints={{
+              640: { slidesPerView: 1 }, // mobile
+              768: { slidesPerView: 2 }, // tablet
+              1024: { slidesPerView: 3 }, // desktop
+            }}
+          >
+            {values.map((val, i) => (
+              <SwiperSlide key={i}>
+                <div className="bg-[#112233] p-16 rounded-2xl shadow-md h-full flex flex-col justify-center">
+                  <div className="text-5xl mb-4 text-[#FF7F06]">{val.icon}</div>
+                  <h3 className="text-2xl font-semibold">{val.label}</h3>
+                  <p className="text-white/70 mt-2 text-lg">{val.desc}</p>
+                </div>
+              </SwiperSlide>
             ))}
-          </div>
+          </Swiper>
         </div>
       </section>
 

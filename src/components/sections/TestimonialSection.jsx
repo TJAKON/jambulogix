@@ -42,11 +42,15 @@ const testimonials = [
 export default function TestimonialCarousel() {
   return (
     <section className="bg-white/95 py-16 md:py-20 px-4 sm:px-6 lg:px-20 text-black">
-      <div className="max-w-6xl mx-auto text-center mb-12">
-        <h2 className="text-4xl sm:text-4xl lg:text-5xl font-bold md:font-extrabold text-[#FF7F06] mb-4">
-         Trusted by Businesses Like Yours
+      <div className="max-w-8xl mx-auto text-center mb-12">
+        <h2 className="text-6xl font-extrabold text-[#24577F] mb-4">
+          Trusted by
+          <span className="text-[#FF7F06] text-8xl">
+            {" "}
+            Businesses Like Yours
+          </span>
         </h2>
-        <p className="text-gray-700 text-base sm:text-lg">
+        <p className="text-gray-700 text-lg sm:text-lg">
           Hear from our partners who trust Jambulogix to deliver excellence
           across every mile.
         </p>
@@ -64,7 +68,7 @@ export default function TestimonialCarousel() {
           1024: { slidesPerView: 1.25 },
           1440: { slidesPerView: 2 },
         }}
-        className="max-w-6xl mx-auto"
+        className="max-w-7xl mx-auto"
       >
         {testimonials.map((item, idx) => (
           <SwiperSlide key={idx}>

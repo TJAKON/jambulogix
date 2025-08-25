@@ -56,8 +56,8 @@ export default function Header() {
     {
       title: "Resources",
       children: [
-        { label: "Our Blogs", link: "/" },
-        { label: "Our News", link: "/" },
+        { label: "Our Blogs", link: "/pages/resources/blogs" },
+        { label: "Our News", link: "/pages/resources/News" },
       ],
     },
   ];
@@ -166,13 +166,13 @@ export default function Header() {
           </PopoverButton>
           <PopoverPanel className="absolute top-15 left-0 mt-2 w-90 font-bold bg-black/40 backdrop-blur-md p-4 space-y-2 z-50 text-white shadow-xl">
             <Link
-              href="/pages/company/OurPartners"
+              href="/pages/resources/blogs"
               className="block hover:text-white hover:bg-[#FF7F06] border-2 bg-[#24577F] p-2 rounded-lg"
             >
               Blogs
             </Link>
             <Link
-              href="/pages/company/OurTeam"
+              href="/pages/resources/News"
               className="block hover:text-white hover:bg-[#FF7F06] border-2 bg-[#24577F] p-2 rounded-lg"
             >
               News

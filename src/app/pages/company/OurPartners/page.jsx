@@ -42,25 +42,25 @@ const leaders = [
     name: "Pankaj Deole",
     role: "Founder & CEO",
     desc: "Visionary leader driving innovation across supply chain solutions.",
-    img: "/test.jpeg",
+    img: "/ceo.jpg",
   },
   {
     name: "Rahul Sinha",
     role: "COO",
     desc: "Operational excellence expert ensuring scalable logistics operations.",
-    img: "/test.jpeg",
+    img: "/ceo.jpg",
   },
   {
     name: "Neha Rathi",
     role: "Chief Strategy Officer",
     desc: "Crafts growth strategies and data-driven decisions for expansion.",
-    img: "/test.jpeg",
+    img: "/ceo.jpg",
   },
   {
     name: "Amit Joshi",
     role: "Tech Head",
     desc: "Leads our digital transformation and intelligent logistics systems.",
-    img: "/test.jpeg",
+    img: "/ceo.jpg",
   },
 ];
 
@@ -167,7 +167,7 @@ export default function OurPartnersPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: idx * 0.1 }}
-                className="group relative rounded-xl overflow-hidden h-90 shadow-lg"
+                className="group relative rounded-xl overflow-hidden h-120 shadow-lg"
               >
                 {/* Background Image */}
                 <Image
@@ -178,16 +178,16 @@ export default function OurPartnersPage() {
                 />
 
                 {/* Overlay */}
-                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/70 transition duration-500 z-10"></div>
+                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/70 transition duration-500 z-10"></div>
 
                 {/* Name (always visible) */}
                 <div className="absolute bottom-4 left-4 z-20">
-                  <p className="text-white text-lg font-bold">{leader.name}</p>
+                  <p className="text-white text-2xl font-bold">{leader.name}</p>
                 </div>
 
                 {/* Hover Content */}
                 <div className="absolute inset-0 flex flex-col items-start justify-center text-white px-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20">
-                  <p className="text-[#FF7F06] font-semibold text-md mb-1">
+                  <p className="text-[#FF7F06] font-semibold text-2xl mb-1">
                     {leader.role}
                   </p>
                   <p className="text-sm">{leader.desc}</p>
