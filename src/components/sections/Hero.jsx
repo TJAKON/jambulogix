@@ -32,7 +32,7 @@ export default function Hero() {
         {/* Tracking Section */}
         <div className="mt-8 bg-white/10 backdrop-blur-md p-4 sm:p-6 rounded-2xl w-full max-w-xl">
           <h3 className="text-white text-lg sm:text-xl font-semibold mb-3">
-            Track Your Shipment
+            Track Your Shipment -  <span className="text-[#FF7F06]"> Comming soon!</span>
           </h3>
           <div className="flex flex-col sm:flex-row gap-3">
             <input

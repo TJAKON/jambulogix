@@ -7,55 +7,101 @@ import { motion } from "framer-motion";
 
 const teamMembers = [
   {
-    name: "Anita Sharma",
+    name: "Satish kumar",
     role: "Founder & CEO",
-    image: "/test.jpeg",
+    image: "/p4.jpg",
     quote: "Passion drives logistics, people bring it to life.",
   },
   {
-    name: "Ravi Mehra",
+    name: "Ishita basu",
     role: "Head of Operations",
-    image: "/test.jpeg",
+    image: "/p5.jpg",
     quote: "Efficiency and empathy—our dual strengths.",
   },
   {
-    name: "Sonal Kapoor",
+    name: "Sandeep Parmar",
     role: "Customer Success Lead",
     image: "/test.jpeg",
     quote: "Every parcel is a promise—we make sure it’s kept.",
   },
   {
-    name: "Arjun Patel",
+    name: "Mahesh kumar",
     role: "Technology Director",
+    image: "/p4.jpg",
+    quote: "We scale fulfillment with scalable code.",
+  },
+  {
+    name: "Sanjeev kumar",
+    role: "Technology Director",
+    image: "/p4.jpg",
+    quote: "We scale fulfillment with scalable code.",
+  },
+];
+const catalysts = [
+  {
+    name: "Akash Singh",
+    role: "Founder & CEO",
+    image: "/p4.jpg",
+    quote: "Passion drives logistics, people bring it to life.",
+  },
+  {
+    name: "Sourabh Singh",
+    role: "Head of Operations",
+    image: "/p5.jpg",
+    quote: "Efficiency and empathy—our dual strengths.",
+  },
+  {
+    name: "Dinesh kumar",
+    role: "Customer Success Lead",
     image: "/test.jpeg",
+    quote: "Every parcel is a promise—we make sure it’s kept.",
+  },
+  {
+    name: "Neeraj kumar",
+    role: "Technology Director",
+    image: "/p4.jpg",
+    quote: "We scale fulfillment with scalable code.",
+  },
+  {
+    name: "Mandeep Singh",
+    role: "Technology Director",
+    image: "/p4.jpg",
+    quote: "We scale fulfillment with scalable code.",
+  },
+  {
+    name: "Rakhi",
+    role: "Technology Director",
+    image: "/p4.jpg",
     quote: "We scale fulfillment with scalable code.",
   },
 ];
 
 const leaders = [
   {
-    name: "Pankaj Deole",
+    name: "Nikhilendu Shekhar",
     role: "Founder & CEO",
     desc: "Visionary leader driving innovation across supply chain solutions.",
-    img: "/test.jpeg",
+    img: "/n4.jpg",
   },
   {
-    name: "Rahul Sinha",
-    role: "COO",
-    desc: "Operational excellence expert ensuring scalable logistics operations.",
-    img: "/test.jpeg",
-  },
-  {
-    name: "Neha Rathi",
-    role: "Chief Strategy Officer",
-    desc: "Crafts growth strategies and data-driven decisions for expansion.",
-    img: "/test.jpeg",
-  },
-  {
-    name: "Amit Joshi",
+    name: "Satish kumar",
     role: "Tech Head",
     desc: "Leads our digital transformation and intelligent logistics systems.",
-    img: "/test.jpeg",
+    img: "/p6.png",
+  },
+
+  {
+    name: "Priyanshi singh",
+    role: "Chief Strategy Officer",
+    desc: "Crafts growth strategies and data-driven decisions for expansion.",
+    img: "/p1.jpg",
+  },
+
+  {
+    name: "Amrendra Pratap Singh",
+    role: "COO",
+    desc: "Operational excellence expert ensuring scalable logistics operations.",
+    img: "/p2.jpg",
   },
 ];
 
@@ -85,7 +131,7 @@ export default function Page() {
         <div className="max-w-7xl mx-auto grid sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-2 gap-16 items-center">
           <div>
             <Image
-              src="/57.jpg"
+              src="/n5.png"
               alt="Team Collaboration"
               width={600}
               height={400}
@@ -95,20 +141,20 @@ export default function Page() {
 
           {/* Text Block */}
           <div>
-            <h2 className="text-4xl sm:text-5xl font-extrabold text-[#24577F] leading-tight">
+            <h2 className="text-4xl sm:text-6xl font-extrabold text-[#24577F] leading-tight">
               The Vision Behind{" "}
-              <span className="text-[#FF7F06]">Jambulogix {"  "}</span>
+              <span className="text-[#FF7F06] sm:text-7xl">Jambulogix {"  "}</span>
             </h2>
-            <h2 className="text-4xl sm:text-5xl font-extrabold mb-6 text-[#24577F] leading-tight">
+            {/* <h2 className="text-4xl sm:text-5xl font-extrabold mb-6 text-[#24577F] leading-tight">
               <span className="text-[#24577F]"> A Note from {"  "}</span>
               <span className="text-[#FF7F06]">Our Founder </span>
-            </h2>
+            </h2> */}
 
-            <p className="text-gray-600 text-lg mb-6 leading-relaxed">
+            <p className="text-gray-600 text-xl mb-6 leading-relaxed text-clip">
               In an increasingly connected world, logistics is no longer just
               about moving goods from Point A to Point B — it’s about enabling
               businesses to grow, customers to trust, and experiences to be
-              delivered seamlessly. Jambulogix was founded with a clear purpose:
+              delivered seamlessly. Jambulogix was founded with a clear purpose
               to redefine fulfillment by combining operational excellence with a
               deep commitment to people — our team, our partners, and our
               clients. Our journey has been built on agility, accountability,
@@ -119,7 +165,7 @@ export default function Page() {
               that empowers every stakeholder involved. Because at Jambulogix,
               we don’t just deliver products — we deliver reliability.
             </p>
-            <p className="text-black text-lg font-bold mb-6 leading-relaxed">
+            <p className="text-black text-xl font-bold mb-6 leading-relaxed">
               Nikhilendu Shekhar, Founder & CEO, Jambulogix
             </p>
           </div>
@@ -199,7 +245,7 @@ export default function Page() {
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-10 max-w-7xl mx-auto">
+        <div className="grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-5 gap-10 max-w-8xl mx-auto">
           {teamMembers.map((member, idx) => (
             <motion.div
               key={idx}
@@ -239,8 +285,8 @@ export default function Page() {
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-10 max-w-7xl mx-auto">
-          {teamMembers.map((member, idx) => (
+        <div className="grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-10 max-w-8xl mx-auto">
+          {catalysts.map((member, idx) => (
             <motion.div
               key={idx}
               initial={{ opacity: 0, y: 30 }}

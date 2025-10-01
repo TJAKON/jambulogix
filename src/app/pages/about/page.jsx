@@ -37,28 +37,30 @@ const sustainabilityPoints = [
 
 const leaders = [
   {
-    name: "Pankaj Deole",
+    name: "Nikhilendu Shekhar",
     role: "Founder & CEO",
     desc: "Visionary leader driving innovation across supply chain solutions.",
-    img: "/ceo.jpg",
+    img: "/n5.png",
   },
   {
-    name: "Rahul Sinha",
-    role: "COO",
-    desc: "Operational excellence expert ensuring scalable logistics operations.",
-    img: "/ceo.jpg",
+    name: "Satish kumar",
+    role: "Co-Founder & COO",
+    desc: "Leading operations with precision, innovation, and customer-focused logistics solutions.",
+    img: "/p6.png",
   },
+
   {
-    name: "Neha Rathi",
-    role: "Chief Strategy Officer",
-    desc: "Crafts growth strategies and data-driven decisions for expansion.",
-    img: "/ceo.jpg",
+    name: "Priyanshi singh",
+    role: "Co-Founder & CCOE",
+    desc: "Leading with commitment to excellence, precision, and operational integrity.",
+    img: "/p1.jpg",
   },
+
   {
-    name: "Amit Joshi",
-    role: "Tech Head",
-    desc: "Leads our digital transformation and intelligent logistics systems.",
-    img: "/ceo.jpg",
+    name: "Amarendra Pratap Singh",
+    role: "CO-Founder & CSO",
+    desc: "Shaping strategic vision, driving smarter, faster, and innovative logistics solutions",
+    img: "/p2.jpg",
   },
 ];
 
@@ -69,7 +71,8 @@ const partners = [
   { name: "Carrier", logo: "/Clientlogo/4.png" },
   { name: "Reliance Digital", logo: "/Clientlogo/5.png" },
   { name: "Croma", logo: "/Clientlogo/6.png" },
-  { name: "Johnson Controls", logo: "/Clientlogo/7.png" },
+  { name: "Johnson Controls", logo: "/Clientlogo/30.jpg" },
+  { name: "Hitchi", logo: "/Clientlogo/29.png" },
   { name: "Indian Terrain", logo: "/Clientlogo/8.png" },
   { name: "Uppercase", logo: "/Clientlogo/9.png" },
   { name: "Mankind", logo: "/Clientlogo/10.png" },
@@ -130,7 +133,7 @@ export default function AboutUsPage() {
             <h1 className="text-4xl md:text-7xl font-extrabold">
               Empowering Global Logistics
             </h1>
-            <p className="mt-4 text-lg md:text-2xl max-w-2xl mx-auto">
+            <p className="mt-4 text-lg md:text-2xl max-w-2xl mx-auto text-[#1a4261]">
               Delivering scalable, tech-enabled supply chain solutions to modern
               businesses across India and beyond.
             </p>
@@ -143,17 +146,17 @@ export default function AboutUsPage() {
         {/* Left: Image Grid + Stats */}
         <div className="space-y-10 hidden sm:block">
           {/* Image Grid */}
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 gap-4">
             <div className="w-full aspect-square overflow-hidden rounded-xl shadow">
               <Image
-                src="/warehousing.jpg"
+                src="/aboutBanner1.jpg"
                 alt="Team 1"
                 width={500}
                 height={500}
                 className="object-cover w-full h-full"
               />
             </div>
-            <div className="w-full aspect-square overflow-hidden rounded-xl shadow">
+            {/* <div className="w-full aspect-square overflow-hidden rounded-xl shadow">
               <Image
                 src="/test1.jpg"
                 alt="Warehouse 1"
@@ -179,11 +182,11 @@ export default function AboutUsPage() {
                 height={500}
                 className="object-cover w-full h-full"
               />
-            </div>
+            </div> */}
           </div>
 
           {/* Sub Stats */}
-          <div className="grid grid-cols-2 gap-6 text-center">
+          {/* <div className="grid grid-cols-3 gap-6 text-center">
             <div>
               <h3 className="text-3xl font-bold text-[#24577F]">80L+</h3>
               <p className="text-sm text-gray-600">Happy Customers</p>
@@ -192,50 +195,7 @@ export default function AboutUsPage() {
               <h3 className="text-3xl font-bold text-[#24577F]">2,200+</h3>
               <p className="text-sm text-gray-600">Business Connections</p>
             </div>
-          </div>
-        </div>
-
-        {/* Right: Text + Stats */}
-        <div>
-          <h2 className="text-5xl text-center xl:text-start font-bold text-[#24577F] mb-6">
-            About <span className="text-[#FF7F06] text-8xl"> Jambulogix</span>
-          </h2>
-          <p className="text-gray-700 text-lg leading-relaxed mb-6">
-            Jambulogix (JLX) is building India’s next-generation flexi-logistics
-            network — designed for brands, retailers, and businesses that demand
-            speed, scale, and reliability. Agile by design and yours by choice,
-            we combine the expertise of industry veterans with a people-first
-            culture, advanced technology, and tailored solutions to meet diverse
-            logistics needs. Our services cover the full spectrum — from smart
-            warehousing, sort centers, cross-docks, and dark stores to
-            multimodal transport, FTL/LTL, and first-mile/last-mile delivery.
-            Serving B2B, B2C, D2C, eCommerce, and express logistics, we operate
-            across 10,000+ PIN codes with a robust network built for precision
-            and scale.
-          </p>
-          <p className="text-gray-700 text-lg leading-relaxed mb-6">
-            What sets us apart is our relentless focus on customer obsession,
-            transparency, and innovation. Our growing tech stack ensures
-            real-time visibility, control, and efficiency in every shipment,
-            while our inclusive culture empowers teams to think big, take
-            ownership, and deliver impact. We are also committed to building a
-            greener supply chain — optimizing routes, reducing empty miles, and
-            adopting energy-efficient practices to lower our carbon footprint
-            without compromising speed or service.
-          </p>
-          <p className="text-gray-700 text-lg leading-relaxed mb-6">
-            Whether you’re a fast-growing D2C brand, a large enterprise
-            optimizing supply chains, or a B2B player navigating India’s
-            geography, JLX brings you the reach, reliability, and agility to
-            move possibilities — not just parcels.
-          </p>
-          <p className="text-gray-700 text-lg leading-relaxed mb-10">
-            We’re on a mission to make logistics smarter, faster, greener, and
-            more human — shaping the future of commerce, one delivery at a time.
-          </p>
-
-          <div className="grid grid-cols-2 sm:grid-cols-2 gap-6 text-center">
-            <div>
+              <div>
               <h3 className="text-4xl font-bold text-[#24577F]">3.5M+</h3>
               <p className="text-sm text-gray-600">Shipments per Month</p>
             </div>
@@ -249,6 +209,104 @@ export default function AboutUsPage() {
             </div>
             <div>
               <h3 className="text-4xl font-bold text-[#24577F]">50+</h3>
+              <p className="text-sm text-gray-600">Cities Served</p>
+            </div>
+          </div> */}
+        </div>
+
+        {/* Right: Text + Stats */}
+        <div>
+          <h2 className="text-3xl text-center xl:text-start font-bold text-[#24577F] mb-3">
+            About <span className="text-[#FF7F06] text-3xl"> Jambulogix</span>
+          </h2>
+          {/* <p className="text-gray-700 text-md leading-relaxed mb-6">
+            Jambulogix (JLX) is building India’s next-generation flexi-logistics
+            network — designed for brands, retailers, and businesses that demand
+            <span className=" font-semibold underline">
+              speed, scale, and reliability
+            </span>
+            . Agile by design and yours by choice, we combine the expertise of
+            industry veterans with a people-first culture, advanced technology,
+            and tailored solutions to meet diverse logistics needs. Our services
+            cover the full spectrum — from smart warehousing, sort centers,
+            cross-docks, and dark stores to multimodal transport, FTL/LTL, and
+            first-mile/last-mile delivery. Serving B2B, B2C, D2C, eCommerce, and
+            express logistics, we operate across 10,000+ PIN codes with a robust
+            network built for precision and scale.
+          </p>
+          <p className="text-gray-700 text-md leading-relaxed mb-6">
+            What sets us apart is our relentless focus on customer obsession,
+            transparency, and innovation. Our growing tech stack ensures
+            real-time visibility, control, and efficiency in every shipment,
+            while our inclusive culture empowers teams to think big, take
+            ownership, and deliver impact. We are also committed to building a
+            greener supply chain — optimizing routes, reducing empty miles, and
+            adopting energy-efficient practices to lower our carbon footprint
+            without compromising speed or service.
+          </p>
+          <p className="text-gray-700 text-md leading-relaxed mb-6">
+            Whether you’re a fast-growing D2C brand, a large enterprise
+            optimizing supply chains, or a B2B player navigating India’s
+            geography, JLX brings you the reach, reliability, and agility to
+            move possibilities — not just parcels.
+          </p>
+          <p className="text-gray-700 text-md leading-relaxed mb-10">
+            We’re on a mission to make logistics smarter, faster, greener, and
+            more human — shaping the future of commerce, one delivery at a time.
+          </p> */}
+          <p className="text-gray-700 text-md leading-relaxed mb-6">
+            Jambulogix (JLX) is building India’s next-gen flexi-logistics
+            network — crafted for brands, retailers, and businesses that demand
+            speed, scale, and reliability.
+          </p>
+          <p className="text-gray-700 text-md leading-relaxed mb-6">
+            With industry expertise, a people-first culture, and advanced tech
+            and unique opreating models, we deliver end-to-end solutions smart
+            warehousing, sort centers, cross-docks, dark stores, FTL/LTL, and
+            distribution services(FM/LM) — covering 10,000+ PIN codes.
+          </p>
+          <p className="text-gray-700 text-md leading-relaxed mb-6">
+            A relentless focus on customer obsession, transparency, and
+            innovation. Our tech stack powers real-time visibility, efficiency,
+            and control — while our teams drive impact with ownership and
+            agility.
+          </p>
+          <p className="text-gray-700 text-md leading-relaxed mb-6">
+            We’re also committed to a greener supply chain — cutting empty
+            miles, optimizing routes, and using energy-efficient practices.
+          </p>
+          <p className="text-gray-700 text-md leading-relaxed mb-6">
+            Whether you’re a fast-scaling D2C brand, a B2B player, or an
+            enterprise optimizing supply chains, JLX moves possibilities, not
+            just parcels.
+          </p>
+          <p className=" font-semibold text-center text-xl leading-relaxed mb-6 text-[#24577F]">
+            Smarter. Faster. Greener. More Human.
+          </p>
+
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 text-center">
+            <div>
+              <h3 className="text-3xl font-bold text-[#24577F]">80L+</h3>
+              <p className="text-sm text-gray-600">Happy Customers</p>
+            </div>
+            <div>
+              <h3 className="text-3xl font-bold text-[#24577F]">2,200+</h3>
+              <p className="text-sm text-gray-600">Business Connections</p>
+            </div>
+            <div>
+              <h3 className="text-3xl font-bold text-[#24577F]">3.5M+</h3>
+              <p className="text-sm text-gray-600">Shipments per Month</p>
+            </div>
+            <div>
+              <h3 className="text-3xl font-bold text-[#24577F]">10,000+</h3>
+              <p className="text-sm text-gray-600">PIN Codes Covered</p>
+            </div>
+            <div>
+              <h3 className="text-3xl font-bold text-[#24577F]">1,400+</h3>
+              <p className="text-sm text-gray-600">Employees</p>
+            </div>
+            <div>
+              <h3 className="text-3xl font-bold text-[#24577F]">50+</h3>
               <p className="text-sm text-gray-600">Cities Served</p>
             </div>
           </div>
@@ -340,7 +398,7 @@ export default function AboutUsPage() {
             <p className="text-lg text-white/90 leading-relaxed">
               To be India’s most agile and progressive logistics partner —
               powered by a culture of customer obsession, operational
-              excellence, and constant innovation. We’re committed to creating a
+              excellence, and constant innovation. We’re committed to create a
               safe, inclusive, and empowering workplace, earning recognition as
               the most trusted name in logistics and the employer of choice for
               top talent.
@@ -350,10 +408,10 @@ export default function AboutUsPage() {
       </section>
 
       {/* our leadership */}
-      <section className=" py-12 md:py-24 px-6 sm:px-20 bg-black/60">
+      <section className=" py-12 md:py-24 px-6 sm:px-20 bg-white">
         <div className="max-w-8xl mx-auto">
-          <h2 className="text-4xl sm:text-6xl font-extrabold text-center text-white mb-8 md:mb-16">
-            Our <span className="text-[#FF7F06] text-8xl">Leadership </span>
+          <h2 className="text-4xl sm:text-4xl font-semibold text-center text-[#24577F] mb-8 md:mb-16">
+            Our <span className="text-[#FF7F06] text-4xl">Leadership </span>
           </h2>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-4 gap-8">
@@ -364,7 +422,7 @@ export default function AboutUsPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: idx * 0.1 }}
-                className="group relative rounded-xl overflow-hidden h-120 shadow-lg"
+                className="group relative rounded-xl overflow-hidden h-100 shadow-lg"
               >
                 {/* Background Image */}
                 <Image
@@ -379,7 +437,9 @@ export default function AboutUsPage() {
 
                 {/* Name (always visible) */}
                 <div className="absolute bottom-4 left-4 z-20">
-                  <p className="text-white text-2xl font-bold">{leader.name}</p>
+                  <p className="text-white text-2xl font-semibold">
+                    {leader.name}
+                  </p>
                 </div>
 
                 {/* Hover Content */}
@@ -396,33 +456,39 @@ export default function AboutUsPage() {
       </section>
 
       {/* Sustainable */}
-      <section className="w-full bg-[#25503f] py-24 px-6">
+      <section className="w-full bg-white py-24 px-6">
         <div className="max-w-8xl mx-auto px-6 sm:px-20 flex flex-col lg:flex-row items-center justify-between gap-16">
           {/* Left Text Block */}
           <div className="lg:w-1/2">
-            <h2 className="text-6xl font-extrabold text-white mb-6">
-              Sustainable
-              <span className="text-[#FF7F06] text-8xl"> Jambulogix</span>
+            <h2 className="text-4xl font-extrabold text-[#24577F] mb-6">
+              Sustainability at
+              <span className="text-[#FF7F06] text-4xl"> Jambulogix</span>
             </h2>
-            <p className="text-lg text-white mb-8">
-              We are committed to building a greener future by optimizing every
-              touchpoint of our supply chain. Our green hubs and logistics
-              processes are designed to reduce waste, save energy, and boost
-              efficiency at scale.
+            <p className="text-md text-[#24577F]  mb-8">
+              We are building a greener logistics network that is at the heart
+              of everything we do. From optimizing routes to reduce empty miles,
+              to adopting energy-efficient vehicles and sustainable warehousing
+              practices, we strive to lower our carbon footprint without
+              compromising speed or reliability. Our commitment extends across
+              every touchpoint — leveraging technology, smarter operations, and
+              innovative solutions to make logistics cleaner, smarter, and more
+              responsible for the planet.
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {[
-                "Eco-optimized packaging & delivery",
-                "Carbon-neutral transportation solutions",
                 "Energy-efficient warehousing practices",
+                "Carbon-neutral transportation solutions",
                 "Recycling, reusing, and rethinking resources",
+                "Eco-optimized packaging & delivery",
               ].map((point, idx) => (
                 <div
                   key={idx}
-                  className="bg-white border border-slate-200 rounded-lg p-4 shadow-sm hover:shadow-md transition"
+                  className="bg-white border border-green-600 items-center justify-center rounded-lg p-4 shadow-sm hover:shadow-xl transition"
                 >
-                  <p className="text-sm text-gray-800 font-medium">{point}</p>
+                  <p className="text-md text-center text-gray-800 font-medium">
+                    {point}
+                  </p>
                 </div>
               ))}
             </div>
@@ -433,7 +499,7 @@ export default function AboutUsPage() {
             {/* Center Circle */}
             <div className="z-10 w-60 h-60 bg-green-100 border-2 border-[#FF7F06] rounded-full flex flex-col items-center justify-center text-center shadow-lg">
               <FaLeaf size={42} className="text-green-600 mb-2" />
-              <h3 className="text-xl font-bold text-green-900">Green Hubs</h3>
+              <h3 className="text-xl font-bold text-green-900">Jambulogix</h3>
               <p className="text-sm text-green-700 mt-1">
                 Reduce • Reuse • Recycle
               </p>
@@ -472,7 +538,7 @@ export default function AboutUsPage() {
           {/* Left Side: Content */}
           <div className="relative z-10">
             <h2 className="text-4xl sm:text-4xl font-extrabold mb-6 leading-tight">
-              Our <span className="text-[#FF7F06] text-8xl">Core Values</span>
+              Our <span className="text-[#FF7F06] text-4xl">Core Values</span>
             </h2>
             <p className="text-gray-300 text-lg mb-4">
               Our values drive everything — from decision-making to daily
@@ -539,13 +605,13 @@ export default function AboutUsPage() {
                     className="object-cover w-full h-84"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end justify-center">
-                    <span className="text-white text-sm font-semibold mb-3 tracking-wide">
+                    <span className="text-white text-md font-semibold mb-3 tracking-wide">
                       {
                         [
-                          "🚀 Innovation",
-                          "💡 Empathy",
-                          "🔍 Transparency",
-                          "🛡 Reliability",
+                          "Innovation",
+                          "Empathy",
+                          "Transparency",
+                          "Reliability",
                         ][idx]
                       }
                     </span>
@@ -560,11 +626,11 @@ export default function AboutUsPage() {
       {/* Partners Grid */}
       <section className="py-20 px-6 sm:px-12 md:px-10 bg-white">
         <div className="text-center mb-12">
-          <h2 className=" text-4xl md:text-5xl font-extrabold text-[#24577F] mb-4">
+          <h2 className=" text-4xl md:text-4xl font-extrabold text-[#24577F] mb-4">
             Trusted by{" "}
-            <span className="text-[#FF7F06] text-8xl"> Leading Brands </span>
+            <span className="text-[#FF7F06] text-4xl"> Leading Brands </span>
           </h2>
-          <p className="text-black max-w-3xl text-lg mx-auto">
+          <p className="text-black max-w-3xl text-md mx-auto">
             We collaborate with industry leaders across sectors. Choose a
             category to view our partners.
           </p>
@@ -591,28 +657,29 @@ export default function AboutUsPage() {
       </section>
 
       {/* Frictionless experiences  */}
-      <section className="bg-black/50 text-white py-16 px-6 md:px-0">
+      <section className="bg-[#24577F] text-white py-16 px-6 md:px-0">
         <div className="max-w-8xl mx-auto px-6 sm:px-20 text-center">
           {/* Title */}
-          <h2 className="text-3xl md:text-6xl font-extrabold text-white mb-4">
-            Frictionless{" "}
-            <span className="text-red-600 text-9xl">Experiences</span>
+          <h2 className="text-3xl md:text-4xl font-extrabold text-white text text- mb-4">
+            The Jambulogix{" "}
+            <span className="text-[#FF7F06] text-4xl">Experience</span>
           </h2>
 
           {/* Description */}
-          <p className="text-white/80 max-w-7xl mx-auto mb-14 text-base md:text-lg leading-relaxed">
-            we ensure seamless collaboration across customers, partners, shop
-            floors, and people. Our solutions simplify operations, improve
-            efficiency, and deliver value with complete transparency.
+          <p className="text-white/80 max-w-7xl mx-auto mb-14 text-base md:text-md leading-relaxed">
+            we create frictionless experiences for everyone we work with —
+            customers, partners, shop floors, and our own people. Our approach
+            blends deep operational expertise, industry-leading efficiency, and
+            a commitment to safety, security, and reliability
           </p>
 
           {/* Grid */}
-          <div className="grid md:grid-cols-2 gap-10 text-left">
+          <div className="grid md:grid-cols-3 gap-5 text-left">
             {/* Left side - Customers + Partners */}
-            <div className="space-y-10">
+            <div className="space-y-10 ">
               {/* Customers */}
               <div>
-                <h3 className="text-2xl font-bold text-red-600 mb-3">
+                <h3 className="text-2xl font-bold text-[#FF7F06] mb-3">
                   Customers
                 </h3>
                 <ul className="space-y-2 list-disc list-inside text-white">
@@ -626,7 +693,7 @@ export default function AboutUsPage() {
 
               {/* Partners */}
               <div>
-                <h3 className="text-2xl font-bold text-red-600 mb-3">
+                <h3 className="text-2xl font-bold text-[#FF7F06] mb-3">
                   Partners
                 </h3>
                 <ul className="space-y-2 list-disc list-inside text-white">
@@ -637,23 +704,47 @@ export default function AboutUsPage() {
               </div>
             </div>
 
+            {/* Middle red icon block */}
+            <div className="grid grid-cols-2 md:grid-cols-2 gap-3 ">
+              <div className="bg-[#FF7F06] p-4 flex flex-col items-center justify-center rounded-xl shadow-md">
+                <ThumbsUp className="w-20 h-20 mb-3" />
+                <p className="font-medium text-white">Customers</p>
+              </div>
+              <div className="bg-[#FF7F06] p-4 flex flex-col items-center justify-center rounded-xl shadow-md">
+                <Layers className="w-20 h-20  mb-3" />
+                <p className="font-medium text-white">Shop Floor</p>
+              </div>
+              <div className="bg-[#FF7F06] p-4 flex flex-col items-center justify-center rounded-xl shadow-md">
+                <Truck className="w-20 h-20 mb-3" />
+                <p className="font-medium text-white">Partners</p>
+              </div>
+              <div className="bg-[#FF7F06] p-4 flex flex-col items-center justify-center rounded-xl shadow-md">
+                <Factory className="w-20 h-20  mb-3" />
+                <p className="font-medium text-white">People</p>
+              </div>
+            </div>
+
             {/* Right side - Shop floor + People */}
             <div className="space-y-10">
               {/* Shop floor */}
               <div>
-                <h3 className="text-2xl font-bold text-red-600 mb-3">
+                <h3 className="text-2xl font-bold text-[#FF7F06] mb-3">
                   Shop Floor
                 </h3>
                 <ul className="space-y-2 list-disc list-inside text-white">
                   <li>Smart Shopfloor operations</li>
                   <li>Superior task management</li>
+                  <li>Quality assurance</li>
+                  <li>Scalable flexiblility</li>
                   <li>Intuitive access to real-time information</li>
                 </ul>
               </div>
 
               {/* People */}
               <div>
-                <h3 className="text-2xl font-bold text-red-600 mb-3">People</h3>
+                <h3 className="text-2xl font-bold text-[#FF7F06] mb-3">
+                  People
+                </h3>
                 <ul className="space-y-2 list-disc list-inside text-white">
                   <li>High calibre Team</li>
                   <li>
@@ -665,42 +756,22 @@ export default function AboutUsPage() {
             </div>
           </div>
 
-          {/* Middle red icon block */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-white mt-16 text-lg">
-            <div className="bg-red-600 p-10 flex flex-col items-center justify-center rounded-xl shadow-md">
-              <ThumbsUp className="w-20 h-20 mb-3" />
-              <p className="font-medium">Customers</p>
-            </div>
-            <div className="bg-red-600 p-10 flex flex-col items-center justify-center rounded-xl shadow-md">
-              <Layers className="w-20 h-20  mb-3" />
-              <p className="font-medium">Shop Floor</p>
-            </div>
-            <div className="bg-red-600 p-10 flex flex-col items-center justify-center rounded-xl shadow-md">
-              <Truck className="w-20 h-20 mb-3" />
-              <p className="font-medium">Partners</p>
-            </div>
-            <div className="bg-red-600 p-10 flex flex-col items-center justify-center rounded-xl shadow-md">
-              <Factory className="w-20 h-20  mb-3" />
-              <p className="font-medium">People</p>
-            </div>
-          </div>
-
           {/* Footer Icons */}
-          <div className="flex flex-wrap justify-center gap-4 text-gray-700 text-lg mt-14">
+          <div className="flex flex-wrap justify-center gap-4 text-gray-700 text-md mt-14">
             <span className="px-4 py-2 bg-gray-100 rounded-full">
-              🔧 Deep Understanding of operations
+              Deep Understanding of operations
             </span>
             <span className="px-4 py-2 bg-gray-100 rounded-full">
-              📈 Industry leading commercial efficiency
+              Industry leading commercial efficiency
             </span>
             <span className="px-4 py-2 bg-gray-100 rounded-full">
-              🔒 Safe, Secure & Reliable
+              Safe, Secure & Reliable
             </span>
             <span className="px-4 py-2 bg-gray-100 rounded-full">
-              🤝 Seamless customer collaboration
+              Seamless customer collaboration
             </span>
             <span className="px-4 py-2 bg-gray-100 rounded-full">
-              📊 Scalable solution
+              Scalable solution
             </span>
           </div>
         </div>
@@ -731,13 +802,13 @@ export default function AboutUsPage() {
                     className="object-cover w-full h-84"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent flex items-end justify-center">
-                    <span className="text-white text-sm font-semibold mb-3 tracking-wide">
+                    <span className="text-white text-md font-semibold mb-3 tracking-wide">
                       {
                         [
-                          "🚀 Innovation",
-                          "💡 Empathy",
-                          "🔍 Transparency",
-                          "🛡 Reliability",
+                          "Innovation",
+                          "Empathy",
+                          "Transparency",
+                          "Reliability",
                         ][idx]
                       }
                     </span>
@@ -749,11 +820,11 @@ export default function AboutUsPage() {
 
           {/* Right Side: Content */}
           <div className="relative z-10">
-            <h2 className="text-4xl md:text-6xl font-extrabold mb-6 leading-tight">
+            <h2 className="text-4xl md:text-4xl font-extrabold mb-6 leading-tight">
               Our{" "}
-              <span className="text-[#FF7F06] text-8xl">Growth Strategy</span>
+              <span className="text-[#FF7F06] text-4xl">Growth Strategy</span>
             </h2>
-            <p className="text-gray-300 text-lg mb-8 max-w-xl">
+            <p className="text-gray-300 text-md mb-8 max-w-xl">
               More than expansion — we are building an{" "}
               <span className="text-white font-semibold">
                 unreal ecosystem{" "}
@@ -776,6 +847,10 @@ export default function AboutUsPage() {
                 {
                   text: "Innovating daily to raise efficiency benchmarks",
                   icon: Zap,
+                },
+                {
+                  text: "Targeting the entire Total Addressable Market (TAM)",
+                  icon: Rocket,
                 },
                 {
                   text: "Targeting the entire Total Addressable Market (TAM)",
@@ -835,11 +910,11 @@ export default function AboutUsPage() {
         <div className="max-w-8xl mx-auto px-6 md:px-20">
           {/* Title */}
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-5xl font-extrabold text-white">
+            <h2 className="text-3xl md:text-4xl font-extrabold text-white">
               Safety and{" "}
-              <span className="text-green-600 text-9xl">Loss Prevention</span>
+              <span className="text-green-600 text-4xl">Loss Prevention</span>
             </h2>
-            <p className="text-white/80 mt-4 max-w-5xl text-lg mx-auto">
+            <p className="text-white/80 mt-4 max-w-5xl text-md mx-auto">
               We ensure complete protection with 24/7 monitoring, advanced
               tracking, secure packing, and access-controlled systems — keeping
               your operations safe and reliable.
@@ -863,7 +938,7 @@ export default function AboutUsPage() {
                   className="flex items-center gap-4 bg-white shadow-sm border border-gray-100 rounded-xl px-5 py-4 hover:shadow-md shadow-green-400 transition"
                 >
                   <item.icon className="w-8 h-8 text-red-600" />
-                  <span className="text-gray-800 font-medium text-xl">
+                  <span className="text-gray-800 font-medium text-md">
                     {item.text}
                   </span>
                 </div>
@@ -894,14 +969,14 @@ export default function AboutUsPage() {
 
       {/* The jambulogix exprience */}
       <section className="bg-[#24577F] text-white py-16 px-6 sm:px-20 text-center">
-        <h2 className="text-6xl font-extrabold mb-4">
+        <h2 className="text-4xl font-extrabold mb-4">
           Gain Leverage for Your
-          <span className="text-[#FF7F06] text-8xl">
+          <span className="text-[#FF7F06] text-4xl">
             {" "}
             Business with Jambulogix
           </span>
         </h2>
-        <p className="mb-6 max-w-7xl text-lg mx-auto">
+        <p className="mb-6 max-w-7xl text-md mx-auto">
           We’d love to hear from you! Whether you’re a business looking for
           scalable logistics solutions, a partner exploring collaboration, or a
           candidate interested in joining our journey — we’re just a message
@@ -920,18 +995,18 @@ export default function AboutUsPage() {
           Ready to Simplify Your Logistics?
         </h2> */}
 
-        <h2 className="text-6xl font-extrabold mb-4">
+        <h2 className="text-4xl font-extrabold mb-4">
           Ready to
-          <span className="text-[#FF7F06] text-8xl">
+          <span className="text-[#FF7F06] text-4xl">
             {" "}
             Simplify Your Logistics?
           </span>
         </h2>
-        <p className="mb-6 max-w-7xl text-lg mx-auto">
+        <p className="mb-6 max-w-7xl text-md mx-auto">
           Let Jambulogix be your partner in building scalable, tech-driven, and
           efficient supply chains.
         </p>
-        <button className="bg-[#FF7F06] text-white px-6 py-3 rounded-lg font-bold text-xl hover:bg-[#e86e00] transition">
+        <button className="bg-[#FF7F06] text-white px-6 py-3 rounded-xl font-bold text-xl hover:bg-[#e86e00] transition">
           Contact Us
         </button>
       </section>
