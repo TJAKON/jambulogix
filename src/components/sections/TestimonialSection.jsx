@@ -45,7 +45,7 @@ export default function TestimonialCarousel() {
       <div className="max-w-8xl mx-auto text-center mb-12">
         <h2 className="text-4xl font-extrabold text-[#24577F] mb-4">
           Trusted by
-          <span className="text-[#FF7F06] text-4xl">
+          <span className="text-[#FF7F06] text-6xl">
             {" "}
             Businesses Like Yours
           </span>

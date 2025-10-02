@@ -40,7 +40,7 @@ export default function Header() {
           link: "/pages/services/transportation-service",
         },
         {
-          label: "Supply Chain Solutioning",
+          label: "Reverse Logistics Solutions",
           link: "/pages/services/supply-chain-solution",
         },
       ],
@@ -111,7 +111,7 @@ export default function Header() {
               href="/pages/services/supply-chain-solution"
               className="block hover:text-white hover:bg-[#FF7F06] border-2 bg-[#24577F] p-2 rounded-lg"
             >
-              Supply Chain Solutioning
+              Reverse Logistics Solutions
             </Link>
           </PopoverPanel>
         </Popover>

@@ -105,10 +105,15 @@ export default function Page() {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-5xl sm:text-6xl font-bold mb-6 leading-tight drop-shadow-lg"
+            className="text-5xl sm:text-6xl font-bold mb-6 text-[#24577F] leading-tight drop-shadow-lg"
           >
-            Your Ideas <span className="text-[#24577F] text-9xl font-extrabold "> Your Move</span>
-            <br /> Our <span className="text-[#24577F] text-9xl font-extrabold ">Mission</span>
+            Your Ideas{" "}
+            <span className="text-white text-9xl font-extrabold ">
+              {" "}
+              Your Move
+            </span>
+            <br /> Our{" "}
+            <span className="text-white text-9xl font-extrabold ">Mission</span>
           </motion.h1>
 
           <motion.p
@@ -131,12 +136,12 @@ export default function Page() {
         <div className="max-w-8xl mx-auto grid sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-2 gap-16 items-center">
           {/* Text Block */}
           <div>
-            <h2 className="text-4xl sm:text-3xl font-extrabold mb-6 text-[#24577F] leading-tight">
+            <h2 className="text-4xl sm:text-4xl font-extrabold mb-6 text-[#24577F] leading-tight">
               Why Work at{" "}
-              <span className="text-[#FF7F06] text-7xl">Jambulogix..?</span>
+              <span className="text-[#FF7F06] text-6xl">Jambulogix..?</span>
             </h2>
 
-            <p className="text-gray-600 text-md mb-6 leading-relaxed">
+            <p className="text-gray-600 text-md mb-6 leading-relaxed capitalize">
               we’re not just moving parcels—we're moving possibilities. We are
               reshaping the logistics ecosystem with technology, empathy, and
               agility at our core. At Jambulogix, we’re building more than a
@@ -146,7 +151,7 @@ export default function Page() {
               ownership and innovation.
             </p>
 
-            <ul className="text-gray-700 text-md space-y-4 list-disc pl-6">
+            <ul className="text-gray-700 text-md space-y-4 list-disc pl-6 capitalize">
               <li>
                 Grow Fast – Accelerate your career in a high-growth
                 logistics-tech environment
@@ -215,14 +220,14 @@ export default function Page() {
       {/* Openings */}
       <section className="py-24 px-6 sm:px-20 bg-white text-[#0A1A2F]">
         <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-4xl sm:text-5xl font-extrabold mb-12 text-[#24577F]">
+          <h2 className="text-4xl sm:text-6xl font-extrabold mb-12 text-[#24577F]">
             Open Positions
           </h2>
           <div className="grid sm:grid-cols-2 gap-10 text-left">
             {openings.map((role, idx) => (
               <motion.div
                 key={idx}
-                className="p-6 border border-gray-200 rounded-2xl shadow-md hover:shadow-xl transition"
+                className="p-6 border-2 border-[#24577F] rounded-2xl shadow-md hover:shadow-xl transition"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: idx * 0.2 }}
@@ -243,10 +248,11 @@ export default function Page() {
 
       {/* Core Values */}
 
-      <section className="py-20 px-6 sm:px-20 bg-[#0A1A2F] text-white text-center">
+      <section className="py-20 px-6 sm:px-20 bg-[#24577F] text-white text-center">
         <div className="max-w-8xl mx-auto">
-          <h2 className="text-4xl sm:text-5xl font-extrabold mb-6">
-            Our Culture & Values
+          <h2 className="text-4xl sm:text-4xl font-extrabold mb-6 text-white leading-tight">
+            Our Culture{" "}
+            <span className="text-[#FF7F06] text-6xl">& Values</span>
           </h2>
           <p className="text-white/80 mb-10 text-lg">
             Our team thrives on autonomy, accountability, and obsession with
@@ -255,7 +261,7 @@ export default function Page() {
 
           {/* Swiper Carousel */}
           <Swiper
-              modules={[Pagination, Autoplay]}
+            modules={[Pagination, Autoplay]}
             pagination={{ clickable: true }}
             spaceBetween={30}
             autoplay={{ delay: 3000, disableOnInteraction: false }}
@@ -268,10 +274,12 @@ export default function Page() {
           >
             {values.map((val, i) => (
               <SwiperSlide key={i}>
-                <div className="bg-[#112233] p-16 rounded-2xl shadow-md h-full flex flex-col justify-center">
+                <div className="bg-white p-16 rounded-2xl shadow-md h-full flex flex-col justify-center">
                   <div className="text-5xl mb-4 text-[#FF7F06]">{val.icon}</div>
-                  <h3 className="text-2xl font-semibold">{val.label}</h3>
-                  <p className="text-white/70 mt-2 text-lg">{val.desc}</p>
+                  <h3 className="text-2xl font-semibold text-[#24577F]">
+                    {val.label}
+                  </h3>
+                  <p className="text-[#24577F] mt-2 text-lg">{val.desc}</p>
                 </div>
               </SwiperSlide>
             ))}
@@ -280,16 +288,17 @@ export default function Page() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 px-6 sm:px-20 bg-[#FF7F06] text-white text-center">
+      <section className="py-20 px-6 sm:px-20 bg-white text-gray-700 text-center">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl sm:text-5xl font-extrabold mb-4">
-            Ready to take the leap?
+          <h2 className="text-4xl sm:text-4xl font-extrabold mb-6 text-[#24577F] leading-tight">
+            Ready to take the{" "}
+            <span className="text-[#FF7F06] text-6xl">leap!</span>
           </h2>
-          <p className="text-white/90 mb-8 text-lg">
+          <p className="text-gray-700 mb-8 text-md">
             We’re always seeking individuals who think differently, act boldly,
             and build with purpose.
           </p>
-          <button className="bg-white text-[#FF7F06] px-6 py-3 font-bold rounded-full shadow-lg hover:scale-105 transition">
+          <button className="bg-[#24577F] text-white px-6 py-3 font-bold rounded-full shadow-lg hover:scale-105 transition">
             Send Your Resume
           </button>
         </div>

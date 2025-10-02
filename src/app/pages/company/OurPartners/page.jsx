@@ -119,7 +119,7 @@ export default function OurPartnersPage() {
       >
         <div className="bg-opacity-50 w-full h-full absolute top-0 left-0" />
         <div className="relative z-10 px-6">
-          <h1 className="text-white text-4xl sm:text-5xl font-bold mb-4">
+          <h1 className="text-white text-4xl sm:text-6xl font-bold mb-4">
             Built on Partnerships. Powered by Purpose.
           </h1>
           <p className="text-white text-lg sm:text-lg max-w-6xl mx-auto">
@@ -132,7 +132,7 @@ export default function OurPartnersPage() {
             across the country or powering the tech behind our operations, our
             partners help us deliver impact at every mile.
           </p>
-          <p className="text-white text-lg sm:text-lg max-w-6xl mx-auto">
+          <p className="text-white text-lg sm:text-lg max-w-7xl mx-auto mb-5">
             From funding innovation to enabling faster deliveries, from smart
             warehouses to people on the ground — every partner brings value that
             moves us forward.
@@ -144,7 +144,7 @@ export default function OurPartnersPage() {
         </div>
       </section>
 
-      <section className="py-24 px-6 sm:px-20 bg-black/60">
+      {/* <section className="py-24 px-6 sm:px-20 bg-black/60">
         <div className="max-w-8xl mx-auto">
           <h2 className="text-4xl sm:text-5xl font-bold text-center text-[#FF7F06] mb-3">
             Our Investers
@@ -169,7 +169,7 @@ export default function OurPartnersPage() {
                 transition={{ duration: 0.5, delay: idx * 0.1 }}
                 className="group relative rounded-xl overflow-hidden h-120 shadow-lg"
               >
-                {/* Background Image */}
+            
                 <Image
                   src={leader.img}
                   alt={leader.name}
@@ -177,15 +177,14 @@ export default function OurPartnersPage() {
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
 
-                {/* Overlay */}
+        
                 <div className="absolute inset-0 bg-black/20 group-hover:bg-black/70 transition duration-500 z-10"></div>
 
-                {/* Name (always visible) */}
+     
                 <div className="absolute bottom-4 left-4 z-20">
                   <p className="text-white text-2xl font-bold">{leader.name}</p>
                 </div>
 
-                {/* Hover Content */}
                 <div className="absolute inset-0 flex flex-col items-start justify-center text-white px-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20">
                   <p className="text-[#FF7F06] font-semibold text-2xl mb-1">
                     {leader.role}
@@ -196,16 +195,17 @@ export default function OurPartnersPage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Partners Grid */}
 
       <section className="py-20 px-6 sm:px-12 md:px-20 bg-[#F4F6F8]">
         <div className="text-center mb-12">
-          <h2 className="text-5xl font-bold text-[#24577F] mb-4">
-            Trusted by Our Partners
+          <h2 className="text-4xl font-extrabold text-[#24577F] mb-4">
+            Trusted by
+            <span className=" text-6xl text-[#FF7F06]"> Our Partners</span>
           </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
+          <p className="text-gray-600 max-w-xl mx-auto">
             We collaborate with industry leaders across sectors. Choose a
             category to view our partners.
           </p>
@@ -262,10 +262,14 @@ export default function OurPartnersPage() {
       {/* Social Impact Section */}
       <section className="bg-[#24577F] py-20 px-4 sm:px-10 md:px-20 relative overflow-hidden">
         <div className="max-w-7xl mx-auto text-center relative z-10">
-          <h2 className="text-4xl font-bold text-white mb-6 leading-tight drop-shadow-lg">
-            Making a Social Impact Together
+          <h2 className="text-4xl font-extrabold text-white mb-6 leading-tight drop-shadow-lg">
+            Making a
+            <span className=" text-6xl text-[#FF7F06]">
+              {" "}
+              Social Impact Together
+            </span>
           </h2>
-          <p className="text-white/70 text-lg mb-16 max-w-2xl mx-auto">
+          <p className="text-white/70 text-lg mb-16 max-w-4xl mx-auto">
             Our partnerships go beyond business. We empower MSMEs, improve rural
             delivery networks, and contribute to a greener, more inclusive
             logistics ecosystem.
@@ -290,9 +294,9 @@ export default function OurPartnersPage() {
             ].map((item, idx) => (
               <div
                 key={idx}
-                className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl hover:-translate-y-2 transform transition duration-300 ease-in-out"
+                className="bg-white rounded-2xl border-2 border-white p-8 shadow-xl hover:shadow-2xl hover:-translate-y-2 transform transition duration-300 ease-in-out"
               >
-                <h3 className="text-2xl font-semibold text-[#FF7F06] mb-3">
+                <h3 className="text-3xl font-semibold text-[#FF7F06] mb-3">
                   {item.title}
                 </h3>
                 <p className="text-gray-700">{item.description}</p>
@@ -329,7 +333,7 @@ export default function OurPartnersPage() {
                 impact
               </span>
             </h2>
-            <p className="text-gray-600 text-md max-w-3xl mx-auto">
+            <p className="text-gray-600 text-md max-w-7xl mx-auto">
               Jambulogix, partnership means progress — not just for us, but for
               every stakeholder in the logistics chain. We don’t just move
               goods, we move opportunities, scale, and impact.
@@ -377,7 +381,7 @@ export default function OurPartnersPage() {
             ].map((item, idx) => (
               <div
                 key={idx}
-                className="bg-white border border-gray-200 rounded-2xl p-8 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col items-start gap-4"
+                className="bg-white border-2 border-[#24577F] rounded-2xl p-8 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col items-start gap-4"
               >
                 <div className="text-3xl p-3 rounded-full bg-[#FF7F06]/10 text-[#FF7F06]">
                   {item.emoji}
@@ -396,8 +400,9 @@ export default function OurPartnersPage() {
 
       {/* CTA */}
       <section className="bg-[#24577F] text-white py-16 text-center px-6">
-        <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-          Ready to Grow? Let’s Partner.
+        <h2 className="text-3xl sm:text-4xl font-extrabold mb-4">
+          Ready to Grow?
+          <span className=" text-6xl text-[#FF7F06]"> Let’s Partner</span>
         </h2>
         <p className="text-lg mb-6 max-w-2xl mx-auto">
           From first mile to last, we grow together. Ready to partner with

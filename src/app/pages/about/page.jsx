@@ -39,27 +39,27 @@ const leaders = [
   {
     name: "Nikhilendu Shekhar",
     role: "Founder & CEO",
-    desc: "Visionary leader driving innovation across supply chain solutions.",
+    desc: "Business Performance",
     img: "/n5.png",
   },
   {
     name: "Satish kumar",
     role: "Co-Founder & COO",
-    desc: "Leading operations with precision, innovation, and customer-focused logistics solutions.",
+    desc: "Business Operations",
     img: "/p6.png",
   },
 
   {
-    name: "Priyanshi singh",
+    name: "Priyanci singh",
     role: "Co-Founder & CCOE",
-    desc: "Leading with commitment to excellence, precision, and operational integrity.",
+    desc: "Business Excellence   ",
     img: "/p1.jpg",
   },
 
   {
     name: "Amarendra Pratap Singh",
     role: "CO-Founder & CSO",
-    desc: "Shaping strategic vision, driving smarter, faster, and innovative logistics solutions",
+    desc: "Business Strategy",
     img: "/p2.jpg",
   },
 ];
@@ -216,8 +216,9 @@ export default function AboutUsPage() {
 
         {/* Right: Text + Stats */}
         <div>
-          <h2 className="text-3xl text-center xl:text-start font-bold text-[#24577F] mb-3">
-            About <span className="text-[#FF7F06] text-3xl"> Jambulogix</span>
+          <h2 className="text-3xl text-center xl:text-start font-extrabold text-[#FF7F06] mb-3">
+            About <span className="text-[#24577F] text-6xl"> Jambulogi</span>
+            <span className="text-[#FF7F06] text-6xl">x</span>
           </h2>
           {/* <p className="text-gray-700 text-md leading-relaxed mb-6">
             Jambulogix (JLX) is building India’s next-generation flexi-logistics
@@ -374,28 +375,13 @@ export default function AboutUsPage() {
         <div className="absolute bottom-[-100px] right-[-80px] w-72 h-72 bg-[#FF7F06]/30 rounded-full blur-2xl opacity-50 z-0" /> */}
 
         <div className="max-w-8xl mx-auto px-6 sm:px-0 relative z-10 grid sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 gap-8 md:gap-16 items-start">
-          {/* Vision */}
-          <div className="bg-white/10 rounded-2xl p-8 h-[40vh] flex flex-col justify-center shadow-lg border border-white/20 hover:bg-white/20 transition">
-            <div className="flex items-center gap-4 mb-4">
-              <Target className="w-10 h-10 text-[#FF7F06]" />
-              <h3 className="text-3xl font-bold">Our Vision</h3>
-            </div>
-            <p className="text-lg text-white/90 leading-relaxed">
-              To be a passionate service catalyst that simplifies and
-              strengthens the flow of commerce across India's supply chain
-              ecosystem. Our aim is to create a focused and collaborative
-              logistics footprint across all Indian geographies, enabling
-              businesses to scale seamlessly.
-            </p>
-          </div>
-
           {/* Mission */}
           <div className="bg-white/10 rounded-2xl p-8 h-[40vh] flex flex-col justify-center shadow-lg border border-white/20 hover:bg-white/20 transition">
             <div className="flex items-center gap-4 mb-4">
               <Rocket className="w-10 h-10 text-[#FF7F06]" />
-              <h3 className="text-3xl font-bold">Our Mission</h3>
+              <h3 className="text-6xl font-bold">Our Mission</h3>
             </div>
-            <p className="text-lg text-white/90 leading-relaxed">
+            <p className="text-md text-white/90 leading-relaxed">
               To be India’s most agile and progressive logistics partner —
               powered by a culture of customer obsession, operational
               excellence, and constant innovation. We’re committed to create a
@@ -404,14 +390,31 @@ export default function AboutUsPage() {
               top talent.
             </p>
           </div>
+
+          {/* Vision */}
+          <div className="bg-white/10 rounded-2xl p-8 h-[40vh] flex flex-col justify-center shadow-lg border border-white/20 hover:bg-white/20 transition">
+            <div className="flex items-center gap-4 mb-4">
+              <Target className="w-10 h-10 text-[#FF7F06]" />
+              <h3 className="text-6xl font-bold">Our Vision</h3>
+            </div>
+            <p className="text-md text-white/90 leading-relaxed">
+              To be a passionate service catalyst that simplifies and
+              strengthens the flow of commerce across India's supply chain
+              ecosystem. Our aim is to create a focused and collaborative
+              logistics footprint across all Indian geographies, enabling
+              businesses to scale seamlessly.
+              <br />
+              <br />
+            </p>
+          </div>
         </div>
       </section>
 
       {/* our leadership */}
       <section className=" py-12 md:py-24 px-6 sm:px-20 bg-white">
         <div className="max-w-8xl mx-auto">
-          <h2 className="text-4xl sm:text-4xl font-semibold text-center text-[#24577F] mb-8 md:mb-16">
-            Our <span className="text-[#FF7F06] text-4xl">Leadership </span>
+          <h2 className="text-4xl sm:text-5xl font-extrabold text-center text-[#24577F] mb-8 md:mb-16">
+            Our <span className="text-[#FF7F06] text-6xl">Leadership </span>
           </h2>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-4 gap-8">
@@ -455,79 +458,8 @@ export default function AboutUsPage() {
         </div>
       </section>
 
-      {/* Sustainable */}
-      <section className="w-full bg-white py-24 px-6">
-        <div className="max-w-8xl mx-auto px-6 sm:px-20 flex flex-col lg:flex-row items-center justify-between gap-16">
-          {/* Left Text Block */}
-          <div className="lg:w-1/2">
-            <h2 className="text-4xl font-extrabold text-[#24577F] mb-6">
-              Sustainability at
-              <span className="text-[#FF7F06] text-4xl"> Jambulogix</span>
-            </h2>
-            <p className="text-md text-[#24577F]  mb-8">
-              We are building a greener logistics network that is at the heart
-              of everything we do. From optimizing routes to reduce empty miles,
-              to adopting energy-efficient vehicles and sustainable warehousing
-              practices, we strive to lower our carbon footprint without
-              compromising speed or reliability. Our commitment extends across
-              every touchpoint — leveraging technology, smarter operations, and
-              innovative solutions to make logistics cleaner, smarter, and more
-              responsible for the planet.
-            </p>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {[
-                "Energy-efficient warehousing practices",
-                "Carbon-neutral transportation solutions",
-                "Recycling, reusing, and rethinking resources",
-                "Eco-optimized packaging & delivery",
-              ].map((point, idx) => (
-                <div
-                  key={idx}
-                  className="bg-white border border-green-600 items-center justify-center rounded-lg p-4 shadow-sm hover:shadow-xl transition"
-                >
-                  <p className="text-md text-center text-gray-800 font-medium">
-                    {point}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Right Orbit Diagram */}
-          <div className="relative lg:w-1/2 h-[500px] flex items-center justify-center">
-            {/* Center Circle */}
-            <div className="z-10 w-60 h-60 bg-green-100 border-2 border-[#FF7F06] rounded-full flex flex-col items-center justify-center text-center shadow-lg">
-              <FaLeaf size={42} className="text-green-600 mb-2" />
-              <h3 className="text-xl font-bold text-green-900">Jambulogix</h3>
-              <p className="text-sm text-green-700 mt-1">
-                Reduce • Reuse • Recycle
-              </p>
-            </div>
-
-            {/* Orbit Points */}
-            {sustainabilityPoints.map((text, idx) => {
-              const angle = (360 / sustainabilityPoints.length) * idx;
-              const radius = 195;
-              const x = radius * Math.cos((angle * Math.PI) / 180);
-              const y = radius * Math.sin((angle * Math.PI) / 180);
-
-              return (
-                <div
-                  key={idx}
-                  className="absolute w-44 h-44 bg-green-600 rounded-full border-2 border-white shadow-sm flex items-center justify-center text-center px-6 hover:shadow-lg shadow-green-400 transition"
-                  style={{ transform: `translate(${x}px, ${y}px)` }}
-                >
-                  <p className="text-sm font-medium text-white">{text}</p>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
       {/* Values Section */}
-      <section className="relative py-24 px-6 sm:px-0 bg-gradient-to-br from-gray-900 via-[#0f172a] to-black text-white overflow-hidden">
+      <section className="relative py-24 px-6 sm:px-0 bg-[#24577F] text-white overflow-hidden">
         {/* Background Glow Effects */}
         <div className="absolute inset-0 -z-10">
           <div className="absolute -top-32 -left-32 w-96 h-96 bg-[#FF7F06]/20 rounded-full blur-3xl animate-pulse" />
@@ -537,8 +469,8 @@ export default function AboutUsPage() {
         <div className="max-w-8xl mx-auto px-6 sm:px-20 grid xl:grid-cols-2 gap-16 items-center">
           {/* Left Side: Content */}
           <div className="relative z-10">
-            <h2 className="text-4xl sm:text-4xl font-extrabold mb-6 leading-tight">
-              Our <span className="text-[#FF7F06] text-4xl">Core Values</span>
+            <h2 className="text-4xl sm:text-3xl font-extrabold mb-6 leading-tight">
+              Our <span className="text-[#FF7F06] text-6xl">Core Values</span>
             </h2>
             <p className="text-gray-300 text-lg mb-4">
               Our values drive everything — from decision-making to daily
@@ -578,7 +510,7 @@ export default function AboutUsPage() {
               ].map((item, idx) => (
                 <div
                   key={idx}
-                  className="flex items-center gap-4 px-5 py-4 rounded-xl bg-white/5 border border-white/10 hover:border-[#FF7F06]/40 hover:translate-x-2 hover:scale-[1.02] transition-all duration-500 backdrop-blur-lg"
+                  className="flex items-center gap-4 px-5 py-4 rounded-xl bg-white/5 border hover:shadow-sm shadow-white border-white/10 hover:border-[#FF7F06]/40 hover:translate-x-2 hover:scale-[1.02] transition-all duration-500 backdrop-blur-lg"
                 >
                   <item.icon className="w-7 h-7 text-[#FF7F06]" />
                   <p className="text-gray-200 group-hover:text-white">
@@ -623,50 +555,17 @@ export default function AboutUsPage() {
         </div>
       </section>
 
-      {/* Partners Grid */}
-      <section className="py-20 px-6 sm:px-12 md:px-10 bg-white">
-        <div className="text-center mb-12">
-          <h2 className=" text-4xl md:text-4xl font-extrabold text-[#24577F] mb-4">
-            Trusted by{" "}
-            <span className="text-[#FF7F06] text-4xl"> Leading Brands </span>
-          </h2>
-          <p className="text-black max-w-3xl text-md mx-auto">
-            We collaborate with industry leaders across sectors. Choose a
-            category to view our partners.
-          </p>
-        </div>
-        <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-6 gap-3 sm:gap-10 justify-items-center max-w-8xl mx-auto ouverflow-hidden">
-          {partners.map((partner, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ delay: index * 0.1, duration: 0.1 }}
-              className="flex justify-center justify-items-center items-center h-24 w-36 bg-transparent rounded-xl shadow-sm   md:p-4 hover:shadow-md transition"
-            >
-              <Image
-                src={partner.logo}
-                alt={partner.name}
-                width={120}
-                height={60}
-                className="object-cover h-20 w-24 md:h-24 md:w-28"
-              />
-            </motion.div>
-          ))}
-        </div>
-      </section>
-
-      {/* Frictionless experiences  */}
-      <section className="bg-[#24577F] text-white py-16 px-6 md:px-0">
+      {/* The Jambulogix experiences  */}
+      <section className="bg-white text-white py-16 px-6 md:px-0">
         <div className="max-w-8xl mx-auto px-6 sm:px-20 text-center">
           {/* Title */}
-          <h2 className="text-3xl md:text-4xl font-extrabold text-white text text- mb-4">
+          <h2 className="text-3xl md:text-3xl font-extrabold text-[#24577F] text text- mb-4">
             The Jambulogix{" "}
-            <span className="text-[#FF7F06] text-4xl">Experience</span>
+            <span className="text-[#FF7F06] text-6xl">Experience</span>
           </h2>
 
           {/* Description */}
-          <p className="text-white/80 max-w-7xl mx-auto mb-14 text-base md:text-md leading-relaxed">
+          <p className="text-gray-700 max-w-7xl mx-auto mb-14 text-base md:text-md leading-relaxed capitalize">
             we create frictionless experiences for everyone we work with —
             customers, partners, shop floors, and our own people. Our approach
             blends deep operational expertise, industry-leading efficiency, and
@@ -676,30 +575,30 @@ export default function AboutUsPage() {
           {/* Grid */}
           <div className="grid md:grid-cols-3 gap-5 text-left">
             {/* Left side - Customers + Partners */}
-            <div className="space-y-10 ">
+            <div className="space-y-10 text-end ">
               {/* Customers */}
               <div>
-                <h3 className="text-2xl font-bold text-[#FF7F06] mb-3">
+                <h3 className="text-2xl font-bold text-[#24577F] mb-3">
                   Customers
                 </h3>
-                <ul className="space-y-2 list-disc list-inside text-white">
-                  <li>Seamless WH operations management</li>
-                  <li>SOP base management</li>
-                  <li>Seamless Transport & distribution management</li>
-                  <li>Value added services</li>
-                  <li>Transparent billing and reconciliation</li>
+                <ul className="space-y-2 list-disc list-inside text-gray-700 capitalize">
+                  <p>Seamless WH operations management</p>
+                  <p>SOP based management</p>
+                  <p>Flawless Transport & distribution management</p>
+                  <p>Value added services</p>
+                  <p>Transparent billing and reconciliation</p>
                 </ul>
               </div>
 
               {/* Partners */}
               <div>
-                <h3 className="text-2xl font-bold text-[#FF7F06] mb-3">
+                <h3 className="text-2xl font-bold text-[#24577F] mb-3">
                   Partners
                 </h3>
-                <ul className="space-y-2 list-disc list-inside text-white">
-                  <li>Partners with high integrity</li>
-                  <li>Automated Partner module</li>
-                  <li>Industry experienced Partners</li>
+                <ul className="space-y-2 list-disc list-inside text-gray-700 capitalize">
+                  <p>Industry experienced Partners</p>
+                  <p>Partners with high integrity</p>
+                  <p>Automated Partner module</p>
                 </ul>
               </div>
             </div>
@@ -725,60 +624,191 @@ export default function AboutUsPage() {
             </div>
 
             {/* Right side - Shop floor + People */}
-            <div className="space-y-10">
+            <div className="space-y-10 text-start">
               {/* Shop floor */}
               <div>
-                <h3 className="text-2xl font-bold text-[#FF7F06] mb-3">
+                <h3 className="text-2xl font-bold text-[#24577F] mb-3">
                   Shop Floor
                 </h3>
-                <ul className="space-y-2 list-disc list-inside text-white">
-                  <li>Smart Shopfloor operations</li>
-                  <li>Superior task management</li>
-                  <li>Quality assurance</li>
-                  <li>Scalable flexiblility</li>
-                  <li>Intuitive access to real-time information</li>
+                <ul className="space-y-2 list-disc list-inside text-gray-700 capitalize">
+                  <p>Smart Shopfloor operations</p>
+                  <p>Superior task management</p>
+                  <p>Quality assurance</p>
+                  <p>Scalable flexiblility</p>
+                  <p>Intuitive access to real-time information</p>
                 </ul>
               </div>
 
               {/* People */}
               <div>
-                <h3 className="text-2xl font-bold text-[#FF7F06] mb-3">
+                <h3 className="text-2xl font-bold text-[#24577F] mb-3">
                   People
                 </h3>
-                <ul className="space-y-2 list-disc list-inside text-white">
-                  <li>High calibre Team</li>
-                  <li>
-                    Highly compliant Team on Discipline, compliance & Quality
-                  </li>
-                  <li>Acknowledged & Accountable</li>
+                <ul className="space-y-2 list-disc list-inside text-gray-700 capitalize">
+                  <p>High calibre Team</p>
+                  <p>Highly compliant Team on Discipline & Quality</p>
+                  <p>Acknowledged & Accountable</p>
                 </ul>
               </div>
             </div>
           </div>
 
           {/* Footer Icons */}
-          <div className="flex flex-wrap justify-center gap-4 text-gray-700 text-md mt-14">
-            <span className="px-4 py-2 bg-gray-100 rounded-full">
+          <div className="flex flex-wrap justify-center gap-4 text-white text-md mt-14">
+            <span className="px-4 py-2 bg-[#24577F] rounded-full">
               Deep Understanding of operations
             </span>
-            <span className="px-4 py-2 bg-gray-100 rounded-full">
+            <span className="px-4 py-2 bg-[#24577F] rounded-full">
               Industry leading commercial efficiency
             </span>
-            <span className="px-4 py-2 bg-gray-100 rounded-full">
+            <span className="px-4 py-2 bg-[#24577F] rounded-full">
               Safe, Secure & Reliable
             </span>
-            <span className="px-4 py-2 bg-gray-100 rounded-full">
+            <span className="px-4 py-2 bg-[#24577F] rounded-full">
               Seamless customer collaboration
             </span>
-            <span className="px-4 py-2 bg-gray-100 rounded-full">
+            <span className="px-4 py-2 bg-[#24577F] rounded-full">
               Scalable solution
             </span>
           </div>
         </div>
       </section>
 
+      {/* Sustainable */}
+      <section className="w-full bg-[#24577F] py-24 px-6">
+        <div className="max-w-8xl mx-auto px-6 sm:px-20 flex flex-col lg:flex-row items-center justify-between gap-16">
+          {/* Left Text Block */}
+          <div className="lg:w-1/2">
+            <h2 className="text-3xl font-extrabold text-white mb-6">
+              Sustainability at
+              <span className="text-[#FF7F06] text-6xl"> Jambulogix</span>
+            </h2>
+            <p className="text-md text-white/80  mb-8">
+              We are building a greener logistics network that is at the heart
+              of everything we do. From optimizing routes to reduce empty miles,
+              to adopting energy-efficient vehicles and sustainable warehousing
+              practices, we strive to lower our carbon footprint without
+              compromising speed or reliability. Our commitment extends across
+              every touchpoint — leveraging technology, smarter operations, and
+              innovative solutions to make logistics cleaner, smarter, and more
+              responsible for the planet.
+            </p>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {[
+                "Sustainable warehousing practices",
+                "Carbon-neutral transportation ",
+                "Recycling and reusing resources",
+                "Eco-optimized packaging & delivery",
+              ].map((point, idx) => (
+                <div
+                  key={idx}
+                  className="bg-[#1c496b] border border-white items-center justify-center rounded-xl p-5 shadow-sm hover:shadow-xl transition"
+                >
+                  <p className="text-md text-center capitalize text-white font-medium">
+                    {point}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Right Orbit Diagram */}
+          <div className="relative lg:w-1/2 h-[500px] flex items-center justify-center">
+            {/* Center Circle */}
+            <div className="z-10 w-60 h-60 bg-green-100 border-2 border-[#FF7F06] rounded-full flex flex-col items-center justify-center text-center hover:shadow-2xl shadow-green-400 p-4">
+              <FaLeaf size={42} className="text-green-600 mb-2" />
+              <h3 className="text-xl font-bold text-[#FF7F06]">Jambulogix</h3>
+              <p className="text-sm text-green-700 mt-1">
+                Reduce • Reuse • Recycle
+              </p>
+            </div>
+
+            {/* Orbit Points */}
+            {sustainabilityPoints.map((text, idx) => {
+              const angle = (360 / sustainabilityPoints.length) * idx;
+              const radius = 195;
+              const x = radius * Math.cos((angle * Math.PI) / 180);
+              const y = radius * Math.sin((angle * Math.PI) / 180);
+
+              return (
+                <div
+                  key={idx}
+                  className="absolute w-44 h-44 bg-green-600 rounded-full border-2 border-white shadow-sm flex items-center justify-center text-center px-6 hover:shadow-2xl shadow-green-400 transition"
+                  style={{ transform: `translate(${x}px, ${y}px)` }}
+                >
+                  <p className="text-sm font-medium text-white">{text}</p>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* loss previntion section */}
+      <section className="bg-white py-24 ">
+        <div className="max-w-8xl mx-auto px-6 md:px-20">
+          {/* Title */}
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-extrabold text-[#24577F]">
+              Safety and{" "}
+              <span className="text-[#FF7F06] text-6xl">Loss Prevention</span>
+            </h2>
+            <p className="text-gray-700 mt-4 max-w-5xl text-md mx-auto">
+              We ensure complete protection with 24/7 monitoring, advanced
+              tracking, secure packing, and access-controlled systems — keeping
+              your operations safe and reliable.
+            </p>
+          </div>
+
+          {/* Grid layout */}
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            {/* Left - Feature list */}
+            <div className="space-y-6">
+              {[
+                { text: "24/7 Active Cameras", icon: Video },
+                { text: "Control Tower", icon: Eye },
+                { text: "Vehicle Tracking System", icon: Map },
+                { text: "24/7 Quick Response Team", icon: ShieldCheck },
+                { text: "Secure Packaging", icon: Package },
+                { text: "Digital Locks", icon: Lock },
+              ].map((item, idx) => (
+                <div
+                  key={idx}
+                  className="flex items-center gap-4 bg-[#24577F] shadow-sm border border-gray-100 rounded-xl px-5 py-4 hover:shadow-lg shadow-black transition"
+                >
+                  <item.icon className="w-8 h-8 text-[#FF7F06]" />
+                  <span className="text-whtie font-medium text-md">
+                    {item.text}
+                  </span>
+                </div>
+              ))}
+            </div>
+
+            {/* Right - Image grid */}
+            <div className="grid grid-cols-2 gap-4">
+              <img
+                src="/lp.jpg"
+                alt="Tracking System"
+                className="rounded-xl shadow-md object-cover object-top  h-40 md:h-60 w-full"
+              />
+              <img
+                src="/lp1.jpg"
+                alt="Digital Lock"
+                className="rounded-xl shadow-md object-cover object-top h-40 md:h-60 w-full"
+              />
+              <img
+                src="/lp2.jpg"
+                alt="CCTV Camera"
+                className="rounded-xl shadow-md object-cover object-bottom h-40 md:h-60 w-full col-span-2"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Growth strategis Section */}
-      <section className="relative py-24 px-6 sm:px-0 bg-gradient-to-br from-gray-900 via-[#0f172a] to-black text-white overflow-hidden">
+      <section className="relative py-24 px-6 sm:px-0 bg-[#24577F] text-white overflow-hidden">
         {/* Futuristic glowing background */}
         {/* <div className="absolute inset-0">
           <div className="absolute -top-32 -left-32 w-96 h-96 bg-[#FF7F06]/30 rounded-full blur-3xl animate-pulse" />
@@ -820,9 +850,9 @@ export default function AboutUsPage() {
 
           {/* Right Side: Content */}
           <div className="relative z-10">
-            <h2 className="text-4xl md:text-4xl font-extrabold mb-6 leading-tight">
+            <h2 className="text-4xl md:text-3xl font-extrabold mb-6 leading-tight">
               Our{" "}
-              <span className="text-[#FF7F06] text-4xl">Growth Strategy</span>
+              <span className="text-[#FF7F06] text-6xl">Growth Strategy</span>
             </h2>
             <p className="text-gray-300 text-md mb-8 max-w-xl">
               More than expansion — we are building an{" "}
@@ -841,7 +871,7 @@ export default function AboutUsPage() {
                   icon: Globe2,
                 },
                 {
-                  text: "Extending reach to over 10,000 PIN codes",
+                  text: "Extending reach to over 12,000 PIN codes",
                   icon: Network,
                 },
                 {
@@ -853,14 +883,14 @@ export default function AboutUsPage() {
                   icon: Rocket,
                 },
                 {
-                  text: "Targeting the entire Total Addressable Market (TAM)",
-                  icon: Rocket,
+                  text: "Creating transperent and relaiable systems",
+                  icon: Leaf,
                 },
                 { text: "Forging next-gen strategic alliances", icon: Users },
               ].map((item, idx) => (
                 <div
                   key={idx}
-                  className="flex items-center gap-4 px-5 py-4 rounded-xl bg-white/5 border border-white/10 hover:border-[#FF7F06]/40 hover:translate-x-2 hover:scale-[1.02] transition-all duration-500 backdrop-blur-lg"
+                  className="flex items-center gap-4 px-5 py-4 rounded-xl bg-white/5 border border-white/10 hover:border-[#FF7F06]/40 hover:shadow-sm shadow-white hover:translate-x-2 hover:scale-[1.02] transition-all duration-500 backdrop-blur-lg"
                 >
                   <item.icon className="w-7 h-7 text-[#FF7F06]" />
                   <p className="text-gray-200 group-hover:text-white">
@@ -905,78 +935,49 @@ export default function AboutUsPage() {
         </div>
       </section>
 
-      {/* loss previntion section */}
-      <section className="bg-black/50 py-24 ">
-        <div className="max-w-8xl mx-auto px-6 md:px-20">
-          {/* Title */}
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-extrabold text-white">
-              Safety and{" "}
-              <span className="text-green-600 text-4xl">Loss Prevention</span>
-            </h2>
-            <p className="text-white/80 mt-4 max-w-5xl text-md mx-auto">
-              We ensure complete protection with 24/7 monitoring, advanced
-              tracking, secure packing, and access-controlled systems — keeping
-              your operations safe and reliable.
-            </p>
-          </div>
-
-          {/* Grid layout */}
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            {/* Left - Feature list */}
-            <div className="space-y-6">
-              {[
-                { text: "24/7 Active Cameras", icon: Video },
-                { text: "Control Tower", icon: Eye },
-                { text: "Vehicle Tracking System", icon: Map },
-                { text: "High Value Check Under CCTV", icon: ShieldCheck },
-                { text: "Secure Packing", icon: Package },
-                { text: "Digital Locks", icon: Lock },
-              ].map((item, idx) => (
-                <div
-                  key={idx}
-                  className="flex items-center gap-4 bg-white shadow-sm border border-gray-100 rounded-xl px-5 py-4 hover:shadow-md shadow-green-400 transition"
-                >
-                  <item.icon className="w-8 h-8 text-red-600" />
-                  <span className="text-gray-800 font-medium text-md">
-                    {item.text}
-                  </span>
-                </div>
-              ))}
-            </div>
-
-            {/* Right - Image grid */}
-            <div className="grid grid-cols-2 gap-4">
-              <img
-                src="/lp.jpg"
-                alt="Tracking System"
-                className="rounded-xl shadow-md object-cover object-top  h-40 md:h-60 w-full"
+      {/* Partners Grid */}
+      <section className="py-20 px-6 sm:px-12 md:px-10 bg-white">
+        <div className="text-center mb-12">
+          <h2 className=" text-4xl md:text-4xl font-extrabold text-[#24577F] mb-4">
+            Trusted by{" "}
+            <span className="text-[#FF7F06] text-6xl"> Leading Brands </span>
+          </h2>
+          <p className="text-gray-700 max-w-3xl text-md mx-auto">
+            We collaborate with industry leaders across sectors. Choose a
+            category to view our partners.
+          </p>
+        </div>
+        <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-6 gap-3 sm:gap-10 justify-items-center max-w-8xl mx-auto ouverflow-hidden">
+          {partners.map((partner, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ delay: index * 0.1, duration: 0.1 }}
+              className="flex justify-center justify-items-center items-center h-24 w-36 bg-transparent border-2 border-[#24577F]/40 overflow-hidden rounded-2xl shadow-lg   md:p-4 hover:shadow-xl transition"
+            >
+              <Image
+                src={partner.logo}
+                alt={partner.name}
+                width={100}
+                height={60}
+                className="object-cover h-20 w-24 md:h-24 md:w-28"
               />
-              <img
-                src="/lp1.jpg"
-                alt="Digital Lock"
-                className="rounded-xl shadow-md object-cover object-top h-40 md:h-60 w-full"
-              />
-              <img
-                src="/lp2.jpg"
-                alt="CCTV Camera"
-                className="rounded-xl shadow-md object-cover object-bottom h-40 md:h-60 w-full col-span-2"
-              />
-            </div>
-          </div>
+            </motion.div>
+          ))}
         </div>
       </section>
 
-      {/* The jambulogix exprience */}
+      {/* The exprience */}
       <section className="bg-[#24577F] text-white py-16 px-6 sm:px-20 text-center">
-        <h2 className="text-4xl font-extrabold mb-4">
+        <h2 className="text-5xl font-extrabold mb-4">
           Gain Leverage for Your
-          <span className="text-[#FF7F06] text-4xl">
+          <span className="text-[#FF7F06] text-6xl">
             {" "}
             Business with Jambulogix
           </span>
         </h2>
-        <p className="mb-6 max-w-7xl text-md mx-auto">
+        <p className="mb-6 max-w-5xl text-md mx-auto">
           We’d love to hear from you! Whether you’re a business looking for
           scalable logistics solutions, a partner exploring collaboration, or a
           candidate interested in joining our journey — we’re just a message
@@ -997,7 +998,7 @@ export default function AboutUsPage() {
 
         <h2 className="text-4xl font-extrabold mb-4">
           Ready to
-          <span className="text-[#FF7F06] text-4xl">
+          <span className="text-[#FF7F06] text-6xl">
             {" "}
             Simplify Your Logistics?
           </span>

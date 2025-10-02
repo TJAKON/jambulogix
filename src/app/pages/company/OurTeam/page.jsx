@@ -116,8 +116,8 @@ export default function Page() {
         <div className="absolute inset-0 bg-black/80" />
         <div className="relative z-10 px-6">
           <h1 className="text-white text-4xl sm:text-5xl max-w-6xl font-bold mb-4">
-            "Alone we can do so little - together we can do so much.” — Helen
-            Keller
+            "Alone we can do so little - together we can do so much”.....
+            <span className=" text-3xl"> Helen Keller</span>
           </h1>
           <p className="text-white text-lg sm:text-xl max-w-6xl mx-auto">
             This belief moves us every day. Meet the people powering India’s
@@ -135,22 +135,24 @@ export default function Page() {
               alt="Team Collaboration"
               width={600}
               height={400}
-              className="rounded-3xl shadow-2xl w-full h-[600px] object-cover"
+              className="rounded-3xl shadow-2xl w-full h-[500px] object-cover object-center"
             />
           </div>
 
           {/* Text Block */}
           <div>
-            <h2 className="text-4xl sm:text-6xl font-extrabold text-[#24577F] leading-tight">
-              The Vision Behind{" "}
-              <span className="text-[#FF7F06] sm:text-7xl">Jambulogix {"  "}</span>
+            <h2 className="text-4xl sm:text-4xl font-extrabold text-[#24577F] leading-tight mb-5">
+              Vision Behind{" "}
+              <span className="text-[#FF7F06] sm:text-6xl">
+                Jambulogix {"  "}
+              </span>
             </h2>
             {/* <h2 className="text-4xl sm:text-5xl font-extrabold mb-6 text-[#24577F] leading-tight">
               <span className="text-[#24577F]"> A Note from {"  "}</span>
               <span className="text-[#FF7F06]">Our Founder </span>
             </h2> */}
 
-            <p className="text-gray-600 text-xl mb-6 leading-relaxed text-clip">
+            <p className="text-gray-600 text-md mb-6 leading-relaxed text-clip">
               In an increasingly connected world, logistics is no longer just
               about moving goods from Point A to Point B — it’s about enabling
               businesses to grow, customers to trust, and experiences to be
@@ -234,10 +236,13 @@ export default function Page() {
       {/* Team Members */}
       <section className="py-20 px-6 sm:px-12 md:px-20 bg-[#F9FAFB]">
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#24577F] mb-4">
-            The Navigators - Charting the course for what’s next
+          <h2 className="text-3xl sm:text-4xl max-w-5xl mx-auto capitalize font-extrabold text-[#24577F] mb-4">
+            <span className="text-[#FF7F06] sm:text-6xl">
+              The Navigators{"  "}
+            </span>
+            Charting the course for what’s next
           </h2>
-          <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+          <p className="text-gray-600 text-lg max-w-7xl mx-auto">
             At the intersection of vision and execution, The Navigators are the
             minds that steer Jambulogix toward its future. We decode complexity,
             identify opportunity, and design strategies that keep us ahead of
@@ -252,7 +257,7 @@ export default function Page() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: idx * 0.1 }}
-              className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl text-center transition-all"
+              className="bg-white rounded-2xl border-2 border-[#24577F] p-6 shadow-lg hover:shadow-xl text-center transition-all"
             >
               <div className="w-28 h-28 mx-auto mb-4 overflow-hidden rounded-full">
                 <img
@@ -273,10 +278,15 @@ export default function Page() {
 
       <section className="py-20 px-6 sm:px-12 md:px-20 bg-[#F9FAFB]">
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#24577F] mb-4">
-            The Catalysts - Fueling momentum, driving change
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#24577F] mb-4"></h2>
+
+          <h2 className="text-3xl sm:text-4xl max-w-5xl mx-auto capitalize font-extrabold text-[#24577F] mb-4">
+            <span className="text-[#FF7F06] sm:text-6xl">
+              The Catalysts{"  "}
+            </span>
+            - Fueling momentum, driving change
           </h2>
-          <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+          <p className="text-gray-600 text-lg max-w-7xl mx-auto">
             When vision turns into action, that’s where we come in. We bring
             clarity, speed, and precision to every step of execution. With a
             deep understanding of strategy and a bias for progress, we drive
@@ -292,7 +302,7 @@ export default function Page() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: idx * 0.1 }}
-              className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl text-center transition-all"
+              className="bg-white border-2 border-[#24577F] rounded-2xl p-6 shadow-lg hover:shadow-xl text-center transition-all"
             >
               <div className="w-28 h-28 mx-auto mb-4 overflow-hidden rounded-full">
                 <img
@@ -314,16 +324,19 @@ export default function Page() {
       {/* Vision Section */}
       <section
         className="bg-[#24577F] h-[60vh] bg-cover bg-center text-white py-20 px-6 sm:px-12 md:px-20"
-        style={{ backgroundImage: "url('/70.jpg')" }}
+        style={{ backgroundImage: "url('/group.jpg')" }}
       >
-        <div className="text-center max-w-3xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Built on Belief. Fueled by People.
+        <div className="text-center ">
+          <h2 className="text-3xl sm:text-4xl max-w-6xl mx-auto capitalize font-extrabold text-white mb-4">
+            <span className="text-[#FF7F06] sm:text-6xl">
+              Built on Belief.{"  "}
+            </span>
+            Fueled by People.
           </h2>
           <h5 className="text-3xl md:text-3xl font-bold mb-4">
             Our people. Our strength. Our story.
           </h5>
-          <p className="text-lg text-white/80">
+          <p className="text-lg text-white/80 max-w-7xl mx-auto">
             At Jambulogix, our people are the backbone of everything we do. From
             the ground to the grid, every role matters — and every voice is
             valued. We’re building a logistics ecosystem that’s not just fast,
@@ -335,10 +348,11 @@ export default function Page() {
 
       {/* CTA */}
       <section className="py-20 px-6 sm:px-12 md:px-20 bg-white text-center">
-        <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-[#24577F]">
-          Want to Join Our Mission?
+        <h2 className="text-3xl sm:text-4xl max-w-6xl mx-auto capitalize font-extrabold text-[#24577F] mb-4">
+          Want to Join
+          <span className="text-[#FF7F06] sm:text-6xl"> Our Mission!{"  "}</span>
         </h2>
-        <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-6">
+        <p className="text-md text-gray-600 max-w-2xl mx-auto mb-6">
           We’re always looking for dreamers, doers, and disruptors —
           people-first thinkers who want to build something meaningful
         </p>

@@ -8,7 +8,9 @@ export default function CompetitiveEdge() {
     { title: "Healthcare & Pharma", image: "/47.jpg" },
     { title: "eCommerce", image: "/50.jpg" },
     { title: "Engineering & Industrial Goods", image: "/48.jpg" },
-    { title: "Perishable Goods", image: "/54.jpg" },
+    { title: "FMCG", image: "/54.jpg" },
+    { title: "Fashon & Lifestyle", image: "/54.jpg" },
+    { title: "MSME", image: "/54.jpg" },
   ];
 
   return (
