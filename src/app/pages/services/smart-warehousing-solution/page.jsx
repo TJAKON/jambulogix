@@ -44,6 +44,13 @@ const subServices = [
       "At Jambulogix, our upcoming Hub-in-Hub model brings everything under one roof — sorting, fulfilment, cross-dock, and last-mile prep — enabling a smarter, faster, and more agile supply chain. It’s not just a hub — it’s an ecosystem, built to reduce handovers, cut delays, and put your cargo on the move with precision. One hub. Infinite flow. Powered by Jambulogix.",
     image: "/41.jpg",
   },
+  {
+    title: "QuickRack",
+    subtitle: "Safe Shelves, Smarter Retail. Coming Soon",
+    description:
+      "QuickRack (Retail Warehousing) is designed to give retailers a competitive edge through smarter, greener, and more scalable storage solutions. Our facilities are strategically located, digitally enabled, and built with efficiency in mind—ensuring products move from shelf to shopper with speed and reliability. From inventory optimization to last-mile readiness, we provide seamless support for retailers to grow, adapt, and thrive in a fast-changing market",
+    image: "/41.jpg",
+  },
 ];
 
 const steps = [
@@ -129,15 +136,17 @@ export default function Page() {
         <div className="max-w-8xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
           {/* Text Section */}
           <div>
-            <h2 className="text-3xl sm:text-5xl md:text-6xl lg:text-6xl font-extrabold text-[#24577F] mb-6 leading-tight">
-              Smart, Sustainable,
-              <span className="text-[#FF7F06]">
-                Customer-First Warehousing..
-              </span>
-              ?
+            <h2 className="  text-3xl sm:text-4xl md:text-4xl lg:text-6xl font-extrabold text-[#24577F] ">
+              Smart Sustainable
+            </h2>
+            <h2 className="text-3xl sm:text-4xl md:text-4xl lg:text-6xl font-extrabold text-[#FF7F06] ">
+              Customer - First
+            </h2>
+            <h2 className="text-3xl sm:text-4xl md:text-4xl lg:text-6xl font-extrabold text-[#FF7F06] mb-3 ">
+              Warehousing...
             </h2>
 
-            <p className="text-black text-md md:text-lg leading-relaxed mb-4">
+            {/* <p className="text-gray-700 text-md md:text-lg leading-relaxed mb-4">
               In today’s competitive landscape, warehousing is not just about
               storage — it’s about enabling faster fulfilment, accurate
               deliveries, and seamless inventory flow. At Jambulogix, our Smart
@@ -145,36 +154,43 @@ export default function Page() {
               intelligent operations to give your supply chain the edge it
               needs.
             </p>
-            <p className="text-black text-md sm:text-lg leading-relaxed">
+            <p className="text-gray-700 text-md sm:text-lg leading-relaxed">
               From sorting and fulfillment to last-mile prep and cross-docking,
               we offer comprehensive warehousing solutions that reduce
               turnaround time, minimize errors, and improve customer
               satisfaction.
-            </p>
-            <p className="text-black text-md sm:text-lg leading-relaxed">
+            </p> */}
+            <p className="text-gray-700 text-md sm:text-md leading-relaxed mb-3">
               Modern warehousing is more than storage — it’s about speed,
               accuracy, and intelligent flow. At Jambulogix, our Smart
               Warehousing combines advanced infrastructure with data-driven
               operations to give your supply chain the agility it needs.
             </p>
-            <p className="text-black text-md sm:text-lg leading-relaxed">
+            <p className="text-gray-700 text-md sm:text-md leading-relaxed mb-3">
               From fast sorting and fulfillment to last-mile prep and
               cross-docking, we streamline every step to reduce turnaround time,
               cut errors, and boost customer satisfaction.
             </p>
-            <p className="text-black text-md sm:text-lg leading-relaxed">
+            <p className="text-gray-700 text-md sm:text-md leading-relaxed mb-3">
               With our focus on Green Warehousing, we integrate energy-efficient
               and sustainable practices across our facilities — helping you grow
               responsibly.
             </p>
-            <p className="text-black text-md sm:text-lg leading-relaxed">
+            <p className="text-gray-700 text-md sm:text-md leading-relaxed mb-3">
               Most importantly, we put you first. At Jambulogix, you’re not just
               a client — you’re a partner. Our collaboration is built on trust,
               transparency, and a shared goal of success.
             </p>
-            <p className="text-black text-md sm:text-lg leading-relaxed">
-              With Jambulogix, expect more than logistics. Expect a relationship
+            <p className="text-black font-bold text-md sm:text-lg">
+              With Jambulogix, expect more than logistics. Expect a
+              <span className=" uppercase font-bold text-[#24577F]">
+                {" "}
+                RELATIONSHIP{" "}
+              </span>
               that delivers.
+            </p>
+            <p className="text-black font-bold text-md sm:text-lg text-end leading-relaxed">
+              box with jlx logo change
             </p>
           </div>
 
@@ -201,7 +217,7 @@ export default function Page() {
               <button
                 key={service.title}
                 onClick={() => setActiveTab(service)}
-                className={`text-md md:text-4xl p-3 font-semibold transition duration-100 ${
+                className={`text-md md:text-3xl p-3 font-semibold transition duration-100 ${
                   activeTab.title === service.title
                     ? "text-white border-[#FF7F06] bg-[#24577F] rounded-2xl shadow-2xl mb-1 md:mb-5"
                     : "text-[#24577F] hover:text-[#FF7F06]"
@@ -232,10 +248,10 @@ export default function Page() {
 
             {/* Text */}
             <div className="w-full md:w-1/3 text-center md:text-left">
-              <h3 className="text-3xl sm:text-5xl md:text-5xl font-extrabold text-[#FF7F06] mb-4 leading-tight">
+              <h3 className="text-3xl sm:text-5xl md:text-4xl font-extrabold text-[#FF7F06] mb-4 leading-tight">
                 {activeTab.subtitle}
               </h3>
-              <p className="text-black text-base sm:text-md leading-relaxed">
+              <p className="text-gray-700 text-base sm:text-md leading-relaxed">
                 {activeTab.description}
               </p>
             </div>
@@ -244,14 +260,14 @@ export default function Page() {
       </section>
 
       {/* Highlights + Benefits */}
-      <section className="py-16 px-6 sm:px-20 bg-[#0A1A2F]">
+      <section className="py-16 px-6 sm:px-20 bg-[#24577F]">
         <div className="max-w-8xl mx-auto  text-center">
-          <h2 className="text-4xl sm:text-5xl font-extrabold text-white mb-12">
-            Key <span className="text-[#FF7F06]"> Highlights</span>
+          <h2 className="text-4xl sm:text-4xl font-extrabold text-white mb-12">
+            Key <span className="text-[#FF7F06] text-6xl"> Highlights</span>
           </h2>
 
           <motion.div
-            className="grid sm:grid-cols-5 gap-6 md:gap-10 mb-6 md:mb-20 text-center"
+            className="grid sm:grid-cols-3  max-w-7xl mx-auto gap-6 md:gap-10 mb-6  text-center"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
@@ -261,6 +277,31 @@ export default function Page() {
               { icon: "🚀", text: "Faster Turnarounds" },
               { icon: "✈️", text: "Real-Time Visibility" },
               { icon: "🔗", text: "Error-Free Operations" },
+            ].map((item, idx) => (
+              <motion.div
+                key={idx}
+                className="bg-white  p-5 md:p-8 rounded-2xl shadow-lg border hover:border-[#FF7F06] hover:bg-black/30 hover:text-white hover:shadow-xl transition duration-300 cursor-pointer group"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+              >
+                <div className="text-4xl mb-4 text-[#FF7F06] group-hover:scale-110 transition">
+                  {item.icon}
+                </div>
+                <p className="font-semibold text-lg text-[#0A1A2F] group-hover:text-white leading-relaxed">
+                  {item.text}
+                </p>
+              </motion.div>
+            ))}
+          </motion.div>
+          <motion.div
+            className="grid sm:grid-cols-2 max-w-3xl mx-auto gap-6 md:gap-10  text-center"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            transition={{ staggerChildren: 0.2 }}
+          >
+            {[
               { icon: "🔗", text: "Lesser Carbon Footprints" },
               { icon: "🔗", text: "Built for Scale" },
             ].map((item, idx) => (
@@ -289,7 +330,7 @@ export default function Page() {
           <h2 className="text-4xl sm:text-5xl font-extrabold text-[#24577F] mb-3 md:mb-6">
             Who is it for?
           </h2>
-          <p className="text-black text-md md:text-lg mb-8 md:mb-16 max-w-6xl mx-auto leading-relaxed">
+          <p className="text-gray-700 text-md md:text-lg mb-8 md:mb-16 max-w-6xl mx-auto leading-relaxed">
             Our warehousing solutions are built to grow with you — whether
             you're a ambitious start-up, a scaling SME, or a large enterprise.
             At Jambulogix, we offer tech-enabled infrastructure, fast turnaround
@@ -335,11 +376,14 @@ export default function Page() {
       </section>
 
       {/* Highlights + Benefits */}
-      <section className="py-16 md:py-24 px-6 sm:px-20 bg-gradient-to-b from-[#F9FAFB] to-white">
-        <div className="max-w-8xl mx-auto">
-          <h2 className="text-4xl sm:text-5xl font-extrabold text-[#24577F] mb-12 text-center">
-            Key Benefits
+      <section className="py-16 md:py-24 px-6 sm:px-20 bg-[#24577F]">
+        <div className="max-w-8xl mx-auto text-center">
+         
+
+          <h2 className="text-4xl sm:text-4xl font-extrabold text-white mb-12">
+            Values we <span className="text-[#FF7F06] text-6xl"> Deliver</span>
           </h2>
+
 
           <motion.div
             className="grid sm:grid-cols-5 gap-6 md:gap-10 text-center"
@@ -349,11 +393,26 @@ export default function Page() {
             transition={{ staggerChildren: 0.2 }}
           >
             {[
-              { icon: "🔐", text: "Scalable Support - Grow without infrastructure burden" },
-              { icon: "⏱️", text: "Faster Turnarounds Speed that meets market demands" },
-              { icon: "💰", text: "Smart Visibility - Real-time Inventory & movement tracking" },
-              { icon: "💰", text: "Green Operations - Lower Carbon Footprint Future-ready" },
-              { icon: "💰", text: "Reliable Partnership - Customer first, always-on support" },
+              {
+                icon: "🔐",
+                text: "Scalable Support - Grow without infrastructure burden",
+              },
+              {
+                icon: "⏱️",
+                text: "Faster Turnarounds - Speed that meets market demands",
+              },
+              {
+                icon: "💰",
+                text: "Smart Visibility - Real-time Inventory & movement tracking",
+              },
+              {
+                icon: "💰",
+                text: "Green Operations - Lower Carbon Footprint Future-ready",
+              },
+              {
+                icon: "💰",
+                text: "Reliable Partnership - Customer first, always-on support",
+              },
             ].map((benefit, idx) => (
               <motion.div
                 key={idx}
@@ -365,23 +424,25 @@ export default function Page() {
                 <div className="text-4xl mb-4 text-[#FF7F06] group-hover:scale-110 transition">
                   {benefit.icon}
                 </div>
-                <p className="font-semibold text-lg text-gray-700 leading-relaxed">
+                <p className="font-semibold text-lg text-[#24577F] leading-relaxed">
                   {benefit.text}
                 </p>
               </motion.div>
             ))}
           </motion.div>
+
+          heading should be larger size and the content should be in smaller
         </div>
       </section>
 
       {/* How Does It Work */}
-      <section className="py-16 px-6 sm:px-20 bg-[#0A1A2F]">
+      {/* <section className="py-16 px-6 sm:px-20 bg-[#0A1A2F]">
         <div className="max-w-8xl mx-auto">
           <h2 className="text-4xl sm:text-6xl font-extrabold text-white mb-8 text-center">
             How does it <span className=" text-[#FF7F06]">work...?</span>
           </h2>
 
-          {/* Step Navigation */}
+        
           <motion.div
             className="flex flex-wrap gap-4 justify-center mb-4"
             initial="hidden"
@@ -407,7 +468,7 @@ export default function Page() {
             ))}
           </motion.div>
 
-          {/* Step Content */}
+       
           <motion.div
             key={activeStep.label}
             initial={{ opacity: 0, y: 40 }}
@@ -432,7 +493,7 @@ export default function Page() {
             </div>
           </motion.div>
         </div>
-      </section>
+      </section> */}
 
       {/* Testimonials Section */}
       <TestimonialCarousel />

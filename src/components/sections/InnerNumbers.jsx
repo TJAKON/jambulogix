@@ -46,35 +46,55 @@ export default function InnerNumbers() {
   const stats = [
     {
       label: "SQFT Warehouse Space",
-      value: "200000",
+      value: "2,00,000",
       suffix: "+",
     },
-    { label: "Shipments Processing Daily", value: "400000", suffix: " +" },
+    { label: "Shipments Processing Daily", value: "4,00,000", suffix: " +" },
     { label: "Livelihood Daily ", value: "1000", suffix: "+" },
-    { label: "Live Warehousing", value: "5", suffix: "states +" },
+    { label: "Live Warehousing", value: "7", suffix: "states +" },
   ];
 
   return (
-    <section className="bg-[#0A1A2F] text-white py-16 px-6 sm:px-20">
+    <section className="bg-[#24577F] text-white py-16 px-6 sm:px-20">
       <div className="max-w-8xl mx-auto text-center mb-12">
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
-          className="text-3xl sm:text-5xl font-bold mb-4"
+          className="text-3xl sm:text-4xl font-bold mb-4"
         >
-          Powering Growth at Scale — With Speed, Precision & Purpose
+          Powering Growth at Scale
+          <span className="text-[#FF7F06] font-extrabold text-6xl">
+            {" "}
+            With Speed, Precision &
+          </span>
         </motion.h2>
+        <motion.h2
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
+          className="text-3xl sm:text-4xl font-bold text-end mb-4 max-w-3xl mx-auto"
+        >
+          <span className="text-[#FF7F06] font-extrabold text-6xl">
+            {" "}
+            Purpose
+          </span>
+        </motion.h2>
+
+        {/* <h2 className="text-3xl md:text-4xl font-extrabold text-[#24577F]">
+              Safety and{" "}
+              <span className="text-[#FF7F06] text-6xl">Loss Prevention</span>
+            </h2> */}
+
         <motion.p
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.7 }}
-          className="text-white/70 max-w-3xl mx-auto"
+          className="text-white/70 max-w-5xl mx-auto capitalize"
         >
-          At Jambulogix, we don’t just move products — we move industries
-          forward. With a rapidly growing footprint and future-ready
-          infrastructure, we’re redefining what warehousing efficiency looks
-          like
+          we don’t just move products — we move industries forward. With a
+          rapidly growing footprint and future-ready infrastructure, we’re
+          redefining what warehousing efficiency looks like
         </motion.p>
       </div>
 
@@ -85,10 +105,10 @@ export default function InnerNumbers() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: idx * 0.2, duration: 0.6 }}
-            className="rounded-2xl text-center bg-[#112233] p-6 shadow-lg hover:scale-105 transition-transform text-nowrap"
+            className="rounded-2xl text-center bg-white p-6 shadow-lg hover:scale-105 transition-transform text-nowrap"
           >
             <Counter target={stat.value + stat.suffix} />
-            <p className="text-xs md:text-sm text-white/80 tracking-wide">
+            <p className="text-xs md:text-sm text-[#24577F] tracking-wide">
               {stat.label}
             </p>
           </motion.div>

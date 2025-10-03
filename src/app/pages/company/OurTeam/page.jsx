@@ -178,21 +178,40 @@ export default function Page() {
 
       <section className="py-24 px-6 sm:px-20 bg-white/20">
         <div className="max-w-8xl mx-auto">
-          <h2 className="text-4xl sm:text-5xl font-bold text-center text-[#FF7F06] mb-4">
+          {/* <h2 className="text-4xl sm:text-5xl font-bold text-center text-[#FF7F06] mb-4">
             Our Board - Guiding the Vision
+          </h2> */}
+
+          <h2 className="text-4xl font-extrabold text-[#24577F] mx-auto text-center max-w-7xl mb-6 leading-tight drop-shadow-lg">
+            Our Board
+            <span className=" text-6xl text-[#FF7F06]">
+              {" "}
+              Guiding the Vision
+            </span>
           </h2>
 
           <h5 className="text-black text-4xl sm:text-2xl max-w-7xl text-center mx-auto font-bold mb-4">
-            – Anchoring our purpose with experience and foresight.” Behind every
+            "Anchoring our purpose with experience and foresight" Behind every
             bold move is a foundation of insight.
           </h5>
-          <p className="text-black text-lg sm:text-md max-w-6xl mx-auto text-center mb-16">
-            Our Board brings the depth of experience, strategic clarity, and
-            long-term perspective that keeps Jambulogix grounded in purpose and
-            geared for progress. With eyes on the horizon and hands steady on
-            the wheel, our Board help ensure every leap forward is backed by
-            wisdom, integrity, and intent.
-          </p>
+          <h3 className=" flex">
+            <p className="text-black text-lg sm:text-md max-w-6xl mx-auto text-center mb-16">
+              Our Board brings the depth of experience, strategic clarity, and
+              long-term perspective that keeps Jambulogix grounded in purpose
+              and geared for progress. With eyes on the horizon and hands steady
+              on the wheel, our Board help ensure every leap forward is backed
+              by
+              <span className=" text-[#24577F] uppercase font-extrabold">
+                {" "}
+                wisdom, integrity,{" "}
+                <span className=" text-black lowercase font-normal">
+                  {" "}
+                  and
+                </span>{" "}
+                intent.
+              </span>
+            </p>
+          </h3>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-4  gap-8">
             {leaders.map((leader, idx) => (
@@ -323,21 +342,22 @@ export default function Page() {
 
       {/* Vision Section */}
       <section
-        className="bg-[#24577F] h-[60vh] bg-cover bg-center text-white py-20 px-6 sm:px-12 md:px-20"
+        className=" relative bg-[#24577F] h-[80vh] bg-cover bg-top text-white py-20 px-6 sm:px-12 md:px-20"
         style={{ backgroundImage: "url('/group.jpg')" }}
       >
-        <div className="text-center ">
+      <div className="absolute inset-0 bg-black/40" />
+        <div className="text-center items-start justify-start z-10 relative max-w-7xl mx-auto">
           <h2 className="text-3xl sm:text-4xl max-w-6xl mx-auto capitalize font-extrabold text-white mb-4">
             <span className="text-[#FF7F06] sm:text-6xl">
               Built on Belief.{"  "}
             </span>
             Fueled by People.
           </h2>
-          <h5 className="text-3xl md:text-3xl font-bold mb-4">
+          <h5 className="text-3xl md:text-3xl font-bold mb-4 capitalize">
             Our people. Our strength. Our story.
           </h5>
-          <p className="text-lg text-white/80 max-w-7xl mx-auto">
-            At Jambulogix, our people are the backbone of everything we do. From
+          <p className="text-lg text-white max-w-7xl mx-auto capitalize">
+            our people are the backbone of everything we do. From
             the ground to the grid, every role matters — and every voice is
             valued. We’re building a logistics ecosystem that’s not just fast,
             but fair, inclusive, and deeply human. Because when people thrive,
@@ -350,7 +370,10 @@ export default function Page() {
       <section className="py-20 px-6 sm:px-12 md:px-20 bg-white text-center">
         <h2 className="text-3xl sm:text-4xl max-w-6xl mx-auto capitalize font-extrabold text-[#24577F] mb-4">
           Want to Join
-          <span className="text-[#FF7F06] sm:text-6xl"> Our Mission!{"  "}</span>
+          <span className="text-[#FF7F06] sm:text-6xl">
+            {" "}
+            Our Mission!{"  "}
+          </span>
         </h2>
         <p className="text-md text-gray-600 max-w-2xl mx-auto mb-6">
           We’re always looking for dreamers, doers, and disruptors —

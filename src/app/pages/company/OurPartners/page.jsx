@@ -313,22 +313,22 @@ export default function OurPartnersPage() {
       <section className="py-20 px-4 sm:px-10 md:px-20 bg-[#F4F6F8]">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16 ">
-            <h2 className="text-5xl font-bold capitalize text-[#24577F] mb-4 max-w-5xl mx-auto">
+            <h2 className="text-4xl font-extrabold capitalize text-[#24577F] mb-4 max-w-5xl mx-auto">
               Partner with{"  "}
-              <span className=" text-[#FF7F06] text-8xl font-extrabold">
+              <span className=" text-[#FF7F06] text-6xl font-extrabold">
                 Jambulogix
               </span>
             </h2>
-            <h2 className="text-3xl font-bold capitalize text-[#24577F] mb-4 max-w-7xl mx-auto">
+            <h2 className="text-4xl font-extrabold capitalize text-[#24577F] mb-4 max-w-7xl mx-auto">
               where logistics meets{"  "}
-              <span className=" text-[#FF7F06] font-extrabold text-5xl">
+              <span className=" text-[#FF7F06] font-extrabold text-4xl">
                 {" "}
                 opportunity, efficiency, {"  "}
               </span>
               <span className=" text-[#24577F] font-extrabold capitalize">
-                And
+                &
               </span>
-              <span className=" text-[#FF7F06] font-extrabold text-5xl">
+              <span className=" text-[#FF7F06] font-extrabold text-4xl">
                 {" "}
                 impact
               </span>

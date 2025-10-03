@@ -70,9 +70,9 @@ const values = [
     desc: "We move fast but never compromise on ethics.",
   },
   {
-    icon: "👥",
-    label: "People First",
-    desc: "We create a safe, inclusive, and empowering workplace.",
+    icon: "🏆",
+    label: "Excellence in execution",
+    desc: "We set the bar high and keep raising it.",
   },
   {
     icon: "🤝",
@@ -80,10 +80,23 @@ const values = [
     desc: "We grow stronger by working together — across teams, across geographies.",
   },
   {
-    icon: "🏆",
-    label: "Excellence as Standard",
-    desc: "We set the bar high and keep raising it.",
+    icon: "👥",
+    label: "People First",
+    desc: "We create a safe, inclusive, and empowering workplace.",
   },
+
+  {
+    icon: "🫡",
+    label: "Respect for All",
+    desc: "We value diversity, inclusion, and fairness—treating every individual with dignity.",
+  },
+  {
+    icon: "🏫",
+    label: "Learning Culture",
+    desc: "We encourage curiosity, knowledge sharing, and constant skill development.",
+  },
+
+  
 ];
 
 export default function Page() {
@@ -100,31 +113,40 @@ export default function Page() {
           />
         </div>
 
-        <div className="relative z-10 h-full flex flex-col justify-center items-start px-6 sm:px-16 max-w-7xl mx-auto text-white">
+        <div className="relative z-10 h-full flex flex-col text-center justify-center items-center px-6 sm:px-16 max-w-7xl mx-auto text-white">
           <motion.h1
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-5xl sm:text-6xl font-bold mb-6 text-[#24577F] leading-tight drop-shadow-lg"
+            className="text-5xl sm:text-6xl font-extrabold mb-6 text-[#FF7F06] leading-tight drop-shadow-lg"
           >
             Your Ideas{" "}
-            <span className="text-white text-9xl font-extrabold ">
+            <span className="text-white text-8xl font-extrabold ">
               {" "}
               Your Move
             </span>
             <br /> Our{" "}
-            <span className="text-white text-9xl font-extrabold ">Mission</span>
+            <span className="text-white text-8xl font-extrabold ">Mission</span>
           </motion.h1>
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.6 }}
-            className="text-lg sm:text-lg text-white/90 max-w-5xl"
+            className="text-lg sm:text-lg text-white/90 max-w-5xl text-start"
           >
-            At Jambulogix, speed meets strategy, tech meets teamwork — and every
-            voice shapes the journey. If you believe in solving real-world
-            challenges and building what’s next, you belong here.
+            With us people don’t just follow plans —
+            <span className="font-bold uppercase">they make them.</span>
+          </motion.p>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2, duration: 0.6 }}
+            className="text-lg sm:text-lg text-white/90 max-w-5xl capitalize mt-4 "
+          >
+            speed meets strategy, tech meets teamwork — and every voice shapes
+            the journey. If you believe in solving real-world challenges and
+            building what’s next, you belong here.
           </motion.p>
         </div>
       </section>
@@ -137,8 +159,8 @@ export default function Page() {
           {/* Text Block */}
           <div>
             <h2 className="text-4xl sm:text-4xl font-extrabold mb-6 text-[#24577F] leading-tight">
-              Why Work at{" "}
-              <span className="text-[#FF7F06] text-6xl">Jambulogix..?</span>
+              Grow with{" "}
+              <span className="text-[#FF7F06] text-6xl">Jambulogix..</span>
             </h2>
 
             <p className="text-gray-600 text-md mb-6 leading-relaxed capitalize">
@@ -151,7 +173,8 @@ export default function Page() {
               ownership and innovation.
             </p>
 
-            <ul className="text-gray-700 text-md space-y-4 list-disc pl-6 capitalize">
+            <ul className="text-gray-700 text-md space-y-2 list-disc pl-6 capitalize">
+              cards style with flip
               <li>
                 Grow Fast – Accelerate your career in a high-growth
                 logistics-tech environment
@@ -186,12 +209,61 @@ export default function Page() {
           {/* Image Block */}
           <div>
             <Image
-              src="/57.jpg"
+              src="/110.jpg"
               alt="Team Collaboration"
               width={600}
               height={400}
-              className="rounded-3xl shadow-2xl w-full h-[600px] object-cover"
+              className="rounded-3xl w-full h-[600px] object-cover object-top"
             />
+          </div>
+        </div>
+      </section>
+
+      <section className="py-12 px-6 sm:px-20 bg-gradient-to-b from-white to-[#F9FAFB] text-[#0A1A2F]">
+        <div className="max-w-8xl mx-auto grid sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-2 gap-16 items-center">
+          {/* Image Block */}
+          <div>
+            <Image
+              src="/109.jpg"
+              alt="Team Collaboration"
+              width={600}
+              height={400}
+              className="rounded-3xl w-full h-[600px] object-cover"
+            />
+          </div>
+
+          {/* Text Block */}
+          <div>
+            <h2 className="text-4xl sm:text-4xl font-extrabold mb-6 text-[#24577F] leading-tight">
+              Unity in Diversity{" "}
+              <span className="text-[#FF7F06] text-6xl">
+                The Jambulogix Way..
+              </span>
+            </h2>
+
+            <p className="text-gray-600 text-md mb-6 leading-relaxed capitalize">
+              diversity isn’t just a policy — it’s our strength. We believe that
+              different perspectives spark innovation, and that inclusion fuels
+              growth. Our diversity strategy — with a strong focus on empowering
+              women, supporting the specially abled, and welcoming transgender
+              and underrepresented communities — brings intelligence,
+              creativity, and fresh ideas into every part of our business.
+            </p>
+            <p className="text-gray-600 text-md mb-6 leading-relaxed capitalize">
+              We are committed to creating a workplace where everyone feels
+              valued, respected, and empowered — regardless of gender, ability,
+              race, age, culture, education, or background. Our teams thrive on
+              collaboration, shared purpose, and the freedom to express unique
+              viewpoints. By embedding diversity into our culture, we not only
+              harness the full potential of our people — we shape the future of
+              logistics with passion, purpose, and innovation. This inclusive
+              mindset strengthens every organizational unit and powers our
+              long-term growth.
+            </p>
+            <p className="text-[#24577F] text-lg mb-6 text-center font-semibold leading-relaxed capitalize">
+              Join us — where differences are celebrated, voices are heard, &
+              opportunities are equal for all.
+            </p>
           </div>
         </div>
       </section>
@@ -199,29 +271,34 @@ export default function Page() {
       {/* Life at Jambulogix */}
       <section className="py-20 px-6 sm:px-20 bg-[#24577F]">
         <div className="max-w-7xl mx-auto text-center mb-12">
-          <h2 className="text-4xl sm:text-5xl font-extrabold text-white">
-            Life at <span className="text-[#FF7F06] text-8xl">Jambulogix</span>
+          <h2 className="text-4xl sm:text-4xl font-extrabold text-white">
+            Life at <span className="text-[#FF7F06] text-6xl">Jambulogix</span>
           </h2>
         </div>
-        <div className="grid sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-3 gap-6">
-          {["60.jpg", "58.jpg", "59.jpg"].map((img, i) => (
-            <Image
-              key={i}
-              src={`/${img}`}
-              alt="Culture"
-              width={400}
-              height={300}
-              className="rounded-2xl object-cover w-full h-72"
-            />
-          ))}
+        <div className="grid sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-3 max-w-8xl mx-auto gap-6">
+          {["l1.jpg", "l3.jpg", "l2.jpg", "l5.jpg", "l6.jpg", "l4.jpg"].map(
+            (img, i) => (
+              <Image
+                key={i}
+                src={`/${img}`}
+                alt="Culture"
+                width={400}
+                height={300}
+                className="rounded-2xl object-cover w-full h-72 border-2 border-white shadow-lg"
+              />
+            )
+          )}
         </div>
       </section>
 
       {/* Openings */}
       <section className="py-24 px-6 sm:px-20 bg-white text-[#0A1A2F]">
         <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-4xl sm:text-6xl font-extrabold mb-12 text-[#24577F]">
+          {/* <h2 className="text-4xl sm:text-6xl font-extrabold mb-12 text-[#24577F]">
             Open Positions
+          </h2> */}
+          <h2 className="text-4xl sm:text-4xl font-extrabold text-[#24577F] mb-12">
+            Open <span className="text-[#FF7F06] text-6xl">Positions</span>
           </h2>
           <div className="grid sm:grid-cols-2 gap-10 text-left">
             {openings.map((role, idx) => (
@@ -260,7 +337,7 @@ export default function Page() {
           </p>
 
           {/* Swiper Carousel */}
-          <Swiper
+          {/* <Swiper
             modules={[Pagination, Autoplay]}
             pagination={{ clickable: true }}
             spaceBetween={30}
@@ -283,7 +360,24 @@ export default function Page() {
                 </div>
               </SwiperSlide>
             ))}
-          </Swiper>
+          </Swiper> */}
+
+          <div className="grid sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-3 max-w-8xl mx-auto gap-6">
+            {values.map((val, i) => (
+              <div
+                key={i}
+                className="bg-white border-2 border-[#FF7F06] p-4 rounded-2xl shadow-md capitalize h-full flex flex-col justify-center"
+              >
+                <div className="text-5xl mb-4 text-[#FF7F06]">{val.icon}</div>
+                <h3 className="text-2xl font-semibold text-[#24577F]">
+                  {val.label}
+                </h3>
+                <p className="text-[#24577F] mt-2 text-lg ">
+                  {val.desc}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -292,13 +386,13 @@ export default function Page() {
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl sm:text-4xl font-extrabold mb-6 text-[#24577F] leading-tight">
             Ready to take the{" "}
-            <span className="text-[#FF7F06] text-6xl">leap!</span>
+            <span className="text-[#FF7F06] text-6xl uppercase ">leap!</span>
           </h2>
           <p className="text-gray-700 mb-8 text-md">
             We’re always seeking individuals who think differently, act boldly,
             and build with purpose.
           </p>
-          <button className="bg-[#24577F] text-white px-6 py-3 font-bold rounded-full shadow-lg hover:scale-105 transition">
+          <button className="bg-[#FF7F06] text-white px-6 py-3 font-bold rounded-full shadow-lg hover:scale-105 transition">
             Send Your Resume
           </button>
         </div>
