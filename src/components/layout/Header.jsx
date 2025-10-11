@@ -145,14 +145,14 @@ export default function Header() {
         {/* Company */}
 
         {/* Static Links with Active Highlight */}
-        <Link
+        {/* <Link
           href="/pages/services/motherhood-service"
           className={`transition duration-200 font-bold text-center ${isActive(
             "/pages/services/motherhood-service"
           )}`}
         >
           Motherhood
-        </Link>
+        </Link> */}
 
         <Link
           href="/pages/about"
@@ -256,13 +256,13 @@ export default function Header() {
 
           {/* Static Links */}
           <div className="space-y-6 mt-4 text-white font-bold">
-            <Link
+            {/* <Link
               href="/pages/services/motherhood-service"
               className="block hover:text-[#FF7F06]"
               onClick={() => setSidebarOpen(false)}
             >
               Motherhood
-            </Link>
+            </Link> */}
             <Link
               href="/pages/about"
               className="block hover:text-[#FF7F06]"

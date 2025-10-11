@@ -10,15 +10,15 @@ import InnerNumbers from "@/components/sections/InnerNumbers";
 
 const subServices = [
   {
-    title: "First Mile Service ",
-    subtitle: "Reliable Starts. Sustainable Moves.",
+    title: "First Mile ",
+    subtitle: "Reliable Start Sustainable Moves.",
 
     description:
       "We know every great delivery begins with a smooth first move. Our First Mile services are built to swiftly move your shipments from your pickup point to the next destination — with precision, care, and efficiency. Powered by a tech-enabled fleet, deep regional reach, and a commitment to low-carbon operations, we ensure your supply chain starts right — and sustainably — every time.",
-    image: "/28.jpg",
+    image: "/112.jpeg",
   },
   {
-    title: " Last Mile Service",
+    title: " Last Mile",
     subtitle: "Right Time. Right Door. Every Time.",
 
     description:
@@ -112,10 +112,10 @@ export default function Page() {
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/96.jpg"
+            src="/29.jpg"
             alt="Smart Warehousing"
             fill
-            className="object-cover brightness-80 "
+            className="object-cover brightness-70 "
           />
         </div>
 
@@ -138,7 +138,7 @@ export default function Page() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.6 }}
-            className="text-lg sm:text-2xl text-white/90 max-w-xl mb-8"
+            className="text-lg sm:text-2xl text-white max-w-2xl mb-8"
           >
             Distribution services built to help you reach more customers —
             faster and smarter. With intelligent route planning, real-time
@@ -156,6 +156,7 @@ export default function Page() {
                 </motion.button> */}
         </div>
       </section>
+
       {/* What is Smart Warehousing */}
       <section className="py-16 px-6 sm:px-12 md:px-20 bg-white">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
@@ -172,25 +173,39 @@ export default function Page() {
 
           {/* Text Section */}
           <div>
-            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-[#24577F] mb-6 leading-tight">
-              Distribution, Reimagined for{" "}
-              <span className="text-[#FF7F06]">Reach, Speed & Control</span>?
+            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-6xl font-extrabold text-[#24577F] mb-6">
+              Distribution, Reimagined <br />
+              <span className="text-[#FF7F06] text-6xl ">Reach, Speed & </span>
+              <span className="text-[#FF7F06] text-6xl  ">Control</span>
             </h2>
 
-            <p className="text-black text-md sm:text-lg leading-relaxed mb-4">
-              At Jambulogix, distribution isn't just a step in the supply chain
-              — it's where customer satisfaction truly begins. Our distribution
-              network is engineered for speed, precision, and scalability.
-              Whether it's initiating the journey with First Mile or delivering
-              the final promise with Last Mile, we ensure every shipment moves
-              efficiently, reliably, and with full visibility.
+            <p className="text-black text-md sm:text-md leading-relaxed mb-4 ">
+              Distribution isn’t just a step in the supply chain — it’s the
+              heartbeat of customer experience. Our tech-enabled, data-driven
+              network is built for speed, precision, and scalability,
+              transforming how goods move across India. From First Mile to Last
+              Mile, every shipment flows through a digitally optimized
+              ecosystem, ensuring real-time visibility, seamless coordination,
+              and on-time reliability. By combining smart infrastructure with
+              digital intelligence, we help brands streamline deliveries, reduce
+              inefficiencies, and enhance operational performance.
+            </p>
+            <p className="text-black text-md sm:text-md leading-relaxed mb-4 ">
+              Our network is designed to handle high volumes while maintaining
+              consistent service quality and customer satisfaction. With a
+              relentless focus on agility, transparency, and accountability.{" "}
+              <span className="text-black font-bold">
+                We ensures every delivery moves efficiently, reliably, and with
+                full visibility — redefining the way businesses reach their
+                customers across India.
+              </span>
             </p>
 
-            <p className="text-black text-md sm:text-lg leading-relaxed">
+            {/* <p className="text-black text-md sm:text-md leading-relaxed">
               By combining physical infrastructure with digital intelligence, we
               help brands across sectors streamline their movement of goods —
               from origin to doorstep.
-            </p>
+            </p> */}
           </div>
         </div>
       </section>
@@ -202,15 +217,16 @@ export default function Page() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
-            className="text-3xl sm:text-5xl font-bold mb-4"
+            className="text-3xl sm:text-4xl font-bold mb-4"
           >
-            Distribution Without Limits
+            Distribution Without{" "}
+            <span className="text-[#FF7F06] text-6xl ">Limits</span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.7 }}
-            className="text-white/70 max-w-3xl mx-auto"
+            className="text-white/70 max-w-6xl mx-auto"
           >
             Our distribution engine is built for performance — combining
             precision, reach, and reliability to deliver at scale. From
@@ -277,10 +293,10 @@ export default function Page() {
 
             {/* Text */}
             <div className="w-full md:w-1/3 text-center md:text-left">
-              <h3 className="text-3xl sm:text-5xl md:text-6xl font-extrabold text-[#FF7F06] mb-4 leading-tight">
+              <h3 className="text-3xl sm:text-5xl md:text-4xl font-extrabold text-[#FF7F06] mb-4 leading-tight">
                 {activeTab.subtitle}
               </h3>
-              <p className="text-black text-base sm:text-lg leading-relaxed">
+              <p className="text-black text-base sm:text-md leading-relaxed">
                 {activeTab.description}
               </p>
             </div>
@@ -289,14 +305,15 @@ export default function Page() {
       </section>
 
       {/* Highlights + Benefits */}
-      <section className="py-16 px-6 sm:px-20 bg-[#0A1A2F]">
-        <div className="max-w-7xl mx-auto  text-center">
-          <h2 className="text-4xl sm:text-5xl font-extrabold text-white mb-12">
-            Key <span className="text-[#FF7F06]"> Highlights</span>
+
+      <section className="py-16 px-6 sm:px-20 bg-[#24577F]">
+        <div className="max-w-8xl mx-auto  text-center">
+          <h2 className="text-4xl sm:text-6xl font-extrabold text-white mb-12">
+            Key <span className="text-[#FF7F06] text-6xl"> Highlights</span>
           </h2>
 
           <motion.div
-            className="grid sm:grid-cols-3 gap-6 md:gap-10 mb-6 md:mb-20 text-center"
+            className="grid sm:grid-cols-3  max-w-7xl mx-auto gap-6 md:gap-10 mb-6  text-center"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
@@ -318,6 +335,34 @@ export default function Page() {
                 text: "Trained Fleet ",
                 desc: "Professionally managed delivery teams.",
               },
+            ].map((item, idx) => (
+              <motion.div
+                key={idx}
+                className="bg-white  p-5 md:p-8 rounded-2xl shadow-lg border hover:border-[#FF7F06] hover:bg-black/30 hover:text-white hover:shadow-xl transition duration-300 cursor-pointer group"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+              >
+                <div className="text-4xl mb-4 text-[#FF7F06] group-hover:scale-110 transition">
+                  {item.icon}
+                </div>
+                <p className="font-semibold text-lg text-[#0A1A2F] group-hover:text-white leading-relaxed">
+                  {item.text}
+                </p>
+                <p className=" text-md text-[#0A1A2F] group-hover:text-white leading-relaxed">
+                  {item.desc}
+                </p>
+              </motion.div>
+            ))}
+          </motion.div>
+          <motion.div
+            className="grid sm:grid-cols-2 max-w-3xl mx-auto gap-6 md:gap-10  text-center"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            transition={{ staggerChildren: 0.2 }}
+          >
+            {[
               {
                 icon: "🚚",
                 text: "Eco Routing ",
@@ -331,7 +376,7 @@ export default function Page() {
             ].map((item, idx) => (
               <motion.div
                 key={idx}
-                className="bg-white p-5 md:p-8 rounded-2xl shadow-lg border hover:border-[#FF7F06] hover:bg-black/30 hover:text-white hover:shadow-xl transition duration-300 cursor-pointer group"
+                className="bg-white  p-5 md:p-8 rounded-2xl shadow-lg border hover:border-[#FF7F06] hover:bg-black/30 hover:text-white hover:shadow-xl transition duration-300 cursor-pointer group"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
@@ -342,6 +387,9 @@ export default function Page() {
                 <p className="font-semibold text-lg text-[#0A1A2F] group-hover:text-white leading-relaxed">
                   {item.text}
                 </p>
+                <p className=" text-md text-[#0A1A2F] group-hover:text-white leading-relaxed">
+                  {item.desc}
+                </p>
               </motion.div>
             ))}
           </motion.div>
@@ -351,10 +399,10 @@ export default function Page() {
       {/* Target Audience */}
       <section className="py-16 md:py-24 px-6 sm:px-20 bg-[#F0F4F8]">
         <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-4xl sm:text-5xl font-extrabold text-[#24577F] mb-3 md:mb-6">
-            Who is it for?
+          <h2 className="text-4xl sm:text-6xl font-extrabold capitalize text-[#24577F] mb-3 md:mb-6">
+            For Businesses of <span className=" text-[#FF7F06]">Every Scale</span>
           </h2>
-          <p className="text-black text-md md:text-lg mb-8 md:mb-16 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-black text-md md:text-lg mb-8 md:mb-16 max-w-7xl mx-auto leading-relaxed">
             Our Distribution Services are built for businesses that value speed,
             visibility, and sustainable scale. Whether you're a growing SME, a
             D2C brand, or a regional distributor, Jambulogix offers the right
@@ -364,7 +412,7 @@ export default function Page() {
           </p>
 
           <motion.div
-            className="grid sm:grid-cols-3 gap-6 md:gap-10"
+            className="grid sm:grid-cols-3 gap-6 md:gap-10 max-w-7xl mx-auto text-center mb-10"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
@@ -374,6 +422,35 @@ export default function Page() {
               { img: "/19.jpg", label: "Startups & Growing Brands" },
               { img: "/18.jpg", label: "SMEs Across Sectors" },
               { img: "/10.jpg", label: "Regional & Local Distributors" },
+            ].map((item, idx) => (
+              <motion.div
+                key={idx}
+                className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition duration-300 group"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+              >
+                <Image
+                  src={item.img}
+                  alt={item.label}
+                  width={320}
+                  height={200}
+                  className="rounded-xl h-60 bg-cover object-cover mx-auto mb-6 group-hover:scale-105 transition"
+                />
+                <p className="font-semibold text-lg text-gray-700">
+                  {item.label}
+                </p>
+              </motion.div>
+            ))}
+          </motion.div>
+          <motion.div
+            className="grid sm:grid-cols-2 gap-6 md:gap-10 max-w-4xl mx-auto text-center"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            transition={{ staggerChildren: 0.2 }}
+          >
+            {[
               { img: "/10.jpg", label: "E-commerce & D2C Sellers" },
               { img: "/10.jpg", label: "Sustainable & Conscious Businesses" },
             ].map((item, idx) => (
@@ -401,14 +478,14 @@ export default function Page() {
       </section>
 
       {/* Highlights + Benefits */}
-      <section className="py-16 md:py-24 px-6 sm:px-20 bg-gradient-to-b from-[#F9FAFB] to-white">
+      <section className="py-16 md:py-24 px-6 sm:px-20 bg-[#24577F]">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl sm:text-5xl font-extrabold text-[#24577F] mb-12 text-center">
-            Key Benefits
+          <h2 className="text-4xl sm:text-6xl font-extrabold text-white mb-12 text-center">
+            Key <span className="text-[#FF7F06] text-6xl"> Benefits</span>
           </h2>
 
           <motion.div
-            className="grid sm:grid-cols-3 gap-6 md:gap-10 text-center"
+            className="grid sm:grid-cols-3 gap-6 md:gap-10 text-center mb-10"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
@@ -417,9 +494,10 @@ export default function Page() {
             {[
               {
                 icon: "🔐",
-                text: "Faster Market Expansion",
-                desc: "Access new regions without building your own infra.",
+                text: "Flexible Service Options",
+                desc: "Customizable delivery windows and options to meet diverse customer needs.",
               },
+
               {
                 icon: "🔐",
                 text: "Lower Operational Burden",
@@ -430,10 +508,43 @@ export default function Page() {
                 text: "Improved Customer Satisfaction",
                 desc: "Reliable, on-time deliveries that build trust.",
               },
+            ].map((benefit, idx) => (
+              <motion.div
+                key={idx}
+                className="bg-white p-8 rounded-2xl shadow-lg border hover:border-[#FF7F06] hover:shadow-xl transition duration-300 cursor-pointer group"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+              >
+                <div className="text-4xl mb-4 text-[#FF7F06] group-hover:scale-110 transition">
+                  {benefit.icon}
+                </div>
+                <p className="font-semibold text-lg text-gray-700 leading-relaxed uppercase">
+                  {benefit.text}
+                </p>
+                <p className=" text-md text-gray-700 leading-relaxed">
+                  {benefit.desc}
+                </p>
+              </motion.div>
+            ))}
+          </motion.div>
+          <motion.div
+            className="grid sm:grid-cols-3 gap-6 md:gap-10 text-center"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            transition={{ staggerChildren: 0.2 }}
+          >
+            {[
               {
                 icon: "🔐",
                 text: "Better Cost Control",
                 desc: "Shared resources and optimized routing reduce logistics costs.",
+              },
+              {
+                icon: "🔐",
+                text: "Scalable Solutions",
+                desc: "Easily handle seasonal peaks or business growth without extra infrastructure.",
               },
               {
                 icon: "🔐",
@@ -451,8 +562,11 @@ export default function Page() {
                 <div className="text-4xl mb-4 text-[#FF7F06] group-hover:scale-110 transition">
                   {benefit.icon}
                 </div>
-                <p className="font-semibold text-lg text-gray-700 leading-relaxed">
+                <p className="font-semibold text-lg text-gray-700 leading-relaxed uppercase">
                   {benefit.text}
+                </p>
+                <p className=" text-md text-gray-700 leading-relaxed">
+                  {benefit.desc}
                 </p>
               </motion.div>
             ))}
@@ -461,13 +575,13 @@ export default function Page() {
       </section>
 
       {/* How Does It Work */}
-      <section className="py-16 px-6 sm:px-20 bg-[#0A1A2F]">
+      {/* <section className="py-16 px-6 sm:px-20 bg-[#0A1A2F]">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl sm:text-6xl font-extrabold text-white mb-8 text-center">
             How does it <span className=" text-[#FF7F06]">work...?</span>
           </h2>
 
-          {/* Step Navigation */}
+   
           <motion.div
             className="flex flex-wrap gap-4 justify-center mb-3"
             initial="hidden"
@@ -493,7 +607,6 @@ export default function Page() {
             ))}
           </motion.div>
 
-          {/* Step Content */}
 
           <motion.div
             key={activeStep.label}
@@ -519,7 +632,8 @@ export default function Page() {
             </div>
           </motion.div>
         </div>
-      </section>
+      </section> */}
+
       {/* Testimonials Section */}
       <TestimonialCarousel />
       {/* Contact Section */}

@@ -262,7 +262,7 @@ export default function Page() {
       {/* Highlights + Benefits */}
       <section className="py-16 px-6 sm:px-20 bg-[#24577F]">
         <div className="max-w-8xl mx-auto  text-center">
-          <h2 className="text-4xl sm:text-4xl font-extrabold text-white mb-12">
+          <h2 className="text-4xl sm:text-6xl font-extrabold text-white mb-12">
             Key <span className="text-[#FF7F06] text-6xl"> Highlights</span>
           </h2>
 
@@ -327,10 +327,11 @@ export default function Page() {
       {/* Target Audience */}
       <section className="py-16 md:py-24 px-6 sm:px-20 bg-[#F0F4F8]">
         <div className="max-w-8xl mx-auto text-center">
-          <h2 className="text-4xl sm:text-5xl font-extrabold text-[#24577F] mb-3 md:mb-6">
-            Who is it for?
+          <h2 className="text-4xl sm:text-6xl font-extrabold text-[#24577F] mb-3 md:mb-6">
+            Designed For{" "}
+            <span className=" text-[#FF7F06]">Mordern Commerce</span>
           </h2>
-          <p className="text-gray-700 text-md md:text-lg mb-8 md:mb-16 max-w-6xl mx-auto leading-relaxed">
+          <p className="text-gray-700 text-md md:text-lg mb-8 md:mb-16 max-w-7xl mx-auto leading-relaxed">
             Our warehousing solutions are built to grow with you — whether
             you're a ambitious start-up, a scaling SME, or a large enterprise.
             At Jambulogix, we offer tech-enabled infrastructure, fast turnaround
@@ -376,17 +377,15 @@ export default function Page() {
       </section>
 
       {/* Highlights + Benefits */}
-      <section className="py-16 md:py-24 px-6 sm:px-20 bg-[#24577F]">
-        <div className="max-w-8xl mx-auto text-center">
-         
 
-          <h2 className="text-4xl sm:text-4xl font-extrabold text-white mb-12">
-            Values we <span className="text-[#FF7F06] text-6xl"> Deliver</span>
+      <section className="py-16 md:py-24 px-6 sm:px-20 bg-[#24577F]">
+        <div className="max-w-7xl mx-auto text-center">
+          <h2 className="text-4xl sm:text-6xl font-extrabold text-white mb-12">
+            Values We <span className="text-[#FF7F06] text-6xl"> Deliver</span>
           </h2>
 
-
           <motion.div
-            className="grid sm:grid-cols-5 gap-6 md:gap-10 text-center"
+            className="grid sm:grid-cols-3 gap-6 md:gap-10 text-center mb-10 max-w-7xl mx-auto"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
@@ -395,23 +394,19 @@ export default function Page() {
             {[
               {
                 icon: "🔐",
-                text: "Scalable Support - Grow without infrastructure burden",
+                text: "Scalable Support",
+                desc: "Grow without infrastructure burden",
+              },
+
+              {
+                icon: "🔐",
+                text: "Faster Turnarounds",
+                desc: "Speed that meets market demands",
               },
               {
-                icon: "⏱️",
-                text: "Faster Turnarounds - Speed that meets market demands",
-              },
-              {
-                icon: "💰",
-                text: "Smart Visibility - Real-time Inventory & movement tracking",
-              },
-              {
-                icon: "💰",
-                text: "Green Operations - Lower Carbon Footprint Future-ready",
-              },
-              {
-                icon: "💰",
-                text: "Reliable Partnership - Customer first, always-on support",
+                icon: "🔐",
+                text: "Smart Visibility",
+                desc: "Real-time Inventory & movement tracking",
               },
             ].map((benefit, idx) => (
               <motion.div
@@ -424,14 +419,53 @@ export default function Page() {
                 <div className="text-4xl mb-4 text-[#FF7F06] group-hover:scale-110 transition">
                   {benefit.icon}
                 </div>
-                <p className="font-semibold text-lg text-[#24577F] leading-relaxed">
+                <p className="font-semibold text-lg text-gray-700 leading-relaxed uppercase">
                   {benefit.text}
+                </p>
+                <p className=" text-md text-gray-700 leading-relaxed">
+                  {benefit.desc}
                 </p>
               </motion.div>
             ))}
           </motion.div>
-
-          heading should be larger size and the content should be in smaller
+          <motion.div
+            className="grid sm:grid-cols-2 gap-6 md:gap-10  max-w-4xl mx-auto text-center"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            transition={{ staggerChildren: 0.2 }}
+          >
+            {[
+              {
+                icon: "🔐",
+                text: "Green Operations",
+                desc: "Lower Carbon Footprint Future-ready",
+              },
+              {
+                icon: "🔐",
+                text: "Reliable Partnership",
+                desc: "Customer first, always-on support",
+              },
+            ].map((benefit, idx) => (
+              <motion.div
+                key={idx}
+                className="bg-white p-8 rounded-2xl shadow-lg border hover:border-[#FF7F06] hover:shadow-xl transition duration-300 cursor-pointer group"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+              >
+                <div className="text-4xl mb-4 text-[#FF7F06] group-hover:scale-110 transition">
+                  {benefit.icon}
+                </div>
+                <p className="font-semibold text-lg text-gray-700 leading-relaxed uppercase">
+                  {benefit.text}
+                </p>
+                <p className=" text-md text-gray-700 leading-relaxed">
+                  {benefit.desc}
+                </p>
+              </motion.div>
+            ))}
+          </motion.div>
         </div>
       </section>
 

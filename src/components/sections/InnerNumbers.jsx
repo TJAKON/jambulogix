@@ -53,6 +53,16 @@ export default function InnerNumbers() {
     { label: "Livelihood Daily ", value: "1000", suffix: "+" },
     { label: "Live Warehousing", value: "7", suffix: "states +" },
   ];
+  const reverse = [
+    {
+      label: "SQFT Warehouse Space",
+      value: "2,00,000",
+      suffix: "+",
+    },
+    { label: "Shipments Processing Daily", value: "4,00,000", suffix: " +" },
+    { label: "Livelihood Daily ", value: "1000", suffix: "+" },
+    { label: "Live Warehousing", value: "7", suffix: "states +" },
+  ];
 
   return (
     <section className="bg-[#24577F] text-white py-16 px-6 sm:px-20">

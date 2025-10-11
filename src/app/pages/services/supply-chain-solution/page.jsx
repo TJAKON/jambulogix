@@ -10,16 +10,22 @@ import InnerNumbers from "@/components/sections/InnerNumbers";
 
 const subServices = [
   {
-    title: "Hub Operations & Optimization (Hub Care)",
-    description:
-      "Our Hub Care service is designed to streamline and optimize high-throughput logistics hubs. Whether it’s managing inventory flow, reducing dwell time, or enabling quick dispatch turnaround, we ensure your central operations run with clockwork precision.",
-    image: "/82.jpg",
-  },
-  {
-    title: "Distribution Solutioning",
+    title: "Recall Management",
     description:
       "Every business has unique distribution challenges — and our Distribution Solutioning service is built to address them. Whether you’re an eCommerce brand scaling across India or a manufacturer needing better market reach, we craft customized distribution strategies based on your geography, product type, and customer base.",
     image: "/81.jpg",
+  },
+  {
+    title: "Refurbishment & Restocking",
+    description:
+      "Every business has unique distribution challenges — and our Distribution Solutioning service is built to address them. Whether you’re an eCommerce brand scaling across India or a manufacturer needing better market reach, we craft customized distribution strategies based on your geography, product type, and customer base.",
+    image: "/81.jpg",
+  },
+  {
+    title: "Recycling & Disposal",
+    description:
+      "Our Hub Care service is designed to streamline and optimize high-throughput logistics hubs. Whether it’s managing inventory flow, reducing dwell time, or enabling quick dispatch turnaround, we ensure your central operations run with clockwork precision.",
+    image: "/82.jpg",
   },
 ];
 
@@ -74,11 +80,11 @@ export default function Page() {
             transition={{ duration: 0.8 }}
             className="text-5xl sm:text-8xl font-extrabold mb-5 leading-tight drop-shadow-lg"
           >
-            Smarter <span className="text-[#FF7F06]"> Supply Chain</span>
+            Smart <span className="text-[#FF7F06]"> Returns </span>
             <br />
-            Seamless{" "}
+            Sustainable{" "}
             <span className="text-[#FF7F06] hover:bg-white hover:text-[#24577F] border-2 md:border-4 border-white px-3">
-              Execution
+              Impact
             </span>
           </motion.h1>
 
@@ -86,10 +92,10 @@ export default function Page() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.6 }}
-            className="text-lg sm:text-2xl text-white/90 max-w-xl mb-8"
+            className="text-lg sm:text-2xl text-white/90 max-w-5xl mb-8 text-left"
           >
-            Pan-India coverage with reliable, tech-enabled cargo movement—built
-            to optimize cost, speed, and service across every route.
+            Smart, seamless, and sustainable reverse logistics that help
+            businesses recover value, reduce waste, and delight customers.
           </motion.p>
 
           {/* <motion.button
@@ -108,25 +114,73 @@ export default function Page() {
         <div className="max-w-8xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
           {/* Text Section */}
           <div>
-            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-extrabold text-[#24577F] mb-6 leading-tight">
-              What is <span className="text-[#FF7F06]">Supply Chain..</span>?
+            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-[#24577F] mb-6 ">
+              Reverse <span className="text-[#FF7F06]">Logistics</span>
             </h2>
 
-            <p className="text-black text-base sm:text-lg leading-relaxed mb-4">
-              In a world where speed, accuracy, and adaptability define
-              competitive advantage, Jambulogix’s Supply Chain Solutioning
-              services empower businesses to build smarter, leaner, and more
-              responsive logistics models. From hub operations to tailored
-              distribution strategies, we bring deep domain expertise and
-              tech-enabled processes to reimagine your supply chain from the
-              ground up.
+            <p className="text-black text-base sm:text-md leading-relaxed mb-4">
+              Reverse logistics is the process of moving goods from customers
+              back to sellers or manufacturers for return, repair, reuse, or
+              recycling. In India, with the rapid growth of e-commerce and
+              increasing consumer expectations, reverse logistics has become a
+              critical component of the supply chain. Efficient reverse flows
+              not only reduce operational costs but also enhance customer
+              satisfaction, support sustainable practices, and enable businesses
+              to recover value from returned or unused products. By treating
+              returns as an opportunity rather than a burden, companies can
+              strengthen brand trust, optimize resources, and contribute to a
+              circular economy, turning a traditionally neglected process into a
+              strategic advantage.
+            </p>
+            <p className="text-black font-bold text-base sm:text-md leading-relaxed mb-4">
+              Challenges that Businesses Face:
             </p>
 
-            <p className="text-black text-base sm:text-lg leading-relaxed">
-              Our goal is simple: optimize your operations, minimize cost, and
-              maximize service experience — whether you're scaling up or
-              navigating complexity.
-            </p>
+            <motion.div
+              className="grid sm:grid-cols-3 gap-6 md:gap-2 max-w-5xl mx-auto text-center mb-3"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              transition={{ staggerChildren: 0.2 }}
+            >
+              {[
+                { label: "High cost and delays in processing returns" },
+                { label: "Poor visibility and tracking" },
+                { label: "High rate of fraudulent or false returns" },
+              ].map((item, idx) => (
+                <motion.div
+                  key={idx}
+                  className="bg-[#24577F] rounded-2xl p-6 shadow-lg hover:shadow-xl transition duration-300 group"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5 }}
+                >
+                  <p className="text-sm text-white">{item.label}</p>
+                </motion.div>
+              ))}
+            </motion.div>
+            <motion.div
+              className="grid sm:grid-cols-2 gap-6 md:gap-2 max-w-lg mx-auto text-center mb-10"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              transition={{ staggerChildren: 0.2 }}
+            >
+              {[
+                { label: "Inefficient reinventory and restocking" },
+                { label: "Environmental impact of waste and disposal" },
+              ].map((item, idx) => (
+                <motion.div
+                  key={idx}
+                  className="bg-[#24577F] rounded-2xl p-6 shadow-lg hover:shadow-xl transition duration-300 group"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5 }}
+                >
+                  <p className="text-sm text-white">{item.label}</p>
+                </motion.div>
+              ))}
+            </motion.div>
           </div>
           {/* Image Section */}
           <div>
@@ -183,10 +237,10 @@ export default function Page() {
 
             {/* Text */}
             <div className="w-full md:w-1/3 text-center md:text-left">
-              <h3 className="text-3xl sm:text-5xl md:text-6xl font-extrabold text-[#FF7F06] mb-4 leading-tight">
+              <h3 className="text-3xl sm:text-5xl md:text-4xl font-extrabold text-[#FF7F06] mb-4 leading-tight">
                 {activeTab.title}
               </h3>
-              <p className="text-gray-600 text-base sm:text-lg leading-relaxed">
+              <p className="text-gray-600 text-base sm:text-md leading-relaxed">
                 {activeTab.description}
               </p>
             </div>
@@ -225,6 +279,96 @@ export default function Page() {
                 </div>
                 <p className="font-semibold text-lg text-[#0A1A2F] group-hover:text-white leading-relaxed">
                   {item.text}
+                </p>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      <section className="py-16 px-6 sm:px-20 bg-[#24577F]">
+        <div className="max-w-8xl mx-auto  text-center">
+          <h2 className="text-4xl sm:text-6xl font-extrabold text-white mb-12">
+            Key <span className="text-[#FF7F06] text-6xl"> Highlights</span>
+          </h2>
+
+          <motion.div
+            className="grid sm:grid-cols-3  max-w-7xl mx-auto gap-6 md:gap-10 mb-6  text-center"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            transition={{ staggerChildren: 0.2 }}
+          >
+            {[
+              {
+                icon: "🚚",
+                text: "Pan-India Reach",
+                desc: "Serve more markets, faster",
+              },
+              {
+                icon: "📦",
+                text: "Real-Time Visibility ",
+                desc: "Know where your cargo is — always",
+              },
+              {
+                icon: "🔗",
+                text: "Cost-Optimized Movement",
+                desc: "Lower spend, smarter routes. ",
+              },
+            ].map((item, idx) => (
+              <motion.div
+                key={idx}
+                className="bg-white  p-5 md:p-8 rounded-2xl shadow-lg border hover:border-[#FF7F06] hover:bg-black/30 hover:text-white hover:shadow-xl transition duration-300 cursor-pointer group"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+              >
+                <div className="text-4xl mb-4 text-[#FF7F06] group-hover:scale-110 transition">
+                  {item.icon}
+                </div>
+                <p className="font-semibold uppercase text-lg text-[#0A1A2F] group-hover:text-white leading-relaxed">
+                  {item.text}
+                </p>
+                <p className=" text-md text-[#0A1A2F] group-hover:text-white leading-relaxed">
+                  {item.desc}
+                </p>
+              </motion.div>
+            ))}
+          </motion.div>
+          <motion.div
+            className="grid sm:grid-cols-2 max-w-3xl mx-auto gap-6 md:gap-10  text-center"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            transition={{ staggerChildren: 0.2 }}
+          >
+            {[
+              {
+                icon: "🔗",
+                text: "Flexible Modal Mix ",
+                desc: "Road, Rail, or Air — We move what fits best.",
+              },
+              {
+                icon: "🔗",
+                text: "Low Carbon Logistics ",
+                desc: "Ship smarter. Grow greener.",
+              },
+            ].map((item, idx) => (
+              <motion.div
+                key={idx}
+                className="bg-white  p-5 md:p-8 rounded-2xl shadow-lg border hover:border-[#FF7F06] hover:bg-black/30 hover:text-white hover:shadow-xl transition duration-300 cursor-pointer group"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+              >
+                <div className="text-4xl mb-4 text-[#FF7F06] group-hover:scale-110 transition">
+                  {item.icon}
+                </div>
+                <p className="font-semibold uppercase text-lg text-[#0A1A2F] group-hover:text-white leading-relaxed">
+                  {item.text}
+                </p>
+                <p className=" text-md text-[#0A1A2F] group-hover:text-white leading-relaxed">
+                  {item.desc}
                 </p>
               </motion.div>
             ))}
@@ -318,14 +462,105 @@ export default function Page() {
         </div>
       </section>
 
+      <section className="py-16 md:py-24 px-6 sm:px-20 bg-[#24577F]">
+        <div className="max-w-7xl mx-auto text-center">
+          <h2 className="text-4xl sm:text-6xl font-extrabold text-white mb-12">
+            Values We <span className="text-[#FF7F06] text-6xl"> Deliver</span>
+          </h2>
+
+          <motion.div
+            className="grid sm:grid-cols-3 gap-6 md:gap-10 text-center mb-10 max-w-7xl mx-auto"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            transition={{ staggerChildren: 0.2 }}
+          >
+            {[
+              {
+                icon: "🔐",
+                text: "Expanded Reach Pan-India Network",
+                desc: "Deliver anywhere with our extensive network covering 10,000+ PIN codes across India.",
+              },
+
+              {
+                icon: "🔐",
+                text: "Total Transparency",
+                desc: "Live Shipment Tracking Stay informed at every step with real-time cargo visibility and proactive updates.",
+              },
+              {
+                icon: "🔐",
+                text: "Smarter Operations, Optimized Routing",
+                desc: "Save time and cost with intelligent route planning and modal flexibility (road, rail, air)",
+              },
+            ].map((benefit, idx) => (
+              <motion.div
+                key={idx}
+                className="bg-white p-8 rounded-2xl shadow-lg border hover:border-[#FF7F06] hover:shadow-xl transition duration-300 cursor-pointer group"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+              >
+                <div className="text-4xl mb-4 text-[#FF7F06] group-hover:scale-110 transition">
+                  {benefit.icon}
+                </div>
+                <p className="font-semibold text-lg text-gray-700 leading-relaxed uppercase">
+                  {benefit.text}
+                </p>
+                <p className=" text-sm text-gray-700 leading-relaxed">
+                  {benefit.desc}
+                </p>
+              </motion.div>
+            ))}
+          </motion.div>
+          <motion.div
+            className="grid sm:grid-cols-2 gap-6 md:gap-10  max-w-4xl mx-auto text-center"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            transition={{ staggerChildren: 0.2 }}
+          >
+            {[
+              {
+                icon: "🔐",
+                text: "Green Operations, Low Carbon Footprint",
+                desc: "Ship with sustainability in mind — through greener modes and consolidated movement.",
+              },
+              {
+                icon: "🔐",
+                text: "Scalable Movement Asset-Light Model",
+                desc: "Grow fast without logistical baggage — pay only for what you use, when you need it.",
+              },
+            ].map((benefit, idx) => (
+              <motion.div
+                key={idx}
+                className="bg-white p-8 rounded-2xl shadow-lg border hover:border-[#FF7F06] hover:shadow-xl transition duration-300 cursor-pointer group"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+              >
+                <div className="text-4xl mb-4 text-[#FF7F06] group-hover:scale-110 transition">
+                  {benefit.icon}
+                </div>
+                <p className="font-semibold text-lg text-gray-700 leading-relaxed uppercase">
+                  {benefit.text}
+                </p>
+                <p className=" text-sm text-gray-700 leading-relaxed">
+                  {benefit.desc}
+                </p>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
       {/* How Does It Work */}
-      <section className="py-16 px-6 sm:px-20 bg-[#0A1A2F]">
+      {/* <section className="py-16 px-6 sm:px-20 bg-[#0A1A2F]">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl sm:text-6xl font-extrabold text-white mb-8 text-center">
             How does it <span className=" text-[#FF7F06]">work...?</span>
           </h2>
 
-          {/* Step Navigation */}
+
           <motion.div
             className="flex flex-wrap gap-4 justify-center mb-3"
             initial="hidden"
@@ -351,7 +586,7 @@ export default function Page() {
             ))}
           </motion.div>
 
-          {/* Step Content */}
+       
           <motion.div
             key={activeStep.label}
             initial={{ opacity: 0, y: 40 }}
@@ -376,7 +611,7 @@ export default function Page() {
             </div>
           </motion.div>
         </div>
-      </section>
+      </section> */}
 
       {/* Testimonials Section */}
       <TestimonialCarousel />
