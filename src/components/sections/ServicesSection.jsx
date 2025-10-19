@@ -29,20 +29,20 @@ const services = [
     color: "#4F46E5",
     to: "/pages/services/transportation-service",
   },
-  {
-    title: "Supply Chain Solution ",
-    description:
-      "Streamlining logistics for seamless and efficient and effective operations from start to finish.",
-    image: "/101.jpg",
-    color: "#4F46E5",
-    to: "/pages/services/supply-chain-solution",
-  },
+  // {
+  //   title: "Supply Chain Solution ",
+  //   description:
+  //     "Streamlining logistics for seamless and efficient and effective operations from start to finish.",
+  //   image: "/101.jpg",
+  //   color: "#4F46E5",
+  //   to: "/pages/services/supply-chain-solution",
+  // },
 ];
 
 export default function ServicesSection() {
   return (
     <section className=" relative px-4 sm:px-8 lg:px-20 py-12 sm:py-20 bg-white/95 text-black">
-      <div className=" hidden md:block absolute inset-0 z-0 opacity-60 pointer-events-none">
+      <div className=" hidden md:block absolute inset-0 opacity-40 pointer-events-none">
         <Image
           src="/graphics.png"
           alt="Background Graphic"
@@ -52,7 +52,7 @@ export default function ServicesSection() {
         />
       </div>
       <motion.h2
-        className="text-4xl sm:text-5xl font-bold md:font-extrabold mb-3 text-[#FF7F06] text-center md:text-center"
+        className="text-4xl sm:text-5xl font-bold md:font-extrabold mb-3 text-[#FF7F06] text-center md:text-center z-10"
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
@@ -69,8 +69,8 @@ export default function ServicesSection() {
         Elevate Your Supply Chain with Our Comprehensive Logistics Solutions
       </motion.p>
 
-      <div className="w-full max-w-8xl mx-auto">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-6 w-full">
+      <div className="w-full max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-6 w-full">
           {services.map((service, index) => (
             <Link href={service.to} key={index}>
               <motion.div
