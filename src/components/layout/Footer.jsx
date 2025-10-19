@@ -595,7 +595,7 @@ export default function LogisticsFooter() {
 
       {/* Optional Logistics Icon Overlay */}
       <div className="absolute -bottom-10 -right-72 w-[620px] opacity-100 pointer-events-none">
-        <Image src="/Truck.png" alt="Truck Icon" width={800} height={600} />
+        <Image src="/truck.png" alt="Truck Icon" width={800} height={600} />
       </div>
       <div className="absolute -bottom-10 -left-15 w-[320px] opacity-100 pointer-events-none">
         <Image src="/JLXXM.png" alt="Truck Icon" width={800} height={600} />
