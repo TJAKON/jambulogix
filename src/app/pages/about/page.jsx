@@ -523,7 +523,7 @@ export default function AboutUsPage() {
 
           {/* Right Side: Floating Image Cards */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            {["/test4.jpg", "/test3.jpg", "/test3.jpg", "/test4.jpg"].map(
+            {["/images/v2.jpeg", "/images/v1.jpeg", "/test3.jpg", "/images/v3.jpeg"].map(
               (src, idx) => (
                 <div
                   key={idx}

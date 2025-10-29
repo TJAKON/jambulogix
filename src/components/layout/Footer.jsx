@@ -353,7 +353,7 @@ export default function LogisticsFooter() {
       </div>
 
       {/* Top Section */}
-      <div className="max-w-7xl mx-auto px-6 sm:px-16 py-10 grid md:grid-cols-5 gap-12 relative z-10">
+      <div className="max-w-7xl mx-auto px-6 sm:px-16 py-10 grid md:grid-cols-5 gap-6 relative z-10">
         {/* Logo & Address */}
         <div className="flex flex-col items-center md:items-start">
           <Link href="/" className="mb-4">
@@ -365,18 +365,27 @@ export default function LogisticsFooter() {
             />
           </Link>
           <p className="text-sm mb-2 flex items-start gap-1">
-            <MapPin size={16} /> 1st Floor, Daulatabad Industrial Area, Dwarka
+            <MapPin size={16} /> 43/39, Rajive Colony Near, Footover Bridge, Gurugram, Haryana - 122006
+          </p>
+          <p className="text-sm mb-2 flex items-start gap-1">
+            <MapPin size={16} /> Plot No.6, Daulatabad Industrial Area, Dwarka
             Expressway, Gurugram, Haryana - 122006
           </p>
+       
           <a
             href="mailto:corporate@jambulogix.com"
             className="text-[#24577F] hover:underline text-sm mb-2 flex items-center gap-1"
           >
             <Mail size={16} /> corporate@jambulogix.com
           </a>
-          <p className="text-sm flex items-center gap-1">
+          <p className="text-sm flex items-center gap-1 mb-2">
             <Phone size={16} /> +91 12345 67890
           </p>
+          <p className="text-sm flex items-center gap-1">
+             CIN - <span className=" text-xs">U52219HR2025PTC128138</span>
+          </p>
+          
+       
           <div className="flex gap-4 mt-4">
             <a href="#">
               <Image
@@ -416,7 +425,29 @@ export default function LogisticsFooter() {
             </li>
             <li>
               <Link href="#" className="hover:text-yellow-400">
-                Support
+                About Us
+              </Link>
+            </li>
+
+            <li>
+              <Link href="#" className="hover:text-yellow-400">
+                Our Team
+              </Link>
+            </li>
+            <li>
+              <Link href="#" className="hover:text-yellow-400">
+                Careers
+              </Link>
+            </li>
+
+            <li>
+              <Link href="#" className="hover:text-yellow-400">
+                Blogs
+              </Link>
+            </li>
+            <li>
+              <Link href="#" className="hover:text-yellow-400">
+                News
               </Link>
             </li>
             <li>
@@ -435,66 +466,82 @@ export default function LogisticsFooter() {
             {/* <li><Link href="#" className="hover:text-yellow-400">Smart Warehousing</Link></li>
             <li><Link href="#" className="hover:text-yellow-400">Smart Transportation</Link></li>
             <li><Link href="#" className="hover:text-yellow-400">Smart Supply Chain</Link></li> */}
-            <li>
-              <Link href="#" className="hover:text-yellow-400">
-                Sort Center
-              </Link>
-            </li>
-            <li>
-              <Link href="#" className="hover:text-yellow-400">
-                Fulfilment Centre
-              </Link>
-            </li>
-            <li>
-              <Link href="#" className="hover:text-yellow-400">
-                Dark Store
-              </Link>
-            </li>
-            <li>
-              <Link href="#" className="hover:text-yellow-400">
-                Cross Dock
-              </Link>
-            </li>
-            <li>
-              <Link href="#" className="hover:text-yellow-400">
-                Hub In Hub
-              </Link>
-            </li>
-            <li>
-              <Link href="#" className="hover:text-yellow-400">
-                QuickRack
-              </Link>
-            </li>
-            <li>
-              <Link href="#" className="hover:text-yellow-400">
-                First Mile
-              </Link>
-            </li>
-            <li>
-              <Link href="#" className="hover:text-yellow-400">
-                Last Mile
-              </Link>
-            </li>
-            <li>
-              <Link href="#" className="hover:text-yellow-400">
-                FTL
-              </Link>
-            </li>
-            <li>
-              <Link href="#" className="hover:text-yellow-400">
-                Surface Express
-              </Link>
-            </li>
-            <li>
-              <Link href="#" className="hover:text-yellow-400">
-                Air Express
-              </Link>
-            </li>
-            <li>
-              <Link href="#" className="hover:text-yellow-400">
-                Rail Parcel
-              </Link>
-            </li>
+            <div>
+              <p className=" font-semibold">Warehousing</p>
+              <ul className="">
+                <li>
+                  <Link href="#" className="hover:text-yellow-400">
+                    Sort Center
+                  </Link>
+                </li>
+                <li>
+                  <Link href="#" className="hover:text-yellow-400">
+                    Fulfilment Centre
+                  </Link>
+                </li>
+                <li>
+                  <Link href="#" className="hover:text-yellow-400">
+                    Dark Store
+                  </Link>
+                </li>
+                <li>
+                  <Link href="#" className="hover:text-yellow-400">
+                    Cross Dock
+                  </Link>
+                </li>
+                <li>
+                  <Link href="#" className="hover:text-yellow-400">
+                    Hub In Hub
+                  </Link>
+                </li>
+                <li>
+                  <Link href="#" className="hover:text-yellow-400">
+                    QuickRack
+                  </Link>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <p className=" font-semibold">Distribution</p>
+              <ul className="">
+                <li>
+                  <Link href="#" className="hover:text-yellow-400">
+                    First Mile
+                  </Link>
+                </li>
+                <li>
+                  <Link href="#" className="hover:text-yellow-400">
+                    Last Mile
+                  </Link>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <p className=" font-semibold">Transportation</p>
+              <ul className="">
+                <li>
+                  <Link href="#" className="hover:text-yellow-400">
+                    FTL
+                  </Link>
+                </li>
+                <li>
+                  <Link href="#" className="hover:text-yellow-400">
+                    Surface Express
+                  </Link>
+                </li>
+                <li>
+                  <Link href="#" className="hover:text-yellow-400">
+                    Air Express
+                  </Link>
+                </li>
+                <li>
+                  <Link href="#" className="hover:text-yellow-400">
+                    Rail Parcel
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
             {/* <li><Link href="#" className="hover:text-yellow-400">Last Mile Delivery</Link></li> */}
           </ul>
         </div>
@@ -505,27 +552,27 @@ export default function LogisticsFooter() {
           <ul className="space-y-2 text-sm">
             <li>
               <Link href="#" className="hover:text-yellow-400">
-                Delivery Partner
+                Warehousing Partner
               </Link>
             </li>
             <li>
               <Link href="#" className="hover:text-yellow-400">
-                Client Partner
-              </Link>
-            </li>
-            <li>
-              <Link href="#" className="hover:text-yellow-400">
-                Franchise Partner
-              </Link>
-            </li>
-            <li>
-              <Link href="#" className="hover:text-yellow-400">
-                Technology Partner
+                Staffing Partner
               </Link>
             </li>
             <li>
               <Link href="#" className="hover:text-yellow-400">
                 Logistics Partner
+              </Link>
+            </li>
+            <li>
+              <Link href="#" className="hover:text-yellow-400">
+                Delivery Partner
+              </Link>
+            </li>
+            <li>
+              <Link href="#" className="hover:text-yellow-400">
+                Technology Partner
               </Link>
             </li>
           </ul>
@@ -594,11 +641,16 @@ export default function LogisticsFooter() {
       </div>
 
       {/* Optional Logistics Icon Overlay */}
-      <div className="absolute -bottom-10 -right-72 w-[620px] opacity-100 pointer-events-none">
+      <div className="absolute -bottom-10 -left-62 w-[620px] opacity-100 pointer-events-none">
         <Image src="/truck.png" alt="Truck Icon" width={800} height={600} />
       </div>
-      <div className="absolute -bottom-10 -left-15 w-[320px] opacity-100 pointer-events-none">
-        <Image src="/JLXXM.png" alt="Truck Icon" width={800} height={600} />
+      <div className="absolute -bottom-10 -right-15 w-[444px] opacity-100 pointer-events-none">
+        <Image
+          src="/images/mascot.png"
+          alt="Truck Icon"
+          width={800}
+          height={600}
+        />
       </div>
     </footer>
   );

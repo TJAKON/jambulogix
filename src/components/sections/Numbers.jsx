@@ -39,32 +39,33 @@ function AnimatedCounter({ value }) {
 
 export default function Numbers() {
   return (
-    <section className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-6 p-8 sm:p-20 text-center bg-black text-white">
+    <section className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-6 p-8 sm:p-20 text-center bg-[#24577F] text-white">
       <div>
         <p className="text-2xl md:text-5xl font-bold">
-          <AnimatedCounter value="10000000" />
-        </p>
-        <p className="text-sm md:text-xl text-white/60">Parcels Delivered</p>
-      </div>
-      <div>
-        <p className="text-2xl md:text-5xl font-bold">
-          <AnimatedCounter value="2500000" />
+          <AnimatedCounter value="200000" />
         </p>
         <p className="text-sm md:text-xl text-white/60">
-          Sq. Ft. of Sort Centres
+          Sq. Ft. of Warehouse
         </p>
       </div>
       <div>
         <p className="text-2xl md:text-5xl font-bold">
-          <AnimatedCounter value="14300" />
+          <AnimatedCounter value="84000000" />
+        </p>
+        <p className="text-sm md:text-xl text-white/60">Shipments Processed</p>
+      </div>
+      
+      <div>
+        <p className="text-2xl md:text-5xl font-bold">
+          <AnimatedCounter value="10000" />
         </p>
         <p className="text-sm md:text-xl text-white/60">Pin Codes</p>
       </div>
       <div>
         <p className="text-2xl md:text-5xl font-bold">
-          <AnimatedCounter value="2500" />
+          <AnimatedCounter value="7000" />
         </p>
-        <p className="text-sm md:text-xl text-white/60">Truck Fleet</p>
+        <p className="text-sm md:text-xl text-white/60">Trips Operated</p>
       </div>
     </section>
   );

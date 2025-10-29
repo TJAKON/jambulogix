@@ -50,11 +50,11 @@ export default function Hero() {
       {/* Right Image */}
       <div className="absolute right-0 sm:right-30 bottom-0 sm:bottom-0 z-0  md:z-10 w-full sm:w-auto flex justify-center sm:justify-end">
         <Image
-          src="/JLXXM.png"
+          src="/images/boy.png"
           alt="Hero"
           width={460}
           height={200}
-          className="w-[400px] sm:w-[320px] md:w-[420px] h-auto "
+          className="w-[400px] sm:w-[320px] md:w-[416px] h-auto "
         />
       </div>
     </section>

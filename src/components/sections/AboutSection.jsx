@@ -23,8 +23,8 @@ export default function AboutSection() {
       <div className="relative z-10 grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-2 gap-10 items-center">
         {/* Left Side - Image Grid */}
         <div className="space-y-10 hidden sm:block">
-          <div className="grid grid-cols-2 gap-4">
-            {["/8.jpg", "/4.jpg", "/12.jpg", "/13.jpg"].map((src, index) => (
+          <div className="">
+            {/* {["/images/a3.png", "/images/a1.jpg", "/images/a2.png", "/images/a4.png"].map((src, index) => (
               <div
                 key={index}
                 className="w-full aspect-square overflow-hidden rounded-xl shadow"
@@ -37,7 +37,20 @@ export default function AboutSection() {
                   className="object-cover w-full h-full"
                 />
               </div>
-            ))}
+            ))} */}
+
+            <div
+              // key={index}
+              className="w-full h-full aspect-square overflow-hidden rounded-xl shadow"
+            >
+              <Image
+                src="/images/aboutus.jpg"
+                alt={`about`}
+                width={500}
+                height={500}
+                className="object-cover w-full h-full"
+              />
+            </div>
           </div>
         </div>
 
@@ -57,14 +70,14 @@ export default function AboutSection() {
             <span className="text-[#24577F]">Cargo & Logistic</span> Experience
           </h2>
 
-          <p className="text-gray-700 text-sm md:text-lg capitalize">
+          <p className="text-gray-700 text-sm md:text-lg ">
             Our services span B2B, B2C, D2C, eCommerce, and Express Logistics,
             offering end-to-end solutions — from smart warehousing and
             multimodal transportation to last-mile delivery and tech-driven
             supply chain management. With operations across 10,000+ PIN codes
             and a wide network of sorting centers, cross docks, dark stores, and
             distribution hubs, we are uniquely positioned to serve businesses of
-            all scales with speed, reliability, and precision.
+            all scales with <span className=" font-bold uppercase">speed, reliability, and precision.</span>
           </p>
 
           <ul className="space-y-2 text-sm md:text-lg text-gray-800 font-medium list-disc pl-5">
@@ -73,7 +86,7 @@ export default function AboutSection() {
             <li>Scalable solutions with dedicated support</li>
           </ul>
 
-          <Link href="/pages/services/supply-chain-solution" passHref>
+          <Link href="/pages/services/smart-warehousing-solution" passHref>
             <button className="bg-[#24577F] text-white md:bg-[#FF7F06] md:text-[#24577F] px-4 py-2 rounded-2xl font-bold text-md md:text-xl border-2 border-white md:border-[#24577F] hover:border-white hover:bg-[#24577F] hover:text-white transition-colors duration-300">
               Explore Our Solutions
             </button>

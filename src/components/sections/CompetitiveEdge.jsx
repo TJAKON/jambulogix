@@ -5,12 +5,12 @@ import Image from "next/image";
 
 export default function CompetitiveEdge() {
   const features = [
+    { title: "MSME", image: "/images/b2.jpeg" },
+    { title: "eCommerce", image: "/images/b4.jpeg"  },
     { title: "Healthcare & Pharma", image: "/47.jpg" },
-    { title: "eCommerce", image: "/50.jpg" },
-    { title: "Engineering & Industrial Goods", image: "/48.jpg" },
-    { title: "FMCG", image: "/54.jpg" },
-    { title: "Fashon & Lifestyle", image: "/54.jpg" },
-    { title: "MSME", image: "/54.jpg" },
+    { title: "Engineering & Industrial Goods", image: "/images/b5.jpeg"  },
+    { title: "FMCG", image: "/images/b3.jpeg"  },
+    { title: "Fashon & Lifestyle", image: "/images/b1.jpeg" },
   ];
 
   return (
@@ -51,7 +51,7 @@ export default function CompetitiveEdge() {
                   src={item.image}
                   alt={item.title}
                   fill
-                  className="object-cover w-full h-full brightness-90 group-hover:brightness-75 transition duration-300"
+                  className="object-cover object-center w-full h-full brightness-90 group-hover:brightness-75 transition duration-300"
                 />
                 <div className="absolute bottom-0 left-0 w-full bg-black/50 p-4 text-white text-md sm:text-lg font-semibold backdrop-blur-sm">
                   {item.title}

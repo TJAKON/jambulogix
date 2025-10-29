@@ -108,7 +108,7 @@ export default function ContactSection() {
                 Gain Leverage For <span className=" text-white">Your</span>{" "}
                 Business With <span className=" text-white">jambulogix</span>
               </h3>
-              <p className=" max-w-2xl text-lg mb-6 text-white/80 text-left sm:text-left">
+              <p className=" max-w-2xl text-md mb-6 text-white/80 text-left sm:text-left">
                 We’d love to hear from you! Whether you’re a business looking
                 for scalable logistics solutions, a partner exploring
                 collaboration, or a candidate interested in joining our journey

@@ -141,24 +141,25 @@ export default function InstantQuote() {
   );
 
   return (
-    <section className="relative w-full min-h-screen bg-black overflow-hidden">
+    <section className="relative w-full min-h-screen  overflow-hidden"
+    style={{ backgroundImage: "url('/road.jpeg')" }}>
       <div className="flex flex-col lg:flex-row h-full">
         {/* Left Visual */}
         <div className="w-full lg:w-1/2 h-[400px] md:h-screen relative">
           <div
             className="inset-0 h-full bg-cover bg-center"
-            style={{ backgroundImage: "url('/truck.png')" }}
+            style={{ backgroundImage: "url('/images/truck.jpg')" }}
           />
           <div className="absolute inset-0 bg-black/20" />
-          <div className="absolute inset-0 rotate-270 flex flex-col items-center justify-start text-white text-center px-6 pt-24 sm:pt-36 lg:pt-48">
-            <h2 className="text-3xl md:text-5xl text-[#FF7F06] font-extrabold">
+          <div className="absolute inset-0 rotate-270 flex flex-col items-center justify-start text-white text-center px-6 pt-24 sm:pt-36 lg:pt-64">
+            <h2 className="text-3xl md:text-3xl text-white font-extrabold">
               Fast, Safe, Hassle-Free
             </h2>
           </div>
         </div>
 
         {/* Right Form */}
-        <div className="w-full lg:w-1/2 flex items-center justify-center p-6 md:px-16 bg-[#0A1A2F]">
+        <div className="w-full lg:w-1/2 flex items-center justify-center p-6 md:px-16 bg-[#24577F]">
           <div className="w-full max-w-2xl bg-white p-5 md:p-8 rounded-2xl shadow-xl">
             <h3 className="text-2xl font-bold text-center text-gray-900 mb-6">
               Get an Instant Quote -<span className="text-[#FF7F06]"> Comming Soon!</span>
