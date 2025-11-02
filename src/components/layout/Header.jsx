@@ -135,6 +135,12 @@ export default function Header() {
               Our Team
             </Link>
             <Link
+              href="/pages/company/People"
+              className="block hover:text-white hover:bg-[#FF7F06] border-2 bg-[#24577F] p-2 rounded-lg"
+            >
+              Our People
+            </Link>
+            <Link
               href="/pages/company/Careers"
               className="block hover:text-white hover:bg-[#FF7F06] border-2 bg-[#24577F] p-2 rounded-lg"
             >
@@ -171,12 +177,12 @@ export default function Header() {
             >
               Blogs
             </Link>
-            <Link
+            {/* <Link
               href="/pages/resources/News"
               className="block hover:text-white hover:bg-[#FF7F06] border-2 bg-[#24577F] p-2 rounded-lg"
             >
               News
-            </Link>
+            </Link> */}
           </PopoverPanel>
         </Popover>
         <Link

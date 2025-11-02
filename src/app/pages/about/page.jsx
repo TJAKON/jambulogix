@@ -65,54 +65,54 @@ const leaders = [
 ];
 
 const partners = [
-  { name: "Motherson", logo: "/Clientlogo/1.png" },
-  { name: "Schaeffler", logo: "/Clientlogo/2.png" },
-  { name: "STUDDS", logo: "/Clientlogo/3.png" },
-  { name: "Carrier", logo: "/Clientlogo/4.png" },
-  { name: "Reliance Digital", logo: "/Clientlogo/5.png" },
-  { name: "Croma", logo: "/Clientlogo/6.png" },
-  { name: "Johnson Controls", logo: "/Clientlogo/30.jpg" },
-  { name: "Hitchi", logo: "/Clientlogo/29.png" },
-  { name: "Indian Terrain", logo: "/Clientlogo/8.png" },
-  { name: "Uppercase", logo: "/Clientlogo/9.png" },
-  { name: "Mankind", logo: "/Clientlogo/10.png" },
-  { name: "Johnson & Johnson", logo: "/Clientlogo/11.png" },
-  { name: "Meesho", logo: "/Clientlogo/12.png" },
-  { name: "Flipkart", logo: "/Clientlogo/13.png" },
-  { name: "Amazon", logo: "/Clientlogo/14.png" },
-  { name: "Domino's", logo: "/Clientlogo/15.png" },
-  { name: "Reliance", logo: "/Clientlogo/16.png" },
-  { name: "Zomato", logo: "/Clientlogo/17.png" },
-  { name: "Dorset", logo: "/Clientlogo/18.png" },
-  { name: "Inalco", logo: "/Clientlogo/19.png" },
-  { name: "Fenesta", logo: "/Clientlogo/20.png" },
-  { name: "Aishwaryam", logo: "/Clientlogo/21.png" },
-  { name: "XpressBees", logo: "/Clientlogo/22.png" },
-  { name: "Shadowfax", logo: "/Clientlogo/23.png" },
-  { name: "DHL", logo: "/Clientlogo/24.png" },
-  { name: "DISHA Publication", logo: "/Clientlogo/25.png" },
-  { name: "SKB", logo: "/Clientlogo/26.png" },
-  { name: "Del Mario", logo: "/Clientlogo/27.png" },
-  { name: "Jubilant FoodWorks", logo: "/Clientlogo/28.png" },
+  { name: "Motherson", logo: "/logo/1.png" },
+  { name: "Schaeffler", logo: "/logo/2.png" },
+  { name: "STUDDS", logo: "/logo/3.png" },
+  { name: "Carrier", logo: "/logo/4.png" },
+  { name: "Reliance Digital", logo: "/logo/5.png" },
+  { name: "Croma", logo: "/logo/6.png" },
+  { name: "Johnson Controls", logo: "/logo/30.jpg" },
+  { name: "Hitchi", logo: "/logo/29.png" },
+  { name: "Indian Terrain", logo: "/logo/8.png" },
+  { name: "Uppercase", logo: "/logo/9.png" },
+  { name: "Mankind", logo: "/logo/10.png" },
+  { name: "Johnson & Johnson", logo: "/logo/11.png" },
+  { name: "Meesho", logo: "/logo/12.png" },
+  { name: "Flipkart", logo: "/logo/13.png" },
+  { name: "Amazon", logo: "/logo/14.png" },
+  { name: "Domino's", logo: "/logo/15.png" },
+  { name: "Reliance", logo: "/logo/16.png" },
+  { name: "Zomato", logo: "/logo/17.png" },
+  { name: "Dorset", logo: "/logo/18.png" },
+  { name: "Inalco", logo: "/logo/19.png" },
+  { name: "Fenesta", logo: "/logo/20.png" },
+  { name: "Aishwaryam", logo: "/logo/21.png" },
+  { name: "XpressBees", logo: "/logo/22.png" },
+  { name: "Shadowfax", logo: "/logo/23.png" },
+  { name: "DHL", logo: "/logo/24.png" },
+  { name: "DISHA Publication", logo: "/logo/25.png" },
+  { name: "SKB", logo: "/logo/26.png" },
+  { name: "Del Mario", logo: "/logo/27.png" },
+  { name: "Jubilant FoodWorks", logo: "/logo/28.png" },
 ];
 
 // Partner categories and their respective logos
 const partnerCategories = [
   {
     label: "Support Partners",
-    logos: ["/Clientlogo/1.png", "/Clientlogo/2.png", "/Clientlogo/3.png"],
+    logos: ["/logo/1.png", "/logo/2.png", "/logo/3.png"],
   },
   {
     label: "Logistics Partners",
-    logos: ["/Clientlogo/22.png", "/Clientlogo/23.png", "/Clientlogo/24.png"],
+    logos: ["/logo/22.png", "/logo/23.png", "/logo/24.png"],
   },
   {
     label: "Retail Partners",
-    logos: ["/Clientlogo/13.png", "/Clientlogo/14.png", "/Clientlogo/12.png"],
+    logos: ["/logo/13.png", "/logo/14.png", "/logo/12.png"],
   },
   {
     label: "Technology Partners",
-    logos: ["/Clientlogo/5.png", "/Clientlogo/6.png", "/Clientlogo/7.png"],
+    logos: ["/logo/5.png", "/logo/6.png", "/logo/7.png"],
   },
 ];
 
@@ -523,34 +523,34 @@ export default function AboutUsPage() {
 
           {/* Right Side: Floating Image Cards */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            {["/images/v2.jpeg", "/images/v1.jpeg", "/test3.jpg", "/images/v3.jpeg"].map(
-              (src, idx) => (
-                <div
-                  key={idx}
-                  className="relative group rounded-2xl overflow-hidden border border-white/10 shadow-lg hover:shadow-[#FF7F06]/50 hover:scale-105 transform transition-all duration-500 backdrop-blur-xl bg-white/5"
-                >
-                  <Image
-                    src={src}
-                    alt={`Core Value ${idx + 1}`}
-                    width={300}
-                    height={200}
-                    className="object-cover w-full h-84"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end justify-center">
-                    <span className="text-white text-md font-semibold mb-3 tracking-wide">
-                      {
-                        [
-                          "Innovation",
-                          "Empathy",
-                          "Transparency",
-                          "Reliability",
-                        ][idx]
-                      }
-                    </span>
-                  </div>
+            {[
+              "/images/v2.jpeg",
+              "/images/v1.jpeg",
+              "/images/v4.jpg",
+              "/images/v3.jpeg",
+            ].map((src, idx) => (
+              <div
+                key={idx}
+                className="relative group rounded-2xl overflow-hidden border border-white/10 hover:scale-105 transform transition-all duration-500 backdrop-blur-xl bg-white/5"
+              >
+                <Image
+                  src={src}
+                  alt={`Core Value ${idx + 1}`}
+                  width={300}
+                  height={200}
+                  className="object-cover w-full h-84"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end justify-center">
+                  <span className="text-white text-md font-semibold mb-3 tracking-wide">
+                    {
+                      ["Innovation", "Empathy", "Transparency", "Reliability"][
+                        idx
+                      ]
+                    }
+                  </span>
                 </div>
-              )
-            )}
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -787,20 +787,26 @@ export default function AboutUsPage() {
 
             {/* Right - Image grid */}
             <div className="grid grid-cols-2 gap-4">
-              <img
-                src="/lp.jpg"
+              <Image
+                src="/images/l1.jpg"
                 alt="Tracking System"
-                className="rounded-xl shadow-md object-cover object-top  h-40 md:h-60 w-full"
+                width={500}
+                height={500}
+                className="rounded-xl shadow-md object-contain  h-40 md:h-60 w-full"
               />
               <img
-                src="/lp1.jpg"
+                src="/images/l2.jpg"
                 alt="Digital Lock"
-                className="rounded-xl shadow-md object-cover object-top h-40 md:h-60 w-full"
+                width={500}
+                height={500}
+                className="rounded-xl shadow-md object-contain h-40 md:h-60 w-full"
               />
               <img
-                src="/lp2.jpg"
+                src="/images/l3.jpg"
                 alt="CCTV Camera"
-                className="rounded-xl shadow-md object-cover object-bottom h-40 md:h-60 w-full col-span-2"
+                width={500}
+                height={500}
+                className="rounded-xl shadow-md object-cover h-40 md:h-64 w-full col-span-2"
               />
             </div>
           </div>
@@ -817,8 +823,8 @@ export default function AboutUsPage() {
 
         <div className="relative max-w-8xl mx-auto px-6 md:px-20 grid xl:grid-cols-2 gap-16 items-center">
           {/* Left Side: Floating Images */}
-          <div className="hidden xl:grid grid-cols-2 gap-6">
-            {["/test4.jpg", "/test3.jpg", "/test3.jpg", "/test4.jpg"].map(
+          <div className="hidden xl:block">
+            {/* {["/test4.jpg", "/test3.jpg", "/test3.jpg", "/test4.jpg"].map(
               (src, idx) => (
                 <div
                   key={idx}
@@ -845,7 +851,20 @@ export default function AboutUsPage() {
                   </div>
                 </div>
               )
-            )}
+            )} */}
+
+            <div
+              // key={index}
+              className="w-full h-full overflow-hidden rounded-xl shadow"
+            >
+              <Image
+                src="/images/v6.jpg"
+                alt={`about`}
+                width={500}
+                height={500}
+                className=" object-cover w-auto h-[600px]"
+              />
+            </div>
           </div>
 
           {/* Right Side: Content */}
@@ -961,7 +980,7 @@ export default function AboutUsPage() {
                 alt={partner.name}
                 width={100}
                 height={60}
-                className="object-cover h-20 w-24 md:h-24 md:w-28"
+                className="object-contain h-20 w-24 md:h-fit md:w-fit"
               />
             </motion.div>
           ))}

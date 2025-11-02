@@ -10,11 +10,11 @@ export default function BlogPage() {
     <>
       {/* 🔹 Hero Section */}
       <section
-        className="bg-[#0A0F2D] text-white py-32 sm:py-28 md:py-40 text-center bg-cover bg-center relative"
-        style={{ backgroundImage: "url('/logistics.jpg')" }}
+        className=" text-white h-[650px] py-32 sm:py-28 md:py-40 text-center bg-cover bg-bottom relative"
+        style={{ backgroundImage: "url('/images/blogsbanner.jpg')" }}
       >
-        <div className="absolute inset-0 bg-black/70 backdrop-blur-xs" />
-        <div className="relative z-10 px-4 sm:px-8 max-w-5xl mx-auto">
+        <div className="absolute inset-0 bg-black/10" />
+        {/* <div className="relative z-10 px-4 sm:px-8 max-w-5xl mx-auto">
           <h1 className="text-3xl sm:text-4xl md:text-7xl font-bold mb-6 leading-snug">
             Stay{" "}
             <span className="text-[#FF7F06] font-extrabold text-8xl">
@@ -30,7 +30,7 @@ export default function BlogPage() {
             technology, logistics, and business trends. Stay updated with
             stories that matter to you.
           </p>
-        </div>
+        </div> */}
       </section>
 
       {/* 🔹 Blog Grid */}

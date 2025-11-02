@@ -38,7 +38,7 @@ const subServices = [
 
     description:
       "Reliable, cost-effective, and built for bulk — Jambulogix Rail Parcel services are perfect for moving shipments efficiently across long distances. With access to major railway routes, scheduled departures, and door-to-door handling, we combine the power of rail with our tech-enabled visibility and coordination. Ideal for MSMEs, regional distributors, and growing brands, our rail parcel solutions reduce logistics costs, support low-emission movement, and ensure dependable service across India's backbone network.",
-    image: "/3.jpg",
+      image: "/services/2.jpg",
   },
 ];
 

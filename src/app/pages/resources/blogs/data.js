@@ -1,136 +1,182 @@
 export const blogPosts = [
   {
-    slug: "the-future-of-technology",
-    title: "The Future of Technology",
-    description: "Exploring AI, Blockchain, and the next wave of innovation.",
+    slug: "india-ecommerce-warehouse-automation-2025",
+    title:
+      "How India’s E-Commerce Boom Is Redefining Warehouse Automation (2025 Outlook)",
+    description:
+      "How India's e-commerce surge is accelerating warehouse automation, robotics, and AI in logistics.",
     image: "/lp2.jpg",
-    date: "Aug 20, 2025",
-    read: "5 min read",
+    date: "Jan 2025",
+    read: "7 min read",
     content: `
-      <p>
-        Technology continues to evolve at a rapid pace, reshaping the way we live, work, and connect with one another. 
-        In the next decade, we will see artificial intelligence, quantum computing, and blockchain transform industries 
-        beyond recognition — driving a new era of efficiency, automation, and data-driven insight.
-      </p>
+      <p>India’s e-commerce sector is undergoing a revolution — and warehouses are at the heart of it. With online retail sales expected to surpass $160B by 2025, automation is no longer optional — it's the foundation for speed, accuracy, and scale.</p>
 
-      <h2>Artificial Intelligence Everywhere</h2>
-      <p>
-        AI has moved from research labs to everyday applications. From personalized shopping experiences and self-driving 
-        cars to predictive healthcare, machine learning is enabling systems to anticipate human needs. Businesses are 
-        using AI-powered analytics to forecast demand, detect fraud, and personalize customer interactions in real time.
-      </p>
+      <h2>1. The New Demands of Growth</h2>
+      <p>India's rapid e-commerce expansion, especially across Tier II & III cities, demands faster fulfillment, larger SKU handling, and real-time accuracy. Manual systems simply can’t keep pace.</p>
 
-      <h2>Blockchain and Trustless Systems</h2>
-      <p>
-        Blockchain technology is redefining digital trust. Its decentralized structure ensures transparency, security, 
-        and immutability — making it ideal for supply chain management, identity verification, and cross-border payments. 
-        In the coming years, blockchain will likely become the backbone of smart contracts and decentralized finance (DeFi).
-      </p>
-
-      <h2>The Human Factor</h2>
-      <p>
-        As automation grows, the value of creativity, empathy, and ethical leadership becomes even more vital. 
-        The challenge for the future isn’t just about adopting technology, but using it responsibly to create inclusive growth.
-      </p>
-
-      <blockquote>
-        "The real danger is not that computers will begin to think like men, 
-        but that men will begin to think like computers." – Sydney J. Harris
-      </blockquote>
-
-      <p>
-        The future of technology is not about machines replacing humans — it’s about empowering us to think bigger, 
-        act faster, and build smarter.
-      </p>
-    `,
-  },
-  {
-    slug: "designing-calm-experiences",
-    title: "Designing Calm Experiences",
-    description: "How minimal design creates focus & better usability.",
-    image: "/111.jpg",
-    date: "Aug 18, 2025",
-    read: "4 min read",
-    content: `
-      <p>
-        In a world filled with constant noise and distraction, simplicity has become a luxury. 
-        Calm design — the art of creating digital experiences that reduce cognitive load — is no longer just a style, 
-        it’s a necessity for user wellbeing and clarity.
-      </p>
-
-      <h2>The Power of Minimalism</h2>
-      <p>
-        Minimal design strips away unnecessary elements and focuses on what truly matters. 
-        White space, clear hierarchy, and intentional use of color create a visual rhythm that’s easy on the eyes. 
-        The result is an interface that communicates effortlessly and feels natural to use.
-      </p>
-
-      <h2>Designing for Focus</h2>
-      <p>
-        Every component in a calm interface has purpose. Typography guides the eye, motion draws attention subtly, 
-        and feedback reassures the user without overwhelming them. By limiting choices, designers help users make decisions faster.
-      </p>
-
-      <h2>Calm Technology Principles</h2>
       <ul>
-        <li>Technology should inform and not demand attention.</li>
-        <li>It should amplify the best of human abilities.</li>
-        <li>Notifications should be meaningful, not intrusive.</li>
+        <li>Higher SKU volumes</li>
+        <li>More frequent orders</li>
+        <li>Real-time tracking expectations</li>
       </ul>
 
-      <p>
-        Great digital experiences are invisible — they make users feel empowered, not exhausted. 
-        Calm design helps bridge that gap, blending aesthetics with empathy.
-      </p>
+      <h2>2. Rise of Smart Warehouses</h2>
+      <p>Modern warehouses now use ASRS systems, AMRs, conveyors, IoT sensors, and RFID for seamless automation. Jambulogix automation systems allow clients to process 40% more orders without sacrificing accuracy.</p>
 
-      <blockquote>
-        “Good design is as little design as possible.” — Dieter Rams
-      </blockquote>
+      <h2>3. Data Advantage</h2>
+      <p>AI-driven systems predict stockouts, optimize labor, and simulate peak loads using digital twins — enabling proactive operations.</p>
+
+      <h2>4. Sustainability Through Automation</h2>
+      <p>Automated warehouses reduce energy consumption by 30% and cut packaging waste. JLX uses solar power, smart lighting, and optimized routing to support eco-friendly logistics.</p>
+
+      <h2>5. Human + Automation</h2>
+      <p>Automation handles speed — people handle judgment. JLX trains teams to operate tech-driven systems, improving job satisfaction & reducing attrition.</p>
+
+      <h2>6. 2025 Outlook</h2>
+      <ul>
+        <li>AI-vision QC systems</li>
+        <li>Blockchain-powered supply chains</li>
+        <li>Micro fulfillment centers</li>
+        <li>Cloud WMS for SMEs</li>
+      </ul>
+
+      <p>Automation is the new baseline — and JLX is leading the way in future-ready warehousing.</p>
     `,
   },
   {
-    slug: "web3-for-businesses",
-    title: "Web3 for Businesses",
-    description: "Decentralized apps and why companies should care.",
+    slug: "first-mile-last-mile-costs-india",
+    title: "First Mile & Last Mile: The Hidden Costs in India’s Supply Chain",
+    description:
+      "Understanding the unseen cost drains in India’s logistics — and how to solve them with smart automation.",
+    image: "/services/3.jpg",
+    date: "Jan 2025",
+    read: "7 min read",
+    content: `
+      <p>First-mile and last-mile logistics account for up to 53% of supply chain costs — making them the biggest challenge in India’s logistics landscape.</p>
+
+      <h2>1. First Mile: Where It Begins</h2>
+      <ul>
+        <li>Under-utilized trucks & poor load planning</li>
+        <li>No real-time visibility</li>
+        <li>Manual documentation errors</li>
+        <li>Fragmented vendor networks</li>
+      </ul>
+
+      <h2>2. Last Mile: The Most Expensive 10 km</h2>
+      <ul>
+        <li>Urban congestion</li>
+        <li>Failed deliveries</li>
+        <li>Rising fuel & labor cost</li>
+        <li>Same-day delivery pressure</li>
+      </ul>
+
+      <h2>3. Hidden Costs</h2>
+      <ul>
+        <li>Idle vehicle time</li>
+        <li>Reverse logistics inefficiency</li>
+        <li>Unoptimized routes</li>
+        <li>Packaging-related losses</li>
+      </ul>
+
+      <h2>4. Fixing the First Mile</h2>
+      <ul>
+        <li>AI load & route planning</li>
+        <li>Factory-WMS sync</li>
+        <li>Predictive delay alerts</li>
+        <li>Vendor dashboards</li>
+      </ul>
+
+      <h2>5. Fixing the Last Mile</h2>
+      <ul>
+        <li>Dynamic routing</li>
+        <li>Micro-fulfillment centers</li>
+        <li>Customer delivery alerts</li>
+        <li>Automated returns</li>
+      </ul>
+
+      <p>JLX connects entire logistics nodes — turning data into accurate delivery execution and lower cost.</p>
+    `,
+  },
+  {
+    slug: "human-centric-logistics-automation",
+    title:
+      "People Power in Logistics: Why Human-Centric Ops Beat Automation Alone",
+    description:
+      "Why the future of logistics is not robots vs humans — it's humans + AI working together.",
     image: "/Delivery.jpg",
-    date: "Aug 15, 2025",
+    date: "Jan 2025",
     read: "6 min read",
     content: `
-      <p>
-        Web3 represents the next evolution of the internet — one that shifts control from centralized entities 
-        to decentralized networks powered by blockchain. For businesses, this evolution isn’t just technical; 
-        it’s a complete paradigm shift in how data, ownership, and trust operate online.
-      </p>
+      <p>Automation brings speed — but people bring intelligence, empathy, and adaptability. Logistics needs both.</p>
 
-      <h2>Decentralization in Practice</h2>
-      <p>
-        Traditional web platforms rely on centralized servers controlled by corporations. 
-        In Web3, data is distributed across nodes on the blockchain, ensuring transparency, immutability, and independence. 
-        This opens up opportunities for new business models such as decentralized autonomous organizations (DAOs) 
-        and tokenized economies.
-      </p>
-
-      <h2>Why Businesses Should Care</h2>
+      <h2>Human Advantage</h2>
       <ul>
-        <li><strong>Transparency:</strong> Blockchain records can’t be altered, increasing consumer trust.</li>
-        <li><strong>Ownership:</strong> Users own their data, and businesses can build stronger ethical brands.</li>
-        <li><strong>Efficiency:</strong> Smart contracts eliminate intermediaries and reduce transaction costs.</li>
+        <li>On-ground decision making</li>
+        <li>Customer empathy</li>
+        <li>Relationship-building</li>
+        <li>Improvement insights</li>
       </ul>
 
-      <h2>Challenges Ahead</h2>
-      <p>
-        Adoption still faces regulatory, technical, and scalability challenges. 
-        However, as infrastructure matures and education spreads, Web3 will become an essential part of digital transformation.
-      </p>
+      <h2>Automation Limits</h2>
+      <ul>
+        <li>Fails during anomalies</li>
+        <li>Struggles with exceptions</li>
+        <li>Cannot build trust</li>
+      </ul>
 
-      <blockquote>
-        "Web3 is not just about technology — it’s about redefining relationships of trust in the digital age."
-      </blockquote>
+      <h2>JLX Human-Centric Automation</h2>
+      <ul>
+        <li>AI assists — humans decide</li>
+        <li>Tech training for all operators</li>
+        <li>Human override systems</li>
+        <li>Empowered workforce culture</li>
+      </ul>
 
-      <p>
-        Forward-thinking companies that begin experimenting with decentralized systems today 
-        will lead the next generation of innovation tomorrow.
-      </p>
+      <blockquote>"Automation builds speed — people build trust."</blockquote>
+
+      <p>JLX blends AI with human intelligence for resilient supply chain execution.</p>
     `,
+  },
+  {
+    slug: "green-logistics-india-sustainability",
+    title:
+      "Green Logistics in India: Can We Scale Without Compromising Sustainability?",
+    description:
+      "Why sustainability is becoming essential in India's fast-growing logistics ecosystem — and how smart green operations are shaping the future.",
+    image: "/storagebanner.jpg",
+    date: "Jan 2025",
+    read: "7 min read",
+    content: `
+    <p>India’s logistics industry is witnessing rapid growth — and sustainability has moved from a CSR checkbox to a core operational priority. As supply chains scale, reducing environmental impact while maintaining efficiency has become essential.</p>
+
+    <h2>1. Why Sustainability Matters</h2>
+    <p>Logistics accounts for almost 10% of India’s carbon emissions. With expanding e-commerce, warehouse networks, and last-mile fleets, sustainable transformation is not optional — it’s a strategic necessity.</p>
+
+    <h2>2. Pillars of Green Logistics</h2>
+    <ul>
+      <li>Electric mobility & intelligent route planning</li>
+      <li>Solar-powered and energy-efficient warehouse design</li>
+      <li>Recyclable & smart packaging systems</li>
+      <li>Optimized reverse logistics to reduce waste</li>
+    </ul>
+
+    <h2>3. Government Initiatives Driving Change</h2>
+    <ul>
+      <li>Gati Shakti multimodal logistics network</li>
+      <li>FAME-II incentives for EV adoption</li>
+      <li>PLI schemes for advanced EV battery tech</li>
+      <li>National Logistics Policy pushing modernization</li>
+    </ul>
+
+    <h2>4. JLX Green Operations Approach</h2>
+    <ul>
+      <li>Solar-enabled warehouse infrastructure</li>
+      <li>AI-optimized fuel routing & fleet planning</li>
+      <li>EV-ready distribution architecture</li>
+      <li>Sustainable packaging & material innovation</li>
+    </ul>
+
+    <p>Sustainable logistics isn’t about slowing down — it’s about building a smarter, cleaner, and future-ready supply chain. At JLX, we believe green logistics is a competitive edge that drives performance, efficiency, and resilience.</p>
+  `,
   },
 ];

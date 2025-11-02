@@ -100,26 +100,29 @@ export default function Page() {
 
         <div className="relative z-10 px-4 sm:px-8 max-w-5xl mx-auto">
           <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-4 leading-tight">
-            Driving <span className="text-[#FF7F06]">Logistics Excellence</span> for Your Business
+            Driving <span className="text-[#FF7F06]">Logistics Excellence</span>{" "}
+            for Your Business
           </h1>
           <p className="text-sm sm:text-base text-white/80 max-w-3xl mx-auto">
-            From first mile to last mile, we deliver seamless, reliable, and efficient logistics solutions tailored to your business needs. Let us move your world—faster, smarter, and better.
+            From first mile to last mile, we deliver seamless, reliable, and
+            efficient logistics solutions tailored to your business needs. Let
+            us move your world—faster, smarter, and better.
           </p>
         </div>
       </section>
 
-      <ContactSection 
-        formData={formData} 
-        setFormData={setFormData} 
-        errors={errors} 
-        handleChange={handleChange} 
-        handleSubmit={handleSubmit} 
-        services={services} 
+      <ContactSection
+        formData={formData}
+        setFormData={setFormData}
+        errors={errors}
+        handleChange={handleChange}
+        handleSubmit={handleSubmit}
+        services={services}
       />
 
       <section className="h-[400px] w-full">
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3334.4801092970106!2d76.99134557528197!3d28.447734675766196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d179270965c3b%3A0xb3f0124d653de1b8!2sJambulogix%20Private%20Limited%20-%20NHQ!5e1!3m2!1sen!2sin!4v1752236997535!5m2!1sen!2sin"
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3333.022690252245!2d76.9968427!3d28.4939235!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d178e20272161%3A0x7df47ed6b7a2bab5!2sPlot%20no%2013%2C%20Daulatabad%20Main%20Rd%2C%20near%20Dwarka%20Expressway%2C%20Industrial%20Area%2C%20Sector%20106%2C%20Gurugram%2C%20Haryana%20122006!5e1!3m2!1sen!2sin!4v1761815346337!5m2!1sen!2sin"
           width="100%"
           height="100%"
           style={{ border: 0 }}
@@ -130,4 +133,16 @@ export default function Page() {
       </section>
     </>
   );
+}
+
+{
+  /* <iframe
+  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3333.022690252245!2d76.9968427!3d28.4939235!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d178e20272161%3A0x7df47ed6b7a2bab5!2sPlot%20no%2013%2C%20Daulatabad%20Main%20Rd%2C%20near%20Dwarka%20Expressway%2C%20Industrial%20Area%2C%20Sector%20106%2C%20Gurugram%2C%20Haryana%20122006!5e1!3m2!1sen!2sin!4v1761815346337!5m2!1sen!2sin"
+  width="600"
+  height="450"
+  style="border:0;"
+  allowfullscreen=""
+  loading="lazy"
+  referrerpolicy="no-referrer-when-downgrade"
+></iframe>; */
 }

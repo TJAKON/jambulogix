@@ -21,21 +21,21 @@ const subServices = [
     subtitle: "Engineered for Fast. Built for Scale. — Coming Soon",
     description:
       "At Jambulogix, we're building the next generation of tech-enabled Fulfilment Centres — designed to power high-speed order processing, precision pick-pack-ship, and seamless inventory flow across channels. Our upcoming facilities will leverage automation, data intelligence, and scalable design to reduce turnaround times, eliminate errors, and deliver unmatched efficiency — from warehouse to doorstep. Built for tomorrow. Ready for scale. Engineered to deliver.",
-    image: "/45.jpg",
+    image: "/services/4.jpg",
   },
   {
     title: "Dark Store",
     subtitle: "Delivering Fast, From Closer Than Ever – Coming Soon",
     description:
       "Jambulogix is gearing up to launch a network of smart Dark Stores — hyperlocal fulfilment hubs built to serve the rising demand for ultra-fast, last-mile deliveries. Strategically placed in high-demand zones, our Dark Stores will enable real-time inventory access, rapid order picking, and seamless dispatch — redefining how urban logistics operates. Fast. Flexible. Hyperlocal. Our Dark Stores will bring the future of fulfilment even closer to your customers.",
-    image: "/42.jpg",
+    image: "/services/7.jpg",
   },
   {
     title: "Cross Dock",
     subtitle: "We Move, So You Don’t Wait – Coming Soon",
     description:
       "At Jambulogix, our Cross-Dock model is built for speed — not storage. Shipments flow in, get sorted, and head right back out — saving you time, space, and cost. With smart coordination and a customer-first mindset, we keep your supply chain in motion — just the way it should be. Less idle. More action. That’s the Jambulogix promise..",
-    image: "/44.jpg",
+     image: "/services/3.jpg",
   },
   {
     title: "Hub In Hub",
@@ -49,7 +49,7 @@ const subServices = [
     subtitle: "Safe Shelves, Smarter Retail. Coming Soon",
     description:
       "QuickRack (Retail Warehousing) is designed to give retailers a competitive edge through smarter, greener, and more scalable storage solutions. Our facilities are strategically located, digitally enabled, and built with efficiency in mind—ensuring products move from shelf to shopper with speed and reliability. From inventory optimization to last-mile readiness, we provide seamless support for retailers to grow, adapt, and thrive in a fast-changing market",
-    image: "/41.jpg",
+    image: "/services/5.jpg",
   },
 ];
 
