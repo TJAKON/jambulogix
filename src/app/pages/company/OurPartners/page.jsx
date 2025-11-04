@@ -5,37 +5,9 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import TestimonialCarousel from "@/components/sections/TestimonialSection";
+import VendorsSection from "@/components/sections/Vendors";
 
-const partners = [
-  { name: "Motherson", logo: "/Clientlogo/1.png" },
-  { name: "Schaeffler", logo: "/Clientlogo/2.png" },
-  { name: "STUDDS", logo: "/Clientlogo/3.png" },
-  { name: "Carrier", logo: "/Clientlogo/4.png" },
-  { name: "Reliance Digital", logo: "/Clientlogo/5.png" },
-  { name: "Croma", logo: "/Clientlogo/6.png" },
-  { name: "Johnson Controls", logo: "/Clientlogo/7.png" },
-  { name: "Indian Terrain", logo: "/Clientlogo/8.png" },
-  { name: "Uppercase", logo: "/Clientlogo/9.png" },
-  { name: "Mankind", logo: "/Clientlogo/10.png" },
-  { name: "Johnson & Johnson", logo: "/Clientlogo/11.png" },
-  { name: "Meesho", logo: "/Clientlogo/12.png" },
-  { name: "Flipkart", logo: "/Clientlogo/13.png" },
-  { name: "Amazon", logo: "/Clientlogo/14.png" },
-  { name: "Domino's", logo: "/Clientlogo/15.png" },
-  { name: "Reliance", logo: "/Clientlogo/16.png" },
-  { name: "Zomato", logo: "/Clientlogo/17.png" },
-  { name: "Dorset", logo: "/Clientlogo/18.png" },
-  { name: "Inalco", logo: "/Clientlogo/19.png" },
-  { name: "Fenesta", logo: "/Clientlogo/20.png" },
-  { name: "Aishwaryam", logo: "/Clientlogo/21.png" },
-  { name: "XpressBees", logo: "/Clientlogo/22.png" },
-  { name: "Shadowfax", logo: "/Clientlogo/23.png" },
-  { name: "DHL", logo: "/Clientlogo/24.png" },
-  { name: "DISHA Publication", logo: "/Clientlogo/25.png" },
-  { name: "SKB", logo: "/Clientlogo/26.png" },
-  { name: "Del Mario", logo: "/Clientlogo/27.png" },
-  { name: "Jubilant FoodWorks", logo: "/Clientlogo/28.png" },
-];
+
 
 const leaders = [
   {
@@ -109,6 +81,7 @@ const partnerCategories = [
 
 export default function OurPartnersPage() {
   const [activeCategory, setActiveCategory] = useState(partnerCategories[0]);
+ 
 
   return (
     <main className="bg-white text-gray-800">
@@ -258,6 +231,8 @@ export default function OurPartnersPage() {
           ))}
         </div>
       </section>
+
+      <VendorsSection />
 
       {/* Social Impact Section */}
       <section className="bg-[#24577F] py-20 px-4 sm:px-10 md:px-20 relative overflow-hidden">

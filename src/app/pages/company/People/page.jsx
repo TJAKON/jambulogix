@@ -204,15 +204,15 @@ const Hero = () => (
 
 // --- 2. OUR WORLD, OUR FUTURE ---
 const OurWorld = () => (
-  <div className="w-full bg-white py-16 md:py-24">
+  <div className="w-full bg-[#24577F] py-16 md:py-24">
     <div className="container px-4 max-w-6xl mx-auto text-center">
-      <h5 className="text-lg uppercase font-bold text-gray-500 tracking-wider">
+      <h5 className="text-lg uppercase font-bold text-white tracking-wider">
         OUR mission
       </h5>
-      <h2 className="text-6xl uppercase font-bold text-gray-500 tracking-wider">
+      <h2 className="text-6xl uppercase font-bold text-white tracking-wider">
         Investing in People & Communities
       </h2>
-      <p className="max-w-2xl mx-auto text-xl md:text-lg text-gray-700 mt-4 leading-relaxed">
+      <p className="max-w-3xl mx-auto text-xl md:text-lg text-white/80 mt-4 leading-relaxed">
         Our mission is simple: to honour the human element in logistics. From
         our sort-centres and FTL (Full Truck Load) operations, to distribution
         hubs and last-mile delivery, every step is underpinned by the commitment
@@ -220,38 +220,6 @@ const OurWorld = () => (
         leadership. We partner with communities to create lasting value. We
         believe logistics done right means communities uplifted.
       </p>
-    </div>
-  </div>
-);
-
-const GenderEquality = () => (
-  <div className="container max-w-7xl mx-auto px-4 py-8">
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-      <div className="flex flex-col rounded-lg overflow-hidden group">
-        <img
-          src="https://placehold.co/600x400/e2e8f0/4a5568?text=Community+Support"
-          alt="Community Support"
-          className="w-full h-full object-cover"
-        />
-      </div>
-      {/* Card 1 */}
-      <div className="flex flex-col rounded-lg overflow-hidden group">
-        <div className="pt-6">
-          <h3 className="text-6xl uppercase font-bold text-gray-900 group-hover:text-blue-600 transition-colors">
-            GENDER EQUALITY
-          </h3>
-          <p className="text-gray-600 mt-2 line-clamp-3">
-            We recognise that logistics is historically male-dominated — we’re
-            changing that. Through targeted programmes, partnerships and
-            pathways, JLX is opening doors for women in warehousing, FTL,
-            distribution and leadership. We support gender equality in
-            operations and community outreach to build a more inclusive supply
-            chain ecosystem.
-          </p>
-        </div>
-      </div>
-
-      {/* Card 2 */}
     </div>
   </div>
 );
@@ -311,6 +279,38 @@ const SupportingPeople = () => {
   );
 };
 
+const GenderEquality = () => (
+  <div className="container bg-[#24577F]   px-4 py-8">
+    <div className="grid grid-cols-1 md:grid-cols-2 max-w-7xl mx-auto gap-8 items-center">
+      <div className="flex flex-col rounded-lg overflow-hidden group">
+        <img
+          src="/images/sub7.jpg"
+          alt="Community Support"
+          className="w-full h-[600px] object-cover"
+        />
+      </div>
+      {/* Card 1 */}
+      <div className="flex flex-col rounded-lg overflow-hidden group">
+        <div className="pt-6">
+          <h3 className="text-6xl uppercase font-bold text-white  transition-colors">
+            GENDER EQUALITY
+          </h3>
+          <p className="text-white/80 mt-2 capitalize line-clamp-3">
+            We recognise that logistics is historically male-dominated — we’re
+            changing that. Through targeted programmes, partnerships and
+            pathways, JLX is opening doors for women in warehousing, FTL,
+            distribution and leadership. We support gender equality in
+            operations and community outreach to build a more inclusive supply
+            chain ecosystem.
+          </p>
+        </div>
+      </div>
+
+      {/* Card 2 */}
+    </div>
+  </div>
+);
+
 // --- 4. CONTENT GRID 1 ---
 
 const Impact = () => (
@@ -319,10 +319,10 @@ const Impact = () => (
       {/* Card 1 */}
       <div className="flex flex-col rounded-lg overflow-hidden group">
         <div className="pt-6">
-          <h3 className="text-6xl uppercase font-bold text-gray-900 group-hover:text-blue-600 transition-colors">
+          <h3 className="text-6xl uppercase font-bold text-gray-900  transition-colors">
             10 years of Impact
           </h3>
-          <p className="text-gray-600 mt-2 line-clamp-3">
+          <p className="text-gray-600 capitalize mt-2 line-clamp-3">
             our logistics operations and community engagements go hand-in-hand.
             At our warehouses, FTL routes and distribution networks, we measure
             success not just by shipments but by lives improved. We partner with
@@ -336,9 +336,9 @@ const Impact = () => (
       {/* Card 2 */}
       <div className="flex flex-col rounded-lg overflow-hidden group">
         <img
-          src="https://placehold.co/600x400/e2e8f0/4a5568?text=Community+Support"
+        src="/images/v1.jpeg"
           alt="Community Support"
-          className="w-full h-full object-cover"
+          className="w-full h-[600px] object-cover"
         />
       </div>
     </div>
@@ -531,28 +531,30 @@ const PartnershipCard = ({ img, title, text }) => (
       className="w-full h-full object-contain flex-shrink-0"
     />
     <div className="mt-4 md:mt-0 md:ml-6">
-      <h3 className="font-bold text-lg text-gray-900">{title}</h3>
-      <p className="text-gray-600 text-sm mt-1">{text}</p>
+      <h3 className="font-bold text-lg text-black">{title}</h3>
+      <p className="text-white/80 text-sm mt-1">{text}</p>
     </div>
   </div>
 );
 
 const Partnerships = () => (
-  <div className="container max-w-7xl mx-auto  px-4 pb-16 md:pb-24">
-    <h2 className="text-7xl max-w-2xl  font-bold text-gray-900 mb-8">
-      OUR PEOPLE AND COMMUNITY PARTNERSHIPS
-    </h2>
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-      <PartnershipCard
-        img="https://placehold.co/200x100/e2e8f0/4a5568?text=Partner+Logo+1"
-        title="Dubai Cares"
-        text="Partnering to enhance access to quality education for children in developing countries."
-      />
-      <PartnershipCard
-        img="https://placehold.co/200x100/e2e8f0/4a5568?text=Partner+Logo+2"
-        title="Earthshot Prize"
-        text="Supporting innovative solutions to the world's greatest environmental challenges."
-      />
+  <div className="container bg-[#24577F]  px-4 pb-16 md:pb-24">
+    <div className="  mx-auto max-w-7xl  px-4 pb-16 md:py-24">
+      <h2 className="text-7xl max-w-2xl  font-bold text-white mb-8">
+        OUR PEOPLE AND COMMUNITY PARTNERSHIPS
+      </h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <PartnershipCard
+          img="https://placehold.co/200x100/e2e8f0/4a5568?text=Partner+Logo+1"
+          title="Dubai Cares"
+          text="Partnering to enhance access to quality education for children in developing countries."
+        />
+        <PartnershipCard
+          img="https://placehold.co/200x100/e2e8f0/4a5568?text=Partner+Logo+2"
+          title="Earthshot Prize"
+          text="Supporting innovative solutions to the world's greatest environmental challenges."
+        />
+      </div>
     </div>
   </div>
 );
@@ -877,10 +879,10 @@ export default function Page() {
         <GenderEquality />
         <Impact />
         {/* <ContentGrid1 /> */}
-        <OurImpact />
-        <ThoughtLeadership />
+        {/* <OurImpact /> */}
+        {/* <ThoughtLeadership /> */}
         <Partnerships />
-        <SustainabilityPages />
+        {/* <SustainabilityPages /> */}
         <BetterFuture />
         <FAQs />
       </main>

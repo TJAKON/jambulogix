@@ -14,7 +14,7 @@ const subServices = [
     subtitle: "Faster Turnarounds. Smarter Deliveries.",
     description:
       "Our strategically located Sort Centres are the nerve centers of speed and accuracy. Designed for high-volume efficiency and built for regional and last-mile optimization, they ensure your shipments are in the right place — at the right time. With a blend of process automation, data-driven workflows, and skilled manpower, we minimize touchpoints, eliminate delays, and enable real-time visibility across every shipment. Less lag. More precision. Seamless flow. That’s the Jambulogix sort advantage.",
-    image: "/46.jpg",
+    image: "/services/8.png",
   },
   {
     title: "Fulfilment Centre",
@@ -42,7 +42,7 @@ const subServices = [
     subtitle: "Everything Connected. Everything Moving– Coming Soon",
     description:
       "At Jambulogix, our upcoming Hub-in-Hub model brings everything under one roof — sorting, fulfilment, cross-dock, and last-mile prep — enabling a smarter, faster, and more agile supply chain. It’s not just a hub — it’s an ecosystem, built to reduce handovers, cut delays, and put your cargo on the move with precision. One hub. Infinite flow. Powered by Jambulogix.",
-    image: "/41.jpg",
+    image: "/services/9.png",
   },
   {
     title: "QuickRack",
@@ -242,7 +242,7 @@ export default function Page() {
                 alt={activeTab.title}
                 width={600}
                 height={400}
-                className="rounded-2xl w-full h-[250px] sm:h-[350px] md:h-[450px] object-cover shadow-lg"
+                className="rounded-2xl w-full h-[250px] sm:h-[350px] md:h-[600px] object-contain"
               />
             </div>
 
@@ -348,10 +348,10 @@ export default function Page() {
             transition={{ staggerChildren: 0.2 }}
           >
             {[
-              { img: "/19.jpg", label: "E-commerce Enterprises" },
-              { img: "/18.jpg", label: "Online Sellers & SMEs" },
-              { img: "/10.jpg", label: "Brands & D2C Companies" },
-              { img: "/10.jpg", label: "Budding Startup" },
+              { img: "/images/sub2.jpg", label: "E-commerce Enterprises" },
+              { img: "/images/sub3.jpg", label: "Online Sellers & SMEs" },
+              { img: "/images/sub6.jpg", label: "Brands & D2C Companies" },
+              { img: "/images/sub5.jpg", label: "Budding Startup" },
             ].map((item, idx) => (
               <motion.div
                 key={idx}

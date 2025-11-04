@@ -14,7 +14,7 @@ const subServices = [
     subtitile: "One Truck is All You Need",
     description:
       "Our FTL services are designed for businesses that need exclusive, high-volume cargo movement with maximum speed and control. Whether it’s a long-haul delivery or regional route, we provide end-to-end truckload solutions with optimized routing, real-time tracking, and minimal transit delays. With a pan-India network and an asset-light model, we offer the flexibility to scale without compromising on reliability — making us the preferred FTL partner for MSMEs, startups, and enterprise clients across industries.",
-    image: "/16.jpg",
+    image: "/services/12.png",
   },
   {
     title: "Surface Express",
@@ -22,7 +22,7 @@ const subServices = [
 
     description:
       "Our Surface Express services are built for time-sensitive cargo that needs to move fast — without the cost of air freight. With a dedicated network, priority routing, and day-definite delivery options, we ensure speed, safety, and service across every surface mile. Whether you’re an MSME, a scaling D2C brand, or an enterprise with frequent dispatches, our Surface Express is designed to keep your shipments on track and your customers impressed — all while minimizing your carbon footprint.",
-    image: "/22.jpg",
+    image: "/services/11.png",
   },
   {
     title: "Air Express",
@@ -30,7 +30,7 @@ const subServices = [
 
     description:
       "When speed is non-negotiable, Jambulogix Air Express delivers. Designed for time-critical and high-value shipments, our air freight solutions ensure priority uplift, secure handling, and nationwide reach — all managed through a single tech-enabled platform. Whether you're an emerging brand, an MSME with urgent B2B dispatches, or an enterprise shipping across zones, our Air Express gets your cargo off the ground and on time, with full visibility and reduced operational stress",
-    image: "/21.jpg",
+     image: "/services/15.png",
   },
   {
     title: "Rail Parcel",
@@ -38,7 +38,7 @@ const subServices = [
 
     description:
       "Reliable, cost-effective, and built for bulk — Jambulogix Rail Parcel services are perfect for moving shipments efficiently across long distances. With access to major railway routes, scheduled departures, and door-to-door handling, we combine the power of rail with our tech-enabled visibility and coordination. Ideal for MSMEs, regional distributors, and growing brands, our rail parcel solutions reduce logistics costs, support low-emission movement, and ensure dependable service across India's backbone network.",
-      image: "/services/2.jpg",
+    image: "/services/2.jpg",
   },
 ];
 
@@ -353,7 +353,7 @@ export default function Page() {
                 alt={activeTab.title}
                 width={600}
                 height={400}
-                className="rounded-2xl w-full h-[250px] sm:h-[350px] md:h-[450px] object-cover shadow-lg"
+                className="rounded-2xl w-full h-[250px] sm:h-[350px] md:h-[600px] object-fit"
               />
             </div>
 
@@ -487,9 +487,9 @@ export default function Page() {
             transition={{ staggerChildren: 0.2 }}
           >
             {[
-              { img: "/19.jpg", label: "Startups & Growing Brands" },
-              { img: "/18.jpg", label: "SMEs Across Sectors" },
-              { img: "/10.jpg", label: "Regional & Local Distributors" },
+              { img: "/images/sub2.jpg", label: "Startups & Growing Brands" },
+              { img: "/images/sub4.jpg", label: "SMEs Across Sectors" },
+              { img: "/images/sub11.jpg", label: "Regional & Local Distributors" },
             ].map((item, idx) => (
               <motion.div
                 key={idx}
@@ -519,8 +519,8 @@ export default function Page() {
             transition={{ staggerChildren: 0.2 }}
           >
             {[
-              { img: "/10.jpg", label: "Brands & D2C Companies" },
-              { img: "/10.jpg", label: "Sustainable & Conscious Businesses" },
+              { img: "/images/sub6.jpg", label: "Brands & D2C Companies" },
+              { img: "/images/sub10.jpg", label: "Sustainable & Conscious Businesses" },
             ].map((item, idx) => (
               <motion.div
                 key={idx}

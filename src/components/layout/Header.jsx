@@ -39,10 +39,6 @@ export default function Header() {
           label: "Transportation Services",
           link: "/pages/services/transportation-service",
         },
-        // {
-        //   label: "Reverse Logistics Solutions",
-        //   link: "/pages/services/supply-chain-solution",
-        // },
       ],
     },
     {
@@ -62,14 +58,13 @@ export default function Header() {
     },
   ];
 
-  // Function to check if link is active
   const isActive = (href) =>
     pathname === href
       ? "text-white underline underline-offset-4 decoration-2"
       : "hover:text-[#FF7F06] text-white";
 
   return (
-    <header className="fixed top-0 left-0 w-full z-50 backdrop-blur-md border-b border-white/10 bg-black/40 shadow p-4 sm:p-6 flex items-center justify-between">
+    <div className="fixed top-0 left-0 w-full z-50 backdrop-blur-md border-b border-white/10 bg-black/40 shadow p-4 sm:p-6 flex items-center justify-between">
       {/* Logo */}
       <Link href="/" className="flex items-center">
         <Image
@@ -82,120 +77,98 @@ export default function Header() {
       </Link>
 
       {/* Desktop Nav */}
-      <PopoverGroup className="hidden xl:flex gap-6  text-white text-xl font-medium items-center">
+      <PopoverGroup className="hidden xl:flex gap-6 text-white text-xl font-medium items-center">
+
         {/* Services */}
         <Popover className="relative group">
-          <PopoverButton className="flex items-center gap-1 hover:text-[#FF7F06] transition duration-200 focus:outline-none">
-            Services <ChevronDownIcon className="h-5 w-5" />
-          </PopoverButton>
-          <PopoverPanel className="absolute top-15 left-0 mt-2 w-90 font-bold bg-black/40 backdrop-blur-md p-4 space-y-2 z-50 text-white shadow-xl">
-            <Link
-              href="/pages/services/smart-warehousing-solution"
-              className="block hover:text-white hover:bg-[#FF7F06] border-2 bg-[#24577F] p-2 rounded-lg"
-            >
-              Smart Warehousing Services
-            </Link>
-            <Link
-              href="/pages/services/smart-distribution-solution"
-              className="block hover:text-white hover:bg-[#FF7F06] border-2 bg-[#24577F] p-2 rounded-lg"
-            >
-              Smart Distribution Services
-            </Link>
-            <Link
-              href="/pages/services/transportation-service"
-              className="block hover:text-white hover:bg-[#FF7F06] border-2 bg-[#24577F] p-2 rounded-lg"
-            >
-              Smart Transportation Services
-            </Link>
-            {/* <Link
-              href="/pages/services/supply-chain-solution"
-              className="block hover:text-white hover:bg-[#FF7F06] border-2 bg-[#24577F] p-2 rounded-lg"
-            >
-              Reverse Logistics Solutions
-            </Link> */}
-          </PopoverPanel>
+          {({ close }) => (
+            <>
+              <PopoverButton className="flex items-center gap-1 hover:text-[#FF7F06] transition duration-200">
+                Services <ChevronDownIcon className="h-5 w-5" />
+              </PopoverButton>
+
+              <PopoverPanel className="absolute top-15 left-0 mt-2 w-90 font-bold bg-black/40 backdrop-blur-md p-4 space-y-2 z-50 text-white shadow-xl">
+                <Link
+                  href="/pages/services/smart-warehousing-solution"
+                  onClick={() => close()}
+                  className="block hover:text-white hover:bg-[#FF7F06] border-2 bg-[#24577F] p-2 rounded-lg"
+                >
+                  Smart Warehousing Services
+                </Link>
+                <Link
+                  href="/pages/services/smart-distribution-solution"
+                  onClick={() => close()}
+                  className="block hover:text-white hover:bg-[#FF7F06] border-2 bg-[#24577F] p-2 rounded-lg"
+                >
+                  Smart Distribution Services
+                </Link>
+                <Link
+                  href="/pages/services/transportation-service"
+                  onClick={() => close()}
+                  className="block hover:text-white hover:bg-[#FF7F06] border-2 bg-[#24577F] p-2 rounded-lg"
+                >
+                  Smart Transportation Services
+                </Link>
+              </PopoverPanel>
+            </>
+          )}
         </Popover>
 
         {/* Company */}
         <Popover className="relative group">
-          <PopoverButton className="flex items-center gap-1 hover:text-[#FF7F06] transition duration-200 focus:outline-none">
-            Company <ChevronDownIcon className="h-5 w-5" />
-          </PopoverButton>
-          <PopoverPanel className="absolute top-15 left-0 mt-2 w-90 font-bold bg-black/40 backdrop-blur-md p-4 space-y-2 z-50 text-white shadow-xl">
-            <Link
-              href="/pages/company/OurPartners"
-              className="block hover:text-white hover:bg-[#FF7F06] border-2 bg-[#24577F] p-2 rounded-lg"
-            >
-              Our Partners
-            </Link>
-            <Link
-              href="/pages/company/OurTeam"
-              className="block hover:text-white hover:bg-[#FF7F06] border-2 bg-[#24577F] p-2 rounded-lg"
-            >
-              Our Team
-            </Link>
-            <Link
-              href="/pages/company/People"
-              className="block hover:text-white hover:bg-[#FF7F06] border-2 bg-[#24577F] p-2 rounded-lg"
-            >
-              Our People
-            </Link>
-            <Link
-              href="/pages/company/Careers"
-              className="block hover:text-white hover:bg-[#FF7F06] border-2 bg-[#24577F] p-2 rounded-lg"
-            >
-              Careers
-            </Link>
-          </PopoverPanel>
+          {({ close }) => (
+            <>
+              <PopoverButton className="flex items-center gap-1 hover:text-[#FF7F06] transition duration-200">
+                Company <ChevronDownIcon className="h-5 w-5" />
+              </PopoverButton>
+
+              <PopoverPanel className="absolute top-15 left-0 mt-2 w-90 font-bold bg-black/40 backdrop-blur-md p-4 space-y-2 z-50 text-white shadow-xl">
+                <Link href="/pages/company/OurPartners" onClick={() => close()} className="block hover:text-white hover:bg-[#FF7F06] border-2 bg-[#24577F] p-2 rounded-lg">
+                  Our Partners
+                </Link>
+                <Link href="/pages/company/OurTeam" onClick={() => close()} className="block hover:text-white hover:bg-[#FF7F06] border-2 bg-[#24577F] p-2 rounded-lg">
+                  Our Team
+                </Link>
+                <Link href="/pages/company/People" onClick={() => close()} className="block hover:text-white hover:bg-[#FF7F06] border-2 bg-[#24577F] p-2 rounded-lg">
+                  Our People
+                </Link>
+                <Link href="/pages/company/Careers" onClick={() => close()} className="block hover:text-white hover:bg-[#FF7F06] border-2 bg-[#24577F] p-2 rounded-lg">
+                  Careers
+                </Link>
+              </PopoverPanel>
+            </>
+          )}
         </Popover>
-        {/* Company */}
 
-        {/* Static Links with Active Highlight */}
-        {/* <Link
-          href="/pages/services/motherhood-service"
-          className={`transition duration-200 font-bold text-center ${isActive(
-            "/pages/services/motherhood-service"
-          )}`}
-        >
-          Motherhood
-        </Link> */}
-
-        <Link
-          href="/pages/about"
-          className={`transition duration-200 ${isActive("/pages/about")}`}
-        >
+        <Link href="/pages/about" className={`transition duration-200 ${isActive("/pages/about")}`}>
           About Us
         </Link>
+
+        {/* Resources */}
         <Popover className="relative group">
-          <PopoverButton className="flex items-center gap-1 hover:text-[#FF7F06] transition duration-200 focus:outline-none">
-            Resources <ChevronDownIcon className="h-5 w-5" />
-          </PopoverButton>
-          <PopoverPanel className="absolute top-15 left-0 mt-2 w-90 font-bold bg-black/40 backdrop-blur-md p-4 space-y-2 z-50 text-white shadow-xl">
-            <Link
-              href="/pages/resources/blogs"
-              className="block hover:text-white hover:bg-[#FF7F06] border-2 bg-[#24577F] p-2 rounded-lg"
-            >
-              Blogs
-            </Link>
-            {/* <Link
-              href="/pages/resources/News"
-              className="block hover:text-white hover:bg-[#FF7F06] border-2 bg-[#24577F] p-2 rounded-lg"
-            >
-              News
-            </Link> */}
-          </PopoverPanel>
+          {({ close }) => (
+            <>
+              <PopoverButton className="flex items-center gap-1 hover:text-[#FF7F06] transition duration-200">
+                Resources <ChevronDownIcon className="h-5 w-5" />
+              </PopoverButton>
+
+              <PopoverPanel className="absolute top-15 left-0 mt-2 w-90 font-bold bg-black/40 backdrop-blur-md p-4 space-y-2 z-50 text-white shadow-xl">
+                <Link href="/pages/resources/blogs" onClick={() => close()} className="block hover:text-white hover:bg-[#FF7F06] border-2 bg-[#24577F] p-2 rounded-lg">
+                  Blogs
+                </Link>
+              </PopoverPanel>
+            </>
+          )}
         </Popover>
-        <Link
-          href="/pages/contact-us"
-          className={`transition duration-200 ${isActive("/pages/contact-us")}`}
-        >
+
+        <Link href="/pages/contact-us" className={`transition duration-200 ${isActive("/pages/contact-us")}`}>
           Contact Us
         </Link>
       </PopoverGroup>
 
-      {/* CTA Button (Desktop Only) */}
+      {/* CTA Button */}
       <Link href="/pages/contact-us">
-        <div className="hidden xl:block ml-4 bg-[#FF7F06] text-white px-4 py-2 rounded-2xl font-bold text-md md:text-xl border-2 border-[#24577F] hover:border-white hover:bg-[#24577F] hover:text-white transition-colors duration-300">
+        <div className="hidden xl:block ml-4 bg-[#FF7F06] text-white px-4 py-2 rounded-2xl font-bold text-md md:text-xl border-2 border-[#24577F] hover:border-white hover:bg-[#24577F] transition-colors duration-300">
           Get in Touch
         </div>
       </Link>
@@ -207,24 +180,18 @@ export default function Header() {
 
       {/* Mobile Sidebar */}
       <div
-        className={`fixed top-0 right-0 w-svw h-screen bg-black/95 z-10 text-white transform ${
+        className={`fixed top-0 right-0 w-svw h-screen bg-black/95 z-50 text-white transform ${
           sidebarOpen ? "translate-x-0" : "translate-x-full"
-        } transition-transform duration-300 z-50 p-6 space-y-6`}
+        } transition-transform duration-300 p-6 space-y-6`}
       >
         <div className="flex items-center justify-between">
-          <Image
-            src="/jlxx.png"
-            alt="Jambulogix Logo"
-            width={180}
-            height={40}
-          />
+          <Image src="/jlxx.png" alt="Jambulogix Logo" width={180} height={40} />
           <button onClick={() => setSidebarOpen(false)}>
             <XMarkIcon className="h-8 w-8 text-white" />
           </button>
         </div>
 
         <div className="space-y-6">
-          {/* Collapsible Dropdown Menus */}
           {menuGroups.map((group) => (
             <div key={group.title}>
               <button
@@ -244,7 +211,7 @@ export default function Header() {
               </button>
 
               {mobileDropdown === group.title && (
-                <div className="ml-4 mt-4 space-y-4 text-md text-white">
+                <div className="ml-4 mt-4 space-y-4 text-md">
                   {group.children.map((child) => (
                     <Link
                       href={child.link}
@@ -260,40 +227,23 @@ export default function Header() {
             </div>
           ))}
 
-          {/* Static Links */}
-          <div className="space-y-6 mt-4 text-white font-bold">
-            {/* <Link
-              href="/pages/services/motherhood-service"
-              className="block hover:text-[#FF7F06]"
-              onClick={() => setSidebarOpen(false)}
-            >
-              Motherhood
-            </Link> */}
-            <Link
-              href="/pages/about"
-              className="block hover:text-[#FF7F06]"
-              onClick={() => setSidebarOpen(false)}
-            >
+          <div className="space-y-6 mt-4 font-bold">
+            <Link href="/pages/about" className="block hover:text-[#FF7F06]" onClick={() => setSidebarOpen(false)}>
               About Us
             </Link>
-            <Link
-              href="/pages/contact-us"
-              className="block hover:text-[#FF7F06]"
-              onClick={() => setSidebarOpen(false)}
-            >
+            <Link href="/pages/contact-us" className="block hover:text-[#FF7F06]" onClick={() => setSidebarOpen(false)}>
               Contact Us
             </Link>
           </div>
 
-          {/* CTA Button */}
           <button
             onClick={() => setSidebarOpen(false)}
-            className="mt-6 w-full bg-[#FF7F06] text-white px-4 py-2 rounded-2xl font-bold border-2 border-[#24577F] hover:border-white hover:bg-[#24577F] hover:text-white transition duration-300"
+            className="mt-6 w-full bg-[#FF7F06] text-white px-4 py-2 rounded-2xl font-bold border-2 border-[#24577F] hover:bg-[#24577F] transition"
           >
             Get in Touch
           </button>
         </div>
       </div>
-    </header>
+    </div>
   );
 }

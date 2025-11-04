@@ -15,7 +15,7 @@ const subServices = [
 
     description:
       "We know every great delivery begins with a smooth first move. Our First Mile services are built to swiftly move your shipments from your pickup point to the next destination — with precision, care, and efficiency. Powered by a tech-enabled fleet, deep regional reach, and a commitment to low-carbon operations, we ensure your supply chain starts right — and sustainably — every time.",
-    image: "/112.jpeg",
+       image: "/services/10.png",
   },
   {
     title: " Last Mile",
@@ -287,7 +287,7 @@ export default function Page() {
                 alt={activeTab.title}
                 width={600}
                 height={400}
-                className="rounded-2xl w-full h-[250px] sm:h-[350px] md:h-[450px] object-cover shadow-lg"
+                className="rounded-2xl w-full h-[250px] sm:h-[350px] md:h-[600px] object-cover"
               />
             </div>
 
@@ -419,9 +419,9 @@ export default function Page() {
             transition={{ staggerChildren: 0.2 }}
           >
             {[
-              { img: "/19.jpg", label: "Startups & Growing Brands" },
-              { img: "/18.jpg", label: "SMEs Across Sectors" },
-              { img: "/10.jpg", label: "Regional & Local Distributors" },
+              { img: "/images/sub1.jpg", label: "Startups & Growing Brands" },
+              { img: "/images/sub4.jpg", label: "SMEs Across Sectors" },
+              { img: "/images/sub11.jpg", label: "Regional & Local Distributors" },
             ].map((item, idx) => (
               <motion.div
                 key={idx}
@@ -451,8 +451,8 @@ export default function Page() {
             transition={{ staggerChildren: 0.2 }}
           >
             {[
-              { img: "/10.jpg", label: "E-commerce & D2C Sellers" },
-              { img: "/10.jpg", label: "Sustainable & Conscious Businesses" },
+              { img: "/images/sub6.jpg", label: "E-commerce & D2C Sellers" },
+              { img: "/images/sub10.jpg", label: "Sustainable & Conscious Businesses" },
             ].map((item, idx) => (
               <motion.div
                 key={idx}
