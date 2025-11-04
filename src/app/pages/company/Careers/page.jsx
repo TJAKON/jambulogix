@@ -103,13 +103,13 @@ export default function Page() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative w-full h-[90vh] overflow-hidden">
+      <section className="relative w-full h-[90vh] contrast-120 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/91.jpg"
+            src="/images/careers.jpg"
             alt="Careers at Jambulogix"
             fill
-            className="object-cover brightness-60"
+            className="object-cover brightness-50"
           />
         </div>
 
@@ -276,7 +276,7 @@ export default function Page() {
           </h2>
         </div>
         <div className="grid sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-3 max-w-8xl mx-auto gap-6">
-          {["l1.jpg", "l3.jpg", "l2.jpg", "l5.jpg", "l6.jpg", "l4.jpg"].map(
+          {["l1.jpg", "l3.jpg", "l2.jpg", "l5.jpg", "l6.jpg", "l7.jpg"].map(
             (img, i) => (
               <Image
                 key={i}

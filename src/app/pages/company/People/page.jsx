@@ -320,7 +320,7 @@ const Impact = () => (
       <div className="flex flex-col rounded-lg overflow-hidden group">
         <div className="pt-6">
           <h3 className="text-6xl uppercase font-bold text-gray-900  transition-colors">
-            10 years of Impact
+            Jambulogix Impact
           </h3>
           <p className="text-gray-600 capitalize mt-2 line-clamp-3">
             our logistics operations and community engagements go hand-in-hand.
@@ -881,7 +881,7 @@ export default function Page() {
         {/* <ContentGrid1 /> */}
         {/* <OurImpact /> */}
         {/* <ThoughtLeadership /> */}
-        <Partnerships />
+        {/* <Partnerships /> */}
         {/* <SustainabilityPages /> */}
         <BetterFuture />
         <FAQs />

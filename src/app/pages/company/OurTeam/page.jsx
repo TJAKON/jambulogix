@@ -80,27 +80,27 @@ const leaders = [
   {
     name: "Nikhilendu Shekhar",
     role: "Founder & CEO",
-    desc: "Visionary leader driving innovation across supply chain solutions.",
-    img: "/n4.jpg",
+    desc: "Business Performance",
+    img: "/n5.png",
   },
   {
     name: "Satish kumar",
-    role: "Tech Head",
-    desc: "Leads our digital transformation and intelligent logistics systems.",
+    role: "Co-Founder & COO",
+    desc: "Business Operations",
     img: "/p6.png",
   },
 
   {
-    name: "Priyanshi singh",
-    role: "Chief Strategy Officer",
-    desc: "Crafts growth strategies and data-driven decisions for expansion.",
+    name: "Priyanci singh",
+    role: "Co-Founder & CCOE",
+    desc: "Business Excellence   ",
     img: "/p1.jpg",
   },
 
   {
-    name: "Amrendra Pratap Singh",
-    role: "COO",
-    desc: "Operational excellence expert ensuring scalable logistics operations.",
+    name: "Amarendra Pratap Singh",
+    role: "CO-Founder & CSO",
+    desc: "Business Strategy",
     img: "/p2.jpg",
   },
 ];
@@ -235,7 +235,7 @@ export default function Page() {
                 <div className="absolute inset-0 bg-black/40 group-hover:bg-black/70 transition duration-500 z-10"></div>
 
                 {/* Name (always visible) */}
-                <div className="absolute bottom-4 left-4 z-20">
+                <div className="absolute bottom-4 left-4 z-20 capitalize">
                   <p className="text-white text-lg font-bold">{leader.name}</p>
                 </div>
 
@@ -342,10 +342,10 @@ export default function Page() {
 
       {/* Vision Section */}
       <section
-        className=" relative bg-[#24577F] h-[80vh] bg-cover bg-top text-white py-20 px-6 sm:px-12 md:px-20"
-        style={{ backgroundImage: "url('/group.jpg')" }}
+        className=" relative bg-[#24577F] h-[80vh] bg-cover bg-center text-white py-20 px-6 sm:px-12 md:px-20"
+        style={{ backgroundImage: "url('/images/group2.png')" }}
       >
-      <div className="absolute inset-0 bg-black/40" />
+        <div className="absolute inset-0 bg-black/30" />
         <div className="text-center items-start justify-start z-10 relative max-w-7xl mx-auto">
           <h2 className="text-3xl sm:text-4xl max-w-6xl mx-auto capitalize font-extrabold text-white mb-4">
             <span className="text-[#FF7F06] sm:text-6xl">
@@ -357,11 +357,11 @@ export default function Page() {
             Our people. Our strength. Our story.
           </h5>
           <p className="text-lg text-white max-w-7xl mx-auto capitalize">
-            our people are the backbone of everything we do. From
-            the ground to the grid, every role matters — and every voice is
-            valued. We’re building a logistics ecosystem that’s not just fast,
-            but fair, inclusive, and deeply human. Because when people thrive,
-            systems grow. And that’s the future we believe in — together
+            our people are the backbone of everything we do. From the ground to
+            the grid, every role matters — and every voice is valued. We’re
+            building a logistics ecosystem that’s not just fast, but fair,
+            inclusive, and deeply human. Because when people thrive, systems
+            grow. And that’s the future we believe in — together
           </p>
         </div>
       </section>

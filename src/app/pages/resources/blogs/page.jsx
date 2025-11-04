@@ -10,27 +10,27 @@ export default function BlogPage() {
     <>
       {/* 🔹 Hero Section */}
       <section
-        className=" text-white h-[650px] py-32 sm:py-28 md:py-40 text-center bg-cover bg-bottom relative"
-        style={{ backgroundImage: "url('/images/blogsbanner.jpg')" }}
+        className=" text-white h-[650px] contrast-200 brightness-100 py-32 sm:py-28 md:py-40 text-center bg-cover bg-top relative"
+        style={{ backgroundImage: "url('/images/careers1.jpg')" }}
       >
-        <div className="absolute inset-0 bg-black/10" />
-        {/* <div className="relative z-10 px-4 sm:px-8 max-w-5xl mx-auto">
-          <h1 className="text-3xl sm:text-4xl md:text-7xl font-bold mb-6 leading-snug">
+        <div className="absolute inset-0 bg-black/40" />
+        <div className="relative z-10 px-4 sm:px-8 max-w-5xl mx-auto">
+          <h1 className="text-3xl text-[#24577F] sm:text-4xl md:text-7xl font-bold mb-6 leading-snug">
             Stay{" "}
-            <span className="text-[#FF7F06] font-extrabold text-8xl">
-              Informed
+            <span className="text-white font-extrabold text-8xl">
+              Informed,
             </span>
-            , Stay{" "}
-            <span className="text-[#FF7F06] text-8xl font-extrabold">
+             {" "}Stay{" "}
+            <span className="text-white text-8xl font-extrabold">
               Ahead
             </span>
           </h1>
-          <p className="text-base sm:text-lg text-white/80 max-w-5xl mx-auto mb-8">
+          <p className="text-base sm:text-lg text-white max-w-4xl mx-auto mb-8">
             Explore the latest blogs, insights, and expert articles in
             technology, logistics, and business trends. Stay updated with
             stories that matter to you.
           </p>
-        </div> */}
+        </div>
       </section>
 
       {/* 🔹 Blog Grid */}

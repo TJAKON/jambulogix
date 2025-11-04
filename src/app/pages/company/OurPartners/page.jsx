@@ -232,7 +232,7 @@ export default function OurPartnersPage() {
         </div>
       </section>
 
-      <VendorsSection />
+      {/* <VendorsSection /> */}
 
       {/* Social Impact Section */}
       <section className="bg-[#24577F] py-20 px-4 sm:px-10 md:px-20 relative overflow-hidden">

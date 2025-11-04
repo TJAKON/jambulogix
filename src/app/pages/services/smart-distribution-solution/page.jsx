@@ -15,7 +15,7 @@ const subServices = [
 
     description:
       "We know every great delivery begins with a smooth first move. Our First Mile services are built to swiftly move your shipments from your pickup point to the next destination — with precision, care, and efficiency. Powered by a tech-enabled fleet, deep regional reach, and a commitment to low-carbon operations, we ensure your supply chain starts right — and sustainably — every time.",
-       image: "/services/10.png",
+    image: "/services/12.png",
   },
   {
     title: " Last Mile",
@@ -23,7 +23,7 @@ const subServices = [
 
     description:
       "The final step matters most — and we make it count. Our Last Mile services ensure your products reach customers on time, intact, and with care, creating a seamless delivery experience that reflects your brand promise. With a tech-enabled delivery network, trained fleet, and a focus on eco-efficient routing, we help you achieve faster drop-offs while reducing your carbon footprint — making every delivery better for your customers and the planet.",
-    image: "/29.jpg",
+        image: "/services/13.png",
   },
 ];
 
@@ -108,7 +108,7 @@ export default function Page() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative w-full h-screen overflow-hidden">
+      <section className="relative w-full contrast-120 h-screen overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <Image

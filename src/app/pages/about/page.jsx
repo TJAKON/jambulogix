@@ -440,7 +440,7 @@ export default function AboutUsPage() {
 
                 {/* Name (always visible) */}
                 <div className="absolute bottom-4 left-4 z-20">
-                  <p className="text-white text-2xl font-semibold">
+                  <p className="text-white text-2xl font-semibold capitalize">
                     {leader.name}
                   </p>
                 </div>
@@ -727,9 +727,53 @@ export default function AboutUsPage() {
             {/* Orbit Points */}
             {sustainabilityPoints.map((text, idx) => {
               const angle = (360 / sustainabilityPoints.length) * idx;
-              const radius = 195;
+              const radius = 220;
               const x = radius * Math.cos((angle * Math.PI) / 180);
               const y = radius * Math.sin((angle * Math.PI) / 180);
+
+              return (
+                <div
+                  key={idx}
+                  className="absolute flex items-center justify-center text-center 
+                 px-4 py-3 text-white font-semibold select-none
+                 border border-green-700 shadow-lg transition hover:scale-105"
+                  style={{
+                    transform: `translate(${x}px, ${y}px)`,
+                    background: `linear-gradient(145deg, #3a9d23, #2e7d1c)`,
+                    width: "120px",
+                    height: "130px",
+                    borderRadius: "70% 70% 50% 50% / 100% 100% 40% 40%", // leaf shape
+                    boxShadow: "0 4px 10px rgba(0, 128, 0, 0.3)",
+                  }}
+                >
+                  <span className="text-sm">{text}</span>
+
+                  {/* Leaf stem */}
+                  <span className="absolute bottom-[-24px] w-[6px] h-[24px] bg-white rounded-full"></span>
+                </div>
+              );
+            })}
+
+            {/* Forest Ground */}
+
+            {/* {sustainabilityPoints.map((text, idx) => {
+              const angle = ((2 * Math.PI) / sustainabilityPoints.length) * idx;
+
+              // Tulsi leaf via Superformula parameters
+              const m = 12;
+              const n1 = 4;
+              const n2 = 6;
+              const n3 = 6;
+              const a = 1;
+              const b = 1;
+
+              const t1 = Math.pow(Math.abs(Math.cos((m * angle) / 4) / a), n2);
+              const t2 = Math.pow(Math.abs(Math.sin((m * angle) / 4) / b), n3);
+              const r = Math.pow(t1 + t2, -1 / n1);
+
+              const scale = 220; // adjust leaf size
+              const x = scale * r * Math.cos(angle);
+              const y = scale * r * Math.sin(angle);
 
               return (
                 <div
@@ -740,7 +784,7 @@ export default function AboutUsPage() {
                   <p className="text-sm font-medium text-white">{text}</p>
                 </div>
               );
-            })}
+            })} */}
           </div>
         </div>
       </section>

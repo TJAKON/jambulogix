@@ -14,7 +14,7 @@ const subServices = [
     subtitile: "One Truck is All You Need",
     description:
       "Our FTL services are designed for businesses that need exclusive, high-volume cargo movement with maximum speed and control. Whether it’s a long-haul delivery or regional route, we provide end-to-end truckload solutions with optimized routing, real-time tracking, and minimal transit delays. With a pan-India network and an asset-light model, we offer the flexibility to scale without compromising on reliability — making us the preferred FTL partner for MSMEs, startups, and enterprise clients across industries.",
-    image: "/services/12.png",
+    image: "/services/16.jpg",
   },
   {
     title: "Surface Express",
@@ -22,7 +22,7 @@ const subServices = [
 
     description:
       "Our Surface Express services are built for time-sensitive cargo that needs to move fast — without the cost of air freight. With a dedicated network, priority routing, and day-definite delivery options, we ensure speed, safety, and service across every surface mile. Whether you’re an MSME, a scaling D2C brand, or an enterprise with frequent dispatches, our Surface Express is designed to keep your shipments on track and your customers impressed — all while minimizing your carbon footprint.",
-    image: "/services/11.png",
+    image: "/services/17.jpg",
   },
   {
     title: "Air Express",
@@ -123,7 +123,7 @@ export default function Page() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative w-full h-screen overflow-hidden">
+      <section className="relative w-full contrast-200 h-screen overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <Image
@@ -353,7 +353,7 @@ export default function Page() {
                 alt={activeTab.title}
                 width={600}
                 height={400}
-                className="rounded-2xl w-full h-[250px] sm:h-[350px] md:h-[600px] object-fit"
+                className="rounded-2xl w-full h-[250px] sm:h-[350px] md:h-[600px] object-cover object-center"
               />
             </div>
 

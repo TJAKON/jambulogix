@@ -84,7 +84,7 @@ export default function Page() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative w-full h-screen overflow-hidden">
+      <section className="relative w-full h-screen contrast-110 overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <Image
@@ -236,7 +236,7 @@ export default function Page() {
             className="flex flex-col md:flex-row items-center gap-8 "
           >
             {/* Image */}
-            <div className="w-full md:w-2/3">
+            <div className="w-full md:w-2/3 contrast-120">
               <Image
                 src={activeTab.image}
                 alt={activeTab.title}
