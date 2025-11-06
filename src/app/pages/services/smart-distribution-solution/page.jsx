@@ -7,6 +7,8 @@ import Image from "next/image";
 import TestimonialCarousel from "@/components/sections/TestimonialSection";
 import ContactSection from "@/components/sections/ContactSection";
 import InnerNumbers from "@/components/sections/InnerNumbers";
+import { Truck, BadgeCheck, Users, Leaf, SatelliteDish } from "lucide-react";
+import { ThumbsUp, DollarSign, BarChart } from "lucide-react";
 
 const subServices = [
   {
@@ -23,7 +25,7 @@ const subServices = [
 
     description:
       "The final step matters most — and we make it count. Our Last Mile services ensure your products reach customers on time, intact, and with care, creating a seamless delivery experience that reflects your brand promise. With a tech-enabled delivery network, trained fleet, and a focus on eco-efficient routing, we help you achieve faster drop-offs while reducing your carbon footprint — making every delivery better for your customers and the planet.",
-        image: "/services/13.png",
+    image: "/services/13.png",
   },
 ];
 
@@ -50,6 +52,76 @@ const steps = [
     image: "/36.jpg",
   },
 ];
+
+const firstRow = [
+  {
+    icon: <Truck className="w-10 h-10 text-[#FF7F06]" />,
+    text: "On-Time Pickup",
+    desc: "Reliable and punctual always.",
+  },
+  {
+    icon: <BadgeCheck className="w-10 h-10 text-[#FF7F06]" />,
+    text: "Brand Experience",
+    desc: "Final-mile service that reflects you.",
+  },
+  {
+    icon: <Users className="w-10 h-10 text-[#FF7F06]" />,
+    text: "Trained Fleet",
+    desc: "Professionally managed delivery teams.",
+  },
+];
+
+// Second Row: 2 Benefits (Centered)
+const secondRow = [
+  {
+    icon: <Leaf className="w-10 h-10 text-[#FF7F06]" />,
+    text: "Eco Routing",
+    desc: "Lower emissions. Smarter movement.",
+  },
+  {
+    icon: <SatelliteDish className="w-10 h-10 text-[#FF7F06]" />,
+    text: "Live Tracking",
+    desc: "Real-time delivery visibility.",
+  },
+];
+
+
+  // Data arrays (like firstRow and secondRow)
+  const keyfirstRow = [
+    {
+      icon: <Truck size={50} className="text-[#FF7F06]" />,
+      text: "Flexible Service Options",
+      desc: "Customizable delivery windows and options to meet diverse customer needs.",
+    },
+    {
+      icon: <Users size={50} className="text-[#FF7F06]" />,
+      text: "Lower Operational Burden",
+      desc: "We handle fleet, routing, and delivery — you focus on growth.",
+    },
+    {
+      icon: <ThumbsUp size={50} className="text-[#FF7F06]" />,
+      text: "Improved Customer Satisfaction",
+      desc: "Reliable, on-time deliveries that build trust and loyalty.",
+    },
+  ];
+
+  const keysecondRow = [
+    {
+      icon: <DollarSign size={50} className="text-[#FF7F06]" />,
+      text: "Better Cost Control",
+      desc: "Shared resources and optimized routing reduce logistics costs.",
+    },
+    {
+      icon: <BarChart size={50} className="text-[#FF7F06]" />,
+      text: "Scalable Solutions",
+      desc: "Easily handle seasonal peaks or business growth without extra infrastructure.",
+    },
+    {
+      icon: <Leaf size={50} className="text-[#FF7F06]" />,
+      text: "Sustainable Brand Value",
+      desc: "Eco-efficient deliveries align with your environmental goals.",
+    },
+  ];
 
 function Counter({ target }) {
   const [count, setCount] = useState(0);
@@ -306,88 +378,73 @@ export default function Page() {
 
       {/* Highlights + Benefits */}
 
-      <section className="py-16 px-6 sm:px-20 bg-[#24577F]">
-        <div className="max-w-8xl mx-auto  text-center">
-          <h2 className="text-4xl sm:text-6xl font-extrabold text-white mb-12">
-            Key <span className="text-[#FF7F06] text-6xl"> Highlights</span>
-          </h2>
+      <section className="py-16 md:py-24 px-6 sm:px-20 bg-[#24577F]">
+        <div className="max-w-8xl mx-auto text-center">
+          {/* Heading */}
+          <motion.h2
+            className="text-4xl sm:text-6xl font-extrabold text-white mb-12"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            Key{" "}
+            <span className="text-[#FF7F06] text-6xl sm:text-7xl">
+              Highlights
+            </span>
+          </motion.h2>
 
+          {/* First Row (3 Cards) */}
           <motion.div
-            className="grid sm:grid-cols-3  max-w-7xl mx-auto gap-6 md:gap-10 mb-6  text-center"
+            className="grid sm:grid-cols-3 gap-6 md:gap-10 max-w-7xl mx-auto mb-12 text-center"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
             transition={{ staggerChildren: 0.2 }}
           >
-            {[
-              {
-                icon: "🚚",
-                text: "On-Time Pickup ",
-                desc: "Reliable and punctual always",
-              },
-              {
-                icon: "🚚",
-                text: "Brand Experience ",
-                desc: "Final-mile service that reflects you.",
-              },
-              {
-                icon: "🚚",
-                text: "Trained Fleet ",
-                desc: "Professionally managed delivery teams.",
-              },
-            ].map((item, idx) => (
+            {firstRow.map((item, idx) => (
               <motion.div
                 key={idx}
-                className="bg-white  p-5 md:p-8 rounded-2xl shadow-lg border hover:border-[#FF7F06] hover:bg-black/30 hover:text-white hover:shadow-xl transition duration-300 cursor-pointer group"
+                className="bg-white p-8 rounded-2xl shadow-lg border hover:border-[#FF7F06] hover:bg-black/30 hover:text-white hover:shadow-[0_0_25px_rgba(255,127,6,0.3)] transition duration-300 cursor-pointer group"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
               >
-                <div className="text-4xl mb-4 text-[#FF7F06] group-hover:scale-110 transition">
+                <div className="mb-4 flex justify-center group-hover:scale-110 transition-transform duration-300">
                   {item.icon}
                 </div>
                 <p className="font-semibold text-lg text-[#0A1A2F] group-hover:text-white leading-relaxed">
                   {item.text}
                 </p>
-                <p className=" text-md text-[#0A1A2F] group-hover:text-white leading-relaxed">
+                <p className="text-md text-[#0A1A2F] group-hover:text-white leading-relaxed">
                   {item.desc}
                 </p>
               </motion.div>
             ))}
           </motion.div>
+
+          {/* Second Row (2 Cards Centered) */}
           <motion.div
-            className="grid sm:grid-cols-2 max-w-3xl mx-auto gap-6 md:gap-10  text-center"
+            className="grid sm:grid-cols-2 gap-6 md:gap-10 max-w-3xl mx-auto text-center justify-center"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
             transition={{ staggerChildren: 0.2 }}
           >
-            {[
-              {
-                icon: "🚚",
-                text: "Eco Routing ",
-                desc: "Lower emissions. Smarter movement.",
-              },
-              {
-                icon: "🚚",
-                text: "Live Tracking ",
-                desc: "Real-time delivery visibility.",
-              },
-            ].map((item, idx) => (
+            {secondRow.map((item, idx) => (
               <motion.div
                 key={idx}
-                className="bg-white  p-5 md:p-8 rounded-2xl shadow-lg border hover:border-[#FF7F06] hover:bg-black/30 hover:text-white hover:shadow-xl transition duration-300 cursor-pointer group"
+                className="bg-white p-8 rounded-2xl shadow-lg border hover:border-[#FF7F06] hover:bg-black/30 hover:text-white hover:shadow-[0_0_25px_rgba(255,127,6,0.3)] transition duration-300 cursor-pointer group"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
               >
-                <div className="text-4xl mb-4 text-[#FF7F06] group-hover:scale-110 transition">
+                <div className="mb-4 flex justify-center group-hover:scale-110 transition-transform duration-300">
                   {item.icon}
                 </div>
                 <p className="font-semibold text-lg text-[#0A1A2F] group-hover:text-white leading-relaxed">
                   {item.text}
                 </p>
-                <p className=" text-md text-[#0A1A2F] group-hover:text-white leading-relaxed">
+                <p className="text-md text-[#0A1A2F] group-hover:text-white leading-relaxed">
                   {item.desc}
                 </p>
               </motion.div>
@@ -400,7 +457,8 @@ export default function Page() {
       <section className="py-16 md:py-24 px-6 sm:px-20 bg-[#F0F4F8]">
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="text-4xl sm:text-6xl font-extrabold capitalize text-[#24577F] mb-3 md:mb-6">
-            For Businesses of <span className=" text-[#FF7F06]">Every Scale</span>
+            For Businesses of{" "}
+            <span className=" text-[#FF7F06]">Every Scale</span>
           </h2>
           <p className="text-black text-md md:text-lg mb-8 md:mb-16 max-w-7xl mx-auto leading-relaxed">
             Our Distribution Services are built for businesses that value speed,
@@ -421,7 +479,10 @@ export default function Page() {
             {[
               { img: "/images/sub1.jpg", label: "Startups & Growing Brands" },
               { img: "/images/sub4.jpg", label: "SMEs Across Sectors" },
-              { img: "/images/sub11.jpg", label: "Regional & Local Distributors" },
+              {
+                img: "/images/sub11.jpg",
+                label: "Regional & Local Distributors",
+              },
             ].map((item, idx) => (
               <motion.div
                 key={idx}
@@ -452,7 +513,10 @@ export default function Page() {
           >
             {[
               { img: "/images/sub6.jpg", label: "E-commerce & D2C Sellers" },
-              { img: "/images/sub10.jpg", label: "Sustainable & Conscious Businesses" },
+              {
+                img: "/images/sub10.jpg",
+                label: "Sustainable & Conscious Businesses",
+              },
             ].map((item, idx) => (
               <motion.div
                 key={idx}
@@ -478,101 +542,80 @@ export default function Page() {
       </section>
 
       {/* Highlights + Benefits */}
-      <section className="py-16 md:py-24 px-6 sm:px-20 bg-[#24577F]">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl sm:text-6xl font-extrabold text-white mb-12 text-center">
-            Key <span className="text-[#FF7F06] text-6xl"> Benefits</span>
-          </h2>
+       <section className="py-16 md:py-24 px-6 sm:px-20 bg-[#24577F]">
+      <div className="max-w-8xl mx-auto text-center">
+        {/* Heading */}
+        <motion.h2
+          className="text-4xl sm:text-6xl font-extrabold text-white mb-12"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        >
+          Key{" "}
+          <span className="text-[#FF7F06] text-6xl sm:text-7xl">
+            Benefits
+          </span>
+        </motion.h2>
 
-          <motion.div
-            className="grid sm:grid-cols-3 gap-6 md:gap-10 text-center mb-10"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            transition={{ staggerChildren: 0.2 }}
-          >
-            {[
-              {
-                icon: "🔐",
-                text: "Flexible Service Options",
-                desc: "Customizable delivery windows and options to meet diverse customer needs.",
-              },
+        {/* First Row (3 Cards) */}
+        <motion.div
+          className="grid sm:grid-cols-3 gap-6 md:gap-10 max-w-7xl mx-auto mb-12 text-center"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          transition={{ staggerChildren: 0.2 }}
+        >
+          {keyfirstRow.map((item, idx) => (
+            <motion.div
+              key={idx}
+              className="bg-white p-8 rounded-2xl shadow-lg border hover:border-[#FF7F06] hover:bg-black/30 hover:text-white hover:shadow-[0_0_25px_rgba(255,127,6,0.3)] transition duration-300 cursor-pointer group"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+            >
+              <div className="mb-4 flex justify-center group-hover:scale-110 transition-transform duration-300">
+                {item.icon}
+              </div>
+              <p className="font-semibold text-lg text-[#0A1A2F] group-hover:text-white leading-relaxed uppercase">
+                {item.text}
+              </p>
+              <p className="text-md text-[#0A1A2F] group-hover:text-white leading-relaxed">
+                {item.desc}
+              </p>
+            </motion.div>
+          ))}
+        </motion.div>
 
-              {
-                icon: "🔐",
-                text: "Lower Operational Burden",
-                desc: "We handle fleet, routing, and delivery — you focus on growth.",
-              },
-              {
-                icon: "🔐",
-                text: "Improved Customer Satisfaction",
-                desc: "Reliable, on-time deliveries that build trust.",
-              },
-            ].map((benefit, idx) => (
-              <motion.div
-                key={idx}
-                className="bg-white p-8 rounded-2xl shadow-lg border hover:border-[#FF7F06] hover:shadow-xl transition duration-300 cursor-pointer group"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-              >
-                <div className="text-4xl mb-4 text-[#FF7F06] group-hover:scale-110 transition">
-                  {benefit.icon}
-                </div>
-                <p className="font-semibold text-lg text-gray-700 leading-relaxed uppercase">
-                  {benefit.text}
-                </p>
-                <p className=" text-md text-gray-700 leading-relaxed">
-                  {benefit.desc}
-                </p>
-              </motion.div>
-            ))}
-          </motion.div>
-          <motion.div
-            className="grid sm:grid-cols-3 gap-6 md:gap-10 text-center"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            transition={{ staggerChildren: 0.2 }}
-          >
-            {[
-              {
-                icon: "🔐",
-                text: "Better Cost Control",
-                desc: "Shared resources and optimized routing reduce logistics costs.",
-              },
-              {
-                icon: "🔐",
-                text: "Scalable Solutions",
-                desc: "Easily handle seasonal peaks or business growth without extra infrastructure.",
-              },
-              {
-                icon: "🔐",
-                text: "Sustainable Brand Value",
-                desc: "Eco-efficient deliveries align with your environmental goals.",
-              },
-            ].map((benefit, idx) => (
-              <motion.div
-                key={idx}
-                className="bg-white p-8 rounded-2xl shadow-lg border hover:border-[#FF7F06] hover:shadow-xl transition duration-300 cursor-pointer group"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-              >
-                <div className="text-4xl mb-4 text-[#FF7F06] group-hover:scale-110 transition">
-                  {benefit.icon}
-                </div>
-                <p className="font-semibold text-lg text-gray-700 leading-relaxed uppercase">
-                  {benefit.text}
-                </p>
-                <p className=" text-md text-gray-700 leading-relaxed">
-                  {benefit.desc}
-                </p>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </section>
+        {/* Second Row (3 Cards) */}
+        <motion.div
+          className="grid sm:grid-cols-3 gap-6 md:gap-10 max-w-7xl mx-auto text-center justify-center"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          transition={{ staggerChildren: 0.2 }}
+        >
+          {keysecondRow.map((item, idx) => (
+            <motion.div
+              key={idx}
+              className="bg-white p-8 rounded-2xl shadow-lg border hover:border-[#FF7F06] hover:bg-black/30 hover:text-white hover:shadow-[0_0_25px_rgba(255,127,6,0.3)] transition duration-300 cursor-pointer group"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+            >
+              <div className="mb-4 flex justify-center group-hover:scale-110 transition-transform duration-300">
+                {item.icon}
+              </div>
+              <p className="font-semibold text-lg text-[#0A1A2F] group-hover:text-white leading-relaxed uppercase">
+                {item.text}
+              </p>
+              <p className="text-md text-[#0A1A2F] group-hover:text-white leading-relaxed">
+                {item.desc}
+              </p>
+            </motion.div>
+          ))}
+        </motion.div>
+      </div>
+    </section>
 
       {/* How Does It Work */}
       {/* <section className="py-16 px-6 sm:px-20 bg-[#0A1A2F]">

@@ -191,7 +191,7 @@ const Hero = () => (
       {/* Right Image — full half */}
       <div className="relative w-full h-[300px] md:h-screen overflow-hidden shadow-xl">
         <Image
-          src="/images/b2.jpeg"
+          src="/images/people1.jpg"
           alt="People & Community"
           fill
           className="object-cover"
@@ -336,7 +336,7 @@ const Impact = () => (
       {/* Card 2 */}
       <div className="flex flex-col rounded-lg overflow-hidden group">
         <img
-        src="/images/v1.jpeg"
+          src="/images/v1.jpeg"
           alt="Community Support"
           className="w-full h-[600px] object-cover"
         />

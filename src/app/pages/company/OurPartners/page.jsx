@@ -7,7 +7,44 @@ import { motion } from "framer-motion";
 import TestimonialCarousel from "@/components/sections/TestimonialSection";
 import VendorsSection from "@/components/sections/Vendors";
 
-
+const values = [
+  {
+    emoji: "🌐",
+    title: "Business Growth at Scale",
+    description:
+      "Access a fast-expanding network of MSMEs, enterprises, and eCommerce players across India — and tap into steady demand, new markets, and consistent load volumes.",
+  },
+  {
+    emoji: "⚙️",
+    title: "Efficiency-Driven Collaboration",
+    description:
+      "We integrate your services into a tech-driven, optimized logistics system — ensuring faster turnaround, reduced idle time, and maximum resource utilization.",
+  },
+  {
+    emoji: "🏆",
+    title: "Long-Term, Transparent Relationships",
+    description:
+      "We believe in fairness, real-time visibility, timely payments, and shared success — building trust at every touchpoint.",
+  },
+  {
+    emoji: "💡",
+    title: "Innovation & Co-Creation",
+    description:
+      "From pilot projects to process improvements, we work closely with our partners to build future-ready logistics solutions.",
+  },
+  {
+    emoji: "🧾",
+    title: "Reliability and Compliance",
+    description:
+      "We ensure reliability through a skilled workforce, strict compliance with all regulations, and proactive risk management to keep operations smooth and dependable.",
+  },
+  {
+    emoji: "🌱",
+    title: "Social & Sustainable Impact",
+    description:
+      "Be part of a logistics movement that supports MSMEs, improves rural connectivity, and reduces environmental footprint through smarter operations.",
+  },
+];
 
 const leaders = [
   {
@@ -81,7 +118,6 @@ const partnerCategories = [
 
 export default function OurPartnersPage() {
   const [activeCategory, setActiveCategory] = useState(partnerCategories[0]);
- 
 
   return (
     <main className="bg-white text-gray-800">
@@ -315,59 +351,38 @@ export default function OurPartnersPage() {
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-1 md:grid-cols-1 xl:grid-cols-3 gap-10">
-            {[
-              {
-                emoji: "🌐",
-                title: "Business Growth at Scale",
-                description:
-                  "Access a fast-expanding network of MSMEs, enterprises, and eCommerce players across India — and tap into steady demand, new markets, and consistent load volumes.",
-              },
-              {
-                emoji: "⚙️",
-                title: "Efficiency-Driven Collaboration",
-                description:
-                  "We integrate your services into a tech-driven, optimized logistics system — ensuring faster turnaround, reduced idle time, and maximum resource utilization.",
-              },
-              {
-                emoji: "🏆",
-                title: "Long-Term, Transparent Relationships",
-                description:
-                  "We believe in fairness, real-time visibility, timely payments, and shared success — building trust at every touchpoint.",
-              },
-              {
-                emoji: "🏆",
-                title: "Innovation & Co-Creation",
-                description:
-                  "From pilot projects to process improvements, we work closely with our partners to build future-ready logistics solutions.",
-              },
-              {
-                emoji: "🏆",
-                title: "Reliability and Complience",
-                description:
-                  "we ensure reliability through a skilled workforce, strict compliance with all regulations, and proactive risk management to keep operations smooth and dependable.",
-              },
-              {
-                emoji: "🏆",
-                title: "Social & Sustainable Impact",
-                description:
-                  "Be part of a logistics movement that supports MSMEs, improves rural connectivity, and reduces environmental footprint through smarter operations.",
-              },
-            ].map((item, idx) => (
-              <div
+          <motion.div
+            className="grid sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            transition={{ staggerChildren: 0.2 }}
+          >
+            {values.map((item, idx) => (
+              <motion.div
                 key={idx}
-                className="bg-white border-2 border-[#24577F] rounded-2xl p-8 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col items-start gap-4"
+                className="bg-white border-2 border-[#24577F] rounded-2xl p-8 shadow-sm hover:shadow-[0_0_25px_rgba(36,87,127,0.3)] hover:-translate-y-1 transition-all duration-300 flex flex-col items-center text-center gap-4"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
               >
-                <div className="text-3xl p-3 rounded-full bg-[#FF7F06]/10 text-[#FF7F06]">
+                {/* Icon */}
+                <div className="text-4xl p-4 rounded-full bg-[#FF7F06]/10 text-[#FF7F06] flex justify-center items-center">
                   {item.emoji}
                 </div>
+
+                {/* Title */}
                 <h3 className="text-xl font-semibold text-[#24577F]">
                   {item.title}
                 </h3>
-                <p className="text-gray-600 text-sm">{item.description}</p>
-              </div>
+
+                {/* Description */}
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  {item.description}
+                </p>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </section>
 

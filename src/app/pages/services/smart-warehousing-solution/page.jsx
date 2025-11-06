@@ -7,6 +7,8 @@ import { motion } from "framer-motion";
 import TestimonialCarousel from "@/components/sections/TestimonialSection";
 import ContactSection from "@/components/sections/ContactSection";
 import InnerNumbers from "@/components/sections/InnerNumbers";
+import { ShieldCheck, Zap, Eye, Leaf, Handshake } from "lucide-react";
+import { Rocket, Plane, Link2, Layers } from "lucide-react";
 
 const subServices = [
   {
@@ -35,7 +37,7 @@ const subServices = [
     subtitle: "We Move, So You Don’t Wait – Coming Soon",
     description:
       "At Jambulogix, our Cross-Dock model is built for speed — not storage. Shipments flow in, get sorted, and head right back out — saving you time, space, and cost. With smart coordination and a customer-first mindset, we keep your supply chain in motion — just the way it should be. Less idle. More action. That’s the Jambulogix promise..",
-     image: "/services/3.jpg",
+    image: "/services/3.jpg",
   },
   {
     title: "Hub In Hub",
@@ -74,6 +76,63 @@ const steps = [
     description:
       "The parcel is either returned to the seller, refurbished, or delivered to the next customer via optimized last-mile logistics.",
     image: "/64.png",
+  },
+];
+
+const topBenefits = [
+  {
+    icon: <ShieldCheck className="w-10 h-10 text-[#FF7F06]" />,
+    text: "Scalable Support",
+    desc: "Grow without infrastructure burden",
+  },
+  {
+    icon: <Zap className="w-10 h-10 text-[#FF7F06]" />,
+    text: "Faster Turnarounds",
+    desc: "Speed that meets market demands",
+  },
+  {
+    icon: <Eye className="w-10 h-10 text-[#FF7F06]" />,
+    text: "Smart Visibility",
+    desc: "Real-time inventory & movement tracking",
+  },
+];
+
+const bottomBenefits = [
+  {
+    icon: <Leaf className="w-10 h-10 text-[#FF7F06]" />,
+    text: "Green Operations",
+    desc: "Lower carbon footprint, future-ready",
+  },
+  {
+    icon: <Handshake className="w-10 h-10 text-[#FF7F06]" />,
+    text: "Reliable Partnership",
+    desc: "Customer first, always-on support",
+  },
+];
+
+const firstRow = [
+  {
+    icon: <Rocket className="w-10 h-10 text-[#FF7F06]" />,
+    text: "Faster Turnarounds",
+  },
+  {
+    icon: <Plane className="w-10 h-10 text-[#FF7F06]" />,
+    text: "Real-Time Visibility",
+  },
+  {
+    icon: <Link2 className="w-10 h-10 text-[#FF7F06]" />,
+    text: "Error-Free Operations",
+  },
+];
+
+const secondRow = [
+  {
+    icon: <Leaf className="w-10 h-10 text-[#FF7F06]" />,
+    text: "Lesser Carbon Footprints",
+  },
+  {
+    icon: <Layers className="w-10 h-10 text-[#FF7F06]" />,
+    text: "Built for Scale",
   },
 ];
 
@@ -260,32 +319,38 @@ export default function Page() {
       </section>
 
       {/* Highlights + Benefits */}
-      <section className="py-16 px-6 sm:px-20 bg-[#24577F]">
-        <div className="max-w-8xl mx-auto  text-center">
-          <h2 className="text-4xl sm:text-6xl font-extrabold text-white mb-12">
-            Key <span className="text-[#FF7F06] text-6xl"> Highlights</span>
-          </h2>
+      <section className="py-16 md:py-24 px-6 sm:px-20 bg-[#24577F]">
+        <div className="max-w-8xl mx-auto text-center">
+          {/* Heading */}
+          <motion.h2
+            className="text-4xl sm:text-6xl font-extrabold text-white mb-12"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            Key{" "}
+            <span className="text-[#FF7F06] text-6xl sm:text-7xl">
+              Highlights
+            </span>
+          </motion.h2>
 
+          {/* First Row (3 cards) */}
           <motion.div
-            className="grid sm:grid-cols-3  max-w-7xl mx-auto gap-6 md:gap-10 mb-6  text-center"
+            className="grid sm:grid-cols-3 gap-6 md:gap-10 max-w-7xl mx-auto mb-12 text-center"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
             transition={{ staggerChildren: 0.2 }}
           >
-            {[
-              { icon: "🚀", text: "Faster Turnarounds" },
-              { icon: "✈️", text: "Real-Time Visibility" },
-              { icon: "🔗", text: "Error-Free Operations" },
-            ].map((item, idx) => (
+            {firstRow.map((item, idx) => (
               <motion.div
                 key={idx}
-                className="bg-white  p-5 md:p-8 rounded-2xl shadow-lg border hover:border-[#FF7F06] hover:bg-black/30 hover:text-white hover:shadow-xl transition duration-300 cursor-pointer group"
+                className="bg-white p-8 rounded-2xl shadow-lg border hover:border-[#FF7F06] hover:bg-black/30 hover:text-white hover:shadow-[0_0_25px_rgba(255,127,6,0.3)] transition duration-300 cursor-pointer group"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
               >
-                <div className="text-4xl mb-4 text-[#FF7F06] group-hover:scale-110 transition">
+                <div className="mb-4 flex justify-center group-hover:scale-110 transition-transform duration-300">
                   {item.icon}
                 </div>
                 <p className="font-semibold text-lg text-[#0A1A2F] group-hover:text-white leading-relaxed">
@@ -294,25 +359,24 @@ export default function Page() {
               </motion.div>
             ))}
           </motion.div>
+
+          {/* Second Row (2 cards centered) */}
           <motion.div
-            className="grid sm:grid-cols-2 max-w-3xl mx-auto gap-6 md:gap-10  text-center"
+            className="grid sm:grid-cols-2 gap-6 md:gap-10 max-w-3xl mx-auto text-center justify-center"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
             transition={{ staggerChildren: 0.2 }}
           >
-            {[
-              { icon: "🔗", text: "Lesser Carbon Footprints" },
-              { icon: "🔗", text: "Built for Scale" },
-            ].map((item, idx) => (
+            {secondRow.map((item, idx) => (
               <motion.div
                 key={idx}
-                className="bg-white  p-5 md:p-8 rounded-2xl shadow-lg border hover:border-[#FF7F06] hover:bg-black/30 hover:text-white hover:shadow-xl transition duration-300 cursor-pointer group"
+                className="bg-white p-8 rounded-2xl shadow-lg border hover:border-[#FF7F06] hover:bg-black/30 hover:text-white hover:shadow-[0_0_25px_rgba(255,127,6,0.3)] transition duration-300 cursor-pointer group"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
               >
-                <div className="text-4xl mb-4 text-[#FF7F06] group-hover:scale-110 transition">
+                <div className="mb-4 flex justify-center group-hover:scale-110 transition-transform duration-300">
                   {item.icon}
                 </div>
                 <p className="font-semibold text-lg text-[#0A1A2F] group-hover:text-white leading-relaxed">
@@ -380,87 +444,69 @@ export default function Page() {
 
       <section className="py-16 md:py-24 px-6 sm:px-20 bg-[#24577F]">
         <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-4xl sm:text-6xl font-extrabold text-white mb-12">
-            Values We <span className="text-[#FF7F06] text-6xl"> Deliver</span>
-          </h2>
+          {/* Heading */}
+          <motion.h2
+            className="text-4xl sm:text-6xl font-extrabold text-white mb-12"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            Values We{" "}
+            <span className="text-[#FF7F06] text-6xl sm:text-7xl">Deliver</span>
+          </motion.h2>
 
+          {/* ✅ FIRST ROW — 3 CARDS */}
           <motion.div
-            className="grid sm:grid-cols-3 gap-6 md:gap-10 text-center mb-10 max-w-7xl mx-auto"
+            className="grid sm:grid-cols-3 gap-6 md:gap-10 mb-10 max-w-7xl mx-auto"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
             transition={{ staggerChildren: 0.2 }}
           >
-            {[
-              {
-                icon: "🔐",
-                text: "Scalable Support",
-                desc: "Grow without infrastructure burden",
-              },
-
-              {
-                icon: "🔐",
-                text: "Faster Turnarounds",
-                desc: "Speed that meets market demands",
-              },
-              {
-                icon: "🔐",
-                text: "Smart Visibility",
-                desc: "Real-time Inventory & movement tracking",
-              },
-            ].map((benefit, idx) => (
+            {topBenefits.map((benefit, idx) => (
               <motion.div
                 key={idx}
-                className="bg-white p-8 rounded-2xl shadow-lg border hover:border-[#FF7F06] hover:shadow-xl transition duration-300 cursor-pointer group"
+                className="bg-white p-8 rounded-2xl shadow-lg border hover:border-[#FF7F06] hover:shadow-[0_0_25px_rgba(255,127,6,0.3)] transition duration-300 cursor-pointer group"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
               >
-                <div className="text-4xl mb-4 text-[#FF7F06] group-hover:scale-110 transition">
+                <div className="mb-4 flex justify-center group-hover:scale-110 transition-transform duration-300">
                   {benefit.icon}
                 </div>
-                <p className="font-semibold text-lg text-gray-700 leading-relaxed uppercase">
+                <p className="font-semibold text-lg text-gray-700 uppercase mb-2">
                   {benefit.text}
                 </p>
-                <p className=" text-md text-gray-700 leading-relaxed">
+                <p className="text-md text-gray-700 leading-relaxed">
                   {benefit.desc}
                 </p>
               </motion.div>
             ))}
           </motion.div>
+
+          {/* ✅ SECOND ROW — 2 CARDS CENTERED */}
           <motion.div
-            className="grid sm:grid-cols-2 gap-6 md:gap-10  max-w-4xl mx-auto text-center"
+            className="grid sm:grid-cols-2 gap-6 md:gap-10 max-w-3xl mx-auto"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
             transition={{ staggerChildren: 0.2 }}
           >
-            {[
-              {
-                icon: "🔐",
-                text: "Green Operations",
-                desc: "Lower Carbon Footprint Future-ready",
-              },
-              {
-                icon: "🔐",
-                text: "Reliable Partnership",
-                desc: "Customer first, always-on support",
-              },
-            ].map((benefit, idx) => (
+            {bottomBenefits.map((benefit, idx) => (
               <motion.div
                 key={idx}
-                className="bg-white p-8 rounded-2xl shadow-lg border hover:border-[#FF7F06] hover:shadow-xl transition duration-300 cursor-pointer group"
+                className="bg-white p-8 rounded-2xl shadow-lg border hover:border-[#FF7F06] hover:shadow-[0_0_25px_rgba(255,127,6,0.3)] transition duration-300 cursor-pointer group"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
               >
-                <div className="text-4xl mb-4 text-[#FF7F06] group-hover:scale-110 transition">
+                <div className="mb-4 flex justify-center group-hover:scale-110 transition-transform duration-300">
                   {benefit.icon}
                 </div>
-                <p className="font-semibold text-lg text-gray-700 leading-relaxed uppercase">
+                <p className="font-semibold text-lg text-gray-700 uppercase mb-2">
                   {benefit.text}
                 </p>
-                <p className=" text-md text-gray-700 leading-relaxed">
+                <p className="text-md text-gray-700 leading-relaxed">
                   {benefit.desc}
                 </p>
               </motion.div>

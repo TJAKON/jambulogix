@@ -7,6 +7,7 @@ import Image from "next/image";
 import TestimonialCarousel from "@/components/sections/TestimonialSection";
 import ContactSection from "@/components/sections/ContactSection";
 import InnerNumbers from "@/components/sections/InnerNumbers";
+import { MapPin, Eye, Route, Leaf, Layers } from "lucide-react";
 
 const subServices = [
   {
@@ -30,7 +31,7 @@ const subServices = [
 
     description:
       "When speed is non-negotiable, Jambulogix Air Express delivers. Designed for time-critical and high-value shipments, our air freight solutions ensure priority uplift, secure handling, and nationwide reach — all managed through a single tech-enabled platform. Whether you're an emerging brand, an MSME with urgent B2B dispatches, or an enterprise shipping across zones, our Air Express gets your cargo off the ground and on time, with full visibility and reduced operational stress",
-     image: "/services/15.png",
+    image: "/services/15.png",
   },
   {
     title: "Rail Parcel",
@@ -63,6 +64,68 @@ const steps = [
     image: "/asset.png",
     description:
       "From dispatch to doorstep, we provide real-time tracking, delivery confirmation, and customer feedback collection.",
+  },
+];
+
+const topList = [
+  {
+    icon: "🚚",
+    text: "Pan-India Reach",
+    desc: "Serve more markets, faster.",
+  },
+  {
+    icon: "📦",
+    text: "Real-Time Visibility",
+    desc: "Know where your cargo is — always.",
+  },
+  {
+    icon: "💰",
+    text: "Cost-Optimized Movement",
+    desc: "Lower spend, smarter routes.",
+  },
+];
+
+const bottomList = [
+  {
+    icon: "⚙️",
+    text: "Flexible Modal Mix",
+    desc: "Road, Rail, or Air — we move what fits best.",
+  },
+  {
+    icon: "🌱",
+    text: "Low Carbon Logistics",
+    desc: "Ship smarter. Grow greener.",
+  },
+];
+
+const topListvalues = [
+  {
+    icon: <MapPin className="w-10 h-10 text-[#FF7F06]" />,
+    text: "Expanded Reach Pan-India Network",
+    desc: "Deliver anywhere with our extensive network covering 10,000+ PIN codes across India.",
+  },
+  {
+    icon: <Eye className="w-10 h-10 text-[#FF7F06]" />,
+    text: "Total Transparency",
+    desc: "Stay informed at every step with real-time cargo visibility and proactive shipment updates.",
+  },
+  {
+    icon: <Route className="w-10 h-10 text-[#FF7F06]" />,
+    text: "Smarter Operations, Optimized Routing",
+    desc: "Save time and cost with intelligent route planning and modal flexibility across road, rail, and air.",
+  },
+];
+
+const bottomListvalue = [
+  {
+    icon: <Leaf className="w-10 h-10 text-[#FF7F06]" />,
+    text: "Green Operations, Low Carbon Footprint",
+    desc: "Ship sustainably through greener modes and consolidated cargo movement for a cleaner future.",
+  },
+  {
+    icon: <Layers className="w-10 h-10 text-[#FF7F06]" />,
+    text: "Scalable Movement, Asset-Light Model",
+    desc: "Grow fast without logistical baggage — pay only for what you use, when you need it.",
   },
 ];
 
@@ -372,77 +435,58 @@ export default function Page() {
 
       {/* Highlights + Benefits */}
 
-      <section className="py-16 px-6 sm:px-20 bg-[#24577F]">
-        <div className="max-w-8xl mx-auto  text-center">
+      <section className="py-16 md:py-24 px-6 sm:px-20 bg-[#24577F]">
+        <div className="max-w-8xl mx-auto text-center">
+          {/* Section Title */}
           <h2 className="text-4xl sm:text-6xl font-extrabold text-white mb-12">
-            Key <span className="text-[#FF7F06] text-6xl"> Highlights</span>
+            Key <span className="text-[#FF7F06] text-6xl">Highlights</span>
           </h2>
 
+          {/* --- Top Row (3 Cards) --- */}
           <motion.div
-            className="grid sm:grid-cols-3  max-w-7xl mx-auto gap-6 md:gap-10 mb-6  text-center"
+            className="grid sm:grid-cols-3 gap-6 md:gap-10 max-w-7xl mx-auto mb-12"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
             transition={{ staggerChildren: 0.2 }}
           >
-            {[
-              {
-                icon: "🚚",
-                text: "Pan-India Reach",
-                desc: "Serve more markets, faster",
-              },
-              {
-                icon: "📦",
-                text: "Real-Time Visibility ",
-                desc: "Know where your cargo is — always",
-              },
-              {
-                icon: "🔗",
-                text: "Cost-Optimized Movement",
-                desc: "Lower spend, smarter routes. ",
-              },
-            ].map((item, idx) => (
+            {topList.map((item, idx) => (
               <motion.div
                 key={idx}
-                className="bg-white  p-5 md:p-8 rounded-2xl shadow-lg border hover:border-[#FF7F06] hover:bg-black/30 hover:text-white hover:shadow-xl transition duration-300 cursor-pointer group"
+                className="bg-white p-8 rounded-2xl shadow-lg border hover:border-[#FF7F06] hover:bg-black/30 hover:text-white hover:shadow-[0_0_25px_rgba(255,127,6,0.3)] transition duration-300 cursor-pointer group"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
               >
-                <div className="text-4xl mb-4 text-[#FF7F06] group-hover:scale-110 transition">
-                  {item.icon}
+                {/* Centered Icon */}
+                <div className="flex justify-center mb-4">
+                  <div className="text-4xl text-[#FF7F06] group-hover:scale-110 transition">
+                    {item.icon}
+                  </div>
                 </div>
+
                 <p className="font-semibold uppercase text-lg text-[#0A1A2F] group-hover:text-white leading-relaxed">
                   {item.text}
                 </p>
-                <p className=" text-md text-[#0A1A2F] group-hover:text-white leading-relaxed">
+                <p className="text-md text-[#0A1A2F] group-hover:text-white leading-relaxed mt-2">
                   {item.desc}
                 </p>
               </motion.div>
             ))}
           </motion.div>
+
+          {/* --- Bottom Row (2 Centered Cards) --- */}
           <motion.div
-            className="grid sm:grid-cols-2 max-w-3xl mx-auto gap-6 md:gap-10  text-center"
+            className="grid sm:grid-cols-2 gap-6 md:gap-10 max-w-3xl mx-auto justify-center"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
             transition={{ staggerChildren: 0.2 }}
           >
-            {[
-              {
-                icon: "🔗",
-                text: "Flexible Modal Mix ",
-                desc: "Road, Rail, or Air — We move what fits best.",
-              },
-              {
-                icon: "🔗",
-                text: "Low Carbon Logistics ",
-                desc: "Ship smarter. Grow greener.",
-              },
-            ].map((item, idx) => (
+            {bottomList.map((item, idx) => (
               <motion.div
                 key={idx}
-                className="bg-white  p-5 md:p-8 rounded-2xl shadow-lg border hover:border-[#FF7F06] hover:bg-black/30 hover:text-white hover:shadow-xl transition duration-300 cursor-pointer group"
+                className="bg-white p-8 rounded-2xl shadow-lg border hover:border-[#FF7F06] hover:bg-black/30 hover:text-white hover:shadow-[0_0_25px_rgba(255,127,6,0.3)] transition duration-300 cursor-pointer group"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
@@ -453,7 +497,7 @@ export default function Page() {
                 <p className="font-semibold uppercase text-lg text-[#0A1A2F] group-hover:text-white leading-relaxed">
                   {item.text}
                 </p>
-                <p className=" text-md text-[#0A1A2F] group-hover:text-white leading-relaxed">
+                <p className="text-md text-[#0A1A2F] group-hover:text-white leading-relaxed">
                   {item.desc}
                 </p>
               </motion.div>
@@ -489,7 +533,10 @@ export default function Page() {
             {[
               { img: "/images/sub2.jpg", label: "Startups & Growing Brands" },
               { img: "/images/sub4.jpg", label: "SMEs Across Sectors" },
-              { img: "/images/sub11.jpg", label: "Regional & Local Distributors" },
+              {
+                img: "/images/sub11.jpg",
+                label: "Regional & Local Distributors",
+              },
             ].map((item, idx) => (
               <motion.div
                 key={idx}
@@ -520,7 +567,10 @@ export default function Page() {
           >
             {[
               { img: "/images/sub6.jpg", label: "Brands & D2C Companies" },
-              { img: "/images/sub10.jpg", label: "Sustainable & Conscious Businesses" },
+              {
+                img: "/images/sub10.jpg",
+                label: "Sustainable & Conscious Businesses",
+              },
             ].map((item, idx) => (
               <motion.div
                 key={idx}
@@ -548,10 +598,12 @@ export default function Page() {
       {/* Highlights + Benefits */}
       <section className="py-16 md:py-24 px-6 sm:px-20 bg-[#24577F]">
         <div className="max-w-7xl mx-auto text-center">
+          {/* Heading */}
           <h2 className="text-4xl sm:text-6xl font-extrabold text-white mb-12">
-            Values We <span className="text-[#FF7F06] text-6xl"> Deliver</span>
+            Values We <span className="text-[#FF7F06] text-6xl">Deliver</span>
           </h2>
 
+          {/* Top Grid */}
           <motion.div
             className="grid sm:grid-cols-3 gap-6 md:gap-10 text-center mb-10 max-w-7xl mx-auto"
             initial="hidden"
@@ -559,24 +611,7 @@ export default function Page() {
             viewport={{ once: true }}
             transition={{ staggerChildren: 0.2 }}
           >
-            {[
-              {
-                icon: "🔐",
-                text: "Expanded Reach Pan-India Network",
-                desc: "Deliver anywhere with our extensive network covering 10,000+ PIN codes across India.",
-              },
-
-              {
-                icon: "🔐",
-                text: "Total Transparency",
-                desc: "Live Shipment Tracking Stay informed at every step with real-time cargo visibility and proactive updates.",
-              },
-              {
-                icon: "🔐",
-                text: "Smarter Operations, Optimized Routing",
-                desc: "Save time and cost with intelligent route planning and modal flexibility (road, rail, air)",
-              },
-            ].map((benefit, idx) => (
+            {topListvalues.map((benefit, idx) => (
               <motion.div
                 key={idx}
                 className="bg-white p-8 rounded-2xl shadow-lg border hover:border-[#FF7F06] hover:shadow-xl transition duration-300 cursor-pointer group"
@@ -584,37 +619,32 @@ export default function Page() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
               >
-                <div className="text-4xl mb-4 text-[#FF7F06] group-hover:scale-110 transition">
-                  {benefit.icon}
+                {/* Centered Icon */}
+                <div className="flex justify-center mb-4">
+                  <div className="text-4xl text-[#FF7F06] group-hover:scale-110 transition">
+                    {benefit.icon}
+                  </div>
                 </div>
+
                 <p className="font-semibold text-lg text-gray-700 leading-relaxed uppercase">
                   {benefit.text}
                 </p>
-                <p className=" text-sm text-gray-700 leading-relaxed">
+                <p className="text-sm text-gray-700 leading-relaxed mt-2">
                   {benefit.desc}
                 </p>
               </motion.div>
             ))}
           </motion.div>
+
+          {/* Bottom Grid (Centered 2 cards) */}
           <motion.div
-            className="grid sm:grid-cols-2 gap-6 md:gap-10  max-w-4xl mx-auto text-center"
+            className="grid sm:grid-cols-2 gap-6 md:gap-10 max-w-4xl mx-auto text-center"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
             transition={{ staggerChildren: 0.2 }}
           >
-            {[
-              {
-                icon: "🔐",
-                text: "Green Operations, Low Carbon Footprint",
-                desc: "Ship with sustainability in mind — through greener modes and consolidated movement.",
-              },
-              {
-                icon: "🔐",
-                text: "Scalable Movement Asset-Light Model",
-                desc: "Grow fast without logistical baggage — pay only for what you use, when you need it.",
-              },
-            ].map((benefit, idx) => (
+            {bottomListvalue.map((benefit, idx) => (
               <motion.div
                 key={idx}
                 className="bg-white p-8 rounded-2xl shadow-lg border hover:border-[#FF7F06] hover:shadow-xl transition duration-300 cursor-pointer group"
@@ -622,13 +652,18 @@ export default function Page() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
               >
-                <div className="text-4xl mb-4 text-[#FF7F06] group-hover:scale-110 transition">
-                  {benefit.icon}
+                {/* Centered Icon */}
+                <div className="flex justify-center mb-4">
+                  <div className="text-4xl text-[#FF7F06] group-hover:scale-110 transition">
+                    {benefit.icon}
+                  </div>
                 </div>
+
+                {/* Text Content */}
                 <p className="font-semibold text-lg text-gray-700 leading-relaxed uppercase">
                   {benefit.text}
                 </p>
-                <p className=" text-sm text-gray-700 leading-relaxed">
+                <p className="text-sm text-gray-700 leading-relaxed mt-2">
                   {benefit.desc}
                 </p>
               </motion.div>
