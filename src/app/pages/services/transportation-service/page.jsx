@@ -532,7 +532,7 @@ export default function Page() {
           >
             {[
               { img: "/images/sub2.jpg", label: "Startups & Growing Brands" },
-              { img: "/images/sub4.jpg", label: "SMEs Across Sectors" },
+              { img: "/53.jpg", label: "SMEs Across Sectors" },
               {
                 img: "/images/sub11.jpg",
                 label: "Regional & Local Distributors",
@@ -566,7 +566,7 @@ export default function Page() {
             transition={{ staggerChildren: 0.2 }}
           >
             {[
-              { img: "/images/sub6.jpg", label: "Brands & D2C Companies" },
+              { img: "/images/a2.png", label: "Brands & D2C Companies" },
               {
                 img: "/images/sub10.jpg",
                 label: "Sustainable & Conscious Businesses",

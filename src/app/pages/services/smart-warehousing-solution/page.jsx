@@ -23,7 +23,7 @@ const subServices = [
     subtitle: "Engineered for Fast. Built for Scale. — Coming Soon",
     description:
       "At Jambulogix, we're building the next generation of tech-enabled Fulfilment Centres — designed to power high-speed order processing, precision pick-pack-ship, and seamless inventory flow across channels. Our upcoming facilities will leverage automation, data intelligence, and scalable design to reduce turnaround times, eliminate errors, and deliver unmatched efficiency — from warehouse to doorstep. Built for tomorrow. Ready for scale. Engineered to deliver.",
-    image: "/services/4.jpg",
+    image: "/services/18.png",
   },
   {
     title: "Dark Store",
@@ -248,15 +248,12 @@ export default function Page() {
               </span>
               that delivers.
             </p>
-            <p className="text-black font-bold text-md sm:text-lg text-end leading-relaxed">
-              box with jlx logo change
-            </p>
           </div>
 
           {/* Image Section */}
           <div>
             <Image
-              src="/38.jpg"
+              src="/images/a5.png"
               alt="Warehouse"
               width={600}
               height={400}

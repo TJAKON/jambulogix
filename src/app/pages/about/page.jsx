@@ -46,7 +46,7 @@ const leaders = [
     name: "Satish kumar",
     role: "Co-Founder & COO",
     desc: "Business Operations",
-    img: "/p6.png",
+    img: "/images/satish.png",
   },
 
   {

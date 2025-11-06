@@ -7,71 +7,85 @@ import { motion } from "framer-motion";
 
 const teamMembers = [
   {
-    name: "Satish kumar",
-    role: "Founder & CEO",
-    image: "/p4.jpg",
-    quote: "Passion drives logistics, people bring it to life.",
+    name: "Mahesh kumar",
+    role: "Project Lead, Opreations",
+    image: "/images/c1.jpg",
+    quote: "We scale fulfillment with scalable code.",
   },
   {
     name: "Ishita basu",
-    role: "Head of Operations",
+    role: "Head, Human Resource",
     image: "/p5.jpg",
     quote: "Efficiency and empathy—our dual strengths.",
   },
   {
     name: "Sandeep Parmar",
-    role: "Customer Success Lead",
-    image: "/test.jpeg",
+    role: "Project Lead, Business",
+    image: "/images/c2.jpg",
     quote: "Every parcel is a promise—we make sure it’s kept.",
   },
-  {
-    name: "Mahesh kumar",
-    role: "Technology Director",
-    image: "/p4.jpg",
-    quote: "We scale fulfillment with scalable code.",
-  },
+
   {
     name: "Sanjeev kumar",
-    role: "Technology Director",
-    image: "/p4.jpg",
+    role: "Head, Security and Loss Prevention",
+    image: "/images/c3.jpg",
     quote: "We scale fulfillment with scalable code.",
   },
 ];
 const catalysts = [
   {
-    name: "Akash Singh",
-    role: "Founder & CEO",
-    image: "/p4.jpg",
+    name: "Deepu Chauhan",
+    role: "Operations",
+    image: "/images/c4.jpg",
     quote: "Passion drives logistics, people bring it to life.",
   },
   {
-    name: "Sourabh Singh",
-    role: "Head of Operations",
-    image: "/p5.jpg",
+    name: "Dinesh Kumar",
+    role: "Operations",
+    image: "/images/c12.jpg",
     quote: "Efficiency and empathy—our dual strengths.",
   },
   {
-    name: "Dinesh kumar",
-    role: "Customer Success Lead",
-    image: "/test.jpeg",
+    name: "Sachin Bamnoli",
+    role: "Operations",
+    image: "/images/c6.jpg",
     quote: "Every parcel is a promise—we make sure it’s kept.",
   },
+
   {
-    name: "Neeraj kumar",
-    role: "Technology Director",
-    image: "/p4.jpg",
+    name: "Sumit Kumar Pandey",
+    role: "Operations",
+    image: "/images/c7.jpg",
     quote: "We scale fulfillment with scalable code.",
   },
   {
-    name: "Mandeep Singh",
-    role: "Technology Director",
-    image: "/p4.jpg",
+    name: "Mandeep mimavat",
+    role: "Operations",
+    image: "/images/c8.jpg",
+    quote: "We scale fulfillment with scalable code.",
+  },
+  {
+    name: "Asheesh Kumar",
+    role: "Operations",
+    image: "/images/c9.jpg",
+    quote: "We scale fulfillment with scalable code.",
+  },
+  {
+    name: "Nibilata buragohain",
+    role: "Data Analyst",
+    image: "/images/c5.jpg",
+    quote: "We scale fulfillment with scalable code.",
+  },
+  {
+    name: "Sourabh Kumar",
+    role: "FTL Operations",
+    image: "/images/c13.jpg",
     quote: "We scale fulfillment with scalable code.",
   },
   {
     name: "Rakhi",
-    role: "Technology Director",
-    image: "/p4.jpg",
+    role: "Human Resources",
+    image: "/images/c10.jpg",
     quote: "We scale fulfillment with scalable code.",
   },
 ];
@@ -87,7 +101,7 @@ const leaders = [
     name: "Satish kumar",
     role: "Co-Founder & COO",
     desc: "Business Operations",
-    img: "/p6.png",
+    img: "/images/satish.png",
   },
 
   {
@@ -269,7 +283,7 @@ export default function Page() {
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-5 gap-10 max-w-8xl mx-auto">
+        <div className="grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-10 max-w-8xl mx-auto">
           {teamMembers.map((member, idx) => (
             <motion.div
               key={idx}
@@ -278,18 +292,18 @@ export default function Page() {
               transition={{ duration: 0.4, delay: idx * 0.1 }}
               className="bg-white rounded-2xl border-2 border-[#24577F] p-6 shadow-lg hover:shadow-xl text-center transition-all"
             >
-              <div className="w-28 h-28 mx-auto mb-4 overflow-hidden rounded-full">
+              <div className="w-40 h-40 mx-auto mb-4 overflow-hidden rounded-lg">
                 <img
                   src={member.image}
                   alt={member.name}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover object-top"
                 />
               </div>
-              <h3 className="text-xl font-semibold text-[#24577F]">
+              <h3 className="text-xl font-semibold capitalize text-[#24577F]">
                 {member.name}
               </h3>
               <p className="text-sm text-gray-500 mb-2">{member.role}</p>
-              <p className="italic text-gray-600 text-sm">“{member.quote}”</p>
+              {/* <p className="italic text-gray-600 text-sm">“{member.quote}”</p> */}
             </motion.div>
           ))}
         </div>
@@ -323,18 +337,18 @@ export default function Page() {
               transition={{ duration: 0.4, delay: idx * 0.1 }}
               className="bg-white border-2 border-[#24577F] rounded-2xl p-6 shadow-lg hover:shadow-xl text-center transition-all"
             >
-              <div className="w-28 h-28 mx-auto mb-4 overflow-hidden rounded-full">
+              <div className="w-40 h-40 mx-auto mb-4 overflow-hidden rounded-lg">
                 <img
                   src={member.image}
                   alt={member.name}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover object-top"
                 />
               </div>
-              <h3 className="text-xl font-semibold text-[#24577F]">
+              <h3 className="text-xl font-semibold capitalize text-[#24577F]">
                 {member.name}
               </h3>
               <p className="text-sm text-gray-500 mb-2">{member.role}</p>
-              <p className="italic text-gray-600 text-sm">“{member.quote}”</p>
+              {/* <p className="italic text-gray-600 text-sm">“{member.quote}”</p> */}
             </motion.div>
           ))}
         </div>

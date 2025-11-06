@@ -7,7 +7,7 @@ import Image from "next/image";
 import TestimonialCarousel from "@/components/sections/TestimonialSection";
 import ContactSection from "@/components/sections/ContactSection";
 import InnerNumbers from "@/components/sections/InnerNumbers";
-import { Truck, BadgeCheck, Users, Leaf, SatelliteDish } from "lucide-react";
+import { Truck, BadgeCheck, Users, Leaf, SatelliteDish, IndianRupee } from "lucide-react";
 import { ThumbsUp, DollarSign, BarChart } from "lucide-react";
 
 const subServices = [
@@ -107,7 +107,7 @@ const secondRow = [
 
   const keysecondRow = [
     {
-      icon: <DollarSign size={50} className="text-[#FF7F06]" />,
+      icon: <IndianRupee size={50} className="text-[#FF7F06]" />,
       text: "Better Cost Control",
       desc: "Shared resources and optimized routing reduce logistics costs.",
     },

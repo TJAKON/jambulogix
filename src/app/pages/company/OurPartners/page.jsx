@@ -76,14 +76,14 @@ const leaders = [
 // Partner categories and their respective logos
 const partnerCategories = [
   {
-    label: "Warehousing Partners",
+    label: "Warehousing",
     heading: "Smart Space, Seamless Service.",
     logos: ["/Clientlogo/22.png", "/Clientlogo/23.png", "/Clientlogo/24.png"],
     description:
       "From storage to fulfillment, our warehousing partners help us stay agile and closer to the customer — wherever demand goes.",
   },
   {
-    label: "Staffing  Partners",
+    label: "Staffing",
     heading: "People Who Power Progress.",
 
     logos: ["/Clientlogo/1.png", "/Clientlogo/2.png", "/Clientlogo/3.png"],
@@ -91,7 +91,7 @@ const partnerCategories = [
       "From ground staff to skilled operators, our staffing partners ensure we have the right people in the right place — every single day.",
   },
   {
-    label: "Logistics Partners",
+    label: "Logistics",
     heading: "Seamless Links in Every Lane.",
 
     logos: ["/Clientlogo/22.png", "/Clientlogo/23.png", "/Clientlogo/24.png"],
@@ -99,7 +99,15 @@ const partnerCategories = [
       "Our logistics partners help us connect the dots — from first mile to last. With their support, we ensure smoother routes, faster turnarounds, and a supply chain that never stops moving.",
   },
   {
-    label: "Delivery Partners",
+    label: "Technology",
+    heading: "Tech That Moves With Us.",
+
+    logos: ["/Clientlogo/5.png", "/Clientlogo/6.png", "/Clientlogo/7.png"],
+    description:
+      "From visibility tools to integration engines, our tech allies help us streamline operations, scale faster, and stay ahead of the curve.",
+  },
+  {
+    label: "Professtional",
     heading: "Miles Made Meaningful.",
 
     logos: ["/Clientlogo/13.png", "/Clientlogo/14.png", "/Clientlogo/12.png"],
@@ -107,13 +115,14 @@ const partnerCategories = [
       "Our delivery network is stronger because of our partner fleets. Together, we reach more pin codes, reduce delays, and deliver brand trust at the doorstep.",
   },
   {
-    label: "Technology Partners",
-    heading: "Tech That Moves With Us.",
+    label: "CSR",
+    heading: "Miles Made Meaningful.",
 
-    logos: ["/Clientlogo/5.png", "/Clientlogo/6.png", "/Clientlogo/7.png"],
+    logos: ["/Clientlogo/13.png", "/Clientlogo/14.png", "/Clientlogo/12.png"],
     description:
-      "From visibility tools to integration engines, our tech allies help us streamline operations, scale faster, and stay ahead of the curve.",
+      "Our delivery network is stronger because of our partner fleets. Together, we reach more pin codes, reduce delays, and deliver brand trust at the doorstep.",
   },
+  
 ];
 
 export default function OurPartnersPage() {
@@ -235,9 +244,9 @@ export default function OurPartnersPage() {
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3 }}
-              className={`px-5 py-3 rounded-2xl border-4 font-semibold text-sm sm:text-base shadow-sm transition ${
+              className={`px-5 py-3 rounded-2xl border-4 uppercase font-semibold text-sm sm:text-base shadow-sm transition ${
                 activeCategory.label === category.label
-                  ? "bg-[#FF7F06] text-black border-[#FF7F06]"
+                  ? "bg-[#FF7F06] text-white border-[#FF7F06]"
                   : "bg-white text-gray-600 border-gray-300 hover:text-[#FF7F06] hover:border-[#24577F]"
               }`}
             >
@@ -291,7 +300,7 @@ export default function OurPartnersPage() {
               {
                 title: "15K+ MSMEs",
                 description:
-                  "Enabled to sell nationwide via our fulfillment network.",
+                  "Enabled to sell Nationwide via our fulfillment network.",
               },
               {
                 title: "90% Faster",
